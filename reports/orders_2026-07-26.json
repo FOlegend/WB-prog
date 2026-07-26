@@ -1,0 +1,32 @@
+[
+  {
+    "ticker": "PLUG",
+    "action": "BUY",
+    "shares": 54,
+    "price": 2.09,
+    "stop": 1.8564,
+    "take_profit": 2.4792,
+    "stop_distance": 0.2336,
+    "risk_amount": 12.61,
+    "risk_reward": 1.67,
+    "position_value": 112.86,
+    "net_score": 0.37,
+    "regime": "BULL",
+    "atr": 0.1557,
+    "reasoning": "買進 PLUG 54 股 @2.09。\n  進場邏輯：regime=BULL(P=79.1%) + technicals=neutral(score=0.03) → net=0.370 > 0.25。\n  TP/SL 設定：ATR=0.16，SL=1.86（entry − 1.5×ATR，保護下行），TP=2.48（entry + 2.5×ATR，R:R=1.67）。\n  倉位理由：倉位=54 股（風險預算 $13 × regime mult 1.0 / stop_dist $0.23）。上限：value 153、cash 613。SL=1.86 TP=2.48 R:R=1.67"
+  },
+  {
+    "ticker": "NOK",
+    "action": "HOLD",
+    "shares": 0,
+    "price": 9.1,
+    "reasoning": "不進場：加權 net=0.048 ≤ 門檻 0.25 (regime 1.00×0.35 + tech -0.46×0.65)"
+  },
+  {
+    "ticker": "NIO",
+    "action": "HOLD",
+    "shares": 0,
+    "price": 4.49,
+    "reasoning": "不進場：regime=BEAR（trending=True），swing bot 僅在 BULL 開新多單"
+  }
+]

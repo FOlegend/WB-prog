@@ -1,0 +1,32 @@
+[
+  {
+    "ticker": "DELL",
+    "action": "HOLD",
+    "shares": 0,
+    "price": 405.37,
+    "reasoning": "不進場：加權 net=0.000 ≤ 門檻 0.25 (regime 0.00×0.35 + tech 0.00×0.65)"
+  },
+  {
+    "ticker": "MSFT",
+    "action": "HOLD",
+    "shares": 0,
+    "price": 464.72,
+    "reasoning": "不進場：regime=BEAR（trending=True），swing bot 僅在 BULL 開新多單"
+  },
+  {
+    "ticker": "BBY",
+    "action": "BUY",
+    "shares": 1,
+    "price": 86.26,
+    "stop": 82.345,
+    "take_profit": 92.785,
+    "stop_distance": 3.915,
+    "risk_amount": 3.92,
+    "risk_reward": 1.67,
+    "position_value": 86.26,
+    "net_score": 0.406,
+    "regime": "SIDEWAYS",
+    "atr": 2.61,
+    "reasoning": "買進 BBY 1 股 @86.26。\n  進場邏輯：regime=SIDEWAYS(P=99.9%) + technicals=bullish(score=0.62) → net=0.406 > 0.25。\n  TP/SL 設定：ATR=2.61，SL=82.34（entry − 1.5×ATR，保護下行），TP=92.78（entry + 2.5×ATR，R:R=1.67）。\n  倉位理由：倉位=1 股（風險預算 $8 × regime mult 0.6 / stop_dist $3.92）。上限：value 3、cash 14。SL=82.35 TP=92.79 R:R=1.67"
+  }
+]

@@ -22,13 +22,35 @@ class Config:
     state_file: str = ""                  # 執行時填：data/state.json
     reports_dir: str = ""                 # 執行時填：reports/
 
-    # ---- 標的篩選（screener）----
+    # ---- Pre-Market Screener（6-filter pipeline）----
+    # Filter 1: Market Cap
+    screener_min_market_cap: float = 10e9      # > $10 Billion USD
+    # Filter 2: Liquidity / Dollar Volume
+    screener_min_dollar_vol: float = 50e6      # 20-day Avg Dollar Vol > $50M/day
+    screener_dvol_window: int = 20             # 20-day rolling mean
+    # Filter 3: Price Gate
+    screener_min_price: float = 10.0           # Close > $10.00
+    # Filter 4: Volatility (ATR%)
+    screener_min_atr_pct: float = 2.0          # 14-day ATR% > 2.0%
+    screener_atr_period: int = 14              # 14-day ATR
+    # Filter 5: Relative Strength vs SPY (multi-timeframe composite)
+    screener_rs_lookbacks: list = field(default_factory=lambda: [50])
+    # Weights must match lookbacks length; swing weighting: 0.5/0.3/0.2 for [50,100,200]
+    screener_rs_weights: list = field(default_factory=lambda: [1.0])
+    screener_min_rs_ratio: float = 1.0         # composite RS > 1.0 (stock outperforms SPY)
+    screener_rs_top_pct: float = 0.20          # alt: top 20% by RS
+    screener_use_rs_top_pct: bool = False      # False=absolute >1.0, True=top 20%
+    # Filter 6: ADX (trend strength) — filters out choppy/range-bound stocks
+    screener_min_adx: float = 20.0             # ADX > 20 = trending stock
+    screener_adx_period: int = 14              # 14-day ADX
+    # Output
+    screener_top_n: int = 30                   # max tickers in final output
+    # Legacy (backward compat with backtest universe)
     price_min: float = 2.0
     price_max: float = 25.0
-    min_dollar_vol: float = 2.0e7         # 近 20 日均金額成交量 ≥ $20M
-    min_daily_range: float = 0.015        # 日內波幅 ≥ 1.5%
-    min_er: float = 0.12                  # Kaufman ER 最低門檻（日線）
-    screener_top_n: int = 12              # 篩選後保留前 N 名
+    min_dollar_vol: float = 2.0e7
+    min_daily_range: float = 0.015
+    min_er: float = 0.12
 
     # ---- HMM regime 分類（照 MDPI 論文）----
     hmm_n_states: int = 3

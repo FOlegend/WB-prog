@@ -96,33 +96,38 @@ def decide(state: dict, candidates: list[dict], prices: dict[str, float],
         if price is None or price <= 0:
             continue
 
-        # regime gate：BEAR / RANGE_BOUND 不開新多單
-        if regime["regime"] in ("BEAR", "RANGE_BOUND") or not regime.get("trending", False):
+        # regime gate：用 composite score 的 position_size_mult（progressive exposure）
+        size_mult = regime.get("position_size_mult", 0.0)
+        regime_score = regime.get("regime_score", 0.0)
+        strategy = regime.get("strategy", "cash")
+
+        if size_mult <= 0:
             orders.append({
                 "ticker": ticker, "action": "HOLD", "shares": 0, "price": round(price, 4),
-                "reasoning": (f"不進場：regime={regime['regime']}（trending={regime.get('trending')}），"
-                              f"swing bot 僅在 BULL 開新多單"),
+                "reasoning": (f"不進場：regime_score={regime_score:.0f}/100 "
+                              f"(strategy={strategy})，"
+                              f"score < {cfg.regime_score_min} → 現金為主，不開新多單"),
             })
             continue
 
         # 加權 net score
-        regime_score = regime.get("score", 0.0)
+        regime_s = regime.get("score", 0.0)
         tech_score = tech.get("score", 0.0)
-        net = cfg.regime_weight * regime_score + cfg.technicals_weight * tech_score
+        net = cfg.regime_weight * regime_s + cfg.technicals_weight * tech_score
 
         if net <= cfg.entry_threshold:
             orders.append({
                 "ticker": ticker, "action": "HOLD", "shares": 0, "price": round(price, 4),
                 "reasoning": (f"不進場：加權 net={net:.3f} ≤ 門檻 {cfg.entry_threshold} "
-                              f"(regime {regime_score:.2f}×{cfg.regime_weight} + "
+                              f"(regime {regime_s:.2f}×{cfg.regime_weight} + "
                               f"tech {tech_score:.2f}×{cfg.technicals_weight})"),
             })
             continue
 
-        # 風控計算倉位
+        # 風控計算倉位（progressive: size_mult from regime score）
         atr_val = tech.get("atr") or c.get("atr") or 0.0
         sizing = size_position(state["equity"], state["cash"], price, atr_val,
-                               regime["regime"], effective_open, cfg)
+                               size_mult, effective_open, cfg)
         if not sizing.get("allow"):
             orders.append({
                 "ticker": ticker, "action": "HOLD", "shares": 0, "price": round(price, 4),
@@ -138,10 +143,13 @@ def decide(state: dict, candidates: list[dict], prices: dict[str, float],
             "risk_amount": sizing["risk_amount"], "risk_reward": sizing["risk_reward"],
             "position_value": sizing["position_value"],
             "net_score": round(net, 3),
-            "regime": regime["regime"], "atr": round(atr_val, 4),
+            "regime": regime["regime"], "regime_score": regime_score,
+            "strategy": strategy, "size_mult": round(size_mult, 3),
+            "atr": round(atr_val, 4),
             "reasoning": (
                 f"買進 {ticker} {sizing['shares']} 股 @{price:.2f}。\n"
-                f"  進場邏輯：regime={regime['regime']}(P={regime.get('latest_prob',0):.1%}) + "
+                f"  進場邏輯：regime_score={regime_score:.0f}/100 "
+                f"(strategy={strategy}, size_mult={size_mult:.2f}) + "
                 f"technicals={tech['signal']}(score={tech_score:.2f}) → net={net:.3f} > {cfg.entry_threshold}。\n"
                 f"  TP/SL 設定：ATR={atr_val:.2f}，"
                 f"SL={sizing['stop_price']:.2f}（entry − {cfg.stop_atr_mult}×ATR，保護下行），"

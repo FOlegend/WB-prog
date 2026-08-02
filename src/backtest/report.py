@@ -71,29 +71,47 @@ def _plot_trade_pnl(trades) -> str:
 
 
 def _plot_regime_timeline(regime_log) -> str:
+    """v3: Market-level regime timeline (one entry per day, not per stock).
+
+    Shows regime score (0-100) as a line with colored background bands
+    for BULL / BEAR / SIDEWAYS / RANGE_BOUND periods.
+    """
     if not regime_log:
         return ""
     df = pd.DataFrame(regime_log)
     df["date"] = pd.to_datetime(df["date"])
-    # 只取每檔第一個 ticker 的 regime 序列做代表（或多數投票）
-    t0 = df["ticker"].iloc[0]
-    sub = df[df["ticker"] == t0].sort_values("date")
-    if sub.empty:
-        return ""
+    df = df.sort_values("date").reset_index(drop=True)
+
+    market_idx = df.get("market_index", pd.Series(["SPY"])).iloc[0]
     color_map = {"BULL": "#d62728", "BEAR": "#2ca02c", "SIDEWAYS": "#7f7f7f",
                  "RANGE_BOUND": "#bcbcbc"}
-    fig, ax = plt.subplots(figsize=(11, 2.5))
-    for i in range(len(sub)):
-        r = sub.iloc[i]
-        ax.axvspan(r["date"], r["date"], color=color_map.get(r["regime"], "#7f7f7f"))
-    # 用散點表達 regime 隨時間
-    for regime, c in color_map.items():
-        s = sub[sub["regime"] == regime]
-        if not s.empty:
-            ax.scatter(s["date"], [1] * len(s), color=c, s=8, label=regime, alpha=0.7)
-    ax.set_title(f"Regime Timeline ({t0}, sample)", fontsize=12)
-    ax.set_yticks([])
-    ax.legend(loc="upper right", fontsize=8, ncol=4)
+
+    fig, ax = plt.subplots(figsize=(11, 3))
+
+    # Background color bands for regime periods
+    if "regime" in df.columns:
+        for i in range(len(df)):
+            r = df.iloc[i]
+            c = color_map.get(r["regime"], "#7f7f7f")
+            ax.axvspan(r["date"], r["date"], color=c, alpha=0.15)
+
+    # Regime score line
+    if "score" in df.columns:
+        ax.plot(df["date"], df["score"], color="#1f77b4", lw=1.2, label="Regime Score")
+        ax.axhline(70, color="#d62728", ls="--", lw=0.8, alpha=0.5, label="Full (70)")
+        ax.axhline(50, color="#7f7f7f", ls="--", lw=0.8, alpha=0.5, label="Min (50)")
+
+    # Scatter regime labels
+    if "regime" in df.columns:
+        for regime, c in color_map.items():
+            s = df[df["regime"] == regime]
+            if not s.empty:
+                ax.scatter(s["date"], [5] * len(s), color=c, s=6, label=regime, alpha=0.6)
+
+    ax.set_title(f"Market Regime Timeline ({market_idx})", fontsize=12)
+    ax.set_ylabel("Score (0-100)")
+    ax.set_ylim(0, 105)
+    ax.legend(loc="upper right", fontsize=7, ncol=6)
     ax.grid(alpha=0.3)
     return _fig_to_b64(fig)
 
@@ -194,7 +212,7 @@ def generate_html(summary: dict, metrics: dict, cfg, out_path: str) -> str:
 <h2>每筆交易淨利</h2>
 {f'<img class="chart" src="data:image/png;base64,{pnl_b64}">' if pnl_b64 else '<p>無交易</p>'}
 
-<h2>Regime 時間線（樣本）</h2>
+<h2>Market Regime 時間線</h2>
 {f'<img class="chart" src="data:image/png;base64,{reg_b64}">' if reg_b64 else '<p>無 regime 紀錄</p>'}
 
 <h2>交易紀錄</h2>

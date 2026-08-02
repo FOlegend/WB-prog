@@ -1,0 +1,44 @@
+[
+  {
+    "ticker": "NVDA",
+    "action": "HOLD",
+    "shares": 0,
+    "price": 200.75,
+    "reasoning": "不進場：regime_score=42/100 (strategy=cash)，score < 50.0 → 現金為主，不開新多單"
+  },
+  {
+    "ticker": "DELL",
+    "action": "HOLD",
+    "shares": 0,
+    "price": 405.37,
+    "reasoning": "不進場：加權 net=0.106 ≤ 門檻 0.25 (regime 0.30×0.35 + tech 0.00×0.65)"
+  },
+  {
+    "ticker": "SPY",
+    "action": "HOLD",
+    "shares": 0,
+    "price": 747.03,
+    "reasoning": "不進場：regime_score=41/100 (strategy=cash)，score < 50.0 → 現金為主，不開新多單"
+  },
+  {
+    "ticker": "BBY",
+    "action": "HOLD",
+    "shares": 0,
+    "price": 86.26,
+    "reasoning": "不進場：regime_score=56/100 (strategy=cash)，score < 50.0 → 現金為主，不開新多單"
+  },
+  {
+    "ticker": "MSFT",
+    "action": "HOLD",
+    "shares": 0,
+    "price": 464.72,
+    "reasoning": "不進場：加權 net=-0.034 ≤ 門檻 0.25 (regime 0.08×0.35 + tech -0.09×0.65)"
+  },
+  {
+    "ticker": "AAPL",
+    "action": "HOLD",
+    "shares": 0,
+    "price": 308.91,
+    "reasoning": "不進場：regime_score=37/100 (strategy=cash)，score < 50.0 → 現金為主，不開新多單"
+  }
+]

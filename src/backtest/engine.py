@@ -1,12 +1,17 @@
 """
-engine.py — swing bot 回測引擎
+engine.py — swing bot 回測引擎（v3: market regime decoupled）
 
 逐日 replay：每個交易日，用「截至當日」的資料跑 regime + technicals + risk + PM，
 模擬收盤成交（含費用），追蹤權益曲線與交易紀錄。
 
+v3 結構解耦：
+  - Regime score 只在 SPY（市場指數）上計算一次 → 全局 position_size_mult
+  - 個股只負責 technicals 進出場訊號（Momentum/Breakout）
+  - HMM 從每支股票各跑一次 → 全回測只跑 SPY（速度大幅提升）
+
 重點：
   - 無 lookahead：agents 只看 ≤ 當日的資料
-  - HMM 每 regime_refit_days 天重 fit 一次（平衡準確度與速度）
+  - HMM 每 regime_refit_days 天重 fit 一次（只在 SPY 上）
   - 模擬收盤成交，含 Alpaca 費用
   - 輸出 equity curve、trade log、metrics
 """
@@ -19,7 +24,8 @@ from copy import deepcopy
 
 from config import Config
 from src.data.data_fetcher import fetch_batch
-from src.agents.regime_agent import fit_hmm, compute_features, decode_and_label
+from src.agents.regime_agent import (fit_hmm, compute_features, decode_and_label,
+                                      RegimeResult, regime_score_engine)
 from src.agents.technicals_agent import technicals_signal
 from src.agents.risk_manager import size_position
 from src.portfolio.portfolio_manager import _exit_check
@@ -31,28 +37,41 @@ class BacktestEngine:
     def __init__(self, cfg: Config, tickers=None, start=None, end=None):
         self.cfg = cfg
         self.tickers = tickers or cfg.backtest_universe
+        self.market_index = getattr(cfg, "regime_market_index", "SPY")
         self.start = start or cfg.backtest_start
         self.end = end or cfg.backtest_end
         self.state = default_state(cfg.capital_usd)
         self.equity_curve = []   # [{date, equity, cash, n_positions}]
-        self.regime_log = []     # [{date, ticker, regime, trending, prob}]
+        self.regime_log = []     # [{date, market_index, regime, score, strategy, size_mult}]
 
     def run(self) -> dict:
         cfg = self.cfg
+        market_idx = self.market_index
         print(f"回測 {self.start} ~ {self.end or '最新'}，標的 {len(self.tickers)} 檔...")
-        print(f"  下載日線（批量）...")
-        data = fetch_batch(self.tickers, start=self.start, end=self.end, period="2y")
-        # 對齊所有標的的交易日索引
-        valid = {t: df for t, df in data.items() if len(df) >= 60}
+        print(f"  市場指數（regime）：{market_idx}")
+        print(f"  下載日線（批量，含 {market_idx}）...")
+
+        # Fetch market index + universe together
+        all_fetch = [market_idx] + self.tickers
+        data = fetch_batch(all_fetch, start=self.start, end=self.end, period="2y")
+
+        # Separate market index data from universe
+        market_data = data.get(market_idx, pd.DataFrame())
+        if len(market_data) < 60:
+            print(f"  ⚠️ {market_idx} 資料不足（{len(market_data)} 根），無法計算 regime")
+            return {}
+
+        # Universe data
+        valid = {t: df for t, df in data.items() if t != market_idx and len(df) >= 60}
         if not valid:
             print("  ⚠️ 無足夠資料")
             return {}
         self.tickers = list(valid.keys())
         all_dates = sorted(set().union(*[set(df["datetime"]) for df in valid.values()]))
-        print(f"  {len(self.tickers)} 檔有效，{len(all_dates)} 個交易日")
+        print(f"  {len(self.tickers)} 檔有效 + {market_idx}（regime），{len(all_dates)} 個交易日")
 
-        # HMM 模型快取（每 ticker 一個，定期重 fit）
-        hmm_cache = {}  # ticker -> (model, feats_df, labels, trending, last_fit_date_idx)
+        # HMM 模型快取（v3: 只有一個 entry — market index）
+        hmm_cache = {}  # market_idx -> (model, feats_df, labels, trending, last_fit_idx)
 
         for di, date in enumerate(all_dates):
             date_str = date.strftime("%Y-%m-%d")
@@ -72,6 +91,28 @@ class BacktestEngine:
             # mark-to-market
             mark_to_market(self.state, prices)
 
+            # ---- v3: Market regime（只在 SPY 上計算，每日一次）----
+            spy_sub = market_data[market_data["datetime"] <= date]
+            market_info = self._market_regime_for(spy_sub, di, hmm_cache, cfg)
+            if market_info is None:
+                # SPY data insufficient — safety: no new positions
+                global_size_mult = 0.0
+                global_regime_s = -1.0
+                global_strategy = "cash"
+                global_score = 0.0
+            else:
+                global_size_mult = market_info["position_size_mult"]
+                global_regime_s = market_info["score"]  # [-1, 1]
+                global_strategy = market_info["strategy"]
+                global_score = market_info["regime_score"]
+                self.regime_log.append({
+                    "date": date_str, "market_index": market_idx,
+                    "regime": market_info["regime"],
+                    "score": global_score, "strategy": global_strategy,
+                    "size_mult": global_size_mult,
+                    "components": market_info.get("components", {}),
+                })
+
             # ---- 處理未平倉部位出場（收盤價成交）----
             i = 0
             while i < len(self.state["open_positions"]):
@@ -82,7 +123,6 @@ class BacktestEngine:
                     continue
                 price = prices[t]
                 tech_sig = "neutral"
-                # 輕量技術訊號給出場用（避免每天跑完整 ensemble 太慢）
                 try:
                     tsig = technicals_signal(slices[t], cfg)
                     tech_sig = tsig["signal"]
@@ -91,7 +131,6 @@ class BacktestEngine:
                 ex = _exit_check(pos, price, date_str, tech_sig, cfg)
                 if ex is not None:
                     close_position(self.state, i, price, date_str, ex["reason"], prices)
-                    # 填 holding_days
                     if self.state["trade_log"]:
                         try:
                             held = (datetime.strptime(date_str, "%Y-%m-%d") -
@@ -102,39 +141,41 @@ class BacktestEngine:
                 else:
                     i += 1
 
-            # ---- 進場：每 N 天重 fit HMM，跑 regime + technicals ----
+            # ---- v3: 進場（使用全局 size_mult，個股只跑 technicals）----
+            # If market regime says cash → skip all entries
+            if global_size_mult <= 0:
+                # 記錄權益曲線
+                self.equity_curve.append({
+                    "date": date_str, "equity": round(self.state["equity"], 2),
+                    "cash": round(self.state["cash"], 2),
+                    "n_positions": len(self.state["open_positions"]),
+                })
+                continue
+
             for t in self.tickers:
                 if t not in slices:
                     continue
                 sub = slices[t]
-                close = sub["close"]
                 if t in {p["ticker"] for p in self.state["open_positions"]}:
                     continue  # 已持有
 
-                # regime（定期重 fit）
-                regime_info = self._regime_for(close, t, di, hmm_cache, cfg)
-                if regime_info is None:
-                    continue
-                self.regime_log.append({"date": date_str, "ticker": t, **regime_info["brief"]})
-                if regime_info["regime"] not in ("BULL",) or not regime_info["trending"]:
-                    continue  # 只在 BULL 開新多單
-
-                # technicals
+                # v3: 只跑 technicals（regime 已由 SPY 全局決定）
                 try:
                     tsig = technicals_signal(sub, cfg)
                 except Exception:
                     continue
                 tech_score = tsig.get("score", 0.0)
-                regime_score = 1.0  # BULL
-                net = cfg.regime_weight * regime_score + cfg.technicals_weight * tech_score
+
+                # Net score: 全局 regime_s + 個股 tech_score
+                net = cfg.regime_weight * global_regime_s + cfg.technicals_weight * tech_score
                 if net <= cfg.entry_threshold:
                     continue
 
-                # 風控 + 下單
+                # 風控 + 下單（全局 size_mult）
                 atr_val = tsig.get("atr", 0.0)
                 n_open = len(self.state["open_positions"])
                 sizing = size_position(self.state["equity"], self.state["cash"],
-                                       prices[t], atr_val, "BULL", n_open, cfg)
+                                       prices[t], atr_val, global_size_mult, n_open, cfg)
                 if not sizing.get("allow"):
                     continue
                 pos = {
@@ -142,8 +183,11 @@ class BacktestEngine:
                     "entry_price": prices[t], "entry_date": date_str,
                     "atr_at_entry": atr_val, "stop_price": sizing["stop_price"],
                     "take_profit": sizing["take_profit"], "highest_since_entry": prices[t],
-                    "entry_regime": "BULL",
-                    "entry_reasoning": f"net={net:.3f}, tech={tsig['signal']}",
+                    "entry_regime": market_info["regime"] if market_info else "UNKNOWN",
+                    "entry_regime_score": global_score,
+                    "entry_market_strategy": global_strategy,
+                    "entry_reasoning": f"net={net:.3f}, tech={tsig['signal']}, "
+                                       f"market_score={global_score:.0f}, size_mult={global_size_mult:.2f}",
                 }
                 open_position(self.state, pos, prices[t], cfg)
 
@@ -165,12 +209,21 @@ class BacktestEngine:
 
         return self._summary()
 
-    def _regime_for(self, close, ticker, date_idx, cache, cfg) -> dict | None:
-        """取得某 ticker 在當日的 regime。定期重 fit HMM。"""
+    def _market_regime_for(self, spy_df: pd.DataFrame, date_idx: int,
+                           cache: dict, cfg) -> dict | None:
+        """在市場指數（SPY）上計算 regime score。每日一次，HMM 定期重 fit。
+
+        v3: 取代舊的 _regime_for()。只處理 SPY，不處理個股。
+        """
+        close = spy_df["close"].astype(float)
         feats = compute_features(close, cfg.hmm_vol_window)
         if len(feats) < cfg.hmm_min_obs:
             return None
-        cached = cache.get(ticker)
+
+        market_idx = self.market_index
+
+        # --- HMM (cached, expensive — only one entry: market index) ---
+        cached = cache.get(market_idx)
         need_fit = (cached is None) or ((date_idx - cached["last_fit_idx"]) >= cfg.regime_refit_days)
         if need_fit:
             with warnings.catch_warnings():
@@ -181,16 +234,15 @@ class BacktestEngine:
                 except Exception:
                     return None
             posteriors = model.predict_proba(feats.values)
-            cache[ticker] = {
+            cache[market_idx] = {
                 "model": model, "labels": labels, "trending": trending,
                 "last_fit_idx": date_idx, "posteriors": posteriors, "states": states,
             }
         else:
-            c = cache[ticker]
+            c = cache[market_idx]
             model = c["model"]
             labels = c["labels"]
             trending = c["trending"]
-            # 用現有 model 預測當日
             try:
                 states = model.predict(feats.values)
                 posteriors = model.predict_proba(feats.values)
@@ -202,11 +254,28 @@ class BacktestEngine:
         regime_label = labels.get(latest_state, "SIDEWAYS")
         if not trending:
             regime_label = "RANGE_BOUND"
+
+        # Build RegimeResult for the score engine
+        hmm_result = RegimeResult(
+            regime=regime_label, trending=trending, latest_prob=latest_prob,
+            switch_confidence=1.0 - latest_prob, labels=labels, stats={},
+            spread=0.0, latest_state=latest_state, n_states=model.n_components,
+        )
+
+        # --- Composite score (all 5 components on SPY data) ---
+        sr = regime_score_engine(spy_df, cfg, hmm_result=hmm_result, ticker=market_idx)
+
+        score_normalized = (sr["regime_score"] - 50.0) / 50.0
+
         return {
             "regime": regime_label, "trending": trending,
             "latest_prob": latest_prob,
-            "brief": {"regime": regime_label, "trending": trending,
-                      "prob": round(latest_prob, 3)},
+            "regime_score": sr["regime_score"],
+            "score": round(score_normalized, 3),
+            "position_size_mult": sr["position_size_mult"],
+            "strategy": sr["strategy"],
+            "components": sr["components"],
+            "vetoes": sr.get("vetoes", []),
         }
 
     def _summary(self) -> dict:

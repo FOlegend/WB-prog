@@ -54,9 +54,9 @@ class Config:
 
     # ---- HMM regime 分類（照 MDPI 論文）----
     hmm_n_states: int = 3
-    hmm_vol_window: int = 10              # 10 日 MSE 波動度
+    hmm_vol_window: int = 10              # 10 日滾動波動度（grid search 確認 VW=10 最優）
     hmm_n_iter: int = 75
-    hmm_covariance_type: str = "full"
+    hmm_covariance_type: str = "diag"     # v3: diag 優於 full（減少過擬合，回測 Sharpe 1.30 vs 1.18）
     hmm_random_state: int = 42
     hmm_min_obs: int = 200                # HMM 至少需要 200 根日線
     # 穩健命名門檻（修復 rigid labeling）
@@ -65,6 +65,47 @@ class Config:
     min_regime_spread: float = 0.05       # bull-bear spread 小於此 → 全 SIDEWAYS
     switch_posterior_thr: float = 0.60    # 後驗機率低於此 = 切換疑慮
     regime_refit_days: int = 20           # backtest 每 N 個交易日重 fit 一次 HMM
+
+    # ---- Regime Score Engine（composite 0-100 score + hard vetoes）----
+    # 5 個獨立 component 加權 → regime_score → strategy + position_size_mult
+    # Layer 1: Regime Detection — HMM (statistical) + MA Structure (structural)
+    # Layer 2: Regime Quality  — KER (efficiency) + ADX (strength, direction-gated)
+    # Layer 3: Volume Pressure  — Distribution Days (IBD/O'Neil)
+    # Weights confirmed by ablation test: all 5 components contribute positively.
+    # Dist days has highest marginal value (Sharpe +0.21), HMM is primarily risk reducer
+    # (MaxDD -2.5%), KER+ADX marginal. Original balanced weights are most robust across
+    # different universes (5-stock: Sharpe 1.30, 9-stock: Sharpe 0.92).
+    regime_score_weights: dict = field(default_factory=lambda: {
+        "hmm": 0.20,   # HMM posterior — statistical regime (risk reducer: MaxDD -2.5%)
+        "ma": 0.30,    # MA alignment (Minervini 50>150>200) — structural baseline
+        "ker": 0.18,   # Kaufman Efficiency Ratio — trend cleanliness
+        "adx": 0.10,   # ADX — trend strength (direction-gated)
+        "dist": 0.22,  # Distribution Days — institutional selling pressure (highest marginal value)
+    })
+    # Progressive exposure bands (Reviewer 2: "progressive, not binary")
+    regime_score_full: float = 70.0        # score >= this → full position (1.0), strategy=trend_following
+    regime_score_min: float = 50.0         # score >= this → selective (0.3-1.0), strategy=selective
+                                            # score < this → cash (0.0), strategy=cash
+    # MA Structure periods (Minervini Trend Template)
+    regime_ma_fast: int = 50               # 50-day SMA
+    regime_ma_mid: int = 150               # 150-day SMA (≈ Weinstein 30-week)
+    regime_ma_slow: int = 200              # 200-day SMA (hard structural gate)
+    # Distribution Day parameters (IBD/O'Neil Market Pulse)
+    regime_dist_day_lookback: int = 25     # ~5 trading weeks
+    regime_dist_day_drop: float = -0.002   # close drops > 0.2%
+    regime_dist_day_rally: float = 0.05    # 5% rally from dist day close → voided (O'Neil rule)
+    # Distribution day scope — more meaningful on market indices than individual stocks
+    regime_dist_day_market_only: bool = True   # v3: decoupled — regime runs on SPY only
+    regime_dist_day_symbols: list = field(default_factory=lambda: ["SPY", "QQQ", "IWM"])
+    # Market index for regime computation (v3 structural decoupling)
+    # Regime score is computed ONCE on this index → global position_size_mult.
+    # Individual stocks only provide technicals signal for entry/exit timing.
+    regime_market_index: str = "SPY"
+    # Hard vetoes (override composite score — safety guardrails per Reviewer 1)
+    regime_veto_hmm_bear_prob: float = 0.70   # HMM BEAR with P > this → force cash
+    regime_veto_below_sma_cap: float = 0.50   # Price < 200SMA → cap size_mult at this
+    regime_veto_dist_days: int = 5            # >= this many dist days → cap
+    regime_veto_dist_cap: float = 0.30        # Cap size_mult when dist days high
 
     # ---- 技術指標 ----
     ema_fast: int = 8
@@ -108,7 +149,10 @@ class Config:
     backtest_start: str = "2024-01-01"
     backtest_end: str = ""
     backtest_universe: list = field(default_factory=lambda: [
-        "NIO", "PLUG", "RIVN", "LCID", "NOK", "INTC", "MARA", "VALE", "BAC", "F",
+        # v3: large/mid-cap liquid stocks across sectors (reviewer-recommended)
+        "MSFT", "AAPL", "NVDA", "GOOGL",  # big tech
+        "DELL", "BBY", "TGT",              # consumer / retail
+        "JPM", "BAC",                      # financial
     ])
 
     def __post_init__(self):

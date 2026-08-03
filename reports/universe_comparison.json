@@ -1,0 +1,68 @@
+{
+  "screener_top20": {
+    "tickers": [
+      "NTAP",
+      "BAX",
+      "AXON",
+      "CRL",
+      "BBY",
+      "CDW",
+      "IQV",
+      "PANW",
+      "EXPE",
+      "WDAY",
+      "DLTR",
+      "IP",
+      "GPC",
+      "WTW",
+      "MTD",
+      "PYPL",
+      "APH",
+      "VEEV",
+      "UAL",
+      "VLO"
+    ],
+    "metrics": {
+      "total_trades": 111,
+      "win_rate": 0.468,
+      "total_pnl": 137.35,
+      "total_return_pct": 10.72,
+      "profit_factor": 1.23,
+      "avg_win": 13.9,
+      "avg_loss": -9.93,
+      "expectancy": 1.24,
+      "sharpe": 0.51,
+      "max_drawdown_pct": -11.01,
+      "final_equity": 1419.42,
+      "starting_equity": 1282.0
+    }
+  },
+  "hardcoded_9stock": {
+    "tickers": [
+      "MSFT",
+      "AAPL",
+      "NVDA",
+      "GOOGL",
+      "DELL",
+      "BBY",
+      "TGT",
+      "JPM",
+      "BAC"
+    ],
+    "metrics": {
+      "total_trades": 87,
+      "win_rate": 0.517,
+      "total_pnl": 175.61,
+      "total_return_pct": 13.71,
+      "profit_factor": 1.49,
+      "avg_win": 11.84,
+      "avg_loss": -8.51,
+      "expectancy": 2.02,
+      "sharpe": 0.92,
+      "max_drawdown_pct": -6.85,
+      "final_equity": 1457.72,
+      "starting_equity": 1282.0
+    }
+  },
+  "timestamp": "2026-08-04T06:20:26.733922"
+}

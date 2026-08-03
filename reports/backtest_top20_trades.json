@@ -904,2846 +904,2996 @@
       {
         "date": "2024-10-30",
         "equity": 1282.0,
-        "cash": 731.9,
-        "n_positions": 3
+        "cash": 526.6,
+        "n_positions": 4
       },
       {
         "date": "2024-10-31",
-        "equity": 1266.24,
-        "cash": 864.38,
-        "n_positions": 2
+        "equity": 1271.77,
+        "cash": 526.6,
+        "n_positions": 4
       },
       {
         "date": "2024-11-01",
-        "equity": 1272.82,
-        "cash": 864.38,
-        "n_positions": 2
+        "equity": 1275.61,
+        "cash": 526.6,
+        "n_positions": 4
       },
       {
         "date": "2024-11-04",
-        "equity": 1268.93,
-        "cash": 864.38,
-        "n_positions": 2
+        "equity": 1274.56,
+        "cash": 526.6,
+        "n_positions": 4
       },
       {
         "date": "2024-11-05",
-        "equity": 1276.14,
-        "cash": 864.38,
-        "n_positions": 2
+        "equity": 1291.58,
+        "cash": 526.6,
+        "n_positions": 4
       },
       {
         "date": "2024-11-06",
-        "equity": 1304.66,
-        "cash": 1169.85,
-        "n_positions": 1
+        "equity": 1327.28,
+        "cash": 696.26,
+        "n_positions": 3
       },
       {
         "date": "2024-11-07",
-        "equity": 1304.03,
-        "cash": 1169.85,
-        "n_positions": 1
+        "equity": 1327.98,
+        "cash": 915.05,
+        "n_positions": 2
       },
       {
         "date": "2024-11-08",
-        "equity": 1300.49,
-        "cash": 1022.38,
-        "n_positions": 2
+        "equity": 1336.96,
+        "cash": 479.75,
+        "n_positions": 4
       },
       {
         "date": "2024-11-11",
-        "equity": 1302.22,
-        "cash": 1022.38,
-        "n_positions": 2
+        "equity": 1363.4,
+        "cash": 510.52,
+        "n_positions": 4
       },
       {
         "date": "2024-11-12",
-        "equity": 1303.26,
-        "cash": 1022.38,
-        "n_positions": 2
+        "equity": 1363.11,
+        "cash": 510.52,
+        "n_positions": 4
       },
       {
         "date": "2024-11-13",
-        "equity": 1299.35,
-        "cash": 844.54,
-        "n_positions": 3
+        "equity": 1361.26,
+        "cash": 498.02,
+        "n_positions": 4
       },
       {
         "date": "2024-11-14",
-        "equity": 1296.38,
-        "cash": 844.54,
-        "n_positions": 3
+        "equity": 1353.61,
+        "cash": 283.14,
+        "n_positions": 5
       },
       {
         "date": "2024-11-15",
-        "equity": 1285.82,
-        "cash": 972.59,
-        "n_positions": 2
+        "equity": 1340.87,
+        "cash": 476.54,
+        "n_positions": 4
       },
       {
         "date": "2024-11-18",
-        "equity": 1286.72,
-        "cash": 1112.45,
-        "n_positions": 1
+        "equity": 1335.69,
+        "cash": 592.87,
+        "n_positions": 4
       },
       {
         "date": "2024-11-19",
-        "equity": 1289.44,
-        "cash": 1112.45,
-        "n_positions": 1
+        "equity": 1329.96,
+        "cash": 893.92,
+        "n_positions": 3
       },
       {
         "date": "2024-11-20",
-        "equity": 1287.32,
-        "cash": 1112.45,
-        "n_positions": 1
+        "equity": 1333.48,
+        "cash": 728.37,
+        "n_positions": 4
       },
       {
         "date": "2024-11-21",
-        "equity": 1279.02,
-        "cash": 457.11,
-        "n_positions": 4
+        "equity": 1338.64,
+        "cash": 529.43,
+        "n_positions": 5
       },
       {
         "date": "2024-11-22",
-        "equity": 1283.93,
-        "cash": 457.11,
-        "n_positions": 4
+        "equity": 1337.86,
+        "cash": 529.43,
+        "n_positions": 5
       },
       {
         "date": "2024-11-25",
-        "equity": 1284.31,
-        "cash": 351.06,
-        "n_positions": 4
+        "equity": 1342.82,
+        "cash": 529.43,
+        "n_positions": 5
       },
       {
         "date": "2024-11-26",
-        "equity": 1285.31,
-        "cash": 351.06,
-        "n_positions": 4
+        "equity": 1346.74,
+        "cash": 529.43,
+        "n_positions": 5
       },
       {
         "date": "2024-11-27",
-        "equity": 1268.25,
-        "cash": 472.05,
-        "n_positions": 3
+        "equity": 1336.43,
+        "cash": 529.43,
+        "n_positions": 5
       },
       {
         "date": "2024-11-29",
-        "equity": 1268.75,
-        "cash": 472.05,
-        "n_positions": 3
+        "equity": 1340.0,
+        "cash": 529.43,
+        "n_positions": 5
       },
       {
         "date": "2024-12-02",
-        "equity": 1264.49,
-        "cash": 709.99,
-        "n_positions": 2
+        "equity": 1340.66,
+        "cash": 529.43,
+        "n_positions": 5
       },
       {
         "date": "2024-12-03",
-        "equity": 1261.5,
-        "cash": 468.76,
-        "n_positions": 3
+        "equity": 1336.86,
+        "cash": 529.43,
+        "n_positions": 5
       },
       {
         "date": "2024-12-04",
-        "equity": 1257.34,
-        "cash": 468.76,
-        "n_positions": 3
+        "equity": 1356.39,
+        "cash": 628.62,
+        "n_positions": 4
       },
       {
         "date": "2024-12-05",
-        "equity": 1263.62,
-        "cash": 323.85,
-        "n_positions": 4
+        "equity": 1354.84,
+        "cash": 219.59,
+        "n_positions": 5
       },
       {
         "date": "2024-12-06",
-        "equity": 1262.61,
-        "cash": 323.85,
-        "n_positions": 4
+        "equity": 1362.16,
+        "cash": 219.59,
+        "n_positions": 5
       },
       {
         "date": "2024-12-09",
-        "equity": 1253.76,
-        "cash": 149.3,
+        "equity": 1340.32,
+        "cash": 219.4,
         "n_positions": 5
       },
       {
         "date": "2024-12-10",
-        "equity": 1258.7,
-        "cash": 468.21,
-        "n_positions": 3
+        "equity": 1318.9,
+        "cash": 453.82,
+        "n_positions": 4
       },
       {
         "date": "2024-12-11",
-        "equity": 1260.14,
-        "cash": 468.21,
-        "n_positions": 3
+        "equity": 1327.56,
+        "cash": 181.7,
+        "n_positions": 5
       },
       {
         "date": "2024-12-12",
-        "equity": 1259.67,
-        "cash": 468.21,
-        "n_positions": 3
+        "equity": 1312.44,
+        "cash": 181.7,
+        "n_positions": 5
       },
       {
         "date": "2024-12-13",
-        "equity": 1255.53,
-        "cash": 699.76,
-        "n_positions": 2
+        "equity": 1310.57,
+        "cash": 362.36,
+        "n_positions": 4
       },
       {
         "date": "2024-12-16",
-        "equity": 1256.95,
-        "cash": 699.76,
-        "n_positions": 2
+        "equity": 1324.78,
+        "cash": 362.36,
+        "n_positions": 4
       },
       {
         "date": "2024-12-17",
-        "equity": 1256.53,
-        "cash": 951.5,
-        "n_positions": 1
+        "equity": 1317.57,
+        "cash": 362.36,
+        "n_positions": 4
       },
       {
         "date": "2024-12-18",
-        "equity": 1245.91,
-        "cash": 1245.75,
+        "equity": 1265.5,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2024-12-19",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2024-12-20",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2024-12-23",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2024-12-24",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2024-12-26",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2024-12-27",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2024-12-30",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2024-12-31",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-02",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-03",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-06",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-07",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-08",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-10",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-13",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-14",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-15",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-16",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-17",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-21",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-22",
-        "equity": 1245.75,
-        "cash": 1245.75,
+        "equity": 1265.03,
+        "cash": 1265.03,
         "n_positions": 0
       },
       {
         "date": "2025-01-23",
-        "equity": 1245.75,
-        "cash": 1245.75,
-        "n_positions": 0
+        "equity": 1265.03,
+        "cash": 1155.12,
+        "n_positions": 1
       },
       {
         "date": "2025-01-24",
-        "equity": 1245.75,
-        "cash": 1245.75,
-        "n_positions": 0
+        "equity": 1267.77,
+        "cash": 1032.61,
+        "n_positions": 2
       },
       {
         "date": "2025-01-27",
-        "equity": 1245.75,
-        "cash": 1154.65,
+        "equity": 1260.31,
+        "cash": 1149.1,
         "n_positions": 1
       },
       {
         "date": "2025-01-28",
-        "equity": 1245.23,
-        "cash": 1154.65,
+        "equity": 1259.93,
+        "cash": 1149.1,
         "n_positions": 1
       },
       {
         "date": "2025-01-29",
-        "equity": 1245.05,
-        "cash": 1154.65,
+        "equity": 1257.79,
+        "cash": 1149.1,
         "n_positions": 1
       },
       {
         "date": "2025-01-30",
-        "equity": 1244.99,
-        "cash": 1154.65,
+        "equity": 1256.05,
+        "cash": 1149.1,
         "n_positions": 1
       },
       {
         "date": "2025-01-31",
-        "equity": 1244.18,
-        "cash": 1154.65,
-        "n_positions": 1
+        "equity": 1253.39,
+        "cash": 1253.33,
+        "n_positions": 0
       },
       {
         "date": "2025-02-03",
-        "equity": 1244.01,
-        "cash": 1154.65,
-        "n_positions": 1
+        "equity": 1253.33,
+        "cash": 1253.33,
+        "n_positions": 0
       },
       {
         "date": "2025-02-04",
-        "equity": 1244.97,
-        "cash": 1154.65,
-        "n_positions": 1
+        "equity": 1253.33,
+        "cash": 1253.33,
+        "n_positions": 0
       },
       {
         "date": "2025-02-05",
-        "equity": 1245.75,
-        "cash": 1154.65,
-        "n_positions": 1
+        "equity": 1253.33,
+        "cash": 1253.33,
+        "n_positions": 0
       },
       {
         "date": "2025-02-06",
-        "equity": 1246.97,
-        "cash": 1154.65,
-        "n_positions": 1
+        "equity": 1253.33,
+        "cash": 1253.33,
+        "n_positions": 0
       },
       {
         "date": "2025-02-07",
-        "equity": 1246.31,
-        "cash": 1154.65,
-        "n_positions": 1
+        "equity": 1253.33,
+        "cash": 1253.33,
+        "n_positions": 0
       },
       {
         "date": "2025-02-10",
-        "equity": 1244.9,
-        "cash": 1154.65,
-        "n_positions": 1
+        "equity": 1253.33,
+        "cash": 1253.33,
+        "n_positions": 0
       },
       {
         "date": "2025-02-11",
-        "equity": 1245.13,
-        "cash": 1154.65,
-        "n_positions": 1
+        "equity": 1253.33,
+        "cash": 1253.33,
+        "n_positions": 0
       },
       {
         "date": "2025-02-12",
-        "equity": 1244.01,
-        "cash": 1154.65,
-        "n_positions": 1
+        "equity": 1253.33,
+        "cash": 1253.33,
+        "n_positions": 0
       },
       {
         "date": "2025-02-13",
-        "equity": 1244.24,
-        "cash": 1154.65,
-        "n_positions": 1
+        "equity": 1253.33,
+        "cash": 1253.33,
+        "n_positions": 0
       },
       {
         "date": "2025-02-14",
-        "equity": 1245.46,
-        "cash": 1154.65,
-        "n_positions": 1
+        "equity": 1253.33,
+        "cash": 1253.33,
+        "n_positions": 0
       },
       {
         "date": "2025-02-18",
-        "equity": 1244.63,
-        "cash": 1154.65,
-        "n_positions": 1
+        "equity": 1253.33,
+        "cash": 1253.33,
+        "n_positions": 0
       },
       {
         "date": "2025-02-19",
-        "equity": 1243.62,
-        "cash": 1154.65,
-        "n_positions": 1
+        "equity": 1253.33,
+        "cash": 872.71,
+        "n_positions": 2
       },
       {
         "date": "2025-02-20",
-        "equity": 1242.25,
-        "cash": 1242.2,
-        "n_positions": 0
+        "equity": 1254.03,
+        "cash": 872.71,
+        "n_positions": 2
       },
       {
         "date": "2025-02-21",
-        "equity": 1242.2,
-        "cash": 1242.2,
-        "n_positions": 0
+        "equity": 1248.42,
+        "cash": 872.71,
+        "n_positions": 2
       },
       {
         "date": "2025-02-24",
-        "equity": 1242.2,
-        "cash": 1242.2,
-        "n_positions": 0
+        "equity": 1249.44,
+        "cash": 872.71,
+        "n_positions": 2
       },
       {
         "date": "2025-02-25",
-        "equity": 1242.2,
-        "cash": 1242.2,
-        "n_positions": 0
+        "equity": 1246.51,
+        "cash": 872.71,
+        "n_positions": 2
       },
       {
         "date": "2025-02-26",
-        "equity": 1242.2,
-        "cash": 1242.2,
-        "n_positions": 0
+        "equity": 1248.22,
+        "cash": 872.71,
+        "n_positions": 2
       },
       {
         "date": "2025-02-27",
-        "equity": 1242.2,
-        "cash": 1242.2,
-        "n_positions": 0
+        "equity": 1240.02,
+        "cash": 872.71,
+        "n_positions": 2
       },
       {
         "date": "2025-02-28",
-        "equity": 1242.2,
-        "cash": 1242.2,
-        "n_positions": 0
+        "equity": 1242.57,
+        "cash": 872.71,
+        "n_positions": 2
       },
       {
         "date": "2025-03-03",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.2,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-04",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-05",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-06",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-07",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-10",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-11",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-12",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-13",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-14",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-17",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-18",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-19",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-20",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-21",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-24",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-25",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-26",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-27",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-28",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-03-31",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-01",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-02",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-03",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-04",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-07",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-08",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-09",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-10",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-11",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-14",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-15",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-16",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-17",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-21",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-22",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-23",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-24",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-25",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-28",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-29",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-04-30",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-01",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-02",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-05",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-06",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-07",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-08",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-09",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-12",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-13",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-14",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-15",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-16",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-19",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-20",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-21",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-22",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-23",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-27",
-        "equity": 1242.2,
-        "cash": 1242.2,
+        "equity": 1229.02,
+        "cash": 1229.02,
         "n_positions": 0
       },
       {
         "date": "2025-05-28",
-        "equity": 1242.2,
-        "cash": 253.92,
+        "equity": 1229.02,
+        "cash": 99.88,
         "n_positions": 5
       },
       {
         "date": "2025-05-29",
-        "equity": 1231.59,
-        "cash": 224.36,
+        "equity": 1213.3,
+        "cash": 74.58,
         "n_positions": 5
       },
       {
         "date": "2025-05-30",
-        "equity": 1221.68,
-        "cash": 224.36,
+        "equity": 1214.7,
+        "cash": 74.58,
         "n_positions": 5
       },
       {
         "date": "2025-06-02",
-        "equity": 1215.35,
-        "cash": 330.48,
+        "equity": 1215.38,
+        "cash": 66.67,
         "n_positions": 5
       },
       {
         "date": "2025-06-03",
-        "equity": 1224.29,
-        "cash": 330.48,
+        "equity": 1252.06,
+        "cash": 180.64,
         "n_positions": 5
       },
       {
         "date": "2025-06-04",
-        "equity": 1224.22,
-        "cash": 330.48,
+        "equity": 1251.39,
+        "cash": 180.64,
         "n_positions": 5
       },
       {
         "date": "2025-06-05",
-        "equity": 1219.47,
-        "cash": 330.48,
+        "equity": 1256.17,
+        "cash": 180.64,
         "n_positions": 5
       },
       {
         "date": "2025-06-06",
-        "equity": 1236.39,
-        "cash": 330.48,
+        "equity": 1270.38,
+        "cash": 284.29,
         "n_positions": 5
       },
       {
         "date": "2025-06-09",
-        "equity": 1240.87,
-        "cash": 330.48,
+        "equity": 1259.38,
+        "cash": 284.29,
         "n_positions": 5
       },
       {
         "date": "2025-06-10",
-        "equity": 1246.64,
-        "cash": 330.48,
+        "equity": 1261.86,
+        "cash": 284.29,
         "n_positions": 5
       },
       {
         "date": "2025-06-11",
-        "equity": 1240.1,
-        "cash": 330.48,
+        "equity": 1258.32,
+        "cash": 284.29,
         "n_positions": 5
       },
       {
         "date": "2025-06-12",
-        "equity": 1242.3,
-        "cash": 330.48,
+        "equity": 1264.85,
+        "cash": 371.76,
         "n_positions": 5
       },
       {
         "date": "2025-06-13",
-        "equity": 1228.66,
-        "cash": 330.48,
-        "n_positions": 5
-      },
-      {
-        "date": "2025-06-16",
-        "equity": 1244.43,
-        "cash": 330.48,
-        "n_positions": 5
-      },
-      {
-        "date": "2025-06-17",
-        "equity": 1243.5,
-        "cash": 330.48,
-        "n_positions": 5
-      },
-      {
-        "date": "2025-06-18",
-        "equity": 1251.25,
-        "cash": 475.7,
-        "n_positions": 4
-      },
-      {
-        "date": "2025-06-20",
-        "equity": 1250.44,
-        "cash": 593.02,
+        "equity": 1245.57,
+        "cash": 735.33,
         "n_positions": 3
       },
       {
+        "date": "2025-06-16",
+        "equity": 1247.79,
+        "cash": 805.94,
+        "n_positions": 3
+      },
+      {
+        "date": "2025-06-17",
+        "equity": 1245.21,
+        "cash": 1152.85,
+        "n_positions": 1
+      },
+      {
+        "date": "2025-06-18",
+        "equity": 1245.69,
+        "cash": 1152.85,
+        "n_positions": 1
+      },
+      {
+        "date": "2025-06-20",
+        "equity": 1246.04,
+        "cash": 1152.85,
+        "n_positions": 1
+      },
+      {
         "date": "2025-06-23",
-        "equity": 1256.04,
-        "cash": 864.62,
-        "n_positions": 2
+        "equity": 1247.46,
+        "cash": 1152.85,
+        "n_positions": 1
       },
       {
         "date": "2025-06-24",
-        "equity": 1259.24,
-        "cash": 1092.82,
+        "equity": 1248.01,
+        "cash": 1152.85,
         "n_positions": 1
       },
       {
         "date": "2025-06-25",
-        "equity": 1263.02,
-        "cash": 1092.82,
+        "equity": 1249.22,
+        "cash": 1152.85,
         "n_positions": 1
       },
       {
         "date": "2025-06-26",
-        "equity": 1265.87,
-        "cash": 1092.82,
+        "equity": 1249.18,
+        "cash": 1152.85,
         "n_positions": 1
       },
       {
         "date": "2025-06-27",
-        "equity": 1270.85,
-        "cash": 1270.75,
+        "equity": 1249.86,
+        "cash": 1249.81,
         "n_positions": 0
       },
       {
         "date": "2025-06-30",
-        "equity": 1270.75,
-        "cash": 1270.75,
+        "equity": 1249.81,
+        "cash": 1249.81,
         "n_positions": 0
       },
       {
         "date": "2025-07-01",
-        "equity": 1270.75,
-        "cash": 1129.31,
+        "equity": 1249.81,
+        "cash": 1153.03,
         "n_positions": 1
       },
       {
         "date": "2025-07-02",
-        "equity": 1272.33,
-        "cash": 1129.31,
+        "equity": 1250.89,
+        "cash": 1153.03,
         "n_positions": 1
       },
       {
         "date": "2025-07-03",
-        "equity": 1272.97,
-        "cash": 544.59,
-        "n_positions": 4
+        "equity": 1251.82,
+        "cash": 441.81,
+        "n_positions": 5
       },
       {
         "date": "2025-07-07",
-        "equity": 1267.17,
-        "cash": 544.59,
-        "n_positions": 4
+        "equity": 1237.41,
+        "cash": 441.81,
+        "n_positions": 5
       },
       {
         "date": "2025-07-08",
-        "equity": 1261.33,
-        "cash": 476.13,
+        "equity": 1248.3,
+        "cash": 441.81,
         "n_positions": 5
       },
       {
         "date": "2025-07-09",
-        "equity": 1270.13,
-        "cash": 335.6,
+        "equity": 1247.34,
+        "cash": 441.81,
         "n_positions": 5
       },
       {
         "date": "2025-07-10",
-        "equity": 1280.78,
-        "cash": 335.6,
+        "equity": 1254.12,
+        "cash": 441.81,
         "n_positions": 5
       },
       {
         "date": "2025-07-11",
-        "equity": 1278.9,
-        "cash": 335.6,
+        "equity": 1243.04,
+        "cash": 441.81,
         "n_positions": 5
       },
       {
         "date": "2025-07-14",
-        "equity": 1278.15,
-        "cash": 335.6,
+        "equity": 1239.58,
+        "cash": 441.81,
         "n_positions": 5
       },
       {
         "date": "2025-07-15",
-        "equity": 1281.17,
-        "cash": 435.62,
-        "n_positions": 4
+        "equity": 1228.5,
+        "cash": 975.03,
+        "n_positions": 2
       },
       {
         "date": "2025-07-16",
-        "equity": 1276.7,
-        "cash": 435.62,
-        "n_positions": 4
+        "equity": 1229.84,
+        "cash": 872.61,
+        "n_positions": 3
       },
       {
         "date": "2025-07-17",
-        "equity": 1284.83,
-        "cash": 262.76,
+        "equity": 1235.99,
+        "cash": 417.42,
         "n_positions": 5
       },
       {
         "date": "2025-07-18",
-        "equity": 1302.33,
-        "cash": 262.76,
+        "equity": 1235.46,
+        "cash": 417.42,
         "n_positions": 5
       },
       {
         "date": "2025-07-21",
-        "equity": 1302.02,
-        "cash": 262.76,
+        "equity": 1229.92,
+        "cash": 417.27,
         "n_positions": 5
       },
       {
         "date": "2025-07-22",
-        "equity": 1292.11,
-        "cash": 384.97,
+        "equity": 1277.35,
+        "cash": 152.87,
         "n_positions": 5
       },
       {
         "date": "2025-07-23",
-        "equity": 1303.36,
-        "cash": 470.06,
+        "equity": 1286.82,
+        "cash": 112.51,
         "n_positions": 5
       },
       {
         "date": "2025-07-24",
-        "equity": 1306.76,
-        "cash": 399.03,
+        "equity": 1296.79,
+        "cash": 112.51,
         "n_positions": 5
       },
       {
         "date": "2025-07-25",
-        "equity": 1310.74,
-        "cash": 399.03,
-        "n_positions": 5
+        "equity": 1303.91,
+        "cash": 378.05,
+        "n_positions": 4
       },
       {
         "date": "2025-07-28",
-        "equity": 1316.9,
-        "cash": 238.13,
+        "equity": 1315.32,
+        "cash": 330.71,
         "n_positions": 5
       },
       {
         "date": "2025-07-29",
-        "equity": 1310.13,
-        "cash": 238.13,
+        "equity": 1307.78,
+        "cash": 330.71,
         "n_positions": 5
       },
       {
         "date": "2025-07-30",
-        "equity": 1313.0,
-        "cash": 435.66,
-        "n_positions": 4
-      },
-      {
-        "date": "2025-07-31",
-        "equity": 1302.08,
-        "cash": 642.3,
-        "n_positions": 3
-      },
-      {
-        "date": "2025-08-01",
-        "equity": 1288.32,
-        "cash": 926.09,
-        "n_positions": 2
-      },
-      {
-        "date": "2025-08-04",
-        "equity": 1300.34,
-        "cash": 926.09,
-        "n_positions": 2
-      },
-      {
-        "date": "2025-08-05",
-        "equity": 1298.23,
-        "cash": 926.09,
-        "n_positions": 2
-      },
-      {
-        "date": "2025-08-06",
-        "equity": 1300.81,
-        "cash": 825.07,
-        "n_positions": 3
-      },
-      {
-        "date": "2025-08-07",
-        "equity": 1302.8,
-        "cash": 825.07,
-        "n_positions": 3
-      },
-      {
-        "date": "2025-08-08",
-        "equity": 1309.36,
-        "cash": 1025.81,
-        "n_positions": 2
-      },
-      {
-        "date": "2025-08-11",
-        "equity": 1307.28,
-        "cash": 1025.81,
-        "n_positions": 2
-      },
-      {
-        "date": "2025-08-12",
-        "equity": 1310.53,
-        "cash": 1025.81,
-        "n_positions": 2
-      },
-      {
-        "date": "2025-08-13",
-        "equity": 1309.2,
-        "cash": 1025.81,
-        "n_positions": 2
-      },
-      {
-        "date": "2025-08-14",
-        "equity": 1308.55,
-        "cash": 823.35,
-        "n_positions": 3
-      },
-      {
-        "date": "2025-08-15",
-        "equity": 1306.65,
-        "cash": 823.35,
-        "n_positions": 3
-      },
-      {
-        "date": "2025-08-18",
-        "equity": 1309.68,
-        "cash": 264.99,
+        "equity": 1295.91,
+        "cash": 325.88,
         "n_positions": 5
       },
       {
+        "date": "2025-07-31",
+        "equity": 1271.97,
+        "cash": 325.88,
+        "n_positions": 5
+      },
+      {
+        "date": "2025-08-01",
+        "equity": 1259.49,
+        "cash": 1029.69,
+        "n_positions": 1
+      },
+      {
+        "date": "2025-08-04",
+        "equity": 1261.13,
+        "cash": 1029.69,
+        "n_positions": 1
+      },
+      {
+        "date": "2025-08-05",
+        "equity": 1261.01,
+        "cash": 1029.69,
+        "n_positions": 1
+      },
+      {
+        "date": "2025-08-06",
+        "equity": 1262.43,
+        "cash": 1029.69,
+        "n_positions": 1
+      },
+      {
+        "date": "2025-08-07",
+        "equity": 1264.01,
+        "cash": 1029.69,
+        "n_positions": 1
+      },
+      {
+        "date": "2025-08-08",
+        "equity": 1261.93,
+        "cash": 1029.69,
+        "n_positions": 1
+      },
+      {
+        "date": "2025-08-11",
+        "equity": 1258.27,
+        "cash": 1029.69,
+        "n_positions": 1
+      },
+      {
+        "date": "2025-08-12",
+        "equity": 1257.81,
+        "cash": 1029.69,
+        "n_positions": 1
+      },
+      {
+        "date": "2025-08-13",
+        "equity": 1260.49,
+        "cash": 1029.69,
+        "n_positions": 1
+      },
+      {
+        "date": "2025-08-14",
+        "equity": 1258.95,
+        "cash": 1029.69,
+        "n_positions": 1
+      },
+      {
+        "date": "2025-08-15",
+        "equity": 1256.67,
+        "cash": 1029.69,
+        "n_positions": 1
+      },
+      {
+        "date": "2025-08-18",
+        "equity": 1253.81,
+        "cash": 543.36,
+        "n_positions": 3
+      },
+      {
         "date": "2025-08-19",
-        "equity": 1309.37,
-        "cash": 440.3,
-        "n_positions": 4
+        "equity": 1263.63,
+        "cash": 543.36,
+        "n_positions": 3
       },
       {
         "date": "2025-08-20",
-        "equity": 1295.19,
-        "cash": 535.83,
-        "n_positions": 3
+        "equity": 1256.98,
+        "cash": 411.05,
+        "n_positions": 4
       },
       {
         "date": "2025-08-21",
-        "equity": 1295.27,
-        "cash": 535.83,
-        "n_positions": 3
+        "equity": 1253.95,
+        "cash": 411.05,
+        "n_positions": 4
       },
       {
         "date": "2025-08-22",
-        "equity": 1317.64,
-        "cash": 535.83,
-        "n_positions": 3
+        "equity": 1275.23,
+        "cash": 411.05,
+        "n_positions": 4
       },
       {
         "date": "2025-08-25",
-        "equity": 1314.66,
-        "cash": 535.83,
-        "n_positions": 3
+        "equity": 1268.85,
+        "cash": 411.05,
+        "n_positions": 4
       },
       {
         "date": "2025-08-26",
-        "equity": 1314.46,
-        "cash": 535.83,
-        "n_positions": 3
+        "equity": 1263.12,
+        "cash": 411.05,
+        "n_positions": 4
       },
       {
         "date": "2025-08-27",
-        "equity": 1322.24,
-        "cash": 535.83,
-        "n_positions": 3
+        "equity": 1278.04,
+        "cash": 523.73,
+        "n_positions": 4
       },
       {
         "date": "2025-08-28",
-        "equity": 1317.57,
-        "cash": 742.11,
+        "equity": 1276.41,
+        "cash": 960.3,
         "n_positions": 3
       },
       {
         "date": "2025-08-29",
-        "equity": 1319.93,
-        "cash": 742.11,
-        "n_positions": 3
+        "equity": 1273.73,
+        "cash": 1069.42,
+        "n_positions": 2
       },
       {
         "date": "2025-09-02",
-        "equity": 1317.46,
-        "cash": 594.0,
-        "n_positions": 4
+        "equity": 1271.27,
+        "cash": 1069.42,
+        "n_positions": 2
       },
       {
         "date": "2025-09-03",
-        "equity": 1335.81,
-        "cash": 823.89,
-        "n_positions": 3
+        "equity": 1271.91,
+        "cash": 1069.42,
+        "n_positions": 2
       },
       {
         "date": "2025-09-04",
-        "equity": 1343.61,
-        "cash": 823.89,
-        "n_positions": 3
+        "equity": 1278.76,
+        "cash": 1069.42,
+        "n_positions": 2
       },
       {
         "date": "2025-09-05",
-        "equity": 1331.83,
-        "cash": 1112.59,
+        "equity": 1277.23,
+        "cash": 1069.42,
         "n_positions": 2
       },
       {
         "date": "2025-09-08",
-        "equity": 1332.11,
-        "cash": 1112.59,
+        "equity": 1278.91,
+        "cash": 1069.42,
         "n_positions": 2
       },
       {
         "date": "2025-09-09",
-        "equity": 1334.02,
-        "cash": 1112.59,
+        "equity": 1277.5,
+        "cash": 1069.42,
         "n_positions": 2
       },
       {
         "date": "2025-09-10",
-        "equity": 1333.16,
-        "cash": 1112.59,
+        "equity": 1277.63,
+        "cash": 1069.42,
         "n_positions": 2
       },
       {
         "date": "2025-09-11",
-        "equity": 1336.74,
-        "cash": 1112.59,
-        "n_positions": 2
+        "equity": 1282.57,
+        "cash": 1208.19,
+        "n_positions": 1
       },
       {
         "date": "2025-09-12",
-        "equity": 1333.78,
-        "cash": 1112.59,
-        "n_positions": 2
+        "equity": 1280.05,
+        "cash": 1208.19,
+        "n_positions": 1
       },
       {
         "date": "2025-09-15",
-        "equity": 1332.56,
-        "cash": 1112.59,
-        "n_positions": 2
+        "equity": 1278.8,
+        "cash": 1208.19,
+        "n_positions": 1
       },
       {
         "date": "2025-09-16",
-        "equity": 1332.29,
-        "cash": 1182.68,
-        "n_positions": 1
+        "equity": 1278.32,
+        "cash": 1278.28,
+        "n_positions": 0
       },
       {
         "date": "2025-09-17",
-        "equity": 1334.44,
-        "cash": 1182.68,
-        "n_positions": 1
+        "equity": 1278.28,
+        "cash": 1278.28,
+        "n_positions": 0
       },
       {
         "date": "2025-09-18",
-        "equity": 1336.59,
-        "cash": 1336.51,
+        "equity": 1278.28,
+        "cash": 1278.28,
         "n_positions": 0
       },
       {
         "date": "2025-09-19",
-        "equity": 1336.51,
-        "cash": 1182.17,
-        "n_positions": 1
+        "equity": 1278.28,
+        "cash": 1278.28,
+        "n_positions": 0
       },
       {
         "date": "2025-09-22",
-        "equity": 1335.46,
-        "cash": 1182.17,
+        "equity": 1278.28,
+        "cash": 1155.75,
         "n_positions": 1
       },
       {
         "date": "2025-09-23",
-        "equity": 1334.81,
-        "cash": 1182.17,
+        "equity": 1277.07,
+        "cash": 1155.75,
         "n_positions": 1
       },
       {
         "date": "2025-09-24",
-        "equity": 1334.81,
-        "cash": 921.18,
-        "n_positions": 2
+        "equity": 1276.88,
+        "cash": 265.69,
+        "n_positions": 5
       },
       {
         "date": "2025-09-25",
-        "equity": 1332.89,
-        "cash": 921.18,
-        "n_positions": 2
+        "equity": 1263.84,
+        "cash": 384.33,
+        "n_positions": 4
       },
       {
         "date": "2025-09-26",
-        "equity": 1333.56,
-        "cash": 921.18,
-        "n_positions": 2
+        "equity": 1271.88,
+        "cash": 266.46,
+        "n_positions": 5
       },
       {
         "date": "2025-09-29",
-        "equity": 1340.38,
-        "cash": 848.56,
-        "n_positions": 3
+        "equity": 1274.21,
+        "cash": 266.46,
+        "n_positions": 5
       },
       {
         "date": "2025-09-30",
-        "equity": 1353.4,
-        "cash": 848.56,
-        "n_positions": 3
+        "equity": 1261.56,
+        "cash": 266.46,
+        "n_positions": 5
       },
       {
         "date": "2025-10-01",
-        "equity": 1367.99,
-        "cash": 1293.55,
-        "n_positions": 1
+        "equity": 1261.41,
+        "cash": 452.66,
+        "n_positions": 4
       },
       {
         "date": "2025-10-02",
-        "equity": 1367.06,
-        "cash": 1144.44,
-        "n_positions": 2
+        "equity": 1269.42,
+        "cash": 379.11,
+        "n_positions": 5
       },
       {
         "date": "2025-10-03",
-        "equity": 1367.68,
-        "cash": 887.02,
-        "n_positions": 3
+        "equity": 1266.93,
+        "cash": 379.11,
+        "n_positions": 5
       },
       {
         "date": "2025-10-06",
-        "equity": 1364.28,
-        "cash": 451.55,
+        "equity": 1274.87,
+        "cash": 416.55,
         "n_positions": 5
       },
       {
         "date": "2025-10-07",
-        "equity": 1358.04,
-        "cash": 451.55,
+        "equity": 1254.7,
+        "cash": 416.55,
         "n_positions": 5
       },
       {
         "date": "2025-10-08",
-        "equity": 1362.87,
-        "cash": 451.55,
+        "equity": 1255.24,
+        "cash": 475.72,
         "n_positions": 5
       },
       {
         "date": "2025-10-09",
-        "equity": 1357.43,
-        "cash": 692.49,
-        "n_positions": 4
+        "equity": 1257.31,
+        "cash": 475.72,
+        "n_positions": 5
       },
       {
         "date": "2025-10-10",
-        "equity": 1331.19,
-        "cash": 1148.03,
-        "n_positions": 1
+        "equity": 1230.04,
+        "cash": 655.66,
+        "n_positions": 3
       },
       {
         "date": "2025-10-13",
-        "equity": 1336.11,
-        "cash": 1148.03,
-        "n_positions": 1
+        "equity": 1244.43,
+        "cash": 655.66,
+        "n_positions": 3
       },
       {
         "date": "2025-10-14",
-        "equity": 1327.83,
-        "cash": 1327.74,
-        "n_positions": 0
+        "equity": 1252.35,
+        "cash": 655.66,
+        "n_positions": 3
       },
       {
         "date": "2025-10-15",
-        "equity": 1327.74,
-        "cash": 1327.74,
-        "n_positions": 0
+        "equity": 1246.63,
+        "cash": 655.66,
+        "n_positions": 3
       },
       {
         "date": "2025-10-16",
-        "equity": 1327.74,
-        "cash": 1327.74,
-        "n_positions": 0
+        "equity": 1248.66,
+        "cash": 655.66,
+        "n_positions": 3
       },
       {
         "date": "2025-10-17",
-        "equity": 1327.74,
-        "cash": 1327.74,
-        "n_positions": 0
+        "equity": 1252.22,
+        "cash": 655.66,
+        "n_positions": 3
       },
       {
         "date": "2025-10-20",
-        "equity": 1327.74,
-        "cash": 1327.74,
-        "n_positions": 0
+        "equity": 1268.8,
+        "cash": 655.66,
+        "n_positions": 3
       },
       {
         "date": "2025-10-21",
-        "equity": 1327.74,
-        "cash": 1327.74,
-        "n_positions": 0
+        "equity": 1287.39,
+        "cash": 874.22,
+        "n_positions": 2
       },
       {
         "date": "2025-10-22",
-        "equity": 1327.74,
-        "cash": 1327.74,
-        "n_positions": 0
+        "equity": 1286.26,
+        "cash": 874.22,
+        "n_positions": 2
       },
       {
         "date": "2025-10-23",
-        "equity": 1327.74,
-        "cash": 1327.74,
+        "equity": 1279.56,
+        "cash": 1279.34,
         "n_positions": 0
       },
       {
         "date": "2025-10-24",
-        "equity": 1327.74,
-        "cash": 1327.74,
+        "equity": 1279.34,
+        "cash": 1279.34,
         "n_positions": 0
       },
       {
         "date": "2025-10-27",
-        "equity": 1327.74,
-        "cash": 1327.74,
+        "equity": 1279.34,
+        "cash": 1279.34,
         "n_positions": 0
       },
       {
         "date": "2025-10-28",
-        "equity": 1327.74,
-        "cash": 1327.74,
+        "equity": 1279.34,
+        "cash": 1279.34,
         "n_positions": 0
       },
       {
         "date": "2025-10-29",
-        "equity": 1327.74,
-        "cash": 784.49,
-        "n_positions": 2
+        "equity": 1279.34,
+        "cash": 427.47,
+        "n_positions": 4
       },
       {
         "date": "2025-10-30",
-        "equity": 1336.06,
-        "cash": 784.49,
-        "n_positions": 2
+        "equity": 1275.35,
+        "cash": 427.47,
+        "n_positions": 4
       },
       {
         "date": "2025-10-31",
-        "equity": 1334.74,
-        "cash": 784.49,
-        "n_positions": 2
+        "equity": 1272.66,
+        "cash": 427.47,
+        "n_positions": 4
       },
       {
         "date": "2025-11-03",
-        "equity": 1335.95,
-        "cash": 784.49,
-        "n_positions": 2
+        "equity": 1271.96,
+        "cash": 427.47,
+        "n_positions": 4
       },
       {
         "date": "2025-11-04",
-        "equity": 1330.77,
-        "cash": 784.49,
-        "n_positions": 2
+        "equity": 1271.93,
+        "cash": 427.47,
+        "n_positions": 4
       },
       {
         "date": "2025-11-05",
-        "equity": 1337.62,
-        "cash": 784.49,
-        "n_positions": 2
+        "equity": 1263.35,
+        "cash": 595.08,
+        "n_positions": 3
       },
       {
         "date": "2025-11-06",
-        "equity": 1337.69,
-        "cash": 784.49,
-        "n_positions": 2
+        "equity": 1262.39,
+        "cash": 595.08,
+        "n_positions": 3
       },
       {
         "date": "2025-11-07",
-        "equity": 1330.49,
-        "cash": 784.49,
-        "n_positions": 2
+        "equity": 1266.78,
+        "cash": 595.08,
+        "n_positions": 3
       },
       {
         "date": "2025-11-10",
-        "equity": 1342.96,
-        "cash": 784.49,
-        "n_positions": 2
+        "equity": 1269.71,
+        "cash": 595.08,
+        "n_positions": 3
       },
       {
         "date": "2025-11-11",
-        "equity": 1349.97,
-        "cash": 784.49,
-        "n_positions": 2
+        "equity": 1275.34,
+        "cash": 595.08,
+        "n_positions": 3
       },
       {
         "date": "2025-11-12",
-        "equity": 1343.61,
-        "cash": 784.49,
-        "n_positions": 2
+        "equity": 1274.08,
+        "cash": 595.08,
+        "n_positions": 3
       },
       {
         "date": "2025-11-13",
-        "equity": 1334.96,
-        "cash": 1062.37,
-        "n_positions": 1
+        "equity": 1274.32,
+        "cash": 595.08,
+        "n_positions": 3
       },
       {
         "date": "2025-11-14",
-        "equity": 1334.28,
-        "cash": 1062.37,
-        "n_positions": 1
+        "equity": 1267.73,
+        "cash": 595.08,
+        "n_positions": 3
       },
       {
         "date": "2025-11-17",
-        "equity": 1329.34,
-        "cash": 1062.37,
-        "n_positions": 1
+        "equity": 1258.34,
+        "cash": 726.63,
+        "n_positions": 2
       },
       {
         "date": "2025-11-18",
-        "equity": 1329.32,
-        "cash": 1062.37,
-        "n_positions": 1
+        "equity": 1260.34,
+        "cash": 726.63,
+        "n_positions": 2
       },
       {
         "date": "2025-11-19",
-        "equity": 1330.44,
-        "cash": 1062.37,
-        "n_positions": 1
+        "equity": 1258.41,
+        "cash": 726.63,
+        "n_positions": 2
       },
       {
         "date": "2025-11-20",
-        "equity": 1328.13,
-        "cash": 1062.37,
-        "n_positions": 1
+        "equity": 1255.58,
+        "cash": 726.63,
+        "n_positions": 2
       },
       {
         "date": "2025-11-21",
-        "equity": 1333.36,
-        "cash": 1062.37,
-        "n_positions": 1
+        "equity": 1263.54,
+        "cash": 726.63,
+        "n_positions": 2
       },
       {
         "date": "2025-11-24",
-        "equity": 1337.78,
-        "cash": 1062.37,
-        "n_positions": 1
+        "equity": 1269.26,
+        "cash": 726.63,
+        "n_positions": 2
       },
       {
         "date": "2025-11-25",
-        "equity": 1338.83,
-        "cash": 1062.37,
-        "n_positions": 1
+        "equity": 1276.07,
+        "cash": 726.63,
+        "n_positions": 2
       },
       {
         "date": "2025-11-26",
-        "equity": 1339.41,
-        "cash": 1062.37,
-        "n_positions": 1
+        "equity": 1276.56,
+        "cash": 726.63,
+        "n_positions": 2
       },
       {
         "date": "2025-11-28",
-        "equity": 1340.71,
-        "cash": 1340.56,
+        "equity": 1274.54,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-01",
-        "equity": 1340.56,
-        "cash": 1340.56,
+        "equity": 1274.25,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-02",
-        "equity": 1340.56,
-        "cash": 1340.56,
+        "equity": 1274.25,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-03",
-        "equity": 1340.56,
-        "cash": 1340.56,
+        "equity": 1274.25,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-04",
-        "equity": 1340.56,
-        "cash": 1340.56,
+        "equity": 1274.25,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-05",
-        "equity": 1340.56,
-        "cash": 1340.56,
+        "equity": 1274.25,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-08",
-        "equity": 1340.56,
-        "cash": 1340.56,
+        "equity": 1274.25,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-09",
-        "equity": 1340.56,
-        "cash": 1340.56,
+        "equity": 1274.25,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-10",
-        "equity": 1340.56,
-        "cash": 1340.56,
+        "equity": 1274.25,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-11",
-        "equity": 1340.56,
-        "cash": 1340.56,
+        "equity": 1274.25,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-12",
-        "equity": 1340.56,
-        "cash": 1340.56,
+        "equity": 1274.25,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-15",
-        "equity": 1340.56,
-        "cash": 1340.56,
+        "equity": 1274.25,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-16",
-        "equity": 1340.56,
-        "cash": 1340.56,
+        "equity": 1274.25,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-17",
-        "equity": 1340.56,
-        "cash": 1340.56,
+        "equity": 1274.25,
+        "cash": 1274.25,
         "n_positions": 0
       },
       {
         "date": "2025-12-18",
-        "equity": 1340.56,
-        "cash": 1135.97,
-        "n_positions": 2
+        "equity": 1274.25,
+        "cash": 1274.25,
+        "n_positions": 0
       },
       {
         "date": "2025-12-19",
-        "equity": 1341.44,
-        "cash": 1135.97,
-        "n_positions": 2
+        "equity": 1274.25,
+        "cash": 1274.25,
+        "n_positions": 0
       },
       {
         "date": "2025-12-22",
-        "equity": 1339.89,
-        "cash": 1042.47,
+        "equity": 1274.25,
+        "cash": 990.46,
         "n_positions": 2
       },
       {
         "date": "2025-12-23",
-        "equity": 1338.16,
-        "cash": 1042.47,
+        "equity": 1272.35,
+        "cash": 990.46,
         "n_positions": 2
       },
       {
         "date": "2025-12-24",
-        "equity": 1343.09,
-        "cash": 1042.47,
-        "n_positions": 2
+        "equity": 1274.54,
+        "cash": 331.33,
+        "n_positions": 5
       },
       {
         "date": "2025-12-26",
-        "equity": 1348.85,
-        "cash": 1042.47,
-        "n_positions": 2
+        "equity": 1275.56,
+        "cash": 331.33,
+        "n_positions": 5
       },
       {
         "date": "2025-12-29",
-        "equity": 1344.39,
-        "cash": 1042.47,
-        "n_positions": 2
+        "equity": 1271.67,
+        "cash": 331.33,
+        "n_positions": 5
       },
       {
         "date": "2025-12-30",
-        "equity": 1342.93,
-        "cash": 728.87,
-        "n_positions": 3
+        "equity": 1270.51,
+        "cash": 331.33,
+        "n_positions": 5
       },
       {
         "date": "2025-12-31",
-        "equity": 1342.0,
-        "cash": 728.87,
-        "n_positions": 3
+        "equity": 1263.28,
+        "cash": 331.33,
+        "n_positions": 5
       },
       {
         "date": "2026-01-02",
-        "equity": 1351.44,
-        "cash": 728.87,
-        "n_positions": 3
+        "equity": 1275.74,
+        "cash": 331.33,
+        "n_positions": 5
       },
       {
         "date": "2026-01-05",
-        "equity": 1357.81,
-        "cash": 872.6,
-        "n_positions": 2
+        "equity": 1310.52,
+        "cash": 509.17,
+        "n_positions": 4
       },
       {
         "date": "2026-01-06",
-        "equity": 1356.43,
-        "cash": 218.82,
+        "equity": 1334.65,
+        "cash": 169.36,
         "n_positions": 5
       },
       {
         "date": "2026-01-07",
-        "equity": 1357.56,
-        "cash": 218.82,
+        "equity": 1323.65,
+        "cash": 169.36,
         "n_positions": 5
       },
       {
         "date": "2026-01-08",
-        "equity": 1362.48,
-        "cash": 218.82,
+        "equity": 1318.99,
+        "cash": 169.36,
         "n_positions": 5
       },
       {
         "date": "2026-01-09",
-        "equity": 1363.19,
-        "cash": 218.82,
+        "equity": 1331.7,
+        "cash": 169.36,
         "n_positions": 5
       },
       {
         "date": "2026-01-12",
-        "equity": 1366.69,
-        "cash": 713.78,
-        "n_positions": 3
+        "equity": 1335.49,
+        "cash": 306.53,
+        "n_positions": 4
       },
       {
         "date": "2026-01-13",
-        "equity": 1372.99,
-        "cash": 713.78,
-        "n_positions": 3
+        "equity": 1349.93,
+        "cash": 306.53,
+        "n_positions": 4
       },
       {
         "date": "2026-01-14",
-        "equity": 1371.56,
-        "cash": 713.78,
-        "n_positions": 3
+        "equity": 1326.41,
+        "cash": 306.53,
+        "n_positions": 4
       },
       {
         "date": "2026-01-15",
-        "equity": 1376.29,
-        "cash": 713.78,
+        "equity": 1362.43,
+        "cash": 613.73,
         "n_positions": 3
       },
       {
         "date": "2026-01-16",
-        "equity": 1373.09,
-        "cash": 968.7,
+        "equity": 1344.3,
+        "cash": 897.48,
         "n_positions": 2
       },
       {
         "date": "2026-01-20",
-        "equity": 1361.0,
-        "cash": 1146.46,
+        "equity": 1332.81,
+        "cash": 1114.5,
         "n_positions": 1
       },
       {
         "date": "2026-01-21",
-        "equity": 1354.44,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1341.27,
+        "cash": 1114.5,
+        "n_positions": 1
       },
       {
         "date": "2026-01-22",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1338.53,
+        "cash": 1114.5,
+        "n_positions": 1
       },
       {
         "date": "2026-01-23",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1334.11,
+        "cash": 1114.5,
+        "n_positions": 1
       },
       {
         "date": "2026-01-26",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1336.85,
+        "cash": 1114.5,
+        "n_positions": 1
       },
       {
         "date": "2026-01-27",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1334.03,
+        "cash": 1114.5,
+        "n_positions": 1
       },
       {
         "date": "2026-01-28",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.27,
         "n_positions": 0
       },
       {
         "date": "2026-01-29",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.27,
+        "cash": 1331.27,
         "n_positions": 0
       },
       {
         "date": "2026-01-30",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.27,
+        "cash": 1331.27,
         "n_positions": 0
       },
       {
         "date": "2026-02-02",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.27,
+        "cash": 1331.27,
         "n_positions": 0
       },
       {
         "date": "2026-02-03",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.27,
+        "cash": 1331.27,
         "n_positions": 0
       },
       {
         "date": "2026-02-04",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1331.27,
+        "cash": 1287.65,
+        "n_positions": 1
       },
       {
         "date": "2026-02-05",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1330.94,
+        "cash": 1287.65,
+        "n_positions": 1
       },
       {
         "date": "2026-02-06",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1333.09,
+        "cash": 1287.65,
+        "n_positions": 1
       },
       {
         "date": "2026-02-09",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1333.99,
+        "cash": 1287.65,
+        "n_positions": 1
       },
       {
         "date": "2026-02-10",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1334.48,
+        "cash": 1287.65,
+        "n_positions": 1
       },
       {
         "date": "2026-02-11",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1335.64,
+        "cash": 1287.65,
+        "n_positions": 1
       },
       {
         "date": "2026-02-12",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1335.62,
+        "cash": 1287.65,
+        "n_positions": 1
       },
       {
         "date": "2026-02-13",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1335.55,
+        "cash": 1287.65,
+        "n_positions": 1
       },
       {
         "date": "2026-02-17",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1335.5,
+        "cash": 1287.65,
+        "n_positions": 1
       },
       {
         "date": "2026-02-18",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1334.95,
+        "cash": 1287.65,
+        "n_positions": 1
       },
       {
         "date": "2026-02-19",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1333.36,
+        "cash": 1287.65,
+        "n_positions": 1
       },
       {
         "date": "2026-02-20",
-        "equity": 1354.33,
-        "cash": 1354.33,
-        "n_positions": 0
+        "equity": 1333.37,
+        "cash": 1287.65,
+        "n_positions": 1
       },
       {
         "date": "2026-02-23",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.41,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-02-24",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-02-25",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-02-26",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-02-27",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-02",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-03",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-04",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-05",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-06",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-09",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-10",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-11",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-12",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-13",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-16",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-17",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-18",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-19",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-20",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-23",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-24",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-25",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-26",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-27",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-30",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-03-31",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-04-01",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-04-02",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-04-06",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-04-07",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-04-08",
-        "equity": 1354.33,
-        "cash": 1354.33,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-04-09",
-        "equity": 1354.33,
-        "cash": 1231.4,
-        "n_positions": 1
+        "equity": 1331.38,
+        "cash": 1331.38,
+        "n_positions": 0
       },
       {
         "date": "2026-04-10",
-        "equity": 1352.15,
-        "cash": 1231.4,
-        "n_positions": 1
+        "equity": 1331.38,
+        "cash": 1331.38,
+        "n_positions": 0
       },
       {
         "date": "2026-04-13",
-        "equity": 1348.18,
-        "cash": 1348.12,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-04-14",
-        "equity": 1348.12,
-        "cash": 1348.12,
+        "equity": 1331.38,
+        "cash": 1331.38,
         "n_positions": 0
       },
       {
         "date": "2026-04-15",
-        "equity": 1348.12,
-        "cash": 100.18,
-        "n_positions": 5
+        "equity": 1331.38,
+        "cash": 1153.19,
+        "n_positions": 1
       },
       {
         "date": "2026-04-16",
-        "equity": 1363.94,
-        "cash": 100.18,
-        "n_positions": 5
+        "equity": 1325.14,
+        "cash": 1325.05,
+        "n_positions": 0
       },
       {
         "date": "2026-04-17",
-        "equity": 1381.22,
-        "cash": 100.18,
-        "n_positions": 5
+        "equity": 1325.05,
+        "cash": 1325.05,
+        "n_positions": 0
       },
       {
         "date": "2026-04-20",
-        "equity": 1400.8,
-        "cash": 30.41,
-        "n_positions": 5
+        "equity": 1325.05,
+        "cash": 900.18,
+        "n_positions": 2
       },
       {
         "date": "2026-04-21",
-        "equity": 1388.53,
-        "cash": 292.0,
-        "n_positions": 4
+        "equity": 1333.03,
+        "cash": 900.18,
+        "n_positions": 2
       },
       {
         "date": "2026-04-22",
-        "equity": 1395.87,
-        "cash": 33.12,
-        "n_positions": 5
+        "equity": 1331.28,
+        "cash": 678.7,
+        "n_positions": 3
       },
       {
         "date": "2026-04-23",
-        "equity": 1387.09,
-        "cash": 33.12,
-        "n_positions": 5
+        "equity": 1316.13,
+        "cash": 814.15,
+        "n_positions": 3
       },
       {
         "date": "2026-04-24",
-        "equity": 1385.64,
-        "cash": 32.8,
-        "n_positions": 5
+        "equity": 1314.92,
+        "cash": 512.12,
+        "n_positions": 4
       },
       {
         "date": "2026-04-27",
-        "equity": 1397.91,
-        "cash": 32.58,
-        "n_positions": 5
+        "equity": 1306.72,
+        "cash": 512.12,
+        "n_positions": 4
       },
       {
         "date": "2026-04-28",
-        "equity": 1392.24,
-        "cash": 32.58,
-        "n_positions": 5
+        "equity": 1300.52,
+        "cash": 511.97,
+        "n_positions": 4
       },
       {
         "date": "2026-04-29",
-        "equity": 1388.36,
-        "cash": 32.58,
+        "equity": 1316.17,
+        "cash": 330.34,
         "n_positions": 5
       },
       {
         "date": "2026-04-30",
-        "equity": 1391.02,
-        "cash": 231.81,
-        "n_positions": 4
+        "equity": 1313.53,
+        "cash": 330.34,
+        "n_positions": 5
       },
       {
         "date": "2026-05-01",
-        "equity": 1395.92,
-        "cash": 33.49,
+        "equity": 1313.86,
+        "cash": 330.34,
         "n_positions": 5
       },
       {
         "date": "2026-05-04",
-        "equity": 1379.24,
-        "cash": 33.49,
+        "equity": 1312.78,
+        "cash": 330.34,
         "n_positions": 5
       },
       {
         "date": "2026-05-05",
-        "equity": 1394.0,
-        "cash": 33.49,
+        "equity": 1292.41,
+        "cash": 376.28,
         "n_positions": 5
       },
       {
         "date": "2026-05-06",
-        "equity": 1419.7,
-        "cash": 33.49,
-        "n_positions": 5
+        "equity": 1259.97,
+        "cash": 484.58,
+        "n_positions": 4
       },
       {
         "date": "2026-05-07",
-        "equity": 1401.09,
-        "cash": 33.18,
+        "equity": 1273.18,
+        "cash": 250.13,
         "n_positions": 5
       },
       {
         "date": "2026-05-08",
-        "equity": 1396.35,
-        "cash": 788.94,
+        "equity": 1286.24,
+        "cash": 811.66,
         "n_positions": 2
       },
       {
         "date": "2026-05-11",
-        "equity": 1389.33,
-        "cash": 569.65,
+        "equity": 1292.41,
+        "cash": 597.89,
         "n_positions": 3
       },
       {
         "date": "2026-05-12",
-        "equity": 1396.79,
-        "cash": 569.65,
+        "equity": 1290.26,
+        "cash": 597.89,
         "n_positions": 3
       },
       {
         "date": "2026-05-13",
-        "equity": 1391.61,
-        "cash": 293.88,
+        "equity": 1304.14,
+        "cash": 323.8,
         "n_positions": 4
       },
       {
         "date": "2026-05-14",
-        "equity": 1405.8,
-        "cash": 45.79,
-        "n_positions": 5
-      },
-      {
-        "date": "2026-05-15",
-        "equity": 1392.82,
-        "cash": 323.35,
-        "n_positions": 4
-      },
-      {
-        "date": "2026-05-18",
-        "equity": 1394.77,
-        "cash": 545.3,
+        "equity": 1323.5,
+        "cash": 561.64,
         "n_positions": 3
       },
       {
-        "date": "2026-05-19",
-        "equity": 1390.83,
-        "cash": 839.52,
+        "date": "2026-05-15",
+        "equity": 1327.08,
+        "cash": 839.2,
         "n_positions": 2
+      },
+      {
+        "date": "2026-05-18",
+        "equity": 1335.98,
+        "cash": 1095.38,
+        "n_positions": 1
+      },
+      {
+        "date": "2026-05-19",
+        "equity": 1335.83,
+        "cash": 1095.38,
+        "n_positions": 1
       },
       {
         "date": "2026-05-20",
-        "equity": 1396.59,
-        "cash": 839.52,
-        "n_positions": 2
+        "equity": 1332.6,
+        "cash": 1095.38,
+        "n_positions": 1
       },
       {
         "date": "2026-05-21",
-        "equity": 1400.63,
-        "cash": 839.52,
-        "n_positions": 2
+        "equity": 1342.53,
+        "cash": 1095.38,
+        "n_positions": 1
       },
       {
         "date": "2026-05-22",
-        "equity": 1406.0,
-        "cash": 498.67,
-        "n_positions": 4
+        "equity": 1373.25,
+        "cash": 1244.9,
+        "n_positions": 1
       },
       {
         "date": "2026-05-26",
-        "equity": 1406.69,
-        "cash": 498.67,
-        "n_positions": 4
+        "equity": 1368.92,
+        "cash": 1244.9,
+        "n_positions": 1
       },
       {
         "date": "2026-05-27",
-        "equity": 1404.38,
-        "cash": 180.05,
-        "n_positions": 5
+        "equity": 1369.4,
+        "cash": 783.9,
+        "n_positions": 3
       },
       {
         "date": "2026-05-28",
-        "equity": 1456.54,
-        "cash": 548.64,
-        "n_positions": 4
+        "equity": 1424.67,
+        "cash": 490.84,
+        "n_positions": 5
       },
       {
         "date": "2026-05-29",
-        "equity": 1455.34,
-        "cash": 317.75,
+        "equity": 1466.74,
+        "cash": 490.66,
         "n_positions": 5
       },
       {
         "date": "2026-06-01",
-        "equity": 1450.07,
-        "cash": 317.75,
-        "n_positions": 5
+        "equity": 1476.59,
+        "cash": 834.54,
+        "n_positions": 3
       },
       {
         "date": "2026-06-02",
-        "equity": 1455.21,
-        "cash": 532.79,
-        "n_positions": 4
+        "equity": 1470.12,
+        "cash": 428.89,
+        "n_positions": 5
       },
       {
         "date": "2026-06-03",
-        "equity": 1442.99,
-        "cash": 532.79,
+        "equity": 1468.56,
+        "cash": 639.06,
         "n_positions": 4
       },
       {
         "date": "2026-06-04",
-        "equity": 1455.98,
-        "cash": 478.6,
-        "n_positions": 4
+        "equity": 1473.34,
+        "cash": 296.89,
+        "n_positions": 5
       },
       {
         "date": "2026-06-05",
-        "equity": 1436.59,
-        "cash": 601.1,
-        "n_positions": 3
+        "equity": 1439.12,
+        "cash": 435.42,
+        "n_positions": 4
       },
       {
         "date": "2026-06-08",
-        "equity": 1433.06,
-        "cash": 809.32,
-        "n_positions": 2
+        "equity": 1442.81,
+        "cash": 300.54,
+        "n_positions": 5
       },
       {
         "date": "2026-06-09",
-        "equity": 1426.39,
-        "cash": 1099.72,
-        "n_positions": 1
+        "equity": 1443.24,
+        "cash": 300.54,
+        "n_positions": 5
       },
       {
         "date": "2026-06-10",
-        "equity": 1426.96,
-        "cash": 1099.72,
-        "n_positions": 1
+        "equity": 1436.64,
+        "cash": 786.06,
+        "n_positions": 3
       },
       {
         "date": "2026-06-11",
-        "equity": 1430.68,
-        "cash": 1099.72,
-        "n_positions": 1
+        "equity": 1436.18,
+        "cash": 786.06,
+        "n_positions": 3
       },
       {
         "date": "2026-06-12",
-        "equity": 1435.84,
-        "cash": 1099.72,
-        "n_positions": 1
+        "equity": 1447.1,
+        "cash": 786.06,
+        "n_positions": 3
       },
       {
         "date": "2026-06-15",
-        "equity": 1434.94,
-        "cash": 1099.72,
-        "n_positions": 1
+        "equity": 1434.1,
+        "cash": 786.06,
+        "n_positions": 3
       },
       {
         "date": "2026-06-16",
-        "equity": 1440.76,
-        "cash": 1440.58,
-        "n_positions": 0
+        "equity": 1425.32,
+        "cash": 1029.12,
+        "n_positions": 2
       },
       {
         "date": "2026-06-17",
-        "equity": 1440.58,
-        "cash": 1440.58,
-        "n_positions": 0
+        "equity": 1407.89,
+        "cash": 1281.06,
+        "n_positions": 1
       },
       {
         "date": "2026-06-18",
-        "equity": 1440.58,
-        "cash": 1440.58,
-        "n_positions": 0
+        "equity": 1409.43,
+        "cash": 1281.06,
+        "n_positions": 1
       },
       {
         "date": "2026-06-22",
-        "equity": 1440.58,
-        "cash": 1440.58,
+        "equity": 1404.63,
+        "cash": 1404.56,
         "n_positions": 0
       },
       {
         "date": "2026-06-23",
-        "equity": 1440.58,
-        "cash": 1440.58,
+        "equity": 1404.56,
+        "cash": 1404.56,
         "n_positions": 0
       },
       {
         "date": "2026-06-24",
-        "equity": 1440.58,
-        "cash": 1440.58,
+        "equity": 1404.56,
+        "cash": 1404.56,
         "n_positions": 0
       },
       {
         "date": "2026-06-25",
-        "equity": 1440.58,
-        "cash": 1440.58,
+        "equity": 1404.56,
+        "cash": 1404.56,
         "n_positions": 0
       },
       {
         "date": "2026-06-26",
-        "equity": 1440.58,
-        "cash": 1440.58,
+        "equity": 1404.56,
+        "cash": 1404.56,
         "n_positions": 0
       },
       {
         "date": "2026-06-29",
-        "equity": 1440.58,
-        "cash": 1440.58,
+        "equity": 1404.56,
+        "cash": 1404.56,
         "n_positions": 0
       },
       {
         "date": "2026-06-30",
-        "equity": 1440.58,
-        "cash": 1326.57,
-        "n_positions": 1
+        "equity": 1404.56,
+        "cash": 1404.56,
+        "n_positions": 0
       },
       {
         "date": "2026-07-01",
-        "equity": 1443.29,
-        "cash": 1326.57,
-        "n_positions": 1
+        "equity": 1404.56,
+        "cash": 1404.56,
+        "n_positions": 0
       },
       {
         "date": "2026-07-02",
-        "equity": 1444.03,
-        "cash": 1326.57,
-        "n_positions": 1
+        "equity": 1404.56,
+        "cash": 1404.56,
+        "n_positions": 0
       },
       {
         "date": "2026-07-06",
-        "equity": 1446.37,
-        "cash": 1326.57,
-        "n_positions": 1
+        "equity": 1404.56,
+        "cash": 1404.56,
+        "n_positions": 0
       },
       {
         "date": "2026-07-07",
-        "equity": 1446.29,
-        "cash": 1247.81,
-        "n_positions": 2
+        "equity": 1404.56,
+        "cash": 1325.81,
+        "n_positions": 1
       },
       {
         "date": "2026-07-08",
-        "equity": 1442.48,
-        "cash": 1247.81,
-        "n_positions": 2
+        "equity": 1403.88,
+        "cash": 1325.81,
+        "n_positions": 1
       },
       {
         "date": "2026-07-09",
-        "equity": 1446.3,
-        "cash": 1247.81,
-        "n_positions": 2
+        "equity": 1405.8,
+        "cash": 1325.81,
+        "n_positions": 1
       },
       {
         "date": "2026-07-10",
-        "equity": 1449.95,
-        "cash": 1247.81,
-        "n_positions": 2
+        "equity": 1408.61,
+        "cash": 1325.81,
+        "n_positions": 1
       },
       {
         "date": "2026-07-13",
-        "equity": 1448.46,
-        "cash": 1247.81,
-        "n_positions": 2
+        "equity": 1407.46,
+        "cash": 1325.81,
+        "n_positions": 1
       },
       {
         "date": "2026-07-14",
-        "equity": 1453.03,
-        "cash": 1247.68,
+        "equity": 1409.79,
+        "cash": 1252.77,
         "n_positions": 2
       },
       {
         "date": "2026-07-15",
-        "equity": 1456.23,
-        "cash": 1247.6,
+        "equity": 1411.62,
+        "cash": 1252.68,
         "n_positions": 2
       },
       {
         "date": "2026-07-16",
-        "equity": 1455.87,
-        "cash": 1247.6,
+        "equity": 1413.71,
+        "cash": 1252.68,
         "n_positions": 2
       },
       {
         "date": "2026-07-17",
-        "equity": 1455.55,
-        "cash": 1247.6,
+        "equity": 1413.21,
+        "cash": 1252.68,
         "n_positions": 2
       },
       {
         "date": "2026-07-20",
-        "equity": 1453.57,
-        "cash": 1247.6,
+        "equity": 1410.31,
+        "cash": 1252.68,
         "n_positions": 2
       },
       {
         "date": "2026-07-21",
-        "equity": 1455.26,
-        "cash": 1247.6,
+        "equity": 1410.6,
+        "cash": 1252.68,
         "n_positions": 2
       },
       {
         "date": "2026-07-22",
-        "equity": 1457.95,
-        "cash": 1247.6,
+        "equity": 1415.97,
+        "cash": 1252.68,
         "n_positions": 2
       },
       {
         "date": "2026-07-23",
-        "equity": 1454.59,
-        "cash": 1247.6,
+        "equity": 1412.93,
+        "cash": 1252.68,
         "n_positions": 2
       },
       {
         "date": "2026-07-24",
-        "equity": 1457.13,
-        "cash": 1247.6,
-        "n_positions": 2
+        "equity": 1422.43,
+        "cash": 1336.96,
+        "n_positions": 1
       },
       {
         "date": "2026-07-27",
-        "equity": 1460.31,
-        "cash": 1247.6,
-        "n_positions": 2
+        "equity": 1425.41,
+        "cash": 1336.96,
+        "n_positions": 1
       },
       {
         "date": "2026-07-28",
-        "equity": 1462.31,
-        "cash": 1247.6,
+        "equity": 1426.43,
+        "cash": 1292.85,
         "n_positions": 2
       },
       {
         "date": "2026-07-29",
-        "equity": 1459.91,
-        "cash": 1247.6,
+        "equity": 1425.66,
+        "cash": 1292.85,
         "n_positions": 2
       },
       {
         "date": "2026-07-30",
-        "equity": 1458.88,
-        "cash": 1247.6,
+        "equity": 1423.82,
+        "cash": 1292.85,
         "n_positions": 2
       },
       {
         "date": "2026-07-31",
-        "equity": 1457.76,
-        "cash": 1247.51,
+        "equity": 1419.94,
+        "cash": 1292.72,
         "n_positions": 2
       },
       {
         "date": "2026-08-03",
-        "equity": 1457.72,
-        "cash": 1247.51,
+        "equity": 1419.42,
+        "cash": 1292.72,
         "n_positions": 2
       }
     ],
     "trade_log": [
       {
-        "ticker": "NVDA",
+        "ticker": "EXPE",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 139.1226348876953,
-        "exit_price": 132.55288696289062,
-        "entry_date": "2024-10-30",
-        "exit_date": "2024-10-31",
-        "holding_days": 1,
-        "gross_pnl": -6.5697,
-        "net_pnl": -6.7085,
-        "return_pct": -4.722,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "BAC",
-        "direction": "LONG",
-        "shares": 7,
-        "entry_price": 40.68095397949219,
-        "exit_price": 43.661590576171875,
+        "entry_price": 159.1756134033203,
+        "exit_price": 169.74452209472656,
         "entry_date": "2024-10-30",
         "exit_date": "2024-11-06",
         "holding_days": 7,
-        "gross_pnl": 20.8645,
-        "net_pnl": 20.5616,
-        "return_pct": 7.327,
+        "gross_pnl": 10.5689,
+        "net_pnl": 10.4008,
+        "return_pct": 6.64,
         "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "DELL",
+        "ticker": "APH",
         "direction": "LONG",
-        "shares": 1,
-        "entry_price": 125.93635559082031,
-        "exit_price": 128.1164093017578,
+        "shares": 3,
+        "entry_price": 67.45406341552734,
+        "exit_price": 72.96997833251953,
         "entry_date": "2024-10-30",
-        "exit_date": "2024-11-15",
-        "holding_days": 16,
-        "gross_pnl": 2.1801,
-        "net_pnl": 2.0502,
-        "return_pct": 1.731,
-        "exit_reason": "TRAILING_STOP",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "NVDA",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 147.39967346191406,
-        "exit_price": 139.9313507080078,
-        "entry_date": "2024-11-08",
-        "exit_date": "2024-11-18",
-        "holding_days": 10,
-        "gross_pnl": -7.4683,
-        "net_pnl": -7.6151,
-        "return_pct": -5.067,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "SIDEWAYS"
-      },
-      {
-        "ticker": "GOOGL",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 177.74684143066406,
-        "exit_price": 166.56808471679688,
-        "entry_date": "2024-11-13",
-        "exit_date": "2024-11-21",
+        "exit_date": "2024-11-07",
         "holding_days": 8,
-        "gross_pnl": -11.1788,
-        "net_pnl": -11.3545,
-        "return_pct": -6.289,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "SIDEWAYS"
-      },
-      {
-        "ticker": "NVDA",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 146.44119262695312,
-        "exit_price": 135.80780029296875,
-        "entry_date": "2024-11-21",
-        "exit_date": "2024-11-25",
-        "holding_days": 4,
-        "gross_pnl": -10.6334,
-        "net_pnl": -10.7775,
-        "return_pct": -7.261,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "DELL",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 135.20155334472656,
-        "exit_price": 121.05073547363281,
-        "entry_date": "2024-11-21",
-        "exit_date": "2024-11-27",
-        "holding_days": 6,
-        "gross_pnl": -14.1508,
-        "net_pnl": -14.2816,
-        "return_pct": -10.466,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "AAPL",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 227.0692596435547,
-        "exit_price": 238.0689697265625,
-        "entry_date": "2024-11-21",
-        "exit_date": "2024-12-02",
-        "holding_days": 11,
-        "gross_pnl": 10.9997,
-        "net_pnl": 10.762,
-        "return_pct": 4.844,
+        "gross_pnl": 16.5477,
+        "net_pnl": 16.332,
+        "return_pct": 8.177,
         "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "NVDA",
+        "ticker": "PYPL",
+        "direction": "LONG",
+        "shares": 3,
+        "entry_price": 77.54839324951172,
+        "exit_price": 86.19351959228516,
+        "entry_date": "2024-10-30",
+        "exit_date": "2024-11-11",
+        "holding_days": 12,
+        "gross_pnl": 25.9354,
+        "net_pnl": 25.6839,
+        "return_pct": 11.148,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "UAL",
+        "direction": "LONG",
+        "shares": 2,
+        "entry_price": 80.41999816894531,
+        "exit_price": 89.43000030517578,
+        "entry_date": "2024-10-30",
+        "exit_date": "2024-11-11",
+        "holding_days": 12,
+        "gross_pnl": 18.02,
+        "net_pnl": 17.8461,
+        "return_pct": 11.204,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "WDAY",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 144.84368896484375,
-        "exit_price": 134.86859130859375,
+        "entry_price": 256.5400085449219,
+        "exit_price": 276.510009765625,
+        "entry_date": "2024-11-08",
+        "exit_date": "2024-11-13",
+        "holding_days": 5,
+        "gross_pnl": 19.97,
+        "net_pnl": 19.6976,
+        "return_pct": 7.784,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "BAX",
+        "direction": "LONG",
+        "shares": 7,
+        "entry_price": 33.40663146972656,
+        "exit_price": 31.85442543029785,
+        "entry_date": "2024-11-11",
+        "exit_date": "2024-11-13",
+        "holding_days": 2,
+        "gross_pnl": -10.8654,
+        "net_pnl": -11.0998,
+        "return_pct": -4.646,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "PANW",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 201.17999267578125,
+        "exit_price": 193.5,
+        "entry_date": "2024-11-13",
+        "exit_date": "2024-11-15",
+        "holding_days": 2,
+        "gross_pnl": -7.68,
+        "net_pnl": -7.8815,
+        "return_pct": -3.817,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "APH",
+        "direction": "LONG",
+        "shares": 3,
+        "entry_price": 71.58853149414062,
+        "exit_price": 68.95391082763672,
+        "entry_date": "2024-11-14",
+        "exit_date": "2024-11-18",
+        "holding_days": 4,
+        "gross_pnl": -7.9039,
+        "net_pnl": -8.1195,
+        "return_pct": -3.68,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "WTW",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 310.3017578125,
+        "exit_price": 301.20458984375,
+        "entry_date": "2024-11-13",
+        "exit_date": "2024-11-19",
+        "holding_days": 6,
+        "gross_pnl": -9.0972,
+        "net_pnl": -9.4093,
+        "return_pct": -2.932,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "UAL",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 90.37999725341797,
+        "exit_price": 99.25,
+        "entry_date": "2024-11-18",
+        "exit_date": "2024-12-04",
+        "holding_days": 16,
+        "gross_pnl": 8.87,
+        "net_pnl": 8.7729,
+        "return_pct": 9.814,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "IP",
+        "direction": "LONG",
+        "shares": 3,
+        "entry_price": 55.15325164794922,
+        "exit_price": 53.15671157836914,
+        "entry_date": "2024-11-20",
+        "exit_date": "2024-12-05",
+        "holding_days": 15,
+        "gross_pnl": -5.9896,
+        "net_pnl": -6.156,
+        "return_pct": -3.62,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "EXPE",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 178.54534912109375,
+        "exit_price": 187.19802856445312,
+        "entry_date": "2024-11-08",
+        "exit_date": "2024-12-09",
+        "holding_days": 31,
+        "gross_pnl": 8.6527,
+        "net_pnl": 8.4658,
+        "return_pct": 4.846,
+        "exit_reason": "TIME_STOP",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "NTAP",
+        "direction": "LONG",
+        "shares": 2,
+        "entry_price": 124.59913635253906,
+        "exit_price": 117.27544403076172,
         "entry_date": "2024-12-05",
         "exit_date": "2024-12-10",
         "holding_days": 5,
-        "gross_pnl": -9.9751,
-        "net_pnl": -10.1179,
-        "return_pct": -6.887,
+        "gross_pnl": -14.6474,
+        "net_pnl": -14.8945,
+        "return_pct": -5.878,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "GOOGL",
+        "ticker": "PYPL",
+        "direction": "LONG",
+        "shares": 2,
+        "entry_price": 86.19351959228516,
+        "exit_price": 89.97080993652344,
+        "entry_date": "2024-11-11",
+        "exit_date": "2024-12-11",
+        "holding_days": 30,
+        "gross_pnl": 7.5546,
+        "net_pnl": 7.3743,
+        "return_pct": 4.382,
+        "exit_reason": "TIME_STOP",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "IP",
+        "direction": "LONG",
+        "shares": 6,
+        "entry_price": 53.15671157836914,
+        "exit_price": 51.10392761230469,
+        "entry_date": "2024-12-05",
+        "exit_date": "2024-12-11",
+        "holding_days": 6,
+        "gross_pnl": -12.3167,
+        "net_pnl": -12.637,
+        "return_pct": -3.862,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "EXPE",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 174.45877075195312,
-        "exit_price": 184.20782470703125,
+        "entry_price": 187.19802856445312,
+        "exit_price": 180.7578887939453,
         "entry_date": "2024-12-09",
-        "exit_date": "2024-12-10",
-        "holding_days": 1,
-        "gross_pnl": 9.7491,
-        "net_pnl": 9.5657,
-        "return_pct": 5.588,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "JPM",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 241.6697540283203,
-        "exit_price": 231.67620849609375,
-        "entry_date": "2024-11-25",
         "exit_date": "2024-12-13",
-        "holding_days": 18,
-        "gross_pnl": -9.9935,
-        "net_pnl": -10.2352,
-        "return_pct": -4.135,
+        "holding_days": 4,
+        "gross_pnl": -6.4401,
+        "net_pnl": -6.628,
+        "return_pct": -3.44,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "AAPL",
+        "ticker": "PANW",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 241.10952758789062,
-        "exit_price": 251.8707733154297,
-        "entry_date": "2024-12-03",
-        "exit_date": "2024-12-17",
-        "holding_days": 14,
-        "gross_pnl": 10.7612,
-        "net_pnl": 10.5094,
-        "return_pct": 4.463,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "BAC",
-        "direction": "LONG",
-        "shares": 7,
-        "entry_price": 44.67116165161133,
-        "exit_price": 42.057796478271484,
+        "entry_price": 198.85000610351562,
+        "exit_price": 188.75999450683594,
         "entry_date": "2024-11-21",
         "exit_date": "2024-12-18",
         "holding_days": 27,
-        "gross_pnl": -18.2936,
-        "net_pnl": -18.6045,
-        "return_pct": -5.85,
+        "gross_pnl": -10.09,
+        "net_pnl": -10.2879,
+        "return_pct": -5.074,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "BAC",
+        "ticker": "PYPL",
+        "direction": "LONG",
+        "shares": 3,
+        "entry_price": 89.97080993652344,
+        "exit_price": 84.71631622314453,
+        "entry_date": "2024-12-11",
+        "exit_date": "2024-12-18",
+        "holding_days": 7,
+        "gross_pnl": -15.7635,
+        "net_pnl": -16.0313,
+        "return_pct": -5.84,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "APH",
+        "direction": "LONG",
+        "shares": 4,
+        "entry_price": 72.55554962158203,
+        "exit_price": 69.32281494140625,
+        "entry_date": "2024-12-11",
+        "exit_date": "2024-12-18",
+        "holding_days": 7,
+        "gross_pnl": -12.9309,
+        "net_pnl": -13.2212,
+        "return_pct": -4.456,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "UAL",
         "direction": "LONG",
         "shares": 2,
-        "entry_price": 45.528770446777344,
-        "exit_price": 43.798118591308594,
-        "entry_date": "2025-01-27",
-        "exit_date": "2025-02-20",
-        "holding_days": 24,
-        "gross_pnl": -3.4613,
-        "net_pnl": -3.5528,
-        "return_pct": -3.801,
+        "entry_price": 98.95999908447266,
+        "exit_price": 91.47000122070312,
+        "entry_date": "2024-12-11",
+        "exit_date": "2024-12-18",
+        "holding_days": 7,
+        "gross_pnl": -14.98,
+        "net_pnl": -15.1746,
+        "return_pct": -7.569,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "NTAP",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 122.4491958618164,
+        "exit_price": 116.55026245117188,
+        "entry_date": "2025-01-24",
+        "exit_date": "2025-01-27",
+        "holding_days": 3,
+        "gross_pnl": -5.8989,
+        "net_pnl": -6.021,
+        "return_pct": -4.817,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "IP",
+        "direction": "LONG",
+        "shares": 2,
+        "entry_price": 54.928287506103516,
+        "exit_price": 52.14438247680664,
+        "entry_date": "2025-01-23",
+        "exit_date": "2025-01-31",
+        "holding_days": 8,
+        "gross_pnl": -5.5678,
+        "net_pnl": -5.6774,
+        "return_pct": -5.068,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "DLTR",
+        "direction": "LONG",
+        "shares": 2,
+        "entry_price": 75.62000274658203,
+        "exit_price": 68.7699966430664,
+        "entry_date": "2025-02-19",
+        "exit_date": "2025-03-03",
+        "holding_days": 12,
+        "gross_pnl": -13.7,
+        "net_pnl": -13.8476,
+        "return_pct": -9.058,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "VEEV",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 229.19000244140625,
+        "exit_price": 218.9499969482422,
+        "entry_date": "2025-02-19",
+        "exit_date": "2025-03-03",
+        "holding_days": 12,
+        "gross_pnl": -10.24,
+        "net_pnl": -10.4688,
+        "return_pct": -4.468,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
@@ -3751,8 +3901,8 @@
         "ticker": "BBY",
         "direction": "LONG",
         "shares": 3,
-        "entry_price": 66.81392669677734,
-        "exit_price": 61.95609664916992,
+        "entry_price": 66.8139419555664,
+        "exit_price": 61.95610046386719,
         "entry_date": "2025-05-28",
         "exit_date": "2025-05-29",
         "holding_days": 1,
@@ -3763,333 +3913,438 @@
         "entry_regime": "BULL"
       },
       {
-        "ticker": "DELL",
+        "ticker": "CDW",
         "direction": "LONG",
-        "shares": 2,
-        "entry_price": 111.8811264038086,
-        "exit_price": 106.28560638427734,
+        "shares": 1,
+        "entry_price": 179.86392211914062,
+        "exit_price": 171.4465789794922,
         "entry_date": "2025-05-28",
         "exit_date": "2025-06-02",
         "holding_days": 5,
-        "gross_pnl": -11.191,
-        "net_pnl": -11.414,
-        "return_pct": -5.001,
+        "gross_pnl": -8.4173,
+        "net_pnl": -8.5967,
+        "return_pct": -4.68,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "NVDA",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 134.62132263183594,
-        "exit_price": 145.2864990234375,
-        "entry_date": "2025-05-28",
-        "exit_date": "2025-06-18",
-        "holding_days": 21,
-        "gross_pnl": 10.6652,
-        "net_pnl": 10.522,
-        "return_pct": 7.922,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "DELL",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 106.28560638427734,
-        "exit_price": 117.3881607055664,
-        "entry_date": "2025-06-02",
-        "exit_date": "2025-06-20",
-        "holding_days": 18,
-        "gross_pnl": 11.1026,
-        "net_pnl": 10.9881,
-        "return_pct": 10.446,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "BEAR"
-      },
-      {
-        "ticker": "JPM",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 257.30419921875,
-        "exit_price": 271.7373046875,
-        "entry_date": "2025-05-28",
-        "exit_date": "2025-06-23",
-        "holding_days": 26,
-        "gross_pnl": 14.4331,
-        "net_pnl": 14.1628,
-        "return_pct": 5.609,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "BAC",
-        "direction": "LONG",
-        "shares": 5,
-        "entry_price": 43.04319381713867,
-        "exit_price": 45.66525650024414,
-        "entry_date": "2025-05-29",
-        "exit_date": "2025-06-24",
-        "holding_days": 26,
-        "gross_pnl": 13.1103,
-        "net_pnl": 12.8829,
-        "return_pct": 6.092,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "BEAR"
-      },
-      {
-        "ticker": "GOOGL",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 171.661865234375,
-        "exit_price": 178.0221405029297,
-        "entry_date": "2025-05-28",
-        "exit_date": "2025-06-27",
-        "holding_days": 30,
-        "gross_pnl": 6.3603,
-        "net_pnl": 6.1816,
-        "return_pct": 3.705,
-        "exit_reason": "TIME_STOP",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "BAC",
+        "ticker": "DLTR",
         "direction": "LONG",
         "shares": 3,
-        "entry_price": 47.12348556518555,
-        "exit_price": 45.84141540527344,
-        "entry_date": "2025-07-01",
-        "exit_date": "2025-07-09",
-        "holding_days": 8,
-        "gross_pnl": -3.8462,
-        "net_pnl": -3.9891,
-        "return_pct": -2.721,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "SIDEWAYS"
+        "entry_price": 89.33999633789062,
+        "exit_price": 96.72000122070312,
+        "entry_date": "2025-05-28",
+        "exit_date": "2025-06-03",
+        "holding_days": 6,
+        "gross_pnl": 22.14,
+        "net_pnl": 21.8544,
+        "return_pct": 8.261,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BULL"
       },
       {
-        "ticker": "NVDA",
+        "ticker": "NTAP",
+        "direction": "LONG",
+        "shares": 3,
+        "entry_price": 97.48235321044922,
+        "exit_price": 103.91792297363281,
+        "entry_date": "2025-05-28",
+        "exit_date": "2025-06-06",
+        "holding_days": 9,
+        "gross_pnl": 19.3067,
+        "net_pnl": 18.9976,
+        "return_pct": 6.602,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "PYPL",
+        "direction": "LONG",
+        "shares": 3,
+        "entry_price": 70.32098388671875,
+        "exit_price": 74.16767120361328,
+        "entry_date": "2025-05-29",
+        "exit_date": "2025-06-12",
+        "holding_days": 14,
+        "gross_pnl": 11.5401,
+        "net_pnl": 11.3182,
+        "return_pct": 5.47,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BEAR"
+      },
+      {
+        "ticker": "APH",
+        "direction": "LONG",
+        "shares": 2,
+        "entry_price": 89.58966064453125,
+        "exit_price": 93.79351043701172,
+        "entry_date": "2025-06-02",
+        "exit_date": "2025-06-12",
+        "holding_days": 10,
+        "gross_pnl": 8.4077,
+        "net_pnl": 8.2201,
+        "return_pct": 4.692,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BEAR"
+      },
+      {
+        "ticker": "CDW",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 159.12806701660156,
-        "exit_price": 170.4729461669922,
+        "entry_price": 175.94956970214844,
+        "exit_price": 167.1888885498047,
+        "entry_date": "2025-06-03",
+        "exit_date": "2025-06-13",
+        "holding_days": 10,
+        "gross_pnl": -8.7607,
+        "net_pnl": -8.9359,
+        "return_pct": -4.979,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "NTAP",
+        "direction": "LONG",
+        "shares": 2,
+        "entry_price": 103.91792297363281,
+        "exit_price": 98.28434753417969,
+        "entry_date": "2025-06-06",
+        "exit_date": "2025-06-13",
+        "holding_days": 7,
+        "gross_pnl": -11.2672,
+        "net_pnl": -11.4738,
+        "return_pct": -5.421,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "EXPE",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 170.35865783691406,
+        "exit_price": 163.3240509033203,
+        "entry_date": "2025-06-12",
+        "exit_date": "2025-06-16",
+        "holding_days": 4,
+        "gross_pnl": -7.0346,
+        "net_pnl": -7.205,
+        "return_pct": -4.129,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "PANW",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 187.8000030517578,
+        "exit_price": 202.0500030517578,
+        "entry_date": "2025-05-28",
+        "exit_date": "2025-06-17",
+        "holding_days": 20,
+        "gross_pnl": 14.25,
+        "net_pnl": 14.0507,
+        "return_pct": 7.588,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "CRL",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 151.88999938964844,
+        "exit_price": 145.0500030517578,
+        "entry_date": "2025-06-12",
+        "exit_date": "2025-06-17",
+        "holding_days": 5,
+        "gross_pnl": -6.84,
+        "net_pnl": -6.9916,
+        "return_pct": -4.503,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "APH",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 92.58391571044922,
+        "exit_price": 97.00875854492188,
+        "entry_date": "2025-06-16",
+        "exit_date": "2025-06-27",
+        "holding_days": 11,
+        "gross_pnl": 4.4248,
+        "net_pnl": 4.3279,
+        "return_pct": 4.779,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "NTAP",
+        "direction": "LONG",
+        "shares": 2,
+        "entry_price": 105.41515350341797,
+        "exit_price": 101.69032287597656,
         "entry_date": "2025-07-03",
         "exit_date": "2025-07-15",
         "holding_days": 12,
-        "gross_pnl": 11.3449,
-        "net_pnl": 11.1764,
-        "return_pct": 7.129,
+        "gross_pnl": -7.4497,
+        "net_pnl": -7.6613,
+        "return_pct": -3.533,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "CDW",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 178.67684936523438,
+        "exit_price": 172.43743896484375,
+        "entry_date": "2025-07-03",
+        "exit_date": "2025-07-15",
+        "holding_days": 12,
+        "gross_pnl": -6.2394,
+        "net_pnl": -6.4187,
+        "return_pct": -3.492,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "IQV",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 164.24000549316406,
+        "exit_price": 157.67999267578125,
+        "entry_date": "2025-07-03",
+        "exit_date": "2025-07-15",
+        "holding_days": 12,
+        "gross_pnl": -6.56,
+        "net_pnl": -6.7244,
+        "return_pct": -3.994,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "APH",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 96.73065185546875,
+        "exit_price": 101.26971435546875,
+        "entry_date": "2025-07-01",
+        "exit_date": "2025-07-17",
+        "holding_days": 16,
+        "gross_pnl": 4.5391,
+        "net_pnl": 4.4378,
+        "return_pct": 4.692,
         "exit_reason": "TAKE_PROFIT",
         "entry_regime": "SIDEWAYS"
       },
       {
-        "ticker": "BBY",
+        "ticker": "CRL",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 68.42333221435547,
-        "exit_price": 65.23137664794922,
-        "entry_date": "2025-07-08",
-        "exit_date": "2025-07-15",
-        "holding_days": 7,
-        "gross_pnl": -3.192,
-        "net_pnl": -3.2603,
+        "entry_price": 157.1199951171875,
+        "exit_price": 149.7899932861328,
+        "entry_date": "2025-07-03",
+        "exit_date": "2025-07-21",
+        "holding_days": 18,
+        "gross_pnl": -7.33,
+        "net_pnl": -7.4867,
         "return_pct": -4.665,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "SIDEWAYS"
       },
       {
-        "ticker": "GOOGL",
+        "ticker": "NTAP",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 179.01930236816406,
-        "exit_price": 190.7957000732422,
-        "entry_date": "2025-07-03",
+        "entry_price": 102.36846923828125,
+        "exit_price": 103.1448745727539,
+        "entry_date": "2025-07-16",
         "exit_date": "2025-07-22",
-        "holding_days": 19,
-        "gross_pnl": 11.7764,
-        "net_pnl": 11.5874,
-        "return_pct": 6.578,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "SIDEWAYS"
-      },
-      {
-        "ticker": "DELL",
-        "direction": "LONG",
-        "shares": 2,
-        "entry_price": 123.14103698730469,
-        "exit_price": 122.76559448242188,
-        "entry_date": "2025-07-03",
-        "exit_date": "2025-07-22",
-        "holding_days": 19,
-        "gross_pnl": -0.7509,
-        "net_pnl": -1.0022,
-        "return_pct": -0.305,
+        "holding_days": 6,
+        "gross_pnl": 0.7764,
+        "net_pnl": 0.6713,
+        "return_pct": 0.758,
         "exit_reason": "TRAILING_STOP",
         "entry_regime": "SIDEWAYS"
       },
       {
-        "ticker": "NVDA",
+        "ticker": "IQV",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 172.76988220214844,
-        "exit_price": 166.80783081054688,
+        "entry_price": 163.25,
+        "exit_price": 187.3800048828125,
         "entry_date": "2025-07-17",
         "exit_date": "2025-07-22",
         "holding_days": 5,
-        "gross_pnl": -5.9621,
-        "net_pnl": -6.1355,
-        "return_pct": -3.451,
+        "gross_pnl": 24.13,
+        "net_pnl": 23.9506,
+        "return_pct": 14.781,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "CRL",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 149.7899932861328,
+        "exit_price": 167.9499969482422,
+        "entry_date": "2025-07-21",
+        "exit_date": "2025-07-23",
+        "holding_days": 2,
+        "gross_pnl": 18.16,
+        "net_pnl": 17.9975,
+        "return_pct": 12.124,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "IP",
+        "direction": "LONG",
+        "shares": 5,
+        "entry_price": 50.24418258666992,
+        "exit_price": 53.1357307434082,
+        "entry_date": "2025-07-22",
+        "exit_date": "2025-07-25",
+        "holding_days": 3,
+        "gross_pnl": 14.4577,
+        "net_pnl": 14.1928,
+        "return_pct": 5.755,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "DLTR",
+        "direction": "LONG",
+        "shares": 2,
+        "entry_price": 108.1500015258789,
+        "exit_price": 115.43000030517578,
+        "entry_date": "2025-07-17",
+        "exit_date": "2025-07-28",
+        "holding_days": 11,
+        "gross_pnl": 14.56,
+        "net_pnl": 14.3313,
+        "return_pct": 6.731,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "APH",
+        "direction": "LONG",
+        "shares": 3,
+        "entry_price": 101.09092712402344,
+        "exit_price": 105.97761535644531,
+        "entry_date": "2025-07-22",
+        "exit_date": "2025-07-28",
+        "holding_days": 6,
+        "gross_pnl": 14.6601,
+        "net_pnl": 14.3423,
+        "return_pct": 4.834,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "SIDEWAYS"
+      },
+      {
+        "ticker": "EXPE",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 185.69789123535156,
+        "exit_price": 178.38543701171875,
+        "entry_date": "2025-07-28",
+        "exit_date": "2025-07-30",
+        "holding_days": 2,
+        "gross_pnl": -7.3125,
+        "net_pnl": -7.4984,
+        "return_pct": -3.938,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "CDW",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 176.5774383544922,
+        "exit_price": 165.658447265625,
+        "entry_date": "2025-07-17",
+        "exit_date": "2025-08-01",
+        "holding_days": 15,
+        "gross_pnl": -10.919,
+        "net_pnl": -11.0937,
+        "return_pct": -6.184,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "SIDEWAYS"
       },
       {
-        "ticker": "JPM",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 277.8446350097656,
-        "exit_price": 291.1893310546875,
-        "entry_date": "2025-07-09",
-        "exit_date": "2025-07-23",
-        "holding_days": 14,
-        "gross_pnl": 13.3447,
-        "net_pnl": 13.054,
-        "return_pct": 4.803,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "SIDEWAYS"
-      },
-      {
-        "ticker": "BAC",
-        "direction": "LONG",
-        "shares": 3,
-        "entry_price": 45.1661262512207,
-        "exit_price": 47.35837173461914,
-        "entry_date": "2025-07-15",
-        "exit_date": "2025-07-24",
-        "holding_days": 9,
-        "gross_pnl": 6.5767,
-        "net_pnl": 6.4344,
-        "return_pct": 4.854,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "SIDEWAYS"
-      },
-      {
-        "ticker": "NVDA",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 166.80783081054688,
-        "exit_price": 176.51490783691406,
-        "entry_date": "2025-07-22",
-        "exit_date": "2025-07-28",
-        "holding_days": 6,
-        "gross_pnl": 9.7071,
-        "net_pnl": 9.5316,
-        "return_pct": 5.819,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "SIDEWAYS"
-      },
-      {
-        "ticker": "DELL",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 122.76559448242188,
-        "exit_price": 132.17567443847656,
-        "entry_date": "2025-07-22",
-        "exit_date": "2025-07-28",
-        "holding_days": 6,
-        "gross_pnl": 9.4101,
-        "net_pnl": 9.2797,
-        "return_pct": 7.665,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "SIDEWAYS"
-      },
-      {
-        "ticker": "TGT",
+        "ticker": "NTAP",
         "direction": "LONG",
         "shares": 2,
-        "entry_price": 102.92536163330078,
-        "exit_price": 98.81524658203125,
+        "entry_price": 104.05887603759766,
+        "exit_price": 99.36109924316406,
         "entry_date": "2025-07-23",
-        "exit_date": "2025-07-30",
-        "holding_days": 7,
-        "gross_pnl": -8.2202,
-        "net_pnl": -8.4264,
-        "return_pct": -3.993,
+        "exit_date": "2025-08-01",
+        "holding_days": 9,
+        "gross_pnl": -9.3956,
+        "net_pnl": -9.6035,
+        "return_pct": -4.515,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "BEAR"
       },
       {
-        "ticker": "AAPL",
+        "ticker": "CRL",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 212.91531372070312,
-        "exit_price": 206.74978637695312,
-        "entry_date": "2025-07-24",
-        "exit_date": "2025-07-31",
-        "holding_days": 7,
-        "gross_pnl": -6.1655,
-        "net_pnl": -6.3798,
-        "return_pct": -2.896,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "JPM",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 292.6807861328125,
-        "exit_price": 283.93804931640625,
+        "entry_price": 178.99000549316406,
+        "exit_price": 166.91000366210938,
         "entry_date": "2025-07-28",
         "exit_date": "2025-08-01",
         "holding_days": 4,
-        "gross_pnl": -8.7427,
-        "net_pnl": -9.0371,
-        "return_pct": -2.987,
+        "gross_pnl": -12.08,
+        "net_pnl": -12.2566,
+        "return_pct": -6.749,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "GOOGL",
+        "ticker": "PANW",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 190.7957000732422,
-        "exit_price": 200.84703063964844,
-        "entry_date": "2025-07-22",
-        "exit_date": "2025-08-08",
-        "holding_days": 17,
-        "gross_pnl": 10.0513,
-        "net_pnl": 9.8512,
-        "return_pct": 5.268,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "SIDEWAYS"
+        "entry_price": 183.02999877929688,
+        "exit_price": 172.8800048828125,
+        "entry_date": "2025-07-30",
+        "exit_date": "2025-08-01",
+        "holding_days": 2,
+        "gross_pnl": -10.15,
+        "net_pnl": -10.3317,
+        "return_pct": -5.546,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
       },
       {
-        "ticker": "NVDA",
+        "ticker": "DLTR",
         "direction": "LONG",
-        "shares": 1,
-        "entry_price": 176.51490783691406,
-        "exit_price": 175.40638732910156,
+        "shares": 2,
+        "entry_price": 115.43000030517578,
+        "exit_price": 112.86000061035156,
         "entry_date": "2025-07-28",
-        "exit_date": "2025-08-19",
-        "holding_days": 22,
-        "gross_pnl": -1.1085,
-        "net_pnl": -1.2883,
-        "return_pct": -0.628,
-        "exit_reason": "TRAILING_STOP",
+        "exit_date": "2025-08-27",
+        "holding_days": 30,
+        "gross_pnl": -5.14,
+        "net_pnl": -5.3733,
+        "return_pct": -2.226,
+        "exit_reason": "TIME_STOP",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "TGT",
+        "ticker": "NTAP",
         "direction": "LONG",
-        "shares": 1,
-        "entry_price": 100.97090148925781,
-        "exit_price": 95.57723236083984,
-        "entry_date": "2025-08-06",
-        "exit_date": "2025-08-20",
-        "holding_days": 14,
-        "gross_pnl": -5.3937,
-        "net_pnl": -5.4941,
-        "return_pct": -5.342,
-        "exit_reason": "STOP_LOSS",
+        "shares": 2,
+        "entry_price": 107.02693176269531,
+        "exit_price": 115.2038345336914,
+        "entry_date": "2025-08-18",
+        "exit_date": "2025-08-28",
+        "holding_days": 10,
+        "gross_pnl": 16.3538,
+        "net_pnl": 16.1264,
+        "return_pct": 7.64,
+        "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
       {
@@ -4108,33 +4363,33 @@
         "entry_regime": "BULL"
       },
       {
-        "ticker": "GOOGL",
+        "ticker": "DLTR",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 202.3627166748047,
-        "exit_price": 230.0038604736328,
-        "entry_date": "2025-08-14",
-        "exit_date": "2025-09-03",
-        "holding_days": 20,
-        "gross_pnl": 27.6411,
-        "net_pnl": 27.42,
-        "return_pct": 13.659,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "BULL"
+        "entry_price": 112.86000061035156,
+        "exit_price": 109.16999816894531,
+        "entry_date": "2025-08-27",
+        "exit_date": "2025-08-29",
+        "holding_days": 2,
+        "gross_pnl": -3.69,
+        "net_pnl": -3.8035,
+        "return_pct": -3.27,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BEAR"
       },
       {
-        "ticker": "JPM",
+        "ticker": "GPC",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 286.0574951171875,
-        "exit_price": 288.85400390625,
-        "entry_date": "2025-08-18",
-        "exit_date": "2025-09-05",
-        "holding_days": 18,
-        "gross_pnl": 2.7965,
-        "net_pnl": 2.5029,
-        "return_pct": 0.978,
-        "exit_reason": "TRAILING_STOP",
+        "entry_price": 132.2508087158203,
+        "exit_price": 138.8433074951172,
+        "entry_date": "2025-08-20",
+        "exit_date": "2025-09-11",
+        "holding_days": 22,
+        "gross_pnl": 6.5925,
+        "net_pnl": 6.4539,
+        "return_pct": 4.985,
+        "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
       {
@@ -4142,7 +4397,7 @@
         "direction": "LONG",
         "shares": 1,
         "entry_price": 68.82113647460938,
-        "exit_price": 70.12821960449219,
+        "exit_price": 70.12822723388672,
         "entry_date": "2025-08-28",
         "exit_date": "2025-09-16",
         "holding_days": 19,
@@ -4153,62 +4408,77 @@
         "entry_regime": "BULL"
       },
       {
-        "ticker": "BAC",
+        "ticker": "NTAP",
         "direction": "LONG",
-        "shares": 3,
-        "entry_price": 49.3450927734375,
-        "exit_price": 51.30241394042969,
-        "entry_date": "2025-09-02",
-        "exit_date": "2025-09-18",
-        "holding_days": 16,
-        "gross_pnl": 5.872,
-        "net_pnl": 5.7172,
-        "return_pct": 3.967,
-        "exit_reason": "TAKE_PROFIT",
+        "shares": 1,
+        "entry_price": 122.46672058105469,
+        "exit_price": 118.70259857177734,
+        "entry_date": "2025-09-22",
+        "exit_date": "2025-09-25",
+        "holding_days": 3,
+        "gross_pnl": -3.7641,
+        "net_pnl": -3.8873,
+        "return_pct": -3.074,
+        "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "BAC",
-        "direction": "LONG",
-        "shares": 3,
-        "entry_price": 51.42050552368164,
-        "exit_price": 49.87543487548828,
-        "entry_date": "2025-09-19",
-        "exit_date": "2025-10-01",
-        "holding_days": 12,
-        "gross_pnl": -4.6352,
-        "net_pnl": -4.7908,
-        "return_pct": -3.005,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BEAR"
-      },
-      {
-        "ticker": "DELL",
+        "ticker": "UAL",
         "direction": "LONG",
         "shares": 2,
-        "entry_price": 130.4279327392578,
-        "exit_price": 147.79661560058594,
+        "entry_price": 101.38999938964844,
+        "exit_price": 93.1500015258789,
         "entry_date": "2025-09-24",
         "exit_date": "2025-10-01",
         "holding_days": 7,
-        "gross_pnl": 34.7374,
-        "net_pnl": 34.4527,
-        "return_pct": 13.317,
+        "gross_pnl": -16.48,
+        "net_pnl": -16.6788,
+        "return_pct": -8.127,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "PANW",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 200.6999969482422,
+        "exit_price": 212.5800018310547,
+        "entry_date": "2025-09-24",
+        "exit_date": "2025-10-06",
+        "holding_days": 12,
+        "gross_pnl": 11.88,
+        "net_pnl": 11.6688,
+        "return_pct": 5.919,
         "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "GOOGL",
+        "ticker": "GPC",
+        "direction": "LONG",
+        "shares": 2,
+        "entry_price": 134.79771423339844,
+        "exit_price": 130.00331115722656,
+        "entry_date": "2025-09-24",
+        "exit_date": "2025-10-08",
+        "holding_days": 14,
+        "gross_pnl": -9.5888,
+        "net_pnl": -9.8594,
+        "return_pct": -3.557,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "NTAP",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 249.9409637451172,
-        "exit_price": 241.05833435058594,
-        "entry_date": "2025-10-06",
-        "exit_date": "2025-10-09",
-        "holding_days": 3,
-        "gross_pnl": -8.8826,
-        "net_pnl": -9.1333,
-        "return_pct": -3.554,
+        "entry_price": 117.81807708740234,
+        "exit_price": 112.46733093261719,
+        "entry_date": "2025-09-26",
+        "exit_date": "2025-10-10",
+        "holding_days": 14,
+        "gross_pnl": -5.3507,
+        "net_pnl": -5.4684,
+        "return_pct": -4.542,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
@@ -4216,375 +4486,420 @@
         "ticker": "BBY",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 72.58800506591797,
+        "entry_price": 73.509033203125,
         "exit_price": 67.57035827636719,
-        "entry_date": "2025-09-29",
-        "exit_date": "2025-10-10",
-        "holding_days": 11,
-        "gross_pnl": -5.0176,
-        "net_pnl": -5.0893,
-        "return_pct": -6.913,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BEAR"
-      },
-      {
-        "ticker": "BAC",
-        "direction": "LONG",
-        "shares": 3,
-        "entry_price": 49.67860794067383,
-        "exit_price": 47.87765884399414,
         "entry_date": "2025-10-02",
         "exit_date": "2025-10-10",
         "holding_days": 8,
-        "gross_pnl": -5.4028,
-        "net_pnl": -5.5527,
-        "return_pct": -3.625,
+        "gross_pnl": -5.9387,
+        "net_pnl": -6.0108,
+        "return_pct": -8.079,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "AAPL",
+        "ticker": "IQV",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 257.2920837402344,
-        "exit_price": 244.5780792236328,
-        "entry_date": "2025-10-03",
-        "exit_date": "2025-10-10",
-        "holding_days": 7,
-        "gross_pnl": -12.714,
-        "net_pnl": -12.9702,
-        "return_pct": -4.941,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BEAR"
-      },
-      {
-        "ticker": "NVDA",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 185.30364990234375,
-        "exit_price": 179.80067443847656,
-        "entry_date": "2025-10-06",
-        "exit_date": "2025-10-14",
-        "holding_days": 8,
-        "gross_pnl": -5.503,
-        "net_pnl": -5.6894,
-        "return_pct": -2.97,
-        "exit_reason": "SIGNAL_EXIT",
+        "entry_price": 200.60000610351562,
+        "exit_price": 218.6699981689453,
+        "entry_date": "2025-10-08",
+        "exit_date": "2025-10-21",
+        "holding_days": 13,
+        "gross_pnl": 18.07,
+        "net_pnl": 17.8557,
+        "return_pct": 9.008,
+        "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "GOOGL",
+        "ticker": "EXPE",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 274.0338134765625,
-        "exit_price": 278.0260314941406,
-        "entry_date": "2025-10-29",
-        "exit_date": "2025-11-13",
-        "holding_days": 15,
-        "gross_pnl": 3.9922,
-        "net_pnl": 3.7103,
-        "return_pct": 1.457,
+        "entry_price": 216.53643798828125,
+        "exit_price": 214.36936950683594,
+        "entry_date": "2025-09-24",
+        "exit_date": "2025-10-23",
+        "holding_days": 29,
+        "gross_pnl": -2.1671,
+        "net_pnl": -2.3871,
+        "return_pct": -1.001,
         "exit_reason": "TRAILING_STOP",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "AAPL",
+        "ticker": "CRL",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 268.93914794921875,
-        "exit_price": 278.3328857421875,
+        "entry_price": 174.9499969482422,
+        "exit_price": 190.97000122070312,
+        "entry_date": "2025-10-06",
+        "exit_date": "2025-10-23",
+        "holding_days": 17,
+        "gross_pnl": 16.02,
+        "net_pnl": 15.8329,
+        "return_pct": 9.157,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "CRL",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 180.14999389648438,
+        "exit_price": 167.6999969482422,
+        "entry_date": "2025-10-29",
+        "exit_date": "2025-11-05",
+        "holding_days": 7,
+        "gross_pnl": -12.45,
+        "net_pnl": -12.6276,
+        "return_pct": -6.911,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "APH",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 138.99620056152344,
+        "exit_price": 131.61622619628906,
+        "entry_date": "2025-10-29",
+        "exit_date": "2025-11-17",
+        "holding_days": 19,
+        "gross_pnl": -7.38,
+        "net_pnl": -7.5182,
+        "return_pct": -5.309,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "IQV",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 217.8300018310547,
+        "exit_price": 230.00999450683594,
         "entry_date": "2025-10-29",
         "exit_date": "2025-11-28",
         "holding_days": 30,
-        "gross_pnl": 9.3937,
-        "net_pnl": 9.1142,
-        "return_pct": 3.493,
+        "gross_pnl": 12.18,
+        "net_pnl": 11.9511,
+        "return_pct": 5.592,
         "exit_reason": "TIME_STOP",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "TGT",
+        "ticker": "WTW",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 97.1350326538086,
-        "exit_price": 93.35945892333984,
-        "entry_date": "2025-12-18",
-        "exit_date": "2025-12-22",
-        "holding_days": 4,
-        "gross_pnl": -3.7756,
-        "net_pnl": -3.8729,
-        "return_pct": -3.887,
-        "exit_reason": "STOP_LOSS",
+        "entry_price": 314.4703063964844,
+        "exit_price": 317.8968505859375,
+        "entry_date": "2025-10-29",
+        "exit_date": "2025-11-28",
+        "holding_days": 30,
+        "gross_pnl": 3.4265,
+        "net_pnl": 3.1036,
+        "return_pct": 1.09,
+        "exit_reason": "TIME_STOP",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "BAC",
+        "ticker": "VLO",
         "direction": "LONG",
-        "shares": 2,
-        "entry_price": 53.67609405517578,
-        "exit_price": 56.277793884277344,
-        "entry_date": "2025-12-18",
-        "exit_date": "2026-01-05",
-        "holding_days": 18,
-        "gross_pnl": 5.2034,
-        "net_pnl": 5.0907,
-        "return_pct": 4.847,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "TGT",
-        "direction": "LONG",
-        "shares": 2,
-        "entry_price": 93.35945892333984,
-        "exit_price": 100.12606048583984,
+        "shares": 1,
+        "entry_price": 161.16432189941406,
+        "exit_price": 177.93605041503906,
         "entry_date": "2025-12-22",
         "exit_date": "2026-01-05",
         "holding_days": 14,
-        "gross_pnl": 13.5332,
-        "net_pnl": 13.3352,
-        "return_pct": 7.248,
+        "gross_pnl": 16.7717,
+        "net_pnl": 16.5983,
+        "return_pct": 10.407,
         "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "GOOGL",
+        "ticker": "CRL",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 313.4420166015625,
-        "exit_price": 331.4285888671875,
-        "entry_date": "2025-12-30",
-        "exit_date": "2026-01-12",
+        "entry_price": 203.16000366210938,
+        "exit_price": 216.11000061035156,
+        "entry_date": "2025-12-24",
+        "exit_date": "2026-01-06",
         "holding_days": 13,
-        "gross_pnl": 17.9866,
-        "net_pnl": 17.6571,
-        "return_pct": 5.738,
+        "gross_pnl": 12.95,
+        "net_pnl": 12.7357,
+        "return_pct": 6.374,
         "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "BAC",
-        "direction": "LONG",
-        "shares": 3,
-        "entry_price": 56.277793884277344,
-        "exit_price": 54.59608840942383,
-        "entry_date": "2026-01-05",
-        "exit_date": "2026-01-12",
-        "holding_days": 7,
-        "gross_pnl": -5.0451,
-        "net_pnl": -5.2154,
-        "return_pct": -2.988,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BEAR"
-      },
-      {
-        "ticker": "AAPL",
+        "ticker": "IQV",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 261.87347412109375,
-        "exit_price": 255.05612182617188,
+        "entry_price": 226.02000427246094,
+        "exit_price": 240.52999877929688,
+        "entry_date": "2025-12-24",
+        "exit_date": "2026-01-06",
+        "holding_days": 13,
+        "gross_pnl": 14.51,
+        "net_pnl": 14.2716,
+        "return_pct": 6.42,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "DLTR",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 122.48999786376953,
+        "exit_price": 137.24000549316406,
+        "entry_date": "2025-12-22",
+        "exit_date": "2026-01-12",
+        "holding_days": 21,
+        "gross_pnl": 14.75,
+        "net_pnl": 14.6171,
+        "return_pct": 12.042,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "APH",
+        "direction": "LONG",
+        "shares": 2,
+        "entry_price": 140.88856506347656,
+        "exit_price": 153.68392944335938,
+        "entry_date": "2026-01-06",
+        "exit_date": "2026-01-15",
+        "holding_days": 9,
+        "gross_pnl": 25.5907,
+        "net_pnl": 25.2894,
+        "return_pct": 9.082,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "EXPE",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 297.9297180175781,
+        "exit_price": 283.8900451660156,
         "entry_date": "2026-01-06",
         "exit_date": "2026-01-16",
         "holding_days": 10,
-        "gross_pnl": -6.8174,
-        "net_pnl": -7.0813,
-        "return_pct": -2.603,
+        "gross_pnl": -14.0397,
+        "net_pnl": -14.3366,
+        "return_pct": -4.712,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "NVDA",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 187.0119171142578,
-        "exit_price": 177.85308837890625,
-        "entry_date": "2026-01-06",
-        "exit_date": "2026-01-20",
-        "holding_days": 14,
-        "gross_pnl": -9.1588,
-        "net_pnl": -9.3451,
-        "return_pct": -4.897,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "TGT",
+        "ticker": "UAL",
         "direction": "LONG",
         "shares": 2,
-        "entry_price": 102.28353118896484,
-        "exit_price": 103.9898910522461,
+        "entry_price": 114.80999755859375,
+        "exit_price": 108.56999969482422,
+        "entry_date": "2025-12-24",
+        "exit_date": "2026-01-20",
+        "holding_days": 27,
+        "gross_pnl": -12.48,
+        "net_pnl": -12.7082,
+        "return_pct": -5.435,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "CRL",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 216.11000061035156,
+        "exit_price": 216.8800048828125,
         "entry_date": "2026-01-06",
-        "exit_date": "2026-01-21",
-        "holding_days": 15,
-        "gross_pnl": 3.4127,
-        "net_pnl": 3.2018,
-        "return_pct": 1.668,
+        "exit_date": "2026-01-28",
+        "holding_days": 22,
+        "gross_pnl": 0.77,
+        "net_pnl": 0.5488,
+        "return_pct": 0.356,
         "exit_reason": "TRAILING_STOP",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "TGT",
+        "ticker": "IP",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 122.86912536621094,
-        "exit_price": 116.77668762207031,
-        "entry_date": "2026-04-09",
-        "exit_date": "2026-04-13",
-        "holding_days": 4,
-        "gross_pnl": -6.0924,
-        "net_pnl": -6.2149,
-        "return_pct": -4.958,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "SIDEWAYS"
-      },
-      {
-        "ticker": "DELL",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 176.44158935546875,
-        "exit_price": 203.2740936279297,
-        "entry_date": "2026-04-15",
-        "exit_date": "2026-04-20",
-        "holding_days": 5,
-        "gross_pnl": 26.8325,
-        "net_pnl": 26.6383,
-        "return_pct": 15.208,
-        "exit_reason": "TAKE_PROFIT",
+        "entry_price": 43.598148345947266,
+        "exit_price": 43.75724411010742,
+        "entry_date": "2026-02-04",
+        "exit_date": "2026-02-23",
+        "holding_days": 19,
+        "gross_pnl": 0.1591,
+        "net_pnl": 0.1143,
+        "return_pct": 0.365,
+        "exit_reason": "TRAILING_STOP",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "TGT",
+        "ticker": "IQV",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 178.10000610351562,
+        "exit_price": 171.9499969482422,
+        "entry_date": "2026-04-15",
+        "exit_date": "2026-04-16",
+        "holding_days": 1,
+        "gross_pnl": -6.15,
+        "net_pnl": -6.3288,
+        "return_pct": -3.453,
+        "exit_reason": "SIGNAL_EXIT",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "CDW",
         "direction": "LONG",
         "shares": 2,
-        "entry_price": 121.71998596191406,
-        "exit_price": 130.8636016845703,
-        "entry_date": "2026-04-15",
-        "exit_date": "2026-04-21",
-        "holding_days": 6,
-        "gross_pnl": 18.2872,
-        "net_pnl": 18.0289,
-        "return_pct": 7.512,
-        "exit_reason": "TAKE_PROFIT",
+        "entry_price": 136.04335021972656,
+        "exit_price": 135.66558837890625,
+        "entry_date": "2026-04-20",
+        "exit_date": "2026-04-23",
+        "holding_days": 3,
+        "gross_pnl": -0.7555,
+        "net_pnl": -1.0332,
+        "return_pct": -0.278,
+        "exit_reason": "TRAILING_STOP",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "BAC",
+        "ticker": "APH",
         "direction": "LONG",
-        "shares": 6,
-        "entry_price": 54.039222717285156,
-        "exit_price": 51.78095626831055,
-        "entry_date": "2026-04-15",
-        "exit_date": "2026-04-24",
-        "holding_days": 9,
-        "gross_pnl": -13.5496,
-        "net_pnl": -13.8746,
-        "return_pct": -4.179,
+        "shares": 1,
+        "entry_price": 152.57980346679688,
+        "exit_price": 143.50350952148438,
+        "entry_date": "2026-04-20",
+        "exit_date": "2026-04-28",
+        "holding_days": 8,
+        "gross_pnl": -9.0763,
+        "net_pnl": -9.2275,
+        "return_pct": -5.949,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "NVDA",
+        "ticker": "PYPL",
         "direction": "LONG",
-        "shares": 1,
-        "entry_price": 198.63848876953125,
-        "exit_price": 216.3578338623047,
-        "entry_date": "2026-04-15",
-        "exit_date": "2026-04-27",
-        "holding_days": 12,
-        "gross_pnl": 17.7193,
-        "net_pnl": 17.5072,
-        "return_pct": 8.92,
-        "exit_reason": "TAKE_PROFIT",
+        "shares": 6,
+        "entry_price": 50.314144134521484,
+        "exit_price": 46.33725357055664,
+        "entry_date": "2026-04-24",
+        "exit_date": "2026-05-05",
+        "holding_days": 11,
+        "gross_pnl": -23.8613,
+        "net_pnl": -24.1582,
+        "return_pct": -7.904,
+        "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "NVDA",
+        "ticker": "APH",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 216.3578338623047,
-        "exit_price": 199.33767700195312,
-        "entry_date": "2026-04-27",
-        "exit_date": "2026-04-30",
-        "holding_days": 3,
-        "gross_pnl": -17.0202,
-        "net_pnl": -17.2323,
-        "return_pct": -7.867,
+        "entry_price": 143.50350952148438,
+        "exit_price": 136.48410034179688,
+        "entry_date": "2026-04-28",
+        "exit_date": "2026-05-05",
+        "holding_days": 7,
+        "gross_pnl": -7.0194,
+        "net_pnl": -7.1624,
+        "return_pct": -4.891,
         "exit_reason": "STOP_LOSS",
         "entry_regime": "BEAR"
       },
       {
-        "ticker": "JPM",
+        "ticker": "CDW",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 304.5579833984375,
-        "exit_price": 304.8964538574219,
-        "entry_date": "2026-04-15",
-        "exit_date": "2026-05-07",
-        "holding_days": 22,
-        "gross_pnl": 0.3385,
-        "net_pnl": 0.0273,
-        "return_pct": 0.111,
-        "exit_reason": "TRAILING_STOP",
-        "entry_regime": "BULL"
+        "entry_price": 135.66558837890625,
+        "exit_price": 108.35749816894531,
+        "entry_date": "2026-04-23",
+        "exit_date": "2026-05-06",
+        "holding_days": 13,
+        "gross_pnl": -27.3081,
+        "net_pnl": -27.4325,
+        "return_pct": -20.129,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BEAR"
       },
       {
-        "ticker": "AAPL",
+        "ticker": "PANW",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 272.79864501953125,
-        "exit_price": 293.0500183105469,
-        "entry_date": "2026-04-20",
+        "entry_price": 181.5399932861328,
+        "exit_price": 207.8800048828125,
+        "entry_date": "2026-04-29",
         "exit_date": "2026-05-08",
-        "holding_days": 18,
-        "gross_pnl": 20.2514,
-        "net_pnl": 19.9622,
-        "return_pct": 7.424,
+        "holding_days": 9,
+        "gross_pnl": 26.34,
+        "net_pnl": 26.1408,
+        "return_pct": 14.509,
         "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "TGT",
+        "ticker": "PYPL",
+        "direction": "LONG",
+        "shares": 5,
+        "entry_price": 46.33725357055664,
+        "exit_price": 45.22093200683594,
+        "entry_date": "2026-05-05",
+        "exit_date": "2026-05-08",
+        "holding_days": 3,
+        "gross_pnl": -5.5816,
+        "net_pnl": -5.8161,
+        "return_pct": -2.409,
+        "exit_reason": "SIGNAL_EXIT",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "APH",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 136.48410034179688,
+        "exit_price": 127.8371353149414,
+        "entry_date": "2026-05-05",
+        "exit_date": "2026-05-08",
+        "holding_days": 3,
+        "gross_pnl": -8.647,
+        "net_pnl": -8.782,
+        "return_pct": -6.336,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "NTAP",
         "direction": "LONG",
         "shares": 2,
-        "entry_price": 129.3776397705078,
-        "exit_price": 124.07771301269531,
+        "entry_price": 110.68382263183594,
+        "exit_price": 119.56684875488281,
         "entry_date": "2026-04-22",
-        "exit_date": "2026-05-08",
-        "holding_days": 16,
-        "gross_pnl": -10.5999,
-        "net_pnl": -10.8588,
-        "return_pct": -4.096,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "NVDA",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 198.21897888183594,
-        "exit_price": 214.94947814941406,
-        "entry_date": "2026-05-01",
-        "exit_date": "2026-05-08",
-        "holding_days": 7,
-        "gross_pnl": 16.7305,
-        "net_pnl": 16.5193,
-        "return_pct": 8.44,
+        "exit_date": "2026-05-14",
+        "holding_days": 22,
+        "gross_pnl": 17.7661,
+        "net_pnl": 17.5305,
+        "return_pct": 8.026,
         "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "BAC",
+        "ticker": "PANW",
         "direction": "LONG",
-        "shares": 6,
-        "entry_price": 51.78095626831055,
-        "exit_price": 49.58238220214844,
-        "entry_date": "2026-04-24",
-        "exit_date": "2026-05-13",
-        "holding_days": 19,
-        "gross_pnl": -13.1914,
-        "net_pnl": -13.5028,
-        "return_pct": -4.246,
-        "exit_reason": "STOP_LOSS",
+        "shares": 1,
+        "entry_price": 213.66000366210938,
+        "exit_price": 238.2100067138672,
+        "entry_date": "2026-05-11",
+        "exit_date": "2026-05-14",
+        "holding_days": 3,
+        "gross_pnl": 24.55,
+        "net_pnl": 24.319,
+        "return_pct": 11.49,
+        "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
       {
@@ -4603,34 +4918,34 @@
         "entry_regime": "BULL"
       },
       {
-        "ticker": "NVDA",
+        "ticker": "VLO",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 219.18453979492188,
-        "exit_price": 222.0612030029297,
-        "entry_date": "2026-05-11",
+        "entry_price": 234.32681274414062,
+        "exit_price": 256.3070068359375,
+        "entry_date": "2026-05-07",
         "exit_date": "2026-05-18",
-        "holding_days": 7,
-        "gross_pnl": 2.8767,
-        "net_pnl": 2.6513,
-        "return_pct": 1.312,
-        "exit_reason": "TRAILING_STOP",
+        "holding_days": 11,
+        "gross_pnl": 21.9802,
+        "net_pnl": 21.7294,
+        "return_pct": 9.38,
+        "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "JPM",
+        "ticker": "NTAP",
         "direction": "LONG",
-        "shares": 1,
-        "entry_price": 304.8964538574219,
-        "exit_price": 294.3738708496094,
-        "entry_date": "2026-05-07",
-        "exit_date": "2026-05-19",
-        "holding_days": 12,
-        "gross_pnl": -10.5226,
-        "net_pnl": -10.8285,
-        "return_pct": -3.451,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BULL"
+        "shares": 2,
+        "entry_price": 119.56684875488281,
+        "exit_price": 138.93801879882812,
+        "entry_date": "2026-05-14",
+        "exit_date": "2026-05-22",
+        "holding_days": 8,
+        "gross_pnl": 38.7423,
+        "net_pnl": 38.4777,
+        "return_pct": 16.201,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BEAR"
       },
       {
         "ticker": "BBY",
@@ -4648,138 +4963,153 @@
         "entry_regime": "BULL"
       },
       {
-        "ticker": "AAPL",
+        "ticker": "NTAP",
         "direction": "LONG",
         "shares": 1,
-        "entry_price": 298.8699951171875,
-        "exit_price": 315.20001220703125,
-        "entry_date": "2026-05-13",
-        "exit_date": "2026-06-02",
-        "holding_days": 20,
-        "gross_pnl": 16.33,
-        "net_pnl": 16.0163,
-        "return_pct": 5.464,
+        "entry_price": 142.3077850341797,
+        "exit_price": 173.76223754882812,
+        "entry_date": "2026-05-27",
+        "exit_date": "2026-05-29",
+        "holding_days": 2,
+        "gross_pnl": 31.4545,
+        "net_pnl": 31.2926,
+        "return_pct": 22.103,
         "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
       {
-        "ticker": "BBY",
+        "ticker": "WDAY",
         "direction": "LONG",
-        "shares": 3,
-        "entry_price": 76.92630004882812,
-        "exit_price": 71.82420349121094,
-        "entry_date": "2026-05-29",
-        "exit_date": "2026-06-02",
+        "shares": 1,
+        "entry_price": 128.13999938964844,
+        "exit_price": 157.22999572753906,
+        "entry_date": "2026-05-22",
+        "exit_date": "2026-06-01",
+        "holding_days": 10,
+        "gross_pnl": 29.09,
+        "net_pnl": 28.9439,
+        "return_pct": 22.702,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "IQV",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 181.08999633789062,
+        "exit_price": 186.82000732421875,
+        "entry_date": "2026-05-28",
+        "exit_date": "2026-06-01",
         "holding_days": 4,
-        "gross_pnl": -15.3063,
-        "net_pnl": -15.5344,
-        "return_pct": -6.632,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "BAC",
-        "direction": "LONG",
-        "shares": 5,
-        "entry_price": 49.59232711791992,
-        "exit_price": 53.88999938964844,
-        "entry_date": "2026-05-14",
-        "exit_date": "2026-06-04",
-        "holding_days": 21,
-        "gross_pnl": 21.4884,
-        "net_pnl": 21.2231,
-        "return_pct": 8.666,
-        "exit_reason": "TAKE_PROFIT",
+        "gross_pnl": 5.73,
+        "net_pnl": 5.542,
+        "return_pct": 3.164,
+        "exit_reason": "SIGNAL_EXIT",
         "entry_regime": "BEAR"
       },
       {
-        "ticker": "TGT",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 125.5999984741211,
-        "exit_price": 122.56999969482422,
-        "entry_date": "2026-05-22",
-        "exit_date": "2026-06-05",
-        "holding_days": 14,
-        "gross_pnl": -3.03,
-        "net_pnl": -3.1568,
-        "return_pct": -2.412,
-        "exit_reason": "SIGNAL_EXIT",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "NVDA",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 215.07933044433594,
-        "exit_price": 208.63999938964844,
-        "entry_date": "2026-05-22",
-        "exit_date": "2026-06-08",
-        "holding_days": 17,
-        "gross_pnl": -6.4393,
-        "net_pnl": -6.6557,
-        "return_pct": -2.994,
-        "exit_reason": "SIGNAL_EXIT",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "AAPL",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 315.20001220703125,
-        "exit_price": 301.5400085449219,
-        "entry_date": "2026-06-02",
-        "exit_date": "2026-06-08",
-        "holding_days": 6,
-        "gross_pnl": -13.66,
-        "net_pnl": -13.9748,
-        "return_pct": -4.334,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "AAPL",
-        "direction": "LONG",
-        "shares": 1,
-        "entry_price": 301.5400085449219,
-        "exit_price": 290.54998779296875,
-        "entry_date": "2026-06-08",
-        "exit_date": "2026-06-09",
-        "holding_days": 1,
-        "gross_pnl": -10.99,
-        "net_pnl": -11.2922,
-        "return_pct": -3.645,
-        "exit_reason": "STOP_LOSS",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "BAC",
-        "direction": "LONG",
-        "shares": 6,
-        "entry_price": 53.88999938964844,
-        "exit_price": 56.84000015258789,
-        "entry_date": "2026-06-04",
-        "exit_date": "2026-06-16",
-        "holding_days": 12,
-        "gross_pnl": 17.7,
-        "net_pnl": 17.3596,
-        "return_pct": 5.474,
-        "exit_reason": "TAKE_PROFIT",
-        "entry_regime": "BULL"
-      },
-      {
-        "ticker": "BAC",
+        "ticker": "UAL",
         "direction": "LONG",
         "shares": 2,
-        "entry_price": 56.97999954223633,
-        "exit_price": 60.619998931884766,
-        "entry_date": "2026-06-30",
-        "exit_date": "2026-07-14",
+        "entry_price": 115.05999755859375,
+        "exit_price": 105.13999938964844,
+        "entry_date": "2026-05-28",
+        "exit_date": "2026-06-03",
+        "holding_days": 6,
+        "gross_pnl": -19.84,
+        "net_pnl": -20.0649,
+        "return_pct": -8.622,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BEAR"
+      },
+      {
+        "ticker": "APH",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 148.17645263671875,
+        "exit_price": 138.60089111328125,
+        "entry_date": "2026-06-02",
+        "exit_date": "2026-06-05",
+        "holding_days": 3,
+        "gross_pnl": -9.5756,
+        "net_pnl": -9.722,
+        "return_pct": -6.462,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "NTAP",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 173.76223754882812,
+        "exit_price": 160.17352294921875,
+        "entry_date": "2026-05-29",
+        "exit_date": "2026-06-10",
+        "holding_days": 12,
+        "gross_pnl": -13.5887,
+        "net_pnl": -13.7592,
+        "return_pct": -7.82,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "PYPL",
+        "direction": "LONG",
+        "shares": 8,
+        "entry_price": 42.75,
+        "exit_price": 40.70000076293945,
+        "entry_date": "2026-06-04",
+        "exit_date": "2026-06-10",
+        "holding_days": 6,
+        "gross_pnl": -16.4,
+        "net_pnl": -16.7421,
+        "return_pct": -4.795,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "VLO",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 257.2657775878906,
+        "exit_price": 243.19017028808594,
+        "entry_date": "2026-06-02",
+        "exit_date": "2026-06-16",
         "holding_days": 14,
-        "gross_pnl": 7.28,
-        "net_pnl": 7.1595,
-        "return_pct": 6.388,
-        "exit_reason": "TAKE_PROFIT",
+        "gross_pnl": -14.0756,
+        "net_pnl": -14.331,
+        "return_pct": -5.471,
+        "exit_reason": "STOP_LOSS",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "BAX",
+        "direction": "LONG",
+        "shares": 13,
+        "entry_price": 19.239999771118164,
+        "exit_price": 19.389999389648438,
+        "entry_date": "2026-05-28",
+        "exit_date": "2026-06-17",
+        "holding_days": 20,
+        "gross_pnl": 1.95,
+        "net_pnl": 1.6912,
+        "return_pct": 0.78,
+        "exit_reason": "TRAILING_STOP",
+        "entry_regime": "BEAR"
+      },
+      {
+        "ticker": "CDW",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 134.80999755859375,
+        "exit_price": 123.56999969482422,
+        "entry_date": "2026-06-08",
+        "exit_date": "2026-06-22",
+        "holding_days": 14,
+        "gross_pnl": -11.24,
+        "net_pnl": -11.3719,
+        "return_pct": -8.338,
+        "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
       {
@@ -4794,6 +5124,21 @@
         "gross_pnl": 6.65,
         "net_pnl": 6.566,
         "return_pct": 8.448,
+        "exit_reason": "TAKE_PROFIT",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "IP",
+        "direction": "LONG",
+        "shares": 2,
+        "entry_price": 36.5,
+        "exit_price": 42.15999984741211,
+        "entry_date": "2026-07-14",
+        "exit_date": "2026-07-24",
+        "holding_days": 10,
+        "gross_pnl": 11.32,
+        "net_pnl": 11.2392,
+        "return_pct": 15.507,
         "exit_reason": "TAKE_PROFIT",
         "entry_regime": "BULL"
       },
@@ -4813,18 +5158,18 @@
         "entry_regime": "BULL"
       },
       {
-        "ticker": "BAC",
+        "ticker": "IP",
         "direction": "LONG",
-        "shares": 2,
-        "entry_price": 60.619998931884766,
-        "exit_price": 62.47999954223633,
-        "entry_date": "2026-07-14",
-        "exit_date": "2026-08-03",
-        "holding_days": null,
-        "gross_pnl": 3.72,
-        "net_pnl": 3.5939,
-        "return_pct": 3.068,
-        "exit_reason": "BACKTEST_END",
+        "shares": 1,
+        "entry_price": 44.09000015258789,
+        "exit_price": 40.83000183105469,
+        "entry_date": "2026-07-28",
+        "exit_date": "2026-07-31",
+        "holding_days": 3,
+        "gross_pnl": -3.26,
+        "net_pnl": -3.3035,
+        "return_pct": -7.394,
+        "exit_reason": "STOP_LOSS",
         "entry_regime": "BULL"
       },
       {
@@ -4839,6 +5184,21 @@
         "gross_pnl": -1.01,
         "net_pnl": -1.0977,
         "return_pct": -1.171,
+        "exit_reason": "BACKTEST_END",
+        "entry_regime": "BULL"
+      },
+      {
+        "ticker": "IP",
+        "direction": "LONG",
+        "shares": 1,
+        "entry_price": 40.83000183105469,
+        "exit_price": 41.45000076293945,
+        "entry_date": "2026-07-31",
+        "exit_date": "2026-08-03",
+        "holding_days": null,
+        "gross_pnl": 0.62,
+        "net_pnl": 0.5778,
+        "return_pct": 1.518,
         "exit_reason": "BACKTEST_END",
         "entry_regime": "BULL"
       }
@@ -4882,7 +5242,7 @@
         "strategy": "cash",
         "size_mult": 0.0,
         "components": {
-          "hmm": 38.7,
+          "hmm": 38.6,
           "ma": 80.0,
           "ker": 3.5,
           "adx": 30.4,
@@ -5019,7 +5379,7 @@
         "components": {
           "hmm": 41.6,
           "ma": 100.0,
-          "ker": 25.4,
+          "ker": 25.3,
           "adx": 78.1,
           "dist": 40.0
         }
@@ -11430,32 +11790,43 @@
         }
       }
     ],
-    "final_equity": 1457.7181618849806,
+    "final_equity": 1419.4150100028191,
     "starting_equity": 1282.0,
     "tickers": [
-      "MSFT",
-      "AAPL",
-      "NVDA",
-      "GOOGL",
-      "DELL",
+      "NTAP",
+      "BAX",
+      "AXON",
+      "CRL",
       "BBY",
-      "TGT",
-      "JPM",
-      "BAC"
+      "CDW",
+      "IQV",
+      "PANW",
+      "EXPE",
+      "WDAY",
+      "DLTR",
+      "IP",
+      "GPC",
+      "WTW",
+      "MTD",
+      "PYPL",
+      "APH",
+      "VEEV",
+      "UAL",
+      "VLO"
     ]
   },
   "metrics": {
-    "total_trades": 87,
-    "win_rate": 0.517,
-    "total_pnl": 175.61,
-    "total_return_pct": 13.71,
-    "profit_factor": 1.49,
-    "avg_win": 11.84,
-    "avg_loss": -8.51,
-    "expectancy": 2.02,
-    "sharpe": 0.92,
-    "max_drawdown_pct": -6.85,
-    "final_equity": 1457.72,
+    "total_trades": 111,
+    "win_rate": 0.468,
+    "total_pnl": 137.35,
+    "total_return_pct": 10.72,
+    "profit_factor": 1.23,
+    "avg_win": 13.9,
+    "avg_loss": -9.93,
+    "expectancy": 1.24,
+    "sharpe": 0.51,
+    "max_drawdown_pct": -11.01,
+    "final_equity": 1419.42,
     "starting_equity": 1282.0
   }
 }

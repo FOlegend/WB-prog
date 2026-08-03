@@ -556,19 +556,38 @@ def regime_signal(df, cfg, ticker: str | None = None) -> dict:
     # Composite score (with vetoes)
     sr = regime_score_engine(df_full, cfg, hmm_result=hmm_result, ticker=ticker)
 
-    # Determine signal from score
+    # Determine raw_signal from score (for transparency)
     if sr["regime_score"] >= cfg.regime_score_full:
-        signal = "bullish"
+        raw_signal = "bullish"
     elif sr["regime_score"] < cfg.regime_score_min:
-        signal = "bearish"
+        raw_signal = "bearish"
     else:
+        raw_signal = "neutral"
+
+    # Derive FINAL signal from POST-VETO strategy (not raw score).
+    # Reviewer fix: vetoes can change strategy/size_mult without changing
+    # regime_score, creating contradictory outputs (e.g. signal="bullish"
+    # but strategy="cash" + size_mult=0.0). Downstream agents reading only
+    # `signal` would trade when the veto has forced cash. Signal must reflect
+    # the final post-veto decision.
+    if sr["strategy"] == "trend_following":
+        signal = "bullish"
+    elif sr["strategy"] == "selective":
         signal = "neutral"
+    else:  # cash
+        signal = "bearish"
 
     # Build result
     result = {
         "agent": "regime_agent",
         "signal": signal,
+        "raw_signal": raw_signal,  # pre-veto signal (transparency)
+        "signal_changed_by_veto": signal != raw_signal,
         "confidence": round(sr["confidence"] * 100, 1),
+        # confidence = component AGREEMENT, not probability of profit.
+        # High confidence means components agree on direction — they could
+        # all agree on "bearish" just as easily as "bullish".
+        "agreement_score": round(sr["confidence"] * 100, 1),
         "score": round((sr["regime_score"] - 50) / 50, 3),  # [0,100] → [-1,1]
         # --- Composite fields ---
         "regime_score": sr["regime_score"],
@@ -598,13 +617,16 @@ def regime_signal(df, cfg, ticker: str | None = None) -> dict:
     veto_str = ""
     if sr.get("vetoes"):
         veto_str = "\n  ⚠️ Veto: " + "; ".join(sr["vetoes"])
+    signal_note = ""
+    if signal != raw_signal:
+        signal_note = f"\n  ⚠️ Signal overridden by veto: {raw_signal} → {signal}"
     result["reasoning"] = (
         f"Regime Score={sr['regime_score']:.0f}/100 "
-        f"(strategy={sr['strategy']}, size_mult={sr['position_size_mult']:.2f}, "
-        f"confidence={sr['confidence']:.0%}).\n"
+        f"(signal={signal}, strategy={sr['strategy']}, size_mult={sr['position_size_mult']:.2f}, "
+        f"agreement={sr['confidence']:.0%}).\n"
         f"  Components: {comp_str}.\n"
         f"  HMM regime={sr['regime']}(P={sr['latest_prob']:.0%}), "
-        f"trending={sr['trending']}.{veto_str}\n"
+        f"trending={sr['trending']}.{veto_str}{signal_note}\n"
         f"  {'→ 允許做多（full size）' if sr['strategy']=='trend_following' else '→ 縮減倉位' if sr['strategy']=='selective' else '→ 現金為主，不開新多單'}"
     )
 

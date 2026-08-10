@@ -209,11 +209,15 @@ class DynamicBacktestEngine:
         for di, date in enumerate(all_dates):
             date_str = date.strftime("%Y-%m-%d")
             rd = active_bucket.get(date_str)
-            allowed = set(self.bucket_selections.get(rd, [])) if rd else set()
+            # v3.2.1 determinism fix: preserve RS-sorted list from screener
+            # (bucket_selections is already sorted by RS descending from screen_as_of).
+            # Use set for O(1) membership checks, list for deterministic iteration.
+            allowed_list = self.bucket_selections.get(rd, []) if rd else []
+            allowed_set = set(allowed_list)
 
             # Tickers we need prices for: this month's candidates + anything held
             held = {p["ticker"] for p in state["open_positions"]}
-            needed = allowed | held
+            needed = sorted(allowed_set | held)  # deterministic iteration
             prices = {}
             slices = {}
             for t in needed:
@@ -270,6 +274,7 @@ class DynamicBacktestEngine:
                         "strategy": global_strategy,
                         "size_mult": global_size_mult,
                         "components": info.get("components", {}),
+                        "vetoes": info.get("vetoes", []),
                     })
 
             # ---- Exit checks (all held positions) ----
@@ -302,8 +307,11 @@ class DynamicBacktestEngine:
                     i += 1
 
             # ---- Entries (only from active bucket, if regime allows) ----
+            # v3.2.1 determinism fix: iterate RS-sorted list (not random set order).
+            # When multiple tickers pass entry filter on same day but position slots
+            # are limited, higher-RS tickers (stronger relative strength) get priority.
             if global_size_mult > 0:
-                for t in allowed:
+                for t in allowed_list:
                     if t not in slices:
                         continue
                     if t in held:
@@ -351,7 +359,7 @@ class DynamicBacktestEngine:
 
             if self.progress and (di % 60 == 0 or di == n_total - 1):
                 print(f"    [{date_str}] equity=${state['equity']:.0f} "
-                      f"pos={len(state['open_positions'])} bucket={len(allowed)}")
+                      f"pos={len(state['open_positions'])} bucket={len(allowed_list)}")
 
         # Close remaining at end
         last_prices = {t: float(self.all_data[t]["close"].iloc[-1])

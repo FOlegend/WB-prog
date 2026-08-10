@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "start": "2018-01-01",
+    "end": "2025-07-31",
+    "top_n": 20,
+    "benchmark": "SPY",
+    "n_buckets": 93,
+    "variants": [
+      "No Regime",
+      "Exp A: Threshold 60",
+      "Exp B: Continuous",
+      "Equal Weights"
+    ]
+  },
+  "spy_buyhold_return_pct": 164.95,
+  "variants": {
+    "No Regime": {
+      "metrics": {
+        "total_trades": 1000,
+        "win_rate": 0.489,
+        "total_pnl": 3022.59,
+        "total_return_pct": 235.93,
+        "profit_factor": 1.24,
+        "avg_win": 32.16,
+        "avg_loss": -24.86,
+        "expectancy": 3.02,
+        "sharpe": 0.84,
+        "max_drawdown_pct": -32.11,
+        "final_equity": 4306.6,
+        "starting_equity": 1282.0,
+        "exposure_pct": 100.0,
+        "n_buckets": 91,
+        "universe_size": 364
+      },
+      "spec": {
+        "no_regime": true,
+        "weights": null,
+        "exposure_mode": "gate",
+        "score_full": 70.0,
+        "desc": "Baseline \u2014 no regime filtering, size_mult=1.0 always"
+      }
+    },
+    "Exp A: Threshold 60": {
+      "metrics": {
+        "total_trades": 628,
+        "win_rate": 0.506,
+        "total_pnl": 1634.55,
+        "total_return_pct": 127.55,
+        "profit_factor": 1.43,
+        "avg_win": 17.2,
+        "avg_loss": -12.37,
+        "expectancy": 2.6,
+        "sharpe": 0.89,
+        "max_drawdown_pct": -17.35,
+        "final_equity": 2917.21,
+        "starting_equity": 1282.0,
+        "exposure_pct": 71.2,
+        "n_buckets": 91,
+        "universe_size": 364
+      },
+      "spec": {
+        "no_regime": false,
+        "weights": {
+          "hmm": 0.2,
+          "ma": 0.3,
+          "ker": 0.18,
+          "adx": 0.1,
+          "dist": 0.22
+        },
+        "exposure_mode": "gate",
+        "score_full": 60.0,
+        "desc": "Gate mode, threshold lowered 70->60. Tests if threshold was simply too high."
+      }
+    },
+    "Exp B: Continuous": {
+      "metrics": {
+        "total_trades": 777,
+        "win_rate": 0.49,
+        "total_pnl": 935.04,
+        "total_return_pct": 72.98,
+        "profit_factor": 1.29,
+        "avg_win": 10.87,
+        "avg_loss": -8.1,
+        "expectancy": 1.2,
+        "sharpe": 0.72,
+        "max_drawdown_pct": -14.69,
+        "final_equity": 2217.59,
+        "starting_equity": 1282.0,
+        "exposure_pct": 87.4,
+        "n_buckets": 91,
+        "universe_size": 364
+      },
+      "spec": {
+        "no_regime": false,
+        "weights": {
+          "hmm": 0.2,
+          "ma": 0.3,
+          "ker": 0.18,
+          "adx": 0.1,
+          "dist": 0.22
+        },
+        "exposure_mode": "continuous",
+        "score_full": 70.0,
+        "desc": "Continuous risk multiplier: <30->0, 30-50->0.2, 50-70->0.4-0.7, 70+->1.0"
+      }
+    },
+    "Equal Weights": {
+      "metrics": {
+        "total_trades": 560,
+        "win_rate": 0.505,
+        "total_pnl": 564.31,
+        "total_return_pct": 44.06,
+        "profit_factor": 1.21,
+        "avg_win": 11.69,
+        "avg_loss": -9.91,
+        "expectancy": 1.01,
+        "sharpe": 0.5,
+        "max_drawdown_pct": -18.01,
+        "final_equity": 1846.89,
+        "starting_equity": 1282.0,
+        "exposure_pct": 65.4,
+        "n_buckets": 91,
+        "universe_size": 364
+      },
+      "spec": {
+        "no_regime": false,
+        "weights": {
+          "hmm": 0.2,
+          "ma": 0.2,
+          "ker": 0.2,
+          "adx": 0.2,
+          "dist": 0.2
+        },
+        "exposure_mode": "gate",
+        "score_full": 70.0,
+        "desc": "Gate mode, all weights 0.20. Lower MA/dist weight = faster re-engagement."
+      }
+    }
+  },
+  "pass_criteria": [
+    {
+      "variant": "No Regime",
+      "c1_maxdd": false,
+      "c1_detail": "MaxDD=-32.11% (threshold: >-25%, No Regime: -32.11%)",
+      "c2_pf": true,
+      "c2_detail": "PF=1.24 (threshold: >=1.15, No Regime: 1.24)",
+      "c3_sharpe": true,
+      "c3_detail": "Sharpe=0.84 (threshold: >=0.50, No Regime: 0.84)",
+      "c4_2023": "True",
+      "c4_detail": "2023: exposure=100.0%, return=+32.49%, cash_pct=0.0%",
+      "c5_stress": false,
+      "c5_detail": "Stress MaxDD: COVID=-22.77%, 2022Bear=-26.36% vs NoRegime=-26.36%",
+      "passed": "3",
+      "total": 5,
+      "verdict": "BORDERLINE"
+    },
+    {
+      "variant": "Exp A: Threshold 60",
+      "c1_maxdd": true,
+      "c1_detail": "MaxDD=-17.35% (threshold: >-25%, No Regime: -32.11%)",
+      "c2_pf": true,
+      "c2_detail": "PF=1.43 (threshold: >=1.15, No Regime: 1.24)",
+      "c3_sharpe": true,
+      "c3_detail": "Sharpe=0.89 (threshold: >=0.50, No Regime: 0.84)",
+      "c4_2023": "True",
+      "c4_detail": "2023: exposure=84.4%, return=+8.97%, cash_pct=47.2%",
+      "c5_stress": true,
+      "c5_detail": "Stress MaxDD: COVID=-3.65%, 2022Bear=-6.29% vs NoRegime=-26.36%",
+      "passed": "5",
+      "total": 5,
+      "verdict": "PASS"
+    },
+    {
+      "variant": "Exp B: Continuous",
+      "c1_maxdd": true,
+      "c1_detail": "MaxDD=-14.69% (threshold: >-25%, No Regime: -32.11%)",
+      "c2_pf": true,
+      "c2_detail": "PF=1.29 (threshold: >=1.15, No Regime: 1.24)",
+      "c3_sharpe": true,
+      "c3_detail": "Sharpe=0.72 (threshold: >=0.50, No Regime: 0.84)",
+      "c4_2023": "True",
+      "c4_detail": "2023: exposure=96.8%, return=+10.15%, cash_pct=4.8%",
+      "c5_stress": true,
+      "c5_detail": "Stress MaxDD: COVID=-3.63%, 2022Bear=-4.33% vs NoRegime=-26.36%",
+      "passed": "5",
+      "total": 5,
+      "verdict": "PASS"
+    },
+    {
+      "variant": "Equal Weights",
+      "c1_maxdd": true,
+      "c1_detail": "MaxDD=-18.01% (threshold: >-25%, No Regime: -32.11%)",
+      "c2_pf": true,
+      "c2_detail": "PF=1.21 (threshold: >=1.15, No Regime: 1.24)",
+      "c3_sharpe": true,
+      "c3_detail": "Sharpe=0.50 (threshold: >=0.50, No Regime: 0.84)",
+      "c4_2023": "True",
+      "c4_detail": "2023: exposure=72.0%, return=+11.10%, cash_pct=53.2%",
+      "c5_stress": true,
+      "c5_detail": "Stress MaxDD: COVID=-2.31%, 2022Bear=-4.78% vs NoRegime=-26.36%",
+      "passed": "5",
+      "total": 5,
+      "verdict": "PASS"
+    }
+  ],
+  "elapsed_seconds": 879.3
+}

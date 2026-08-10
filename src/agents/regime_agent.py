@@ -433,16 +433,36 @@ def regime_score_engine(df: pd.DataFrame, cfg,
     regime_score = max(0.0, min(100.0, regime_score))
 
     # --- Strategy + position size (progressive exposure) ---
-    if regime_score >= cfg.regime_score_full:
-        strategy = "trend_following"
-        position_size_mult = 1.0
-    elif regime_score >= cfg.regime_score_min:
-        strategy = "selective"
-        t = (regime_score - cfg.regime_score_min) / max(1.0, cfg.regime_score_full - cfg.regime_score_min)
-        position_size_mult = 0.3 + 0.7 * t
+    exposure_mode = getattr(cfg, "regime_exposure_mode", "gate")
+    if exposure_mode == "continuous":
+        # v3.2 Experiment B: Regime as risk multiplier, not gate.
+        # Never completely zero except in extreme bear (score < 30).
+        # This allows partial participation during uncertain/recovery markets.
+        if regime_score >= cfg.regime_score_full:
+            strategy = "trend_following"
+            position_size_mult = 1.0
+        elif regime_score >= cfg.regime_score_min:
+            strategy = "selective"
+            t = (regime_score - cfg.regime_score_min) / max(1.0, cfg.regime_score_full - cfg.regime_score_min)
+            position_size_mult = 0.4 + 0.3 * t  # 0.4 → 0.7
+        elif regime_score >= 30.0:
+            strategy = "selective"
+            position_size_mult = 0.2
+        else:
+            strategy = "cash"
+            position_size_mult = 0.0
     else:
-        strategy = "cash"
-        position_size_mult = 0.0
+        # Default "gate" mode (production v3.1 behavior)
+        if regime_score >= cfg.regime_score_full:
+            strategy = "trend_following"
+            position_size_mult = 1.0
+        elif regime_score >= cfg.regime_score_min:
+            strategy = "selective"
+            t = (regime_score - cfg.regime_score_min) / max(1.0, cfg.regime_score_full - cfg.regime_score_min)
+            position_size_mult = 0.3 + 0.7 * t
+        else:
+            strategy = "cash"
+            position_size_mult = 0.0
 
     # --- Hard vetoes (override composite score — safety guardrails) ---
     # These prevent the weighted average from treating a clean bearish trend

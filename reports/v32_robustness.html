@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<title>v3.2 Robustness Validation — Equal Weights</title>
+<style>
+ body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin: 32px; color:#222; }
+ h1 { font-size: 22px; } h2 { font-size: 17px; margin-top: 30px; }
+ h3 { font-size: 14px; margin: 14px 0 4px; }
+ table { border-collapse: collapse; width: 100%; margin: 8px 0 18px; font-size: 12.5px; }
+ th, td { border: 1px solid #ccc; padding: 5px 8px; text-align: right; }
+ th:first-child, td:first-child { text-align: left; }
+ th { background: #fafafa; }
+ .note { background:#fff8e1; border-left:4px solid #ffc107; padding:10px 14px; margin:14px 0; font-size:13px; }
+ .verdict-box { display:inline-block; padding:8px 20px; border-radius:6px; font-size:16px; font-weight:bold; margin:10px 0; }
+</style></head>
+<body>
+<h1>v3.2 Robustness Validation — Equal Weights</h1>
+<p>Period <b>2018-01-01 ~ 2025-07-31</b> - Same dynamic universe - Equal Weights (gate mode, score_full=70)<br>
+Per reviewer: "目標不是找最佳組合，而是問：Equal 是否在不同設定下仍然穩？"</p>
+
+<div class="note">
+<b>Test methodology:</b> Each test changes ONLY ONE variable (top N, slippage, or commission).
+All other settings remain identical. If Equal Weights is robust, it should perform
+reasonably across ALL tests — not just the baseline.
+</div>
+
+<h2>1. Overall Verdict</h2>
+<div class="verdict-box" style="background:#c8e6c9">
+  ROBUST — 5/5 tests stable
+</div>
+<p>If ROBUST: Equal Weights can be promoted to v3.2 production candidate with high confidence.<br>
+If MOSTLY STABLE: Investigate the unstable test before promoting.<br>
+If FRAGILE: Equal Weights may be overfit to Top 20 Monthly — do not promote.</p>
+
+<h2>2. Comparison Table</h2>
+<table>
+<tr><th>Test</th><th>Ret%</th><th>Sharpe</th><th>MaxDD%</th><th>PF</th>
+<th>Win%</th><th>Trades</th><th>Exp%</th>
+<th>Ret Dev</th><th>Sharpe Dev</th><th>MaxDD Dev</th><th>Verdict</th></tr>
+<tr><td><b>Top 10</b></td><td>+63.04</td><td>0.67</td><td>-16.48</td><td>1.33</td><td>51.3</td><td>499</td><td>64.0</td><td>43.1%</td><td>0.17</td><td>1.53</td><td style='background:#c8e6c9;text-align:center'><b>STABLE</b></td></tr><tr><td><b>Top 20 (baseline)</b></td><td>+44.06</td><td>0.50</td><td>-18.01</td><td>1.21</td><td>50.5</td><td>560</td><td>65.4</td><td>0.0%</td><td>0.00</td><td>0.00</td><td style='background:#c8e6c9;text-align:center'><b>STABLE</b></td></tr><tr><td><b>Top 30</b></td><td>+42.27</td><td>0.48</td><td>-21.90</td><td>1.19</td><td>50.4</td><td>570</td><td>64.3</td><td>4.1%</td><td>0.02</td><td>3.89</td><td style='background:#c8e6c9;text-align:center'><b>STABLE</b></td></tr><tr><td><b>Top 20 + High Slippage</b></td><td>+41.43</td><td>0.49</td><td>-20.27</td><td>1.26</td><td>50.7</td><td>558</td><td>64.3</td><td>6.0%</td><td>0.01</td><td>2.26</td><td style='background:#c8e6c9;text-align:center'><b>STABLE</b></td></tr><tr><td><b>Top 20 + High Commission</b></td><td>+44.06</td><td>0.50</td><td>-18.01</td><td>1.21</td><td>50.5</td><td>560</td><td>65.4</td><td>0.0%</td><td>0.00</td><td>0.00</td><td style='background:#c8e6c9;text-align:center'><b>STABLE</b></td></tr>
+</table>
+<p><i>Dev = deviation from Top 20 baseline. Large deviations suggest sensitivity to that parameter.</i></p>
+
+<h2>3. Per-Test Stability Checks</h2>
+<div style='margin:8px 0'><b>Top 10</b>: <span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> Return > 0% (Return=+63.04%)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> Sharpe > 0.3 (Sharpe=0.67)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> MaxDD > -25% (MaxDD=-16.48%)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> PF > 1.0 (PF=1.33)</div><div style='margin:8px 0'><b>Top 20 (baseline)</b>: <span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> Return > 0% (Return=+44.06%)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> Sharpe > 0.3 (Sharpe=0.50)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> MaxDD > -25% (MaxDD=-18.01%)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> PF > 1.0 (PF=1.21)</div><div style='margin:8px 0'><b>Top 30</b>: <span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> Return > 0% (Return=+42.27%)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> Sharpe > 0.3 (Sharpe=0.48)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> MaxDD > -25% (MaxDD=-21.90%)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> PF > 1.0 (PF=1.19)</div><div style='margin:8px 0'><b>Top 20 + High Slippage</b>: <span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> Return > 0% (Return=+41.43%)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> Sharpe > 0.3 (Sharpe=0.49)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> MaxDD > -25% (MaxDD=-20.27%)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> PF > 1.0 (PF=1.26)</div><div style='margin:8px 0'><b>Top 20 + High Commission</b>: <span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> Return > 0% (Return=+44.06%)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> Sharpe > 0.3 (Sharpe=0.50)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> MaxDD > -25% (MaxDD=-18.01%)<span style='background:#c8e6c9;padding:2px 6px;border-radius:3px;font-size:11px;margin-right:6px'>PASS</span> PF > 1.0 (PF=1.21)</div>
+
+<h2>4. Interpretation Guide</h2>
+<div class="note">
+<ul>
+<li><b>Top 10:</b> If return drops significantly, Equal needs diversified universe to work.</li>
+<li><b>Top 30:</b> If return drops, adding more tickers dilutes the edge. If it improves, the edge scales.</li>
+<li><b>High Slippage:</b> If Sharpe drops below 0.3, the strategy is too cost-sensitive for real trading.</li>
+<li><b>High Commission:</b> If PF drops below 1.0, the strategy can't survive typical broker costs.</li>
+</ul>
+</div>
+
+<div class="note">
+<b>Next steps after robustness:</b><br>
+If ROBUST -> Proceed to walk-forward validation (Step 3).<br>
+If MOSTLY STABLE -> Investigate unstable test, then decide.<br>
+If FRAGILE -> Do not promote Equal Weights. Reconsider approach.
+</div>
+</body></html>

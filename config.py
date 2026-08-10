@@ -86,6 +86,12 @@ class Config:
     regime_score_full: float = 70.0        # score >= this → full position (1.0), strategy=trend_following
     regime_score_min: float = 50.0         # score >= this → selective (0.3-1.0), strategy=selective
                                             # score < this → cash (0.0), strategy=cash
+    # v3.2 Experiment B: exposure mapping mode
+    # "gate" (default/production): score < min → cash (0.0). Binary door.
+    # "continuous": score < 30 → 0.0, 30-50 → 0.2, 50-70 → 0.4-0.7, 70+ → 1.0
+    # Regime acts as throttle (risk multiplier), not door (entry gate).
+    # Vetoes still apply in both modes (safety guardrails unchanged).
+    regime_exposure_mode: str = "gate"
     # MA Structure periods (Minervini Trend Template)
     regime_ma_fast: int = 50               # 50-day SMA
     regime_ma_mid: int = 150               # 150-day SMA (≈ Weinstein 30-week)

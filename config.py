@@ -124,7 +124,7 @@ class Config:
     er_lookback: int = 30                 # Kaufman ER 回看天數
 
     # ---- 進出場（swing）----
-    entry_threshold: float = 0.25         # 加權 net score > 此 → 買進候選
+    entry_threshold: float = 0.25         # 加權 net score > 此 → 買進候選（legacy，被 setup_agent 取代）
     stop_atr_mult: float = 1.5            # 止損 = entry - ATR × 1.5
     take_profit_atr_mult: float = 2.5     # 止盈 = entry + ATR × 2.5（≈1.67:1 R:R）
     trailing_atr_mult: float = 1.5        # 移動停利：從最高點回撤 ATR × 1.5
@@ -133,6 +133,25 @@ class Config:
     max_open_positions: int = 5           # 投組層：最多同時持倉數
     max_position_pct: float = 0.25        # 單一持倉 ≤ 25% 權益
     risk_per_trade: float = 0.01          # 每筆風險 1% 權益
+
+    # ---- Setup Agent（explicit trade setups — Type C→D upgrade）----
+    # Entry gate becomes: regime allows + ticker in bucket + setup valid + score >= threshold
+    # entry_mode: "setup" (new) or "weighted" (legacy 0.35*regime+0.65*tech > 0.25)
+    entry_mode: str = "setup"
+    setup_score_threshold: float = 0.5    # min setup_score to allow entry
+    setup_enabled_types: list = field(default_factory=lambda: ["breakout", "pullback"])
+    # setup_quality_mult mapping (0 = reject, 0.5-1.2 = position size scaling)
+    setup_quality_score_high: float = 0.8  # score >= this → high mult
+    setup_quality_score_mid: float = 0.6   # score >= this → mid mult
+    setup_quality_mult_high: float = 1.2   # perfect setup → larger size
+    setup_quality_mult_mid: float = 1.0    # good setup
+    setup_quality_mult_low: float = 0.5    # marginal setup
+    # Breakout setup params
+    setup_breakout_vol_expand: float = 1.5     # vol > 1.5x 20MA vol
+    setup_breakout_near_high_pct: float = 0.02 # close within 2% of 20D high
+    setup_breakout_vcp_ratio: float = 0.8      # 10D ATR% < 0.8x 30D ATR%
+    # Pullback setup params
+    setup_pullback_ma_tol: float = 0.01    # close within 1% of 10/20 EMA
     regime_size_mult: dict = field(default_factory=lambda: {
         "BULL": 1.0, "SIDEWAYS": 0.6, "BEAR": 0.0, "RANGE_BOUND": 0.0
     })

@@ -12,35 +12,67 @@ from datetime import datetime
 from src.agents.risk_manager import size_position
 
 
-def _exit_check(pos: dict, price: float, date_str: str, tech_signal: str, cfg) -> dict | None:
-    """檢查未平倉部位是否觸發出場。回傳 {reason, exit_price} 或 None（續抱）。"""
-    # 1. 止損
-    if price <= pos["stop_price"]:
-        return {"reason": "STOP_LOSS", "exit_price": price,
-                "detail": f"收盤 {price:.2f} ≤ 止損 {pos['stop_price']:.2f}"}
-    # 2. 止盈
-    if price >= pos["take_profit"]:
-        return {"reason": "TAKE_PROFIT", "exit_price": price,
-                "detail": f"收盤 {price:.2f} ≥ 止盈 {pos['take_profit']:.2f}"}
-    # 3. 移動停利：先看是否啟動（獲利達 1R）
-    r_dist = pos["atr_at_entry"] * cfg.stop_atr_mult
-    if pos["highest_since_entry"] >= pos["entry_price"] + cfg.trailing_trigger_r * r_dist:
-        trail_stop = pos["highest_since_entry"] - cfg.trailing_atr_mult * pos["atr_at_entry"]
-        if price <= trail_stop:
-            return {"reason": "TRAILING_STOP", "exit_price": price,
-                    "detail": f"從最高 {pos['highest_since_entry']:.2f} 回撤至 {price:.2f} ≤ 移動停利 {trail_stop:.2f}"}
-    # 4. 時間停損
+def _exit_check(pos: dict, bar: dict, date_str: str, tech_signal: str, cfg) -> dict | None:
+    """檢查未平倉部位是否觸發出場。回傳 {reason, exit_price, fill_model, detail} 或 None（續抱）。
+
+    v3.2.2 gap-aware: uses today's OHLC bar (open/high/low/close) instead of
+    close-only. Stop/target fills respect intraday price path:
+      - open <= stop        -> exit at OPEN (gap down through stop)
+      - low <= stop         -> exit at STOP (intraday stop hit)
+      - high >= target      -> exit at TARGET (intraday target hit)
+      - both stop+target    -> stop first (conservative default)
+    Trailing stop uses the same gap-aware logic.
+    Time stop / signal exit remain close-based (end-of-day decisions).
+
+    Backward compat: if `bar` is a float, treat it as a degenerate close-only bar.
+    """
+    if not isinstance(bar, dict):
+        bar = {"open": bar, "high": bar, "low": bar, "close": bar}
+    open_px = bar.get("open")
+    high_px = bar.get("high")
+    low_px = bar.get("low")
+    close_px = bar.get("close", pos["entry_price"])
+    stop = pos.get("stop_price")
+    target = pos.get("take_profit")
+
+    # 1. 止損（gap-aware，保守：stop 優先於 target）
+    if stop is not None:
+        if open_px is not None and open_px <= stop:
+            return {"reason": "STOP_LOSS", "exit_price": open_px, "fill_model": "GAP",
+                    "detail": f"開盤 {open_px:.2f} ≤ 止損 {stop:.2f}（跳空越過）"}
+        if low_px is not None and low_px <= stop:
+            return {"reason": "STOP_LOSS", "exit_price": stop, "fill_model": "STOP",
+                    "detail": f"盤中低點 {low_px:.2f} ≤ 止損 {stop:.2f}"}
+
+    # 2. 止盈（盤中 high >= target）
+    if target is not None and high_px is not None and high_px >= target:
+        return {"reason": "TAKE_PROFIT", "exit_price": target, "fill_model": "TARGET",
+                "detail": f"盤中高點 {high_px:.2f} ≥ 止盈 {target:.2f}"}
+
+    # 3. 移動停利（gap-aware）
+    r_dist = pos.get("atr_at_entry", 0.0) * cfg.stop_atr_mult
+    if r_dist > 0 and pos.get("highest_since_entry", 0.0) >= pos["entry_price"] + cfg.trailing_trigger_r * r_dist:
+        trail_stop = pos["highest_since_entry"] - cfg.trailing_atr_mult * pos.get("atr_at_entry", 0.0)
+        if open_px is not None and open_px <= trail_stop:
+            return {"reason": "TRAILING_STOP", "exit_price": open_px, "fill_model": "GAP",
+                    "detail": f"開盤 {open_px:.2f} ≤ 移動停利 {trail_stop:.2f}"}
+        if low_px is not None and low_px <= trail_stop:
+            return {"reason": "TRAILING_STOP", "exit_price": trail_stop, "fill_model": "TRAILING",
+                    "detail": f"從最高 {pos['highest_since_entry']:.2f} 回撤至 {low_px:.2f} ≤ 移動停利 {trail_stop:.2f}"}
+
+    # 4. 時間停損（收盤價）
     try:
         held = (datetime.strptime(date_str, "%Y-%m-%d") -
                 datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days
     except Exception:
         held = 0
     if held >= cfg.max_holding_days:
-        return {"reason": "TIME_STOP", "exit_price": price,
+        return {"reason": "TIME_STOP", "exit_price": close_px, "fill_model": "CLOSE",
                 "detail": f"持有 {held} 天 ≥ 上限 {cfg.max_holding_days} 天"}
-    # 5. 技術翻空
+
+    # 5. 技術翻空（收盤價）
     if tech_signal == "bearish":
-        return {"reason": "SIGNAL_EXIT", "exit_price": price,
+        return {"reason": "SIGNAL_EXIT", "exit_price": close_px, "fill_model": "CLOSE",
                 "detail": "technicals_agent 轉 bearish"}
     return None
 

@@ -61,6 +61,7 @@ from src.agents.regime_agent import (fit_hmm, compute_features, decode_and_label
                                       RegimeResult, regime_score_engine)
 from src.agents.technicals_agent import technicals_signal
 from src.agents.risk_manager import size_position
+from src.agents.setup_agent import setup_signal
 from src.portfolio.portfolio_manager import _exit_check
 from src.state.state import default_state, mark_to_market, close_position, open_position
 from src.backtest.engine import compute_metrics
@@ -220,6 +221,7 @@ class DynamicBacktestEngine:
             needed = sorted(allowed_set | held)  # deterministic iteration
             prices = {}
             slices = {}
+            bars = {}  # v3.2.2: OHLC bars for gap-aware exit fills
             for t in needed:
                 df = self.all_data.get(t)
                 if df is None:
@@ -227,7 +229,10 @@ class DynamicBacktestEngine:
                 sub = df[df["datetime"] <= date]
                 if len(sub) < 60:
                     continue
-                prices[t] = float(sub["close"].iloc[-1])
+                last = sub.iloc[-1]
+                prices[t] = float(last["close"])
+                bars[t] = {"open": float(last["open"]), "high": float(last["high"]),
+                           "low": float(last["low"]), "close": float(last["close"])}
                 slices[t] = sub
 
             if not slices:
@@ -277,7 +282,7 @@ class DynamicBacktestEngine:
                         "vetoes": info.get("vetoes", []),
                     })
 
-            # ---- Exit checks (all held positions) ----
+            # ---- Exit checks (all held positions, gap-aware OHLC) ----
             i = 0
             while i < len(state["open_positions"]):
                 pos = state["open_positions"][i]
@@ -285,16 +290,18 @@ class DynamicBacktestEngine:
                 if t not in slices:
                     i += 1
                     continue
-                price = prices[t]
                 tech_sig = "neutral"
                 try:
                     tsig = technicals_signal(slices[t], cfg)
                     tech_sig = tsig["signal"]
                 except Exception:
                     pass
-                ex = _exit_check(pos, price, date_str, tech_sig, cfg)
+                bar = bars.get(t, {"close": prices[t]})
+                ex = _exit_check(pos, bar, date_str, tech_sig, cfg)
                 if ex is not None:
-                    close_position(state, i, price, date_str, ex["reason"], prices)
+                    fill = ex.get("exit_price", prices[t])
+                    close_position(state, i, fill, date_str, ex["reason"], prices,
+                                   fill_model=ex.get("fill_model"))
                     if self.state["trade_log"]:
                         try:
                             held_days = (datetime.strptime(date_str, "%Y-%m-%d") -
@@ -307,27 +314,52 @@ class DynamicBacktestEngine:
                     i += 1
 
             # ---- Entries (only from active bucket, if regime allows) ----
+            # v3.2.2: entry gate = regime allows + in bucket + setup valid + score >= threshold
+            # (replaces the old weighted-score gate: 0.35*regime + 0.65*tech > 0.25)
+            # entry_mode="weighted" preserves the legacy weighted-score gate.
             # v3.2.1 determinism fix: iterate RS-sorted list (not random set order).
-            # When multiple tickers pass entry filter on same day but position slots
-            # are limited, higher-RS tickers (stronger relative strength) get priority.
             if global_size_mult > 0:
                 for t in allowed_list:
                     if t not in slices:
                         continue
                     if t in held:
                         continue
-                    try:
-                        tsig = technicals_signal(slices[t], cfg)
-                    except Exception:
-                        continue
-                    tech_score = tsig.get("score", 0.0)
-                    net = cfg.regime_weight * global_regime_s + cfg.technicals_weight * tech_score
-                    if net <= cfg.entry_threshold:
-                        continue
-                    atr_val = tsig.get("atr", 0.0)
+                    entry_mode = getattr(cfg, "entry_mode", "setup")
+                    if entry_mode == "weighted":
+                        # Legacy weighted-score entry (Type C)
+                        try:
+                            tsig = technicals_signal(slices[t], cfg)
+                        except Exception:
+                            continue
+                        tech_score = tsig.get("score", 0.0)
+                        net = cfg.regime_weight * global_regime_s + cfg.technicals_weight * tech_score
+                        if net <= cfg.entry_threshold:
+                            continue
+                        atr_val = tsig.get("atr", 0.0)
+                        eff_size_mult = global_size_mult
+                        setup_type = None
+                        setup_score = None
+                        entry_reason = (f"net={net:.3f}, tech={tsig['signal']}, "
+                                        f"market_score={global_score:.0f}, size_mult={global_size_mult:.2f}")
+                    else:
+                        # Setup-based entry (Type D)
+                        try:
+                            setup = setup_signal(slices[t], cfg)
+                        except Exception:
+                            continue
+                        if not setup.get("valid"):
+                            continue
+                        if setup.get("setup_score", 0.0) < cfg.setup_score_threshold:
+                            continue
+                        atr_val = setup.get("atr", 0.0)
+                        eff_size_mult = global_size_mult * setup.get("setup_quality_mult", 1.0)
+                        setup_type = setup.get("setup_type")
+                        setup_score = setup.get("setup_score")
+                        entry_reason = setup.get("entry_reason", "UNKNOWN")
+
                     n_open = len(state["open_positions"])
                     sizing = size_position(state["equity"], state["cash"],
-                                           prices[t], atr_val, global_size_mult, n_open, cfg)
+                                           prices[t], atr_val, eff_size_mult, n_open, cfg)
                     if not sizing.get("allow"):
                         continue
                     pos = {
@@ -338,8 +370,11 @@ class DynamicBacktestEngine:
                         "entry_regime": global_regime_label if not self.no_regime else "N/A(no_regime)",
                         "entry_regime_score": global_score,
                         "entry_market_strategy": global_strategy,
-                        "entry_reasoning": f"net={net:.3f}, tech={tsig['signal']}, "
-                                           f"market_score={global_score:.0f}, size_mult={global_size_mult:.2f}",
+                        "entry_size_mult": global_size_mult,  # v3.2.2 audit field
+                        "bucket_date": rd,  # v3.2.2 audit field (rebalance date source)
+                        "setup_type": setup_type,  # v3.2.2 setup field
+                        "setup_score": setup_score,  # v3.2.2 setup field
+                        "entry_reasoning": entry_reason,
                     }
                     open_position(state, pos, prices[t], cfg)
 

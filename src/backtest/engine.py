@@ -186,6 +186,7 @@ class BacktestEngine:
                     "entry_regime": market_info["regime"] if market_info else "UNKNOWN",
                     "entry_regime_score": global_score,
                     "entry_market_strategy": global_strategy,
+                    "entry_size_mult": global_size_mult,  # v3.2.2 audit field
                     "entry_reasoning": f"net={net:.3f}, tech={tsig['signal']}, "
                                        f"market_score={global_score:.0f}, size_mult={global_size_mult:.2f}",
                 }

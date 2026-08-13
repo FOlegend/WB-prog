@@ -66,7 +66,7 @@ def mark_to_market(state: dict, prices: dict[str, float]) -> float:
 
 
 def close_position(state: dict, idx: int, exit_price: float, exit_date: str,
-                   exit_reason: str, prices: dict) -> dict:
+                   exit_reason: str, prices: dict, fill_model: str | None = None) -> dict:
     """平倉第 idx 個部位，寫進 trade_log，更新 cash。回傳該筆交易紀錄。"""
     pos = state["open_positions"].pop(idx)
     gross_pnl = (exit_price - pos["entry_price"]) * pos["shares"]
@@ -77,6 +77,16 @@ def close_position(state: dict, idx: int, exit_price: float, exit_date: str,
     sell_cost += min(pos["shares"] * 0.000195, 9.79)  # FINRA TAF
     net_pnl = gross_pnl - buy_cost - sell_cost
     state["cash"] += pos["shares"] * exit_price - sell_cost  # 賣出回收（扣賣方費用）
+
+    # R-multiple: 報酬 / 初始風險（entry − stop）
+    stop_price = pos.get("stop_price")
+    r_multiple = None
+    if stop_price is not None and stop_price > 0:
+        risk_per_share = float(pos["entry_price"]) - float(stop_price)
+        if risk_per_share > 0:
+            r_multiple = round((exit_price - pos["entry_price"]) / risk_per_share, 3)
+
+    pct = round((exit_price / pos["entry_price"] - 1) * 100, 3)
     trade = {
         "ticker": pos["ticker"],
         "direction": pos["direction"],
@@ -88,9 +98,23 @@ def close_position(state: dict, idx: int, exit_price: float, exit_date: str,
         "holding_days": None,  # 由呼叫端填
         "gross_pnl": round(gross_pnl, 4),
         "net_pnl": round(net_pnl, 4),
-        "return_pct": round((exit_price / pos["entry_price"] - 1) * 100, 3),
+        "return_pct": pct,
+        "pnl_pct": pct,
         "exit_reason": exit_reason,
+        "exit_fill_model": fill_model if fill_model is not None else "CLOSE",
         "entry_regime": pos["entry_regime"],
+        # ---- v3.2.2 audit fields (from position dict, not inferred) ----
+        "entry_reason": pos.get("entry_reasoning", "UNKNOWN"),
+        "setup_type": pos.get("setup_type"),
+        "setup_score": pos.get("setup_score"),
+        "stop_price": stop_price,
+        "target_price": pos.get("take_profit"),
+        "r_multiple": r_multiple,
+        "regime_score_at_entry": pos.get("entry_regime_score"),
+        "market_size_mult_at_entry": pos.get("entry_size_mult"),
+        "atr_at_entry": pos.get("atr_at_entry"),
+        "bucket_date": pos.get("bucket_date"),
+        "position_value": round(pos["shares"] * pos["entry_price"], 2),
     }
     state["trade_log"].append(trade)
     return trade

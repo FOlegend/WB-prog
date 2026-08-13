@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "start": "2018-01-01",
+    "end": "2025-07-31",
+    "top_n": 20,
+    "config": "Current Weights | gate | score_full=70 | gap-aware OHLC exit"
+  },
+  "variants": {
+    "Current Simplified": {
+      "metrics": {
+        "total_trades": 766,
+        "win_rate": 0.457,
+        "total_pnl": -210.05,
+        "total_return_pct": -15.78,
+        "profit_factor": 0.92,
+        "avg_win": 6.68,
+        "avg_loss": -6.13,
+        "expectancy": -0.27,
+        "sharpe": -0.13,
+        "max_drawdown_pct": -32.22,
+        "final_equity": 1079.68,
+        "starting_equity": 1282.0
+      },
+      "setup_distribution": {
+        "null": 766
+      },
+      "fill_model_distribution": {
+        "STOP": 330,
+        "TARGET": 242,
+        "GAP": 85,
+        "CLOSE": 41,
+        "TRAILING": 68
+      }
+    },
+    "Breakout Only": {
+      "metrics": {
+        "total_trades": 774,
+        "win_rate": 0.49,
+        "total_pnl": 370.02,
+        "total_return_pct": 29.86,
+        "profit_factor": 1.17,
+        "avg_win": 6.77,
+        "avg_loss": -5.55,
+        "expectancy": 0.48,
+        "sharpe": 0.39,
+        "max_drawdown_pct": -12.48,
+        "final_equity": 1664.83,
+        "starting_equity": 1282.0
+      },
+      "setup_distribution": {
+        "breakout": 774
+      },
+      "fill_model_distribution": {
+        "STOP": 311,
+        "TARGET": 258,
+        "GAP": 84,
+        "TRAILING": 65,
+        "CLOSE": 56
+      }
+    },
+    "Pullback Only": {
+      "metrics": {
+        "total_trades": 787,
+        "win_rate": 0.466,
+        "total_pnl": 63.91,
+        "total_return_pct": 5.17,
+        "profit_factor": 1.02,
+        "avg_win": 7.53,
+        "avg_loss": -6.42,
+        "expectancy": 0.08,
+        "sharpe": 0.12,
+        "max_drawdown_pct": -27.02,
+        "final_equity": 1348.33,
+        "starting_equity": 1282.0
+      },
+      "setup_distribution": {
+        "pullback": 787
+      },
+      "fill_model_distribution": {
+        "STOP": 335,
+        "TARGET": 255,
+        "GAP": 78,
+        "CLOSE": 50,
+        "TRAILING": 69
+      }
+    },
+    "Breakout + Pullback": {
+      "metrics": {
+        "total_trades": 810,
+        "win_rate": 0.484,
+        "total_pnl": 262.58,
+        "total_return_pct": 20.73,
+        "profit_factor": 1.1,
+        "avg_win": 7.67,
+        "avg_loss": -6.57,
+        "expectancy": 0.32,
+        "sharpe": 0.28,
+        "max_drawdown_pct": -19.5,
+        "final_equity": 1547.71,
+        "starting_equity": 1282.0
+      },
+      "setup_distribution": {
+        "breakout": 387,
+        "pullback": 423
+      },
+      "fill_model_distribution": {
+        "STOP": 325,
+        "TARGET": 278,
+        "CLOSE": 52,
+        "TRAILING": 64,
+        "GAP": 91
+      }
+    }
+  },
+  "determinism_test": {
+    "deterministic": true,
+    "runs": [
+      {
+        "return": 20.73,
+        "sharpe": 0.28,
+        "max_dd": -19.5,
+        "pf": 1.1,
+        "trades": 810
+      },
+      {
+        "return": 20.73,
+        "sharpe": 0.28,
+        "max_dd": -19.5,
+        "pf": 1.1,
+        "trades": 810
+      },
+      {
+        "return": 20.73,
+        "sharpe": 0.28,
+        "max_dd": -19.5,
+        "pf": 1.1,
+        "trades": 810
+      }
+    ]
+  }
+}

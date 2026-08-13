@@ -139,17 +139,25 @@ class Config:
     # entry_mode: "setup" (new) or "weighted" (legacy 0.35*regime+0.65*tech > 0.25)
     entry_mode: str = "setup"
     setup_score_threshold: float = 0.5    # min setup_score to allow entry
-    setup_enabled_types: list = field(default_factory=lambda: ["breakout", "pullback"])
-    # setup_quality_mult mapping (0 = reject, 0.5-1.2 = position size scaling)
+    setup_enabled_types: list = field(default_factory=lambda: ["breakout"])  # v3.2.3: breakout only (pullback not yet tested)
+    # setup_quality_mult mapping (0 = reject, 0.5-1.0 = position size scaling)
+    # v3.2.3: cap at 1.0 — no >1.0 risk scaling until robustness validation passes
     setup_quality_score_high: float = 0.8  # score >= this → high mult
     setup_quality_score_mid: float = 0.6   # score >= this → mid mult
-    setup_quality_mult_high: float = 1.2   # perfect setup → larger size
-    setup_quality_mult_mid: float = 1.0    # good setup
+    setup_quality_mult_high: float = 1.0   # perfect setup
+    setup_quality_mult_mid: float = 0.75   # good setup
     setup_quality_mult_low: float = 0.5    # marginal setup
     # Breakout setup params
     setup_breakout_vol_expand: float = 1.5     # vol > 1.5x 20MA vol
-    setup_breakout_near_high_pct: float = 0.02 # close within 2% of 20D high
+    setup_breakout_near_high_pct: float = 0.02 # price within 2% below prior 20D high = near pivot (watchlist only)
     setup_breakout_vcp_ratio: float = 0.8      # 10D ATR% < 0.8x 30D ATR%
+    setup_min_rs_rank: int = 10            # rs_rank <= this (1 = strongest) awards RS points
+    # v3.2.4: which scoring components are active (component ablation)
+    # "ma" (5 MA conditions), "rs_rank", "volume", "vcp". strict breakout is ALWAYS required.
+    setup_breakout_components: list = field(default_factory=lambda: ["ma", "rs_rank", "volume", "vcp"])
+    # v3.2.4: next-open extension filters (skip entry if next open gaps/extends too far)
+    max_entry_gap_pct: float = 0.02        # skip if next_open > signal_close * (1 + this)
+    max_extension_from_pivot_pct: float = 0.03  # skip if next_open > prior_high20 * (1 + this)
     # Pullback setup params
     setup_pullback_ma_tol: float = 0.01    # close within 1% of 10/20 EMA
     regime_size_mult: dict = field(default_factory=lambda: {

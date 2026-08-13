@@ -109,6 +109,7 @@ class DynamicBacktestEngine:
         self.equity_curve = []
         self.regime_log = []
         self.rebalance_log = []   # diagnostics: {date, selected, n}
+        self.skipped_signals = []  # v3.2.4: {ticker, signal_date, skip_reason, next_open_gap_pct, extension_pct}
 
     # ---- rebalance bucket mapping --------------------------------------
     def _build_active_bucket_map(self, all_dates: list) -> dict:
@@ -206,6 +207,8 @@ class DynamicBacktestEngine:
         self.state = state  # capture for _summary()
         hmm_cache: dict = {}
         n_total = len(all_dates)
+        # v3.2.3: pending signals — signal at close D, execute at open D+1
+        pending_signals: dict = {}  # {ticker: signal_dict}
 
         for di, date in enumerate(all_dates):
             date_str = date.strftime("%Y-%m-%d")
@@ -216,9 +219,10 @@ class DynamicBacktestEngine:
             allowed_list = self.bucket_selections.get(rd, []) if rd else []
             allowed_set = set(allowed_list)
 
-            # Tickers we need prices for: this month's candidates + anything held
+            # Tickers we need prices for: this month's candidates + held + pending signals
             held = {p["ticker"] for p in state["open_positions"]}
-            needed = sorted(allowed_set | held)  # deterministic iteration
+            pending_tickers = set(pending_signals.keys())
+            needed = sorted(allowed_set | held | pending_tickers)  # deterministic iteration
             prices = {}
             slices = {}
             bars = {}  # v3.2.2: OHLC bars for gap-aware exit fills
@@ -282,6 +286,82 @@ class DynamicBacktestEngine:
                         "vetoes": info.get("vetoes", []),
                     })
 
+            # ---- v3.2.3: Execute pending signals at today's OPEN ----
+            # Signal was generated at previous close; entry happens at next open.
+            if global_size_mult > 0:
+                for t in sorted(pending_signals.keys()):
+                    sig = pending_signals[t]
+                    # Re-validate: still in bucket, not held, open available
+                    if t not in allowed_set or t in held or t not in bars:
+                        del pending_signals[t]
+                        continue
+                    open_px = bars[t]["open"]
+                    if open_px is None or open_px <= 0:
+                        del pending_signals[t]
+                        continue  # missing next open -> skip trade
+
+                    # v3.2.4: next-open extension filters
+                    signal_close = sig.get("signal_close")
+                    prior_high20 = sig.get("prior_high20")
+                    next_open_gap_pct = None
+                    extension_pct = None
+                    if signal_close and signal_close > 0:
+                        next_open_gap_pct = round((open_px - signal_close) / signal_close, 4)
+                    if prior_high20 and prior_high20 > 0:
+                        extension_pct = round((open_px - prior_high20) / prior_high20, 4)
+
+                    skip_reason = None
+                    if next_open_gap_pct is not None and \
+                            next_open_gap_pct > cfg.max_entry_gap_pct:
+                        skip_reason = "GAP_TOO_HIGH"
+                    elif extension_pct is not None and \
+                            extension_pct > cfg.max_extension_from_pivot_pct:
+                        skip_reason = "EXTENDED_FROM_PIVOT"
+
+                    if skip_reason is not None:
+                        self.skipped_signals.append({
+                            "ticker": t, "signal_date": sig.get("signal_date"),
+                            "entry_date": date_str, "skip_reason": skip_reason,
+                            "next_open_gap_pct": next_open_gap_pct,
+                            "extension_pct": extension_pct,
+                        })
+                        del pending_signals[t]
+                        continue
+
+                    atr_val = sig.get("atr", 0.0)
+                    eff_size_mult = global_size_mult * sig.get("quality_mult", 1.0)
+                    n_open = len(state["open_positions"])
+                    # stop/target recomputed from actual entry price (next_open)
+                    sizing = size_position(state["equity"], state["cash"],
+                                           open_px, atr_val, eff_size_mult, n_open, cfg)
+                    if not sizing.get("allow"):
+                        del pending_signals[t]
+                        continue
+                    pos = {
+                        "ticker": t, "direction": "LONG", "shares": sizing["shares"],
+                        "entry_price": open_px, "entry_date": date_str,
+                        "signal_date": sig.get("signal_date"),  # v3.2.3
+                        "entry_fill_model": "NEXT_OPEN",  # v3.2.3
+                        "atr_at_entry": atr_val, "stop_price": sizing["stop_price"],
+                        "take_profit": sizing["take_profit"], "highest_since_entry": open_px,
+                        "entry_regime": global_regime_label if not self.no_regime else "N/A(no_regime)",
+                        "entry_regime_score": global_score,
+                        "entry_market_strategy": global_strategy,
+                        "entry_size_mult": global_size_mult,
+                        "bucket_date": sig.get("bucket_date"),
+                        "setup_type": sig.get("setup_type"),
+                        "setup_score": sig.get("setup_score"),
+                        "components": sig.get("components", {}),  # v3.2.4
+                        "next_open_gap_pct": next_open_gap_pct,  # v3.2.4
+                        "extension_from_pivot_pct": extension_pct,  # v3.2.4
+                        "entry_reasoning": sig.get("entry_reason", "UNKNOWN"),
+                    }
+                    open_position(state, pos, open_px, cfg)
+                    del pending_signals[t]
+            else:
+                # regime went to cash — drop stale pending signals (do not defer)
+                pending_signals.clear()
+
             # ---- Exit checks (all held positions, gap-aware OHLC) ----
             i = 0
             while i < len(state["open_positions"]):
@@ -313,17 +393,17 @@ class DynamicBacktestEngine:
                 else:
                     i += 1
 
-            # ---- Entries (only from active bucket, if regime allows) ----
-            # v3.2.2: entry gate = regime allows + in bucket + setup valid + score >= threshold
-            # (replaces the old weighted-score gate: 0.35*regime + 0.65*tech > 0.25)
+            # ---- v3.2.3: Generate signals at today's CLOSE (store in pending) ----
+            # No same-bar entry: signal uses today's close/high/volume, entry is next open.
             # entry_mode="weighted" preserves the legacy weighted-score gate.
-            # v3.2.1 determinism fix: iterate RS-sorted list (not random set order).
+            held_now = {p["ticker"] for p in state["open_positions"]}
             if global_size_mult > 0:
-                for t in allowed_list:
+                for idx, t in enumerate(allowed_list):
                     if t not in slices:
                         continue
-                    if t in held:
+                    if t in held_now:
                         continue
+                    rs_rank = idx + 1  # 1 = strongest RS in bucket
                     entry_mode = getattr(cfg, "entry_mode", "setup")
                     if entry_mode == "weighted":
                         # Legacy weighted-score entry (Type C)
@@ -335,48 +415,40 @@ class DynamicBacktestEngine:
                         net = cfg.regime_weight * global_regime_s + cfg.technicals_weight * tech_score
                         if net <= cfg.entry_threshold:
                             continue
-                        atr_val = tsig.get("atr", 0.0)
-                        eff_size_mult = global_size_mult
-                        setup_type = None
-                        setup_score = None
-                        entry_reason = (f"net={net:.3f}, tech={tsig['signal']}, "
-                                        f"market_score={global_score:.0f}, size_mult={global_size_mult:.2f}")
+                        sig = {
+                            "signal_date": date_str,
+                            "atr": tsig.get("atr", 0.0),
+                            "quality_mult": 1.0,
+                            "setup_type": None,
+                            "setup_score": None,
+                            "bucket_date": rd,
+                            "entry_reason": (f"net={net:.3f}, tech={tsig['signal']}, "
+                                             f"market_score={global_score:.0f}, size_mult={global_size_mult:.2f}"),
+                        }
                     else:
                         # Setup-based entry (Type D)
                         try:
-                            setup = setup_signal(slices[t], cfg)
+                            setup = setup_signal(slices[t], cfg, rs_rank=rs_rank)
                         except Exception:
                             continue
                         if not setup.get("valid"):
                             continue
                         if setup.get("setup_score", 0.0) < cfg.setup_score_threshold:
                             continue
-                        atr_val = setup.get("atr", 0.0)
-                        eff_size_mult = global_size_mult * setup.get("setup_quality_mult", 1.0)
-                        setup_type = setup.get("setup_type")
-                        setup_score = setup.get("setup_score")
-                        entry_reason = setup.get("entry_reason", "UNKNOWN")
-
-                    n_open = len(state["open_positions"])
-                    sizing = size_position(state["equity"], state["cash"],
-                                           prices[t], atr_val, eff_size_mult, n_open, cfg)
-                    if not sizing.get("allow"):
-                        continue
-                    pos = {
-                        "ticker": t, "direction": "LONG", "shares": sizing["shares"],
-                        "entry_price": prices[t], "entry_date": date_str,
-                        "atr_at_entry": atr_val, "stop_price": sizing["stop_price"],
-                        "take_profit": sizing["take_profit"], "highest_since_entry": prices[t],
-                        "entry_regime": global_regime_label if not self.no_regime else "N/A(no_regime)",
-                        "entry_regime_score": global_score,
-                        "entry_market_strategy": global_strategy,
-                        "entry_size_mult": global_size_mult,  # v3.2.2 audit field
-                        "bucket_date": rd,  # v3.2.2 audit field (rebalance date source)
-                        "setup_type": setup_type,  # v3.2.2 setup field
-                        "setup_score": setup_score,  # v3.2.2 setup field
-                        "entry_reasoning": entry_reason,
-                    }
-                    open_position(state, pos, prices[t], cfg)
+                        sig = {
+                            "signal_date": date_str,
+                            "atr": setup.get("atr", 0.0),
+                            "quality_mult": setup.get("setup_quality_mult", 1.0),
+                            "setup_type": setup.get("setup_type"),
+                            "setup_score": setup.get("setup_score"),
+                            "signal_close": setup.get("signal_close"),  # v3.2.4
+                            "prior_high20": setup.get("prior_high20"),  # v3.2.4
+                            "components": setup.get("components", {}),  # v3.2.4
+                            "bucket_date": rd,
+                            "entry_reason": setup.get("entry_reason", "UNKNOWN"),
+                        }
+                    # Store pending signal — executed at next trading day's open
+                    pending_signals[t] = sig
 
             self.equity_curve.append({
                 "date": date_str, "equity": round(state["equity"], 2),
@@ -415,6 +487,7 @@ class DynamicBacktestEngine:
             "trade_log": self.state["trade_log"],
             "regime_log": self.regime_log,
             "rebalance_log": self.rebalance_log,
+            "skipped_signals": self.skipped_signals,  # v3.2.4
             "final_equity": self.state["equity"],
             "starting_equity": self.cfg.capital_usd,
             "no_regime": self.no_regime,

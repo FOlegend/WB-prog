@@ -65,8 +65,15 @@ def _vcp_ratio(df: pd.DataFrame, cfg) -> float | None:
     return float(recent / prior)
 
 
-def breakout_setup(df: pd.DataFrame, cfg) -> dict:
-    """Detect a VCP + pivot breakout setup. Returns score dict."""
+def breakout_setup(df: pd.DataFrame, cfg, rs_rank: int | None = None) -> dict:
+    """Detect a strict VCP + pivot breakout setup. Returns score dict.
+
+    v3.2.4 changes (reviewer):
+      - STRICT only: price > prior_20d_high is REQUIRED for valid entry.
+        near_prior_20d_pivot is watchlist-only, never an entry.
+      - component ablation via cfg.setup_breakout_components
+      - outputs boolean component flags + prior_high20 + signal_close
+    """
     if len(df) < 210:
         return {"valid": False, "setup_score": 0.0,
                 "entry_reason": "資料不足（< 210 根）"}
@@ -83,54 +90,85 @@ def breakout_setup(df: pd.DataFrame, cfg) -> dict:
         return {"valid": False, "setup_score": 0.0,
                 "entry_reason": "MA 未暖機"}
 
+    # ---- Compute boolean components (for attribution, not all scored) ----
+    prior_high20 = safe_float(df["high"].shift(1).rolling(20).max().iloc[-1])
+    vol_ma20 = safe_float(volume.rolling(20).mean().iloc[-1])
+    vol_today = safe_float(volume.iloc[-1])
+    vcp = _vcp_ratio(df, cfg)
+
+    strict_breakout = prior_high20 > 0 and price > prior_high20
+    near_pivot = (not strict_breakout) and prior_high20 > 0 and \
+        (prior_high20 - price) / prior_high20 <= cfg.setup_breakout_near_high_pct
+    volume_expansion = vol_ma20 > 0 and vol_today >= cfg.setup_breakout_vol_expand * vol_ma20
+    vcp_contraction = vcp is not None and vcp < cfg.setup_breakout_vcp_ratio
+    rs_rank_pass = rs_rank is not None and rs_rank <= cfg.setup_min_rs_rank
+
+    comps = {
+        "above_50": price > s50,
+        "above_150": price > s150,
+        "above_200": price > s200,
+        "ma_aligned": (s50 > s150) and (s150 > s200),
+        "strict_breakout": strict_breakout,
+        "near_pivot": near_pivot,
+        "volume_expansion": volume_expansion,
+        "vcp_contraction": vcp_contraction,
+        "rs_rank_pass": rs_rank_pass,
+    }
+
+    # ---- Score from ENABLED components (ablation) ----
+    enabled = set(getattr(cfg, "setup_breakout_components", ["ma", "rs_rank", "volume", "vcp"]))
     score = 0.0
     reasons = []
 
-    # 1. Price above MAs
-    if price > s50:
-        score += 0.10
-        reasons.append("px>50SMA")
-    if price > s150:
-        score += 0.10
-        reasons.append("px>150SMA")
-    if price > s200:
-        score += 0.10
-        reasons.append("px>200SMA")
+    # strict breakout is always scored (0.20) — core gate
+    if strict_breakout:
+        score += 0.20
+        reasons.append("breakout_above_prior_20d_high")
 
-    # 2. MA alignment 50>150>200
-    if s50 > s150:
-        score += 0.10
-        reasons.append("50>150")
-    if s150 > s200:
-        score += 0.10
-        reasons.append("150>200")
+    if "ma" in enabled:
+        if comps["above_50"]:
+            score += 0.10
+            reasons.append("px>50SMA")
+        if comps["above_150"]:
+            score += 0.10
+            reasons.append("px>150SMA")
+        if comps["above_200"]:
+            score += 0.10
+            reasons.append("px>200SMA")
+        if s50 > s150:
+            score += 0.10
+            reasons.append("50>150")
+        if s150 > s200:
+            score += 0.10
+            reasons.append("150>200")
 
-    # 3. Close near 20D high (pivot breakout)
-    high20 = safe_float(df["high"].rolling(20).max().iloc[-1])
-    if high20 > 0:
-        near_high = (high20 - price) / high20 <= cfg.setup_breakout_near_high_pct
-        if near_high:
-            score += 0.20
-            reasons.append("near20Dhigh")
-
-    # 4. Volume expansion
-    vol_ma20 = safe_float(volume.rolling(20).mean().iloc[-1])
-    vol_today = safe_float(volume.iloc[-1])
-    if vol_ma20 > 0 and vol_today >= cfg.setup_breakout_vol_expand * vol_ma20:
+    if "volume" in enabled and volume_expansion:
         score += 0.15
         reasons.append("vol_expand")
 
-    # 5. VCP (volatility contraction)
-    vcp = _vcp_ratio(df, cfg)
-    if vcp is not None and vcp < cfg.setup_breakout_vcp_ratio:
+    if "vcp" in enabled and vcp_contraction:
         score += 0.15
         reasons.append(f"VCP={vcp:.2f}")
 
+    if "rs_rank" in enabled and rs_rank_pass:
+        score += 0.10
+        reasons.append(f"RS_rank={rs_rank}")
+
     score = round(min(1.0, score), 3)
-    return {"valid": score >= cfg.setup_score_threshold,
-            "setup_score": score,
-            "entry_reason": f"breakout: {'+'.join(reasons) if reasons else 'none'} (score={score:.2f})",
-            "detail": {"s50": s50, "s150": s150, "s200": s200, "vcp": vcp}}
+    # STRICT: valid requires strict_breakout (near-pivot never valid)
+    valid = strict_breakout and score >= cfg.setup_score_threshold
+
+    return {
+        "valid": valid,
+        "setup_score": score,
+        "strict_breakout": strict_breakout,
+        "prior_high20": prior_high20,
+        "signal_close": price,
+        "components": comps,
+        "entry_reason": f"breakout: {'+'.join(reasons) if reasons else 'none'} (score={score:.2f})",
+        "detail": {"s50": s50, "s150": s150, "s200": s200, "vcp": vcp,
+                   "prior_high20": prior_high20, "rs_rank": rs_rank},
+    }
 
 
 def _reversal_candle(df: pd.DataFrame) -> bool:
@@ -154,8 +192,8 @@ def _reversal_candle(df: pd.DataFrame) -> bool:
     # Hammer: lower shadow >= 2x body, small upper shadow, bullish close
     hammer = (c > o) and (lower_shadow >= 2 * body) and (upper_shadow <= body)
 
-    # Bullish engulfing
-    engulf = (c > po) and (o < pc) and (c > pc) and (o < po)
+    # Bullish engulfing (v3.2.3 fix: previous candle must be bearish pc < po)
+    engulf = (pc < po) and (c > po) and (o < pc)
 
     return hammer or engulf
 
@@ -226,59 +264,61 @@ def pullback_setup(df: pd.DataFrame, cfg) -> dict:
 
 
 def _quality_mult(score: float, cfg) -> float:
-    """Map setup_score -> setup_quality_mult (0.5-1.2, 0 = reject)."""
+    """Map setup_score -> setup_quality_mult (0.5-1.0, 0 = reject).
+
+    v3.2.3: cap at 1.0 (was 1.2). No >1.0 risk scaling until robustness passes.
+    """
     if score >= cfg.setup_quality_score_high:
-        return cfg.setup_quality_mult_high       # 1.2 (perfect)
+        return cfg.setup_quality_mult_high       # 1.0 (perfect)
     if score >= cfg.setup_quality_score_mid:
-        return cfg.setup_quality_mult_mid        # 1.0 (good)
+        return cfg.setup_quality_mult_mid        # 0.75 (good)
     if score >= cfg.setup_score_threshold:
         return cfg.setup_quality_mult_low        # 0.5 (marginal)
     return 0.0                                  # reject
 
 
-def setup_signal(df: pd.DataFrame, cfg) -> dict:
+def setup_signal(df: pd.DataFrame, cfg, rs_rank: int | None = None) -> dict:
     """Evaluate both setups, return the better one with execution fields.
 
     This is the agent-signal entry point used by the backtest engine.
+    rs_rank: 1-based rank in the RS-sorted screener bucket (1 = strongest).
+
+    v3.2.4: outputs signal_close / atr / prior_high20 / components instead of
+    stop/target anchored to signal close. Stop/target are recomputed at the
+    actual next-open entry price by the engine (size_position).
     """
-    # Which setups to evaluate (cfg.setup_enabled_types)
     enabled = getattr(cfg, "setup_enabled_types", ["breakout", "pullback"])
 
     results = []
     if "breakout" in enabled:
-        results.append(("breakout", breakout_setup(df, cfg)))
+        results.append(("breakout", breakout_setup(df, cfg, rs_rank=rs_rank)))
     if "pullback" in enabled:
         results.append(("pullback", pullback_setup(df, cfg)))
 
     if not results:
         return {"valid": False, "setup_type": None, "setup_score": 0.0,
-                "setup_quality_mult": 0.0, "entry": None, "stop": None,
-                "target": None, "risk_reward": None,
+                "setup_quality_mult": 0.0, "signal_close": None, "atr": None,
+                "prior_high20": None, "components": {},
                 "entry_reason": "no setup type enabled"}
 
     best_type, best = max(results, key=lambda x: x[1]["setup_score"])
     score = best["setup_score"]
-    valid = score >= cfg.setup_score_threshold
+    valid = best.get("valid", score >= cfg.setup_score_threshold)
     quality_mult = _quality_mult(score, cfg) if valid else 0.0
 
-    # Execution fields (entry/stop/target consistent with risk engine)
     close = df["close"].astype(float)
     price = safe_float(close.iloc[-1])
     a = atr(df, cfg.atr_period)
     atr_val = safe_float(a.iloc[-1])
-    stop = round(price - atr_val * cfg.stop_atr_mult, 4) if atr_val > 0 else None
-    target = round(price + atr_val * cfg.take_profit_atr_mult, 4) if atr_val > 0 else None
-    rr = round(cfg.take_profit_atr_mult / cfg.stop_atr_mult, 2) if cfg.stop_atr_mult > 0 else None
 
     return {
         "valid": valid,
         "setup_type": best_type if valid else None,
         "setup_score": score,
         "setup_quality_mult": quality_mult,
-        "entry": price,
-        "stop": stop,
-        "target": target,
-        "risk_reward": rr,
+        "signal_close": price,
         "atr": atr_val,
+        "prior_high20": best.get("prior_high20"),
+        "components": best.get("components", {}),
         "entry_reason": best["entry_reason"],
     }

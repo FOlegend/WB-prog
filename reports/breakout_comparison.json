@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "start": "2018-01-01",
+    "end": "2025-07-31",
+    "top_n": 20,
+    "setup": "Breakout Only",
+    "entry": "next-open",
+    "exit": "gap-aware OHLC",
+    "weights": "Current"
+  },
+  "variants": {
+    "score_full=70": {
+      "return_pct": 7.59,
+      "cagr_pct": 0.97,
+      "sharpe": 0.17,
+      "max_dd_pct": -11.77,
+      "max_dd_duration_days": 1140,
+      "pf": 1.05,
+      "win_rate": 0.479,
+      "trades": 700,
+      "avg_win": 6.23,
+      "avg_loss": -5.46,
+      "avg_r": 0.094,
+      "worst_r": -3.13,
+      "gap_fill_count": 59,
+      "dd_2020": -1.22,
+      "dd_2022": -2.63,
+      "ret_2023_pct": 3.84,
+      "exposure_2023_pct": 58.8,
+      "setup_buckets": [
+        {
+          "bucket": "0.70-0.75",
+          "trade_count": 97,
+          "return_contribution": -48.86,
+          "pf": 0.83,
+          "win_rate": 0.454,
+          "avg_r": 0.022,
+          "worst_r": -1.221,
+          "gap_fill_count": 8
+        },
+        {
+          "bucket": "0.75-0.80",
+          "trade_count": 45,
+          "return_contribution": 50.88,
+          "pf": 1.46,
+          "win_rate": 0.6,
+          "avg_r": 0.257,
+          "worst_r": -3.13,
+          "gap_fill_count": 1
+        },
+        {
+          "bucket": "0.80-0.85",
+          "trade_count": 80,
+          "return_contribution": -101.42,
+          "pf": 0.71,
+          "win_rate": 0.412,
+          "avg_r": -0.029,
+          "worst_r": -1.386,
+          "gap_fill_count": 5
+        },
+        {
+          "bucket": "0.85-1.00",
+          "trade_count": 112,
+          "return_contribution": 84.26,
+          "pf": 1.21,
+          "win_rate": 0.482,
+          "avg_r": 0.117,
+          "worst_r": -1.326,
+          "gap_fill_count": 10
+        }
+      ]
+    },
+    "score_full=60": {
+      "return_pct": 4.38,
+      "cagr_pct": 0.57,
+      "sharpe": 0.11,
+      "max_dd_pct": -14.9,
+      "max_dd_duration_days": 1140,
+      "pf": 1.02,
+      "win_rate": 0.471,
+      "trades": 695,
+      "avg_win": 7.08,
+      "avg_loss": -6.14,
+      "avg_r": 0.085,
+      "worst_r": -2.525,
+      "gap_fill_count": 60,
+      "dd_2020": -2.33,
+      "dd_2022": -3.87,
+      "ret_2023_pct": 7.1,
+      "exposure_2023_pct": 58.8,
+      "setup_buckets": [
+        {
+          "bucket": "0.70-0.75",
+          "trade_count": 94,
+          "return_contribution": -109.19,
+          "pf": 0.68,
+          "win_rate": 0.426,
+          "avg_r": -0.063,
+          "worst_r": -1.364,
+          "gap_fill_count": 10
+        },
+        {
+          "bucket": "0.75-0.80",
+          "trade_count": 40,
+          "return_contribution": 80.22,
+          "pf": 1.89,
+          "win_rate": 0.65,
+          "avg_r": 0.475,
+          "worst_r": -1.0,
+          "gap_fill_count": 0
+        },
+        {
+          "bucket": "0.80-0.85",
+          "trade_count": 81,
+          "return_contribution": -72.15,
+          "pf": 0.81,
+          "win_rate": 0.407,
+          "avg_r": -0.046,
+          "worst_r": -1.415,
+          "gap_fill_count": 6
+        },
+        {
+          "bucket": "0.85-1.00",
+          "trade_count": 114,
+          "return_contribution": 66.47,
+          "pf": 1.13,
+          "win_rate": 0.456,
+          "avg_r": 0.103,
+          "worst_r": -1.326,
+          "gap_fill_count": 9
+        }
+      ]
+    }
+  }
+}

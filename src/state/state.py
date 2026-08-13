@@ -94,6 +94,8 @@ def close_position(state: dict, idx: int, exit_price: float, exit_date: str,
         "entry_price": pos["entry_price"],
         "exit_price": exit_price,
         "entry_date": pos["entry_date"],
+        "signal_date": pos.get("signal_date"),  # v3.2.3
+        "entry_fill_model": pos.get("entry_fill_model", "CLOSE"),  # v3.2.3
         "exit_date": exit_date,
         "holding_days": None,  # 由呼叫端填
         "gross_pnl": round(gross_pnl, 4),
@@ -115,6 +117,10 @@ def close_position(state: dict, idx: int, exit_price: float, exit_date: str,
         "atr_at_entry": pos.get("atr_at_entry"),
         "bucket_date": pos.get("bucket_date"),
         "position_value": round(pos["shares"] * pos["entry_price"], 2),
+        # ---- v3.2.4 component attribution fields ----
+        "components": pos.get("components", {}),
+        "next_open_gap_pct": pos.get("next_open_gap_pct"),
+        "extension_from_pivot_pct": pos.get("extension_from_pivot_pct"),
     }
     state["trade_log"].append(trade)
     return trade

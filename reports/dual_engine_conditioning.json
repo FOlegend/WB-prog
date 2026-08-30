@@ -1,0 +1,89 @@
+{
+  "unconditioned": {
+    "return_pct": -21.11,
+    "cagr_pct": -3.08,
+    "sharpe": -0.19,
+    "sortino": -0.24,
+    "max_dd_pct": -30.03,
+    "calmar": -0.1,
+    "ann_vol_pct": 12.32,
+    "turnover": 132.09,
+    "exposure_pct": 87.9,
+    "pf": 0.92,
+    "win_rate": 0.456,
+    "trades": 823
+  },
+  "conditioned_C": {
+    "return_pct": 2.87,
+    "cagr_pct": 0.37,
+    "sharpe": 0.09,
+    "sortino": 0.09,
+    "max_dd_pct": -18.46,
+    "calmar": 0.02,
+    "ann_vol_pct": 6.67,
+    "turnover": 49.11,
+    "exposure_pct": 55.2,
+    "pf": 1.02,
+    "win_rate": 0.46,
+    "trades": 435
+  },
+  "regime_specific": {
+    "BULL": {
+      "days": 394,
+      "daily_mean_bps": 5.52,
+      "cum_return_pct": 23.2
+    },
+    "SIDEWAYS": {
+      "days": 551,
+      "daily_mean_bps": -0.39,
+      "cum_return_pct": -2.62
+    },
+    "BEAR": {
+      "days": 959,
+      "daily_mean_bps": -1.57,
+      "cum_return_pct": -14.26
+    }
+  },
+  "walkforward_yearly": {
+    "2018": {
+      "return_pct": -4.29,
+      "max_dd_pct": -6.23,
+      "days": 251
+    },
+    "2019": {
+      "return_pct": 6.95,
+      "max_dd_pct": -2.78,
+      "days": 252
+    },
+    "2020": {
+      "return_pct": 1.37,
+      "max_dd_pct": -3.49,
+      "days": 253
+    },
+    "2021": {
+      "return_pct": -0.86,
+      "max_dd_pct": -4.7,
+      "days": 252
+    },
+    "2022": {
+      "return_pct": -0.12,
+      "max_dd_pct": -7.03,
+      "days": 251
+    },
+    "2023": {
+      "return_pct": -6.76,
+      "max_dd_pct": -14.33,
+      "days": 250
+    },
+    "2024": {
+      "return_pct": -3.11,
+      "max_dd_pct": -8.01,
+      "days": 252
+    },
+    "2025": {
+      "return_pct": 11.38,
+      "max_dd_pct": -4.39,
+      "days": 144
+    }
+  }
+}

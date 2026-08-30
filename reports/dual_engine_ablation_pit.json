@@ -1,0 +1,294 @@
+{
+  "results": {
+    "A. HMM only": {
+      "metrics": {
+        "total_trades": 330,
+        "win_rate": 0.455,
+        "total_pnl": 16.23,
+        "total_return_pct": 1.27,
+        "profit_factor": 1.01,
+        "avg_win": 7.57,
+        "avg_loss": -6.21,
+        "expectancy": 0.05,
+        "sharpe": 0.06,
+        "max_drawdown_pct": -14.44,
+        "final_equity": 1298.23,
+        "starting_equity": 1282.0,
+        "exposure_pct": 40.5,
+        "regime_dist": {
+          "BEAR": 1196,
+          "BULL": 499,
+          "SIDEWAYS": 210
+        },
+        "veto_dist": {
+          "BREADTH_THRUST": 187,
+          "BEARISH_BREADTH_DIVERGENCE": 236
+        }
+      }
+    },
+    "B. Breadth only": {
+      "metrics": {
+        "total_trades": 594,
+        "win_rate": 0.475,
+        "total_pnl": 95.76,
+        "total_return_pct": 8.55,
+        "profit_factor": 1.05,
+        "avg_win": 7.6,
+        "avg_loss": -6.57,
+        "expectancy": 0.16,
+        "sharpe": 0.17,
+        "max_drawdown_pct": -13.78,
+        "final_equity": 1391.56,
+        "starting_equity": 1282.0,
+        "exposure_pct": 68.0,
+        "regime_dist": {
+          "SIDEWAYS": 678,
+          "BULL": 571,
+          "BEAR": 656
+        },
+        "veto_dist": {
+          "BREADTH_THRUST": 187,
+          "BEARISH_BREADTH_DIVERGENCE": 236
+        }
+      }
+    },
+    "C. HMM+Breadth": {
+      "metrics": {
+        "total_trades": 438,
+        "win_rate": 0.463,
+        "total_pnl": 66.18,
+        "total_return_pct": 6.24,
+        "profit_factor": 1.05,
+        "avg_win": 7.47,
+        "avg_loss": -6.17,
+        "expectancy": 0.15,
+        "sharpe": 0.15,
+        "max_drawdown_pct": -17.38,
+        "final_equity": 1361.98,
+        "starting_equity": 1282.0,
+        "exposure_pct": 54.5,
+        "regime_dist": {
+          "BEAR": 947,
+          "SIDEWAYS": 558,
+          "BULL": 400
+        },
+        "veto_dist": {
+          "BREADTH_THRUST": 187,
+          "BEARISH_BREADTH_DIVERGENCE": 236
+        }
+      }
+    },
+    "D. +DistDays": {
+      "metrics": {
+        "total_trades": 434,
+        "win_rate": 0.461,
+        "total_pnl": 38.68,
+        "total_return_pct": 4.09,
+        "profit_factor": 1.03,
+        "avg_win": 6.57,
+        "avg_loss": -5.45,
+        "expectancy": 0.09,
+        "sharpe": 0.12,
+        "max_drawdown_pct": -16.54,
+        "final_equity": 1334.47,
+        "starting_equity": 1282.0,
+        "exposure_pct": 54.1,
+        "regime_dist": {
+          "BEAR": 947,
+          "SIDEWAYS": 558,
+          "BULL": 400
+        },
+        "veto_dist": {
+          "DISTRIBUTION_DAY_CAP": 978,
+          "BREADTH_THRUST": 187,
+          "BEARISH_BREADTH_DIVERGENCE": 236
+        }
+      }
+    }
+  },
+  "results_current": {
+    "A. HMM only": {
+      "metrics": {
+        "total_trades": 327,
+        "win_rate": 0.453,
+        "total_pnl": -20.07,
+        "total_return_pct": -1.57,
+        "profit_factor": 0.98,
+        "avg_win": 7.39,
+        "avg_loss": -6.22,
+        "expectancy": -0.06,
+        "sharpe": 0.0,
+        "max_drawdown_pct": -16.97,
+        "final_equity": 1261.93,
+        "starting_equity": 1282.0,
+        "exposure_pct": 41.4,
+        "regime_dist": {
+          "BEAR": 1197,
+          "BULL": 498,
+          "SIDEWAYS": 210
+        },
+        "veto_dist": {
+          "BREADTH_THRUST": 184,
+          "BEARISH_BREADTH_DIVERGENCE": 240
+        }
+      }
+    },
+    "B. Breadth only": {
+      "metrics": {
+        "total_trades": 576,
+        "win_rate": 0.472,
+        "total_pnl": -12.76,
+        "total_return_pct": 0.08,
+        "profit_factor": 0.99,
+        "avg_win": 6.67,
+        "avg_loss": -6.01,
+        "expectancy": -0.02,
+        "sharpe": 0.04,
+        "max_drawdown_pct": -18.0,
+        "final_equity": 1283.04,
+        "starting_equity": 1282.0,
+        "exposure_pct": 67.6,
+        "regime_dist": {
+          "SIDEWAYS": 692,
+          "BULL": 542,
+          "BEAR": 671
+        },
+        "veto_dist": {
+          "BREADTH_THRUST": 184,
+          "BEARISH_BREADTH_DIVERGENCE": 240
+        }
+      }
+    },
+    "C. HMM+Breadth": {
+      "metrics": {
+        "total_trades": 435,
+        "win_rate": 0.462,
+        "total_pnl": 28.04,
+        "total_return_pct": 3.26,
+        "profit_factor": 1.02,
+        "avg_win": 7.17,
+        "avg_loss": -6.04,
+        "expectancy": 0.06,
+        "sharpe": 0.1,
+        "max_drawdown_pct": -18.46,
+        "final_equity": 1323.84,
+        "starting_equity": 1282.0,
+        "exposure_pct": 55.2,
+        "regime_dist": {
+          "BEAR": 960,
+          "SIDEWAYS": 553,
+          "BULL": 392
+        },
+        "veto_dist": {
+          "BREADTH_THRUST": 184,
+          "BEARISH_BREADTH_DIVERGENCE": 240
+        }
+      }
+    },
+    "D. +DistDays": {
+      "metrics": {
+        "total_trades": 429,
+        "win_rate": 0.462,
+        "total_pnl": 15.77,
+        "total_return_pct": 2.31,
+        "profit_factor": 1.01,
+        "avg_win": 6.29,
+        "avg_loss": -5.32,
+        "expectancy": 0.04,
+        "sharpe": 0.08,
+        "max_drawdown_pct": -16.13,
+        "final_equity": 1311.56,
+        "starting_equity": 1282.0,
+        "exposure_pct": 54.8,
+        "regime_dist": {
+          "BEAR": 960,
+          "SIDEWAYS": 553,
+          "BULL": 392
+        },
+        "veto_dist": {
+          "DISTRIBUTION_DAY_CAP": 978,
+          "BREADTH_THRUST": 184,
+          "BEARISH_BREADTH_DIVERGENCE": 240
+        }
+      }
+    }
+  },
+  "vs_current": {
+    "A. HMM only": {
+      "current": {
+        "return_pct": -1.57,
+        "sharpe": 0.0,
+        "max_dd_pct": -16.97,
+        "pf": 0.98,
+        "exposure_pct": 41.4
+      },
+      "pit": {
+        "return_pct": 1.27,
+        "sharpe": 0.06,
+        "max_dd_pct": -14.44,
+        "pf": 1.01,
+        "exposure_pct": 40.5
+      },
+      "delta_return_pp": 2.84,
+      "delta_sharpe": 0.06,
+      "delta_maxdd_pp": 2.53
+    },
+    "B. Breadth only": {
+      "current": {
+        "return_pct": 0.08,
+        "sharpe": 0.04,
+        "max_dd_pct": -18.0,
+        "pf": 0.99,
+        "exposure_pct": 67.6
+      },
+      "pit": {
+        "return_pct": 8.55,
+        "sharpe": 0.17,
+        "max_dd_pct": -13.78,
+        "pf": 1.05,
+        "exposure_pct": 68.0
+      },
+      "delta_return_pp": 8.47,
+      "delta_sharpe": 0.13,
+      "delta_maxdd_pp": 4.22
+    },
+    "C. HMM+Breadth": {
+      "current": {
+        "return_pct": 3.26,
+        "sharpe": 0.1,
+        "max_dd_pct": -18.46,
+        "pf": 1.02,
+        "exposure_pct": 55.2
+      },
+      "pit": {
+        "return_pct": 6.24,
+        "sharpe": 0.15,
+        "max_dd_pct": -17.38,
+        "pf": 1.05,
+        "exposure_pct": 54.5
+      },
+      "delta_return_pp": 2.98,
+      "delta_sharpe": 0.05,
+      "delta_maxdd_pp": 1.08
+    },
+    "D. +DistDays": {
+      "current": {
+        "return_pct": 2.31,
+        "sharpe": 0.08,
+        "max_dd_pct": -16.13,
+        "pf": 1.01,
+        "exposure_pct": 54.8
+      },
+      "pit": {
+        "return_pct": 4.09,
+        "sharpe": 0.12,
+        "max_dd_pct": -16.54,
+        "pf": 1.03,
+        "exposure_pct": 54.1
+      },
+      "delta_return_pp": 1.78,
+      "delta_sharpe": 0.04,
+      "delta_maxdd_pp": -0.41
+    }
+  }
+}

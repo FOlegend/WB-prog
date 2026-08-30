@@ -1,0 +1,92 @@
+{
+  "thr60/40_lb7": {
+    "bull_threshold": 60.0,
+    "bear_threshold": 40.0,
+    "lookback": 7,
+    "return_pct": 1.03,
+    "sharpe": 0.05,
+    "max_dd_pct": -14.34,
+    "pf": 1.01,
+    "trades": 365
+  },
+  "thr60/40_lb10": {
+    "bull_threshold": 60.0,
+    "bear_threshold": 40.0,
+    "lookback": 10,
+    "return_pct": 1.86,
+    "sharpe": 0.07,
+    "max_dd_pct": -13.82,
+    "pf": 1.02,
+    "trades": 373
+  },
+  "thr60/40_lb13": {
+    "bull_threshold": 60.0,
+    "bear_threshold": 40.0,
+    "lookback": 13,
+    "return_pct": -2.8,
+    "sharpe": -0.02,
+    "max_dd_pct": -15.49,
+    "pf": 0.97,
+    "trades": 377
+  },
+  "thr65/35_lb7": {
+    "bull_threshold": 65.0,
+    "bear_threshold": 35.0,
+    "lookback": 7,
+    "return_pct": 1.81,
+    "sharpe": 0.07,
+    "max_dd_pct": -19.06,
+    "pf": 1.01,
+    "trades": 426
+  },
+  "thr65/35_lb10": {
+    "bull_threshold": 65.0,
+    "bear_threshold": 35.0,
+    "lookback": 10,
+    "return_pct": 2.87,
+    "sharpe": 0.09,
+    "max_dd_pct": -18.46,
+    "pf": 1.02,
+    "trades": 435
+  },
+  "thr65/35_lb13": {
+    "bull_threshold": 65.0,
+    "bear_threshold": 35.0,
+    "lookback": 13,
+    "return_pct": -1.92,
+    "sharpe": -0.0,
+    "max_dd_pct": -16.78,
+    "pf": 0.97,
+    "trades": 435
+  },
+  "thr70/30_lb7": {
+    "bull_threshold": 70.0,
+    "bear_threshold": 30.0,
+    "lookback": 7,
+    "return_pct": 4.34,
+    "sharpe": 0.12,
+    "max_dd_pct": -15.35,
+    "pf": 1.03,
+    "trades": 511
+  },
+  "thr70/30_lb10": {
+    "bull_threshold": 70.0,
+    "bear_threshold": 30.0,
+    "lookback": 10,
+    "return_pct": 5.1,
+    "sharpe": 0.13,
+    "max_dd_pct": -16.56,
+    "pf": 1.03,
+    "trades": 514
+  },
+  "thr70/30_lb13": {
+    "bull_threshold": 70.0,
+    "bear_threshold": 30.0,
+    "lookback": 13,
+    "return_pct": -0.07,
+    "sharpe": 0.03,
+    "max_dd_pct": -14.66,
+    "pf": 0.99,
+    "trades": 507
+  }
+}

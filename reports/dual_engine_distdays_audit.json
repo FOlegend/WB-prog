@@ -1,0 +1,116 @@
+{
+  "definition_note": "see distribution_days.py; SPY index; auto_adjust close/vol; rally-reset uses latest close",
+  "stats": {
+    "n_days": 2408,
+    "mean": 4.548,
+    "median": 4.0,
+    "p75": 6.0,
+    "p90": 8.0,
+    "p95": 9.0,
+    "max": 13,
+    "freq_ge3_pct": 78.61,
+    "freq_ge4_pct": 63.54,
+    "freq_ge5_pct": 47.26,
+    "freq_ge6_pct": 33.55,
+    "freq_ge7_pct": 21.68,
+    "by_year": {
+      "2016": {
+        "mean": 4.18,
+        "ge5_pct": 43.7,
+        "ge7_pct": 15.5
+      },
+      "2017": {
+        "mean": 3.08,
+        "ge5_pct": 19.9,
+        "ge7_pct": 0.0
+      },
+      "2018": {
+        "mean": 5.37,
+        "ge5_pct": 64.9,
+        "ge7_pct": 35.1
+      },
+      "2019": {
+        "mean": 3.99,
+        "ge5_pct": 36.1,
+        "ge7_pct": 17.1
+      },
+      "2020": {
+        "mean": 4.28,
+        "ge5_pct": 37.2,
+        "ge7_pct": 12.6
+      },
+      "2021": {
+        "mean": 4.64,
+        "ge5_pct": 54.8,
+        "ge7_pct": 15.9
+      },
+      "2022": {
+        "mean": 6.03,
+        "ge5_pct": 70.9,
+        "ge7_pct": 51.4
+      },
+      "2023": {
+        "mean": 5.1,
+        "ge5_pct": 62.0,
+        "ge7_pct": 34.0
+      },
+      "2024": {
+        "mean": 3.92,
+        "ge5_pct": 27.4,
+        "ge7_pct": 7.9
+      },
+      "2025": {
+        "mean": 5.18,
+        "ge5_pct": 62.5,
+        "ge7_pct": 31.9
+      }
+    },
+    "by_regime": {
+      "BULL": {
+        "days": 480,
+        "mean": 4.13,
+        "ge5_pct": 38.5,
+        "p90": 8.0
+      },
+      "SIDEWAYS": {
+        "days": 883,
+        "mean": 4.1,
+        "ge5_pct": 40.4,
+        "p90": 7.0
+      },
+      "BEAR": {
+        "days": 1045,
+        "mean": 5.12,
+        "ge5_pct": 57.0,
+        "p90": 9.0
+      }
+    },
+    "episodes": {
+      "ge3": {
+        "n_episodes": 68,
+        "avg_len_days": 27.84,
+        "max_len_days": 145
+      },
+      "ge4": {
+        "n_episodes": 92,
+        "avg_len_days": 16.63,
+        "max_len_days": 104
+      },
+      "ge5": {
+        "n_episodes": 94,
+        "avg_len_days": 12.11,
+        "max_len_days": 93
+      },
+      "ge6": {
+        "n_episodes": 81,
+        "avg_len_days": 9.98,
+        "max_len_days": 71
+      },
+      "ge7": {
+        "n_episodes": 60,
+        "avg_len_days": 8.7,
+        "max_len_days": 36
+      }
+    }
+  }
+}

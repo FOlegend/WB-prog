@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# OHLCV cache — 可重下載，避免 repo 過大
+data/cache/

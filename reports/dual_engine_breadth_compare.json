@@ -1,0 +1,23 @@
+{
+  "n_common_days": 2408,
+  "pearson": 0.9956,
+  "spearman": 0.9929,
+  "mean_abs_diff_pct": 2.168,
+  "mean_abs_diff_pct_p95": 5.244,
+  "max_abs_diff_pct": 9.375,
+  "days_pit_n_below_cur": 2408,
+  "regime_label_agreement_pct": 96.76,
+  "regime_label_mismatches": {
+    "BEAR->SIDEWAYS": 31,
+    "SIDEWAYS->BEAR": 16,
+    "SIDEWAYS->BULL": 15,
+    "BEAR->BULL": 8,
+    "BULL->SIDEWAYS": 4,
+    "BULL->BEAR": 4
+  },
+  "divergence_days_current": 390,
+  "divergence_days_pit": 385,
+  "thrust_days_current": 189,
+  "thrust_days_pit": 194,
+  "dist_ge5_days": 1138
+}

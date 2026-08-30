@@ -1,0 +1,68 @@
+{
+  "breadth_used": "PIT (point-in-time S&P500)",
+  "results": {
+    "C_no_overlay": {
+      "return_pct": 6.24,
+      "cagr_pct": 0.8,
+      "sharpe": 0.15,
+      "sortino": 0.15,
+      "max_dd_pct": -17.38,
+      "calmar": 0.05,
+      "exposure_pct": 54.5,
+      "pf": 1.05,
+      "trades": 438
+    },
+    "D_thr4": {
+      "return_pct": 0.71,
+      "cagr_pct": 0.09,
+      "sharpe": 0.04,
+      "sortino": 0.04,
+      "max_dd_pct": -17.22,
+      "calmar": 0.01,
+      "exposure_pct": 53.9,
+      "pf": 1.0,
+      "trades": 429,
+      "trigger_freq_pct": 67.24,
+      "cagr_retention": 0.112
+    },
+    "D_thr5": {
+      "return_pct": 4.09,
+      "cagr_pct": 0.53,
+      "sharpe": 0.12,
+      "sortino": 0.12,
+      "max_dd_pct": -16.54,
+      "calmar": 0.03,
+      "exposure_pct": 54.1,
+      "pf": 1.03,
+      "trades": 434,
+      "trigger_freq_pct": 51.34,
+      "cagr_retention": 0.662
+    },
+    "D_thr6": {
+      "return_pct": 4.11,
+      "cagr_pct": 0.53,
+      "sharpe": 0.12,
+      "sortino": 0.11,
+      "max_dd_pct": -16.6,
+      "calmar": 0.03,
+      "exposure_pct": 54.5,
+      "pf": 1.03,
+      "trades": 442,
+      "trigger_freq_pct": 37.9,
+      "cagr_retention": 0.662
+    },
+    "D_thr7": {
+      "return_pct": 9.92,
+      "cagr_pct": 1.26,
+      "sharpe": 0.23,
+      "sortino": 0.23,
+      "max_dd_pct": -12.74,
+      "calmar": 0.1,
+      "exposure_pct": 54.6,
+      "pf": 1.08,
+      "trades": 442,
+      "trigger_freq_pct": 25.35,
+      "cagr_retention": 1.575
+    }
+  }
+}

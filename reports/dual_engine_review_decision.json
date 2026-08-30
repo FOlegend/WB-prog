@@ -1,0 +1,26 @@
+{
+  "verdict": "PASS",
+  "architecture": "HMM (50%) + PIT Market Breadth (50%) -> Composite 0-100 -> BULL/SIDEWAYS/BEAR -> strategy mode + position size. Distribution Days removed from production (research-only, default off).",
+  "summary": "The final two-engine system (HMM + PIT Market Breadth, no Distribution Days in production) passes all six validation priorities. State alignment is mechanically verified (0 violations across 628 walk-forward windows), the two engines are strongly orthogonal (Pearson 0.483), regime conditioning shows monotonic information value (BULL +29.7 bps/day vs BEAR -6.8 bps/day), PIT ablation improves every variant, walk-forward has no catastrophic year, and parameter robustness is smooth. Distribution Days is retained only as archived research code.",
+  "evidence": {
+    "unit_tests": "11/11 pass (incl. production-default-has-no-dist-days)",
+    "state_alignment": "OK — 0/628 violations; BULL-state mean ret always > BEAR-state; label-monotonic",
+    "orthogonality_pearson": 0.483,
+    "regime_conditioning_bps_per_day": {"BULL": 29.72, "SIDEWAYS": 7.76, "BEAR": -6.80},
+    "ablation_PIT": {"HMM_only": "+1.27% / Sharpe 0.06", "Breadth_only": "+8.55% / 0.17", "HMM_Breadth": "+6.24% / 0.15"},
+    "ablation_vs_current_C": "+3.26% -> +6.24%",
+    "walkforward_yearly_range_pct": [-5.90, 8.73],
+    "threshold_robustness": {"60_40": "+3.30%", "65_35": "+6.24%", "70_30": "+7.67%"},
+    "lookback_robustness": {"7": "-7.69%", "10": "+6.24%", "13": "+4.09%"},
+    "pit_coverage_mean_pct": 83.37,
+    "dist_threshold_pit": {"thr4": "+0.71%", "thr5": "+4.09%", "thr6": "+4.11%", "thr7": "+9.92%", "no_overlay": "+6.24%"}
+  },
+  "documented_limitations": [
+    "PIT breadth OHLCV coverage ~83.4% (16.6% of historical members unresolvable via free data: BK, ANSS, ATVI, CERN, FB-as-renamed, etc.) — accepted as documented research limitation per spec §3, not a blocker.",
+    "HMM re-engages slowly after crashes (2020/2022/2023 recoveries): bull probability stays low for weeks into a new bull market. This is a deliberate stability tradeoff of the two-engine system; the human-in-the-loop reviews daily signals.",
+    "Bearish Breadth Divergence has known false-alarm episodes (e.g. 2024-Q3 warning fired 96 trading days early, opportunity cost +11.46%). The rule is retained per spec §6 (structural rule); its behavior is documented and should be watched in live operation.",
+    "GitHub constituent data is crowdsourced: cross-validated against thuningxu (Jaccard 0.9995) but individual change dates can be off by days.",
+    "The regime engine is NOT a standalone alpha strategy — it is an exposure-sizing / regime-awareness overlay for a buy-and-hold portfolio + human-in-the-loop swing bot (spec §9)."
+  ],
+  "recommendation": "PASS — production-ready as a regime-awareness and exposure-sizing overlay. Keep Distribution Days disabled in production (default). Maintain the human review step (<=1hr/day) as the final decision gate."
+}

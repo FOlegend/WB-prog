@@ -1,0 +1,36 @@
+{
+  "tops": [
+    {
+      "event": "2018-Q4 top",
+      "peak_date": "2018-09-20",
+      "warning_date": "2018-08-21",
+      "lead_trading_days": 21
+    },
+    {
+      "event": "2021-Q4 top",
+      "peak_date": "2022-01-03",
+      "warning_date": "2021-11-18",
+      "lead_trading_days": 30
+    }
+  ],
+  "bottoms": [
+    {
+      "event": "2018-Q4 bottom",
+      "trough_date": "2018-12-24",
+      "thrust_date": "2018-11-05",
+      "days_from_trough": -33,
+      "hmm_bull_date": "2019-02-08",
+      "hmm_bull_days_after_trough": 31,
+      "thrust_before_hmm": true
+    },
+    {
+      "event": "2020-COVID bottom",
+      "trough_date": "2020-03-23",
+      "thrust_date": "2020-03-26",
+      "days_from_trough": 3,
+      "hmm_bull_date": null,
+      "hmm_bull_days_after_trough": null,
+      "thrust_before_hmm": false
+    }
+  ]
+}

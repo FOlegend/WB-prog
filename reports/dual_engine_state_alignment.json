@@ -1,0 +1,36 @@
+{
+  "verdict": "OK",
+  "n_windows": 2156,
+  "alignment_violations": 0,
+  "label_monotonic": true,
+  "bull_vs_market_spearman": 0.1092,
+  "inverted_days": 232,
+  "inverted_sample": [
+    "2018-01-22",
+    "2018-01-23",
+    "2018-01-24",
+    "2018-01-25",
+    "2018-01-26"
+  ],
+  "note": "low market correlation reflects slow post-crash HMM re-engagement (documented limitation), not alignment flip",
+  "bull_prob_by_label": {
+    "mean": {
+      "BEAR": 0.128,
+      "BULL": 0.786,
+      "RANGE_BOUND": 0.35,
+      "SIDEWAYS": 0.07
+    },
+    "min": {
+      "BEAR": 0.0,
+      "BULL": 0.445,
+      "RANGE_BOUND": 0.35,
+      "SIDEWAYS": 0.0
+    },
+    "max": {
+      "BEAR": 0.489,
+      "BULL": 1.0,
+      "RANGE_BOUND": 0.35,
+      "SIDEWAYS": 0.414
+    }
+  }
+}

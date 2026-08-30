@@ -1,0 +1,65 @@
+{
+  "C_no_overlay": {
+    "return_pct": 2.87,
+    "cagr_pct": 0.37,
+    "sharpe": 0.09,
+    "sortino": 0.09,
+    "max_dd_pct": -18.46,
+    "calmar": 0.02,
+    "exposure_pct": 55.2,
+    "pf": 1.02,
+    "trades": 435
+  },
+  "D_thr4": {
+    "return_pct": -6.41,
+    "cagr_pct": -0.87,
+    "sharpe": -0.14,
+    "sortino": -0.13,
+    "max_dd_pct": -18.93,
+    "calmar": -0.05,
+    "exposure_pct": 54.6,
+    "pf": 0.93,
+    "trades": 426,
+    "trigger_freq_pct": 67.24,
+    "cagr_retention": -2.351
+  },
+  "D_thr5": {
+    "return_pct": -2.52,
+    "cagr_pct": -0.34,
+    "sharpe": -0.03,
+    "sortino": -0.03,
+    "max_dd_pct": -17.91,
+    "calmar": -0.02,
+    "exposure_pct": 54.8,
+    "pf": 0.96,
+    "trades": 428,
+    "trigger_freq_pct": 51.34,
+    "cagr_retention": -0.919
+  },
+  "D_thr6": {
+    "return_pct": -0.06,
+    "cagr_pct": -0.01,
+    "sharpe": 0.03,
+    "sortino": 0.03,
+    "max_dd_pct": -16.06,
+    "calmar": -0.0,
+    "exposure_pct": 55.1,
+    "pf": 0.99,
+    "trades": 436,
+    "trigger_freq_pct": 37.9,
+    "cagr_retention": -0.027
+  },
+  "D_thr7": {
+    "return_pct": 3.88,
+    "cagr_pct": 0.5,
+    "sharpe": 0.11,
+    "sortino": 0.11,
+    "max_dd_pct": -13.51,
+    "calmar": 0.04,
+    "exposure_pct": 55.2,
+    "pf": 1.03,
+    "trades": 434,
+    "trigger_freq_pct": 25.35,
+    "cagr_retention": 1.351
+  }
+}

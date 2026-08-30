@@ -1,0 +1,36 @@
+{
+  "fja_validation": {
+    "n_snapshots": 2718,
+    "date_range": [
+      "1996-01-02",
+      "2026-06-30"
+    ],
+    "count_per_snapshot": {
+      "mean": 496.8,
+      "min": 487,
+      "max": 507,
+      "q05": 488,
+      "q95": 506
+    },
+    "max_snapshot_gap_days": 91,
+    "median_snapshot_gap_days": 2,
+    "duplicate_dates": 0,
+    "n_unique_tickers": 1206
+  },
+  "cross_check": {
+    "sample_n": 38,
+    "mean_jaccard": 0.9995,
+    "min_jaccard": 0.9842,
+    "mismatched_snapshots": 1
+  },
+  "coverage": {
+    "cache_tickers": 616,
+    "n_snapshots": 564,
+    "per_date_coverage": {
+      "mean_pct": 83.37,
+      "min_pct": 75.2,
+      "max_pct": 99.8,
+      "q10_pct": 77.0
+    }
+  }
+}

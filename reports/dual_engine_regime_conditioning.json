@@ -1,0 +1,27 @@
+{
+  "regime_returns": {
+    "BULL": {
+      "days": 496,
+      "daily_bps": 29.72,
+      "cum_pct": 324.13,
+      "ann_vol": 16.8
+    },
+    "SIDEWAYS": {
+      "days": 886,
+      "daily_bps": 7.76,
+      "cum_pct": 88.38,
+      "ann_vol": 17.4
+    },
+    "BEAR": {
+      "days": 1025,
+      "daily_bps": -6.8,
+      "cum_pct": -53.83,
+      "ann_vol": 19.3
+    }
+  },
+  "size_mult_by_regime": {
+    "BEAR": 0.0,
+    "BULL": 0.858,
+    "SIDEWAYS": 0.5
+  }
+}

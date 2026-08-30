@@ -1,0 +1,83 @@
+[
+  {
+    "item": "1. Signal source (entry signal)",
+    "live_present": false,
+    "backtest_present": true,
+    "live_evidence": "main.py uses technicals_signal (weighted entry)",
+    "backtest_evidence": "dynamic uses setup_signal (Type D entry)",
+    "verdict": "MISMATCH",
+    "note": "Live still uses legacy weighted entry; setup_agent only wired into backtest"
+  },
+  {
+    "item": "2. Next-open entry",
+    "live_present": false,
+    "backtest_present": true,
+    "live_evidence": "live: entry price = today close",
+    "backtest_evidence": "backtest: pending signal -> next open",
+    "verdict": "MISMATCH",
+    "note": "backtest fills at next open with gap; live fills at today close"
+  },
+  {
+    "item": "3. Gap filter (max_entry_gap_pct)",
+    "live_present": false,
+    "backtest_present": true,
+    "live_evidence": "live: none",
+    "backtest_evidence": "backtest: GAP_TOO_HIGH skip",
+    "verdict": "MISMATCH",
+    "note": "backtest skips entries that gap >2% above signal close; live has no such check"
+  },
+  {
+    "item": "4. Extension filter (max_extension_from_pivot_pct)",
+    "live_present": false,
+    "backtest_present": true,
+    "live_evidence": "live: none",
+    "backtest_evidence": "backtest: EXTENDED_FROM_PIVOT skip",
+    "verdict": "MISMATCH",
+    "note": "backtest skips entries extended >3% above pivot; live has no such check"
+  },
+  {
+    "item": "5. ATR position sizing",
+    "live_present": true,
+    "backtest_present": true,
+    "live_evidence": "live: size_position(equity,cash,close,atr,size_mult,...)",
+    "backtest_evidence": "backtest: size_position(equity,cash,open,atr,size_mult*quality_mult,...)",
+    "verdict": "MATCH (same fn)",
+    "note": "Same risk_manager.size_position; but live passes close, backtest passes next-open price"
+  },
+  {
+    "item": "6. Stop/Target/Trailing exit logic",
+    "live_present": true,
+    "backtest_present": true,
+    "live_evidence": "live: _exit_check(pos, price, ...) close-only",
+    "backtest_evidence": "backtest: _exit_check(pos, bar{open,high,low,close}, ...) gap-aware OHLC",
+    "verdict": "PARTIAL",
+    "note": "Same _exit_check fn but backtest passes OHLC bar -> gap-aware fills; live passes close only"
+  },
+  {
+    "item": "7. Quality multiplier (setup_quality_mult)",
+    "live_present": false,
+    "backtest_present": true,
+    "live_evidence": "live: none (weighted entry)",
+    "backtest_evidence": "backtest: eff_size_mult = global * quality_mult",
+    "verdict": "MISMATCH",
+    "note": "backtest scales position by setup quality; live has no setup quality concept"
+  },
+  {
+    "item": "8. Daily briefing / order output",
+    "live_present": true,
+    "backtest_present": true,
+    "live_evidence": "live: briefing.md + orders.json (recommendations, human reviews)",
+    "backtest_evidence": "backtest: trade_log JSON + HTML report (simulated fills)",
+    "verdict": "MATCH (different purpose)",
+    "note": "Live = recommendation for human; backtest = simulation. Both exist, no auto-reconciliation"
+  },
+  {
+    "item": "Regime source",
+    "live_present": true,
+    "backtest_present": false,
+    "live_evidence": "live: market_regime (v3 5-component)",
+    "backtest_evidence": "backtest: compute_regime_decision (Regime v1 dual)",
+    "verdict": "MISMATCH",
+    "note": "Live still uses legacy v3 regime; Regime v1 (HMM+Breadth) only wired into backtest harness"
+  }
+]

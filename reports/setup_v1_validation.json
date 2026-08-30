@@ -1,0 +1,176 @@
+{
+  "T5_core_comparison": {
+    "Breakout Only": {
+      "return_pct": 6.24,
+      "cagr_pct": 0.8,
+      "sharpe": 0.15,
+      "max_dd_pct": -17.38,
+      "pf": 1.05,
+      "win_pct": 46.3,
+      "trades": 438,
+      "exposure_pct": 54.5,
+      "avg_r": 0.006,
+      "setup_dist": {
+        "breakout": 438
+      },
+      "fill_dist": {
+        "TARGET": 123,
+        "GAP": 40,
+        "TRAILING": 43,
+        "STOP": 188,
+        "CLOSE": 44
+      }
+    },
+    "Pullback Only": {
+      "return_pct": 18.19,
+      "cagr_pct": 2.23,
+      "sharpe": 0.33,
+      "max_dd_pct": -15.85,
+      "pf": 1.1,
+      "win_pct": 46.9,
+      "trades": 687,
+      "exposure_pct": 68.3,
+      "avg_r": 0.072,
+      "setup_dist": {
+        "pullback": 687
+      },
+      "fill_dist": {
+        "STOP": 282,
+        "TARGET": 211,
+        "CLOSE": 85,
+        "TRAILING": 52,
+        "GAP": 57
+      }
+    },
+    "Breakout+Pullback": {
+      "return_pct": 6.47,
+      "cagr_pct": 0.83,
+      "sharpe": 0.14,
+      "max_dd_pct": -26.38,
+      "pf": 1.03,
+      "win_pct": 45.6,
+      "trades": 697,
+      "exposure_pct": 65.0,
+      "avg_r": 0.023,
+      "setup_dist": {
+        "pullback": 540,
+        "breakout": 157
+      },
+      "fill_dist": {
+        "TARGET": 204,
+        "GAP": 69,
+        "STOP": 285,
+        "TRAILING": 52,
+        "CLOSE": 87
+      }
+    }
+  },
+  "T1_setup_x_regime": {
+    "breakout": [
+      {
+        "regime": "BULL",
+        "setup_type": "breakout",
+        "n": 223,
+        "pf": 1.321,
+        "win_pct": 53.4,
+        "avg_r": 0.151,
+        "net_pnl_sum": 264.62,
+        "contrib_pct": 399.8
+      },
+      {
+        "regime": "SIDEWAYS",
+        "setup_type": "breakout",
+        "n": 215,
+        "pf": 0.683,
+        "win_pct": 39.1,
+        "avg_r": -0.144,
+        "net_pnl_sum": -198.44,
+        "contrib_pct": -299.8
+      }
+    ],
+    "pullback": [
+      {
+        "regime": "BULL",
+        "setup_type": "pullback",
+        "n": 296,
+        "pf": 1.342,
+        "win_pct": 52.4,
+        "avg_r": 0.188,
+        "net_pnl_sum": 362.22,
+        "contrib_pct": 163.7
+      },
+      {
+        "regime": "SIDEWAYS",
+        "setup_type": "pullback",
+        "n": 391,
+        "pf": 0.87,
+        "win_pct": 42.7,
+        "avg_r": -0.016,
+        "net_pnl_sum": -140.97,
+        "contrib_pct": -63.7
+      }
+    ]
+  },
+  "T2_threshold_sensitivity": {
+    "0.4": {
+      "trades": 438,
+      "pf": 1.04,
+      "win_pct": 46.1,
+      "avg_r": 0.003,
+      "cagr_pct": 0.76,
+      "max_dd_pct": -17.64,
+      "return_pct": 5.94,
+      "sharpe": 0.15
+    },
+    "0.5": {
+      "trades": 438,
+      "pf": 1.05,
+      "win_pct": 46.3,
+      "avg_r": 0.006,
+      "cagr_pct": 0.8,
+      "max_dd_pct": -17.38,
+      "return_pct": 6.24,
+      "sharpe": 0.15
+    },
+    "0.6": {
+      "trades": 432,
+      "pf": 1.06,
+      "win_pct": 46.8,
+      "avg_r": 0.017,
+      "cagr_pct": 1.0,
+      "max_dd_pct": -18.29,
+      "return_pct": 7.85,
+      "sharpe": 0.18
+    },
+    "0.7": {
+      "trades": 408,
+      "pf": 0.99,
+      "win_pct": 45.6,
+      "avg_r": -0.017,
+      "cagr_pct": 0.06,
+      "max_dd_pct": -19.43,
+      "return_pct": 0.49,
+      "sharpe": 0.04
+    }
+  },
+  "T3_quality_mult": {
+    "current": {
+      "cagr_pct": 0.8,
+      "sharpe": 0.15,
+      "max_dd_pct": -17.38,
+      "pf": 1.05,
+      "exposure_pct": 54.5,
+      "trades": 438,
+      "return_pct": 6.24
+    },
+    "fixed_1.0": {
+      "cagr_pct": 0.77,
+      "sharpe": 0.13,
+      "max_dd_pct": -23.71,
+      "pf": 1.04,
+      "exposure_pct": 55.4,
+      "trades": 457,
+      "return_pct": 6.01
+    }
+  }
+}

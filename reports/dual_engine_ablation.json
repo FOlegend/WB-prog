@@ -1,0 +1,107 @@
+{
+  "A. HMM only": {
+    "metrics": {
+      "total_trades": 327,
+      "win_rate": 0.453,
+      "total_pnl": -20.07,
+      "total_return_pct": -1.57,
+      "profit_factor": 0.98,
+      "avg_win": 7.39,
+      "avg_loss": -6.22,
+      "expectancy": -0.06,
+      "sharpe": 0.0,
+      "max_drawdown_pct": -16.97,
+      "final_equity": 1261.93,
+      "starting_equity": 1282.0,
+      "exposure_pct": 41.4,
+      "regime_dist": {
+        "BEAR": 1196,
+        "BULL": 499,
+        "SIDEWAYS": 210
+      },
+      "veto_dist": {
+        "BREADTH_THRUST": 185,
+        "BEARISH_BREADTH_DIVERGENCE": 240
+      }
+    }
+  },
+  "B. Breadth only": {
+    "metrics": {
+      "total_trades": 576,
+      "win_rate": 0.472,
+      "total_pnl": -12.76,
+      "total_return_pct": 0.08,
+      "profit_factor": 0.99,
+      "avg_win": 6.67,
+      "avg_loss": -6.01,
+      "expectancy": -0.02,
+      "sharpe": 0.04,
+      "max_drawdown_pct": -18.0,
+      "final_equity": 1283.04,
+      "starting_equity": 1282.0,
+      "exposure_pct": 67.6,
+      "regime_dist": {
+        "SIDEWAYS": 693,
+        "BULL": 541,
+        "BEAR": 671
+      },
+      "veto_dist": {
+        "BREADTH_THRUST": 185,
+        "BEARISH_BREADTH_DIVERGENCE": 240
+      }
+    }
+  },
+  "C. HMM+Breadth": {
+    "metrics": {
+      "total_trades": 435,
+      "win_rate": 0.46,
+      "total_pnl": 22.95,
+      "total_return_pct": 2.87,
+      "profit_factor": 1.02,
+      "avg_win": 7.15,
+      "avg_loss": -5.98,
+      "expectancy": 0.05,
+      "sharpe": 0.09,
+      "max_drawdown_pct": -18.46,
+      "final_equity": 1318.75,
+      "starting_equity": 1282.0,
+      "exposure_pct": 55.2,
+      "regime_dist": {
+        "BEAR": 960,
+        "SIDEWAYS": 551,
+        "BULL": 394
+      },
+      "veto_dist": {
+        "BREADTH_THRUST": 185,
+        "BEARISH_BREADTH_DIVERGENCE": 240
+      }
+    }
+  },
+  "D. +DistDays": {
+    "metrics": {
+      "total_trades": 428,
+      "win_rate": 0.453,
+      "total_pnl": -46.11,
+      "total_return_pct": -2.52,
+      "profit_factor": 0.96,
+      "avg_win": 6.11,
+      "avg_loss": -5.26,
+      "expectancy": -0.11,
+      "sharpe": -0.03,
+      "max_drawdown_pct": -17.91,
+      "final_equity": 1249.68,
+      "starting_equity": 1282.0,
+      "exposure_pct": 54.8,
+      "regime_dist": {
+        "BEAR": 960,
+        "SIDEWAYS": 551,
+        "BULL": 394
+      },
+      "veto_dist": {
+        "DISTRIBUTION_DAY_CAP": 978,
+        "BREADTH_THRUST": 185,
+        "BEARISH_BREADTH_DIVERGENCE": 240
+      }
+    }
+  }
+}

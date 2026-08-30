@@ -69,6 +69,66 @@ from src.backtest.engine import compute_metrics
 warnings.filterwarnings("ignore")
 
 
+def _setup_signal_policy(df: pd.DataFrame, cfg, rs_rank: int | None,
+                         regime: str) -> dict:
+    """Regime-dependent setup selection (EXPERIMENTAL harness knob).
+
+    Activated ONLY when cfg.setup_regime_policy = {regime: rule} is set;
+    default (no policy) falls back to legacy setup_signal (max score) so
+    existing behavior is unchanged. Rules (deterministic, per reviewer):
+      "breakout"            -> breakout only
+      "pullback"            -> pullback only
+      "both_pullback_first" -> evaluate both; PULLBACK wins when valid
+                               (tighter stop / better R:R per reviewer rule)
+      "both_score"          -> max(setup_score)  [legacy selection, explicit]
+    setup_agent.py itself is NOT modified.
+    """
+    policy = getattr(cfg, "setup_regime_policy", None)
+    if not policy or regime not in policy:
+        return setup_signal(df, cfg, rs_rank=rs_rank)
+    rule = policy[regime]
+    from src.indicators.technicals import atr as _atr
+    from src.agents.setup_agent import (breakout_setup, pullback_setup,
+                                        _quality_mult)
+    thr = cfg.setup_score_threshold
+
+    def _pack(stype: str, s: dict) -> dict:
+        score = s.get("setup_score", 0.0)
+        valid = bool(s.get("valid", False)) and score >= thr
+        close = df["close"].astype(float)
+        price = float(close.iloc[-1])
+        a = _atr(df, cfg.atr_period)
+        return {
+            "valid": valid, "setup_type": stype if valid else None,
+            "setup_score": score,
+            "setup_quality_mult": _quality_mult(score, cfg) if valid else 0.0,
+            "signal_close": price, "atr": float(a.iloc[-1]),
+            "prior_high20": s.get("prior_high20"),
+            "components": s.get("components", {}),
+            "entry_reason": s.get("entry_reason", "UNKNOWN"),
+        }
+
+    if rule == "breakout":
+        return _pack("breakout", breakout_setup(df, cfg, rs_rank=rs_rank))
+    if rule == "pullback":
+        return _pack("pullback", pullback_setup(df, cfg))
+
+    bk = breakout_setup(df, cfg, rs_rank=rs_rank)
+    pb = pullback_setup(df, cfg)
+    if rule == "both_pullback_first":
+        if pb.get("valid", False) and pb["setup_score"] >= thr:
+            return _pack("pullback", pb)
+        if bk.get("valid", False) and bk["setup_score"] >= thr:
+            return _pack("breakout", bk)
+        # neither valid -> higher-score candidate (keeps legacy trade count)
+        return _pack("breakout", bk) if bk["setup_score"] >= pb["setup_score"] \
+            else _pack("pullback", pb)
+    if rule == "both_score":
+        return _pack("breakout", bk) if bk["setup_score"] >= pb["setup_score"] \
+            else _pack("pullback", pb)
+    return setup_signal(df, cfg, rs_rank=rs_rank)
+
+
 # ---------------------------------------------------------------------------
 # Layer 2 — Rebalance Calendar
 # ---------------------------------------------------------------------------
@@ -428,7 +488,8 @@ class DynamicBacktestEngine:
                     else:
                         # Setup-based entry (Type D)
                         try:
-                            setup = setup_signal(slices[t], cfg, rs_rank=rs_rank)
+                            setup = _setup_signal_policy(
+                                slices[t], cfg, rs_rank, global_regime_label)
                         except Exception:
                             continue
                         if not setup.get("valid"):

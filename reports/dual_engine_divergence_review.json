@@ -1,0 +1,60 @@
+{
+  "tops": [
+    {
+      "event": "2018-Q4 top",
+      "peak_date": "2018-09-20",
+      "warning_date": "2018-08-21",
+      "lead_trading_days": 21,
+      "index_ret_warning_to_peak_pct": 2.53,
+      "index_ret_warning_to_20d_pct": 1.7,
+      "index_ret_peak_to_60d_pct": -12.62
+    },
+    {
+      "event": "2021-Q4 top",
+      "peak_date": "2022-01-03",
+      "warning_date": "2021-11-18",
+      "lead_trading_days": 30,
+      "index_ret_warning_to_peak_pct": 2.06,
+      "index_ret_warning_to_20d_pct": -1.76,
+      "index_ret_peak_to_60d_pct": -3.68
+    },
+    {
+      "event": "2024-Q3 top",
+      "peak_date": "2024-10-18",
+      "warning_date": "2024-06-03",
+      "lead_trading_days": 96,
+      "index_ret_warning_to_peak_pct": 11.46,
+      "index_ret_warning_to_20d_pct": 4.35,
+      "index_ret_peak_to_60d_pct": 1.55
+    }
+  ],
+  "bottoms": [
+    {
+      "event": "2018-Q4 bottom",
+      "trough_date": "2018-12-24",
+      "thrust_date": "2018-11-05",
+      "thrust_days_from_trough": 33,
+      "hmm_bull_date": "2019-02-08",
+      "hmm_bull_days_from_trough": 31,
+      "thrust_before_hmm": true
+    },
+    {
+      "event": "2020-COVID bottom",
+      "trough_date": "2020-03-23",
+      "thrust_date": "2020-03-26",
+      "thrust_days_from_trough": -3,
+      "hmm_bull_date": null,
+      "hmm_bull_days_from_trough": null,
+      "thrust_before_hmm": false
+    },
+    {
+      "event": "2022-Q4 bottom",
+      "trough_date": "2022-10-12",
+      "thrust_date": "2022-10-05",
+      "thrust_days_from_trough": 5,
+      "hmm_bull_date": null,
+      "hmm_bull_days_from_trough": null,
+      "thrust_before_hmm": false
+    }
+  ]
+}

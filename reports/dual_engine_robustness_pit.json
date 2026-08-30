@@ -1,0 +1,96 @@
+{
+  "walkforward_yearly": {
+    "2018": {
+      "return_pct": -5.2,
+      "max_dd_pct": -6.82
+    },
+    "2019": {
+      "return_pct": 8.73,
+      "max_dd_pct": -2.71
+    },
+    "2020": {
+      "return_pct": 5.03,
+      "max_dd_pct": -3.56
+    },
+    "2021": {
+      "return_pct": -1.2,
+      "max_dd_pct": -5.2
+    },
+    "2022": {
+      "return_pct": 1.05,
+      "max_dd_pct": -6.22
+    },
+    "2023": {
+      "return_pct": -5.9,
+      "max_dd_pct": -13.8
+    },
+    "2024": {
+      "return_pct": -2.3,
+      "max_dd_pct": -6.97
+    },
+    "2025": {
+      "return_pct": 8.73,
+      "max_dd_pct": -4.67
+    }
+  },
+  "threshold_perturbation": {
+    "thr60/40": {
+      "return_pct": 3.3,
+      "sharpe": 0.1,
+      "max_dd_pct": -12.96,
+      "pf": 1.03,
+      "trades": 375,
+      "exposure_pct": 46.9
+    },
+    "thr65/35": {
+      "return_pct": 6.24,
+      "sharpe": 0.15,
+      "max_dd_pct": -17.38,
+      "pf": 1.05,
+      "trades": 438,
+      "exposure_pct": 54.5
+    },
+    "thr70/30": {
+      "return_pct": 7.67,
+      "sharpe": 0.18,
+      "max_dd_pct": -15.5,
+      "pf": 1.06,
+      "trades": 512,
+      "exposure_pct": 63.2
+    }
+  },
+  "breadth_lookback_perturbation": {
+    "lookback7": {
+      "return_pct": -7.69,
+      "sharpe": -0.13,
+      "max_dd_pct": -23.15,
+      "pf": 0.93,
+      "trades": 427,
+      "exposure_pct": 54.0
+    },
+    "lookback10": {
+      "return_pct": 6.24,
+      "sharpe": 0.15,
+      "max_dd_pct": -17.38,
+      "pf": 1.05,
+      "trades": 438,
+      "exposure_pct": 54.5
+    },
+    "lookback13": {
+      "return_pct": 4.09,
+      "sharpe": 0.11,
+      "max_dd_pct": -16.81,
+      "pf": 1.02,
+      "trades": 439,
+      "exposure_pct": 53.0
+    }
+  },
+  "baseline_C": {
+    "return_pct": 6.24,
+    "sharpe": 0.15,
+    "max_dd_pct": -17.38,
+    "pf": 1.05,
+    "trades": 438,
+    "exposure_pct": 54.5
+  }
+}

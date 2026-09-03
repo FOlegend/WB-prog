@@ -75,6 +75,7 @@ class ProductionConfig:
     max_holding_days: int = 30
     max_open_positions: int = 5
     max_position_pct: float = 0.25
+    slippage_pct: float = 0.0005            # 來回滑點約 0.05%（執行層費用模型）
 
     # ================= 技術指標（pullback / ATR sizing 需要） =================
     atr_period: int = 14

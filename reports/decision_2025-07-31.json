@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2025-07-31",
+  "generated_by": "production.pipeline.run_daily",
+  "pipeline_status": "OK",
+  "data": {
+    "benchmark": {
+      "ticker": "SPY",
+      "provider": "cache",
+      "ok": true,
+      "file": "SPY.csv",
+      "rows": 2408,
+      "as_of_bound": "2025-07-31",
+      "stale": false,
+      "error": null,
+      "note": null
+    },
+    "breadth": {
+      "kind": "pit-or-current",
+      "rows": 2408,
+      "ok": true,
+      "error": null
+    },
+    "candidate_providers": {},
+    "status": "OK"
+  },
+  "regime": {
+    "status": "OK",
+    "input_rows": 2408,
+    "breadth_rows": 2408,
+    "output": {
+      "regime_label": "BULL",
+      "composite_score": 70.858,
+      "position_size_mult": 0.5,
+      "strategy_mode": "trend_following",
+      "veto_flags": [
+        "BEARISH_BREADTH_DIVERGENCE"
+      ]
+    },
+    "warnings": []
+  },
+  "screener": {
+    "mode": "provided",
+    "status": "OK",
+    "error": null,
+    "n_candidates": 5,
+    "top_n": 30,
+    "apply_mcap": null,
+    "filters_applied": [],
+    "candidates": [
+      {
+        "ticker": "AAPL",
+        "rs_rank": 1,
+        "rs": null
+      },
+      {
+        "ticker": "MSFT",
+        "rs_rank": 2,
+        "rs": null
+      },
+      {
+        "ticker": "NVDA",
+        "rs_rank": 3,
+        "rs": null
+      },
+      {
+        "ticker": "GOOGL",
+        "rs_rank": 4,
+        "rs": null
+      },
+      {
+        "ticker": "AMZN",
+        "rs_rank": 5,
+        "rs": null
+      }
+    ],
+    "n_universe_checked": 0,
+    "provider_counts": {},
+    "warnings": [
+      "provided: candidates supplied externally (rs_rank = list order)"
+    ]
+  },
+  "setup": {
+    "status": "OK",
+    "evaluations": [
+      {
+        "ticker": "AAPL",
+        "provider": "cache",
+        "valid": false,
+        "setup_type": null,
+        "setup_score": 0.2,
+        "setup_quality_mult": 0.0,
+        "signal_close": 206.7498016357422,
+        "atr": 2.998108406676849,
+        "entry_reason": "pullback: px>50SMA+RS_strong (score=0.20)",
+        "rs_rank": 1
+      },
+      {
+        "ticker": "MSFT",
+        "provider": "cache",
+        "valid": false,
+        "setup_type": null,
+        "setup_score": 0.4,
+        "setup_quality_mult": 0.0,
+        "signal_close": 529.2723999023438,
+        "atr": 8.658701165326704,
+        "entry_reason": "pullback: px>50SMA+px>200SMA+50>200+RS_strong (score=0.40)",
+        "rs_rank": 2
+      },
+      {
+        "ticker": "NVDA",
+        "provider": "cache",
+        "valid": false,
+        "setup_type": null,
+        "setup_score": 0.4,
+        "setup_quality_mult": 0.0,
+        "signal_close": 177.63340759277344,
+        "atr": 4.195125581503547,
+        "entry_reason": "pullback: px>50SMA+px>200SMA+50>200+RS_strong (score=0.40)",
+        "rs_rank": 3
+      },
+      {
+        "ticker": "GOOGL",
+        "provider": "cache",
+        "valid": true,
+        "setup_type": "pullback",
+        "setup_score": 0.65,
+        "setup_quality_mult": 0.75,
+        "signal_close": 191.35411071777344,
+        "atr": 3.8718120914264307,
+        "entry_reason": "pullback: px>50SMA+px>200SMA+50>200+nearEMA+RS_strong (score=0.65)",
+        "rs_rank": 4
+      },
+      {
+        "ticker": "AMZN",
+        "provider": "cache",
+        "valid": false,
+        "setup_type": null,
+        "setup_score": 0.4,
+        "setup_quality_mult": 0.0,
+        "signal_close": 234.11000061035156,
+        "atr": 3.451430184500556,
+        "entry_reason": "pullback: px>50SMA+px>200SMA+50>200+RS_strong (score=0.40)",
+        "rs_rank": 5
+      }
+    ],
+    "n_valid": 1
+  },
+  "positions": {
+    "n_open": 0,
+    "max_open": 5,
+    "equity": 1282.0,
+    "cash": 1282.0,
+    "nav_mark": 1282.0,
+    "gross_exposure": 0,
+    "exposure_pct": 0.0,
+    "items": []
+  },
+  "exits": {
+    "status": "OK",
+    "proposed": [],
+    "warnings": []
+  },
+  "entries": {
+    "status": "EMPTY",
+    "blocked_reason": null,
+    "proposed": [],
+    "n_buys": 0
+  },
+  "risk": {
+    "sizing": [
+      {
+        "ticker": "GOOGL",
+        "shares": 0,
+        "stop": null,
+        "take_profit": null,
+        "risk_reward": null,
+        "eff_size_mult": 0.375,
+        "allow": false
+      }
+    ],
+    "warnings": []
+  },
+  "portfolio": {
+    "n_open_after": 0,
+    "max_open": 5,
+    "constraints": [
+      "max_open_positions=5",
+      "max_position_pct=0.25",
+      "risk_per_trade=0.01"
+    ],
+    "warnings": []
+  },
+  "warnings": [],
+  "recommendations": {
+    "summary": "no action",
+    "buys": [],
+    "sells": []
+  }
+}

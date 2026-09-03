@@ -7,3 +7,6 @@ __pycache__/
 
 # OHLCV cache — 可重下載，避免 repo 過大
 data/cache/
+
+# 誤放的另一專案（診所更表自動化）— 不屬於本 repo
+YOT/

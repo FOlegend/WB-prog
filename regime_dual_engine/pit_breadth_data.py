@@ -38,6 +38,8 @@ if _REPO_ROOT not in sys.path:
     sys.path.insert(0, _REPO_ROOT)
 
 from regime_dual_engine.pit_constituents import PitMembership, cache_dir, norm
+# single definition of the point-in-time slice contract (see reports/pit_breadth_leak_2026-10-01.md)
+from regime_dual_engine.breadth_data import slice_to_end
 
 _OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 _PIT_OUT = os.path.join(_OUT_DIR, "breadth_pit_2016_2025.csv")
@@ -137,15 +139,25 @@ def build_current_breadth(end: str = "2025-07-31") -> pd.DataFrame:
 
 
 def get_breadth(kind: str, rebuild: bool = False, end: str = "2025-07-31") -> pd.DataFrame:
-    """Load (or build + cache) a breadth series. kind in {'pit','current'}."""
+    """Load (or build + cache) a breadth series. kind in {'pit','current'}.
+
+    PIT contract: the returned frame never contains an observation after `end`
+    (see `breadth_data.slice_to_end`). `end=None` returns the full cached series.
+
+    The defect this fixes: the cached path used to ignore `end` entirely, so
+    `get_breadth('pit', end=as_of)` returned the whole 2016..2025 file and
+    `compute_regime_decision` read its tail — identical breadth inputs for every
+    historical as-of date (a look-ahead).
+    """
     path = _PIT_OUT if kind == "pit" else _CUR_OUT
     if os.path.exists(path) and not rebuild:
         df = pd.read_csv(path, parse_dates=["datetime"]).set_index("datetime")
-        return df
+        return slice_to_end(df, end, name=f"get_breadth({kind},cache)")
     os.makedirs(_OUT_DIR, exist_ok=True)
     df = build_pit_breadth(end=end) if kind == "pit" else build_current_breadth(end=end)
+    # write the FULL built frame to the cache, but return only up to `end`
     df.reset_index().rename(columns={"index": "datetime"}).to_csv(path, index=False)
-    return df
+    return slice_to_end(df, end, name=f"get_breadth({kind},rebuild)")
 
 
 # ---------------------------------------------------------------------------

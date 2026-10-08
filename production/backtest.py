@@ -58,12 +58,75 @@ if _REPO_ROOT not in sys.path:
 
 from production.config import ProductionConfig
 from production.datasource import build_cached_source, CachedSource
+from production.observability import parse_setup_components
 from production.pipeline import run_daily
 from production.screener.screener import screen_from_source
 from src.state.state import default_state, open_position, close_position, \
     mark_to_market, default_position
 
 BREADTH_LAST = "2025-07-31"   # PIT breadth cache tail (see regime_dual_engine/data)
+
+
+def _entry_research_context(*, o, sizing, open_px, gap, ext, equity,
+                            cash_after, cfg) -> dict:
+    """R7 §3 — the entry-phase research context for one filled BUY.
+
+    Every field is either an EXACT value the execution path already computed, or
+    an explicit "unavailable" marker. Nothing is estimated, back-filled or
+    proxied, and nothing here is read by any decision rule — the dictionary is
+    merged onto the trade record only after the position has been opened (and
+    again only after it has been closed).
+
+    Provenance
+    -----------
+    signal_close          exact  — setup_signal's last close on the signal date
+    next_open_gap_pct     exact  — (next open − signal close) / signal close
+    entry_atr / atr_pct   exact  — atr_at_entry carried on the position
+    risk_budget_usd       exact  — equity × risk_per_trade × eff multiplier
+    stop_distance_usd     exact  — atr × stop_atr_mult (the frozen R unit)
+    entry_phase_*         exact  — the sizing inputs, captured at the fill
+    extension_*           exact  — but `prior_high20` is None under Setup v1
+                                    Pullback-Only, so the frozen extension
+                                    filter can never fire; the null is
+                                    reported, not replaced by a look-alike
+    score_components      exact  — parsed from the engine's own entry_reason
+    """
+    atr = o.get("atr") or 0.0
+    quality = o.get("quality_mult", 1.0) or 0.0
+    size_mult = o.get("size_mult", 1.0) or 0.0
+    eff = size_mult * quality
+    risk_budget = equity * cfg.risk_per_trade * eff
+    stop_distance = atr * cfg.stop_atr_mult
+    return {
+        "signal_close": o.get("signal_close"),
+        "entry_open": round(open_px, 4),
+        "next_open_gap_pct": round(gap, 6) if gap is not None else None,
+        "max_entry_gap_pct": cfg.max_entry_gap_pct,
+        "entry_atr": atr,
+        "entry_atr_pct_of_price": (round(100.0 * atr / open_px, 4)
+                                   if open_px else None),
+        "prior_high20": o.get("prior_high20"),
+        "extension_from_pivot_pct": (round(ext, 6) if ext is not None else None),
+        "extension_filter_status": (
+            "evaluated" if ext is not None else
+            "unavailable — prior_high20 is None (Setup v1 is Pullback-Only), so the "
+            "frozen max_extension_from_pivot_pct guard is INERT and did not evaluate "
+            "this entry (P6); no substitute value is supplied"),
+        "entry_phase_equity": round(equity, 2),
+        "entry_phase_cash_after_fill": round(cash_after, 2),
+        "entry_regime_size_mult": size_mult,
+        "entry_setup_quality_mult": quality,
+        "entry_eff_size_mult": round(eff, 6),
+        "risk_budget_usd": round(risk_budget, 2),
+        "stop_distance_usd": round(stop_distance, 4),
+        "r_unit_usd": round(stop_distance, 4),
+        "shares_requested_before_flooring": (
+            int(risk_budget // stop_distance) if stop_distance > 0 else 0),
+        "shares_final": sizing.get("shares"),
+        "position_value": sizing.get("position_value"),
+        "score_components": parse_setup_components(o.get("reason"),
+                                                   o.get("setup_type")),
+    }
 
 
 class ProductionBacktest:
@@ -156,9 +219,11 @@ class ProductionBacktest:
 
         state = default_state(cfg.capital_usd)
         pending: dict[str, dict] = {}      # BUY proposals queued for next open
+        entry_ctx: dict[str, dict] = {}    # R7: per-entry research context
         equity_curve: list[dict] = []
         skipped: list[dict] = []
         regime_log: list[dict] = []
+        shadow_log: list[dict] = []        # Phase 3: per-session shadow coverage
         day_records: list[str] = []        # ledger file names written (if any)
         decisions: list[dict] = []         # DecisionRecords (for tests/audit)
 
@@ -174,7 +239,8 @@ class ProductionBacktest:
             bucket_tickers = [c["ticker"] for c in bucket.get("tickers", [])]
 
             # ---- 0) execute yesterday's BUY proposals at TODAY's OPEN ----
-            self._execute_pending(state, pending, bucket_tickers, date, skipped)
+            self._execute_pending(state, pending, bucket_tickers, date, skipped,
+                                  entry_ctx)
 
             # ---- 1) canonical decision for today ----
             rec = run_daily(date_s, state, self.source, cfg,
@@ -189,8 +255,22 @@ class ProductionBacktest:
                             if p["ticker"] == s["ticker"]), None)
                 if idx is None:
                     continue
-                close_position(state, idx, float(s["exit_price"]), date_s,
-                               s["reason"], {}, fill_model=s["fill_model"])
+                trade = close_position(state, idx, float(s["exit_price"]), date_s,
+                                       s["reason"], {}, fill_model=s["fill_model"])
+                # R7 §3 (P1) — holding_days was declared in the state contract
+                # but never filled by any caller, so it is null on every trade.
+                # Calendar days, matching the frozen TIME_STOP convention.
+                # Additive on the trade record; no decision path is touched.
+                trade["holding_days"] = (
+                    datetime.strptime(date_s, "%Y-%m-%d")
+                    - datetime.strptime(trade["entry_date"], "%Y-%m-%d")).days
+                # R7 §3 — attach the entry-phase research context that the
+                # position carried. Read-only merge onto the finished trade
+                # record; the position is already closed and cannot be affected.
+                _ctx = entry_ctx.pop(s["ticker"], None)
+                if _ctx:
+                    for _k, _v in _ctx.items():
+                        trade.setdefault(_k, _v)
             # positions closed today are removed from pending (stale)
             sold = {s["ticker"] for s in rec["exits"]["proposed"]}
             for t in sold:
@@ -219,7 +299,17 @@ class ProductionBacktest:
                                       for k in ("regime_label",
                                                 "composite_score",
                                                 "position_size_mult",
-                                                "strategy_mode")}})
+                                                "strategy_mode")},
+                                   # R7 §3 (P4) — the veto flags explain WHY the
+                                   # multiplier moved on a given day. Purely
+                                   # additive to the log; never read back.
+                                   "veto_flags": rec["regime"]["output"].get(
+                                       "veto_flags", [])})
+            # ---- Phase 3: shadow coverage (observation only, no side effect) ----
+            shadow_summary = rec["exits"].get("shadow_summary")
+            if shadow_summary:
+                shadow_log.append({"date": date_s, **shadow_summary,
+                                   "n_held": len(state["open_positions"])})
 
         state["last_run_date"] = dates[-1].strftime("%Y-%m-%d")
         summary = self._summary(equity_curve, state, skipped, decisions,
@@ -231,14 +321,18 @@ class ProductionBacktest:
         return {"summary": summary, "equity_curve": equity_curve,
                 "trade_log": state["trade_log"], "skipped": skipped,
                 "regime_log": regime_log, "screens": screens_out,
+                "shadow_log": shadow_log,
                 "n_decisions": len(decisions),
                 "start": self.start, "end": self.end}
 
     # ------------------------------------------------------------------
     def _execute_pending(self, state: dict, pending: dict, bucket: list[str],
-                         date: pd.Timestamp, skipped: list) -> None:
+                         date: pd.Timestamp, skipped: list,
+                         entry_ctx: dict | None = None) -> None:
         cfg = self.cfg
         date_s = date.strftime("%Y-%m-%d")
+        if entry_ctx is None:
+            entry_ctx = {}
         held = {p["ticker"] for p in state["open_positions"]}
         bucket_set = set(bucket)
         for t in sorted(pending.keys()):
@@ -309,6 +403,12 @@ class ProductionBacktest:
                 "extension_from_pivot_pct": round(ext, 4) if ext is not None else None,
             })
             open_position(state, pos, open_px, cfg)
+            # R7 §3 — entry-phase context, merged onto the trade record when the
+            # position closes. Written AFTER open_position so it cannot be
+            # mistaken for execution input, and never read by any decision rule.
+            entry_ctx[t] = _entry_research_context(
+                o=o, sizing=sizing, open_px=open_px, gap=gap, ext=ext,
+                equity=state["equity"], cash_after=state["cash"], cfg=cfg)
             del pending[t]
 
     # ------------------------------------------------------------------

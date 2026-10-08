@@ -8,12 +8,18 @@ Thin CLI over the canonical pipeline (production.pipeline.run_daily):
   python production/main.py --tickers NVDA,AMD       # skip screener (provided)
   python production/main.py --no-screen              # exits only
 
+Stop/Exit wiring mode (Phase 3, human-approved):
+
+  python production/main.py --exit-engine-mode shadow   # observe-only shadow run
+  (default: legacy — the legacy oracle stays the sole decision authority)
+
 Every run writes:
   reports/decision_<as_of>.json    machine-readable DecisionRecord (ledger)
   reports/briefing_<as_of>.md      human-readable briefing
   reports/orders_<as_of>.json      proposed orders (kept for compatibility)
 
-Frozen: Regime v1 + Setup v1. No v3 regime, no weighted entry, no DistDays.
+Frozen: Regime v1 + Setup v1 + Stop/Exit v1
+(production/STOP_EXIT_V1_FREEZE.md). No v3 regime, no weighted entry, no DistDays.
 """
 from __future__ import annotations
 
@@ -28,6 +34,8 @@ if _REPO_ROOT not in sys.path:
     sys.path.insert(0, _REPO_ROOT)
 
 from production.config import ProductionConfig
+from production.contracts.reason_codes import (EXIT_ENGINE_LEGACY,
+                                               EXIT_ENGINE_MODES)
 from production.datasource import build_live_source, build_cached_source
 from production.pipeline import run_daily as pipeline_run_daily
 from production.ledger import save_ledger
@@ -64,12 +72,25 @@ def _load_state(cfg) -> dict:
 
 def _emit(rec: dict, cfg: ProductionConfig) -> None:
     as_of = rec["as_of"]
+    exit_mode = rec["exits"].get("mode", cfg.exit_engine_mode)
     print(f"=== Production V2 — 每日決策（{as_of}） pipeline={rec['pipeline_status']} ===")
+    print(f"  exit mode: {exit_mode}"
+          + ("  (legacy oracle is the decision authority)"
+             if exit_mode == EXIT_ENGINE_LEGACY else "")
+          + ("  (observation only — legacy still decides)"
+             if exit_mode == "shadow" else ""))
     print(f"  regime   : {rec['regime']['output']['regime_label'] if rec['regime']['output'] else 'FAIL'}"
           f"  (score={rec['regime']['output']['composite_score'] if rec['regime']['output'] else '-'})")
     print(f"  screener : {rec['screener']['status']}  {rec['screener']['n_candidates']} candidates")
     print(f"  exits    : {len(rec['exits']['proposed'])} proposed | "
           f"entries: {rec['entries']['n_buys']} proposed BUY")
+    shadow = rec["exits"].get("shadow_summary")
+    if shadow:
+        print(f"  shadow   : {shadow['n_evaluated']} evaluated | "
+              f"{shadow['n_agree']} agree | {shadow['n_diverged']} diverged | "
+              f"{shadow['n_error']} error"
+              + (f" | types={shadow['divergence_types']}"
+                 if shadow["divergence_types"] else ""))
     for w in rec["warnings"]:
         print(f"  ⚠️ {w}")
 
@@ -109,8 +130,14 @@ def main():
     ap.add_argument("--as-of", default="", help="point-in-time 日期")
     ap.add_argument("--cached", action="store_true",
                     help="用 CachedSource（離線，不做網路更新）")
+    ap.add_argument("--exit-engine-mode", dest="exit_engine_mode",
+                    choices=sorted(EXIT_ENGINE_MODES),
+                    default=EXIT_ENGINE_LEGACY,
+                    help="Stop/Exit wiring mode: legacy (default, oracle decides) | "
+                         "shadow (observe + record only) | new (NOT enabled; needs "
+                         "human approval)")
     args = ap.parse_args()
-    cfg = ProductionConfig()
+    cfg = ProductionConfig(exit_engine_mode=args.exit_engine_mode)
     tickers = ([t.strip().upper() for t in args.tickers.split(",") if t.strip()]
                if args.tickers else None)
     run_daily(cfg, tickers=tickers, no_screen=args.no_screen,

@@ -34,6 +34,43 @@ _OUT_PATH = os.path.join(_OUT_DIR, "breadth_2016_2025.csv")
 EXCLUDE = {"SPY", "QQQ", "IWM"}  # benchmarks, not breadth constituents
 
 
+# ---------------------------------------------------------------------------
+# PIT guard (data-integrity contract — see reports/pit_breadth_leak_2026-10-01.md)
+# ---------------------------------------------------------------------------
+def slice_to_end(df: pd.DataFrame, end: str | None, *,
+                 name: str = "breadth") -> pd.DataFrame:
+    """Keep only observations with date <= `end`. THE PIT CONTRACT.
+
+    Any loader asked for `end=as_of` must never hand back an observation later
+    than `as_of`. Historically the cached-CSV path ignored `end` entirely, so a
+    historical replay silently read the 2025-07-31 tail (percentile 41.746) for
+    every as-of date — a look-ahead in Regime v1's breadth engine. This helper
+    is the single place that guarantees the restriction; it is applied to the
+    cache path AND the rebuild path, in both `get_breadth` (PIT series) and
+    `get_breadth_series` (current-constituent fallback).
+
+    Date semantics (unchanged from the existing convention): `end` is a US
+    trading-session date `YYYY-MM-DD`. A non-trading `end` resolves to the most
+    recent observation at or before it. An `end` before the series start yields
+    an EMPTY frame on purpose — callers must treat that as a data failure, never
+    as "breadth is neutral".
+
+    Raises TypeError rather than returning future data if the frame carries
+    neither a DatetimeIndex nor a `datetime` column (fail loud, never leak).
+    """
+    if df is None or len(df) == 0 or end is None:
+        return df
+    ts = pd.Timestamp(end)
+    if isinstance(df.index, pd.DatetimeIndex):
+        return df[df.index <= ts]
+    if "datetime" in df.columns:
+        mask = pd.to_datetime(df["datetime"]) <= ts
+        return df[mask]
+    raise TypeError(
+        f"{name}: cannot apply the point-in-time slice — the frame has neither "
+        f"a DatetimeIndex nor a 'datetime' column")
+
+
 def _load_closes(end: str = "2025-07-31") -> pd.DataFrame:
     """Load all ticker closes into a wide DataFrame (index=datetime, cols=tickers)."""
     frames = {}
@@ -94,20 +131,29 @@ def build_breadth_series(sma_period: int = 50, end: str = "2025-07-31",
 
 def get_breadth_series(rebuild: bool = False, end: str = "2025-07-31",
                        verbose: bool = True) -> pd.DataFrame:
-    """Return the breadth series, building + caching if needed."""
+    """Return the breadth series, building + caching if needed.
+
+    PIT contract: the returned frame never contains an observation after `end`
+    (see `slice_to_end`). `end=None` returns the full cached series.
+    """
     if os.path.exists(_OUT_PATH) and not rebuild:
-        df = pd.read_csv(_OUT_PATH, parse_dates=["datetime"]).set_index("datetime")
+        df = slice_to_end(
+            pd.read_csv(_OUT_PATH, parse_dates=["datetime"]).set_index("datetime"),
+            end, name="get_breadth_series(cache)")
         if verbose:
-            print(f"  loaded cached breadth: {len(df)} days "
-                  f"({df.index.min().date()} -> {df.index.max().date()})")
+            span = (f"{df.index.min().date()} -> {df.index.max().date()}"
+                    if len(df) else "EMPTY")
+            print(f"  loaded cached breadth: {len(df)} days ({span}) "
+                  f"[PIT end={end}]")
         return df
 
     os.makedirs(_OUT_DIR, exist_ok=True)
     df = build_breadth_series(end=end, verbose=verbose)
+    # write the FULL built frame to the cache, but return only up to `end`
     df.reset_index().rename(columns={"index": "datetime"}).to_csv(_OUT_PATH, index=False)
     if verbose:
         print(f"  saved breadth -> {_OUT_PATH}")
-    return df
+    return slice_to_end(df, end, name="get_breadth_series(rebuild)")
 
 
 if __name__ == "__main__":

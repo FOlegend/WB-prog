@@ -17,6 +17,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from regime_dual_engine.config import DualEngineConfig  # frozen Regime v1
+from production.contracts.reason_codes import (EXIT_ENGINE_LEGACY,
+                                               EXIT_ENGINE_MODES)
 
 
 @dataclass
@@ -80,6 +82,54 @@ class ProductionConfig:
     # ================= 技術指標（pullback / ATR sizing 需要） =================
     atr_period: int = 14
 
+    # ================= Phase 3 wiring（唯一新增 flag） =================
+    # legacy : 舊決策路徑為唯一權威（DEFAULT — 不得自動改為 new）
+    # shadow : 舊路徑仍為唯一權威；新 Stop / Exit Engine 只被評估 + 記錄
+    # new    : 新 Exit Engine 的 ExitDecision 才可驅動 production 動作
+    # 任何缺失 / 非法 / 初始化失敗 → 安全回退 legacy（見 resolve_exit_engine_mode）。
+    exit_engine_mode: str = EXIT_ENGINE_LEGACY
+    # 記錄 config 層的安全回退等訊息（pipeline 會帶進 DecisionRecord.warnings）
+    config_warnings: list = field(default_factory=list)
+
+    # ================= R7 observability（研究專用，預設關閉） =================
+    # Tier B of the capacity-observability proposal: when entries are blocked
+    # BEFORE any setup evaluation, also RUN the setup + risk engines on the
+    # blocked candidates so the foregone cohort is measurable.
+    #
+    # This is a LOGGING capability, not a decision input: the result is written
+    # only to rec["setup"]["blocked_snapshot"]["per_candidate"], after the
+    # decision to block has already been taken. It never appends to `buys`,
+    # never mutates `state`, and must never be enabled in live.
+    # Cost: one extra evaluate_setup + size_position pass over the blocked
+    # candidate population on blocked sessions only.
+    research_blocked_setup_eval: bool = False
+
+    # ================= BS-3/4/6 data-validity（預設關閉） =================
+    # Freshness / temporal-consistency contract for Regime INPUTS.
+    #
+    # DEFAULT None = the assessment is not run at all, which is what keeps
+    # HISTORICAL REPLAY byte-identical (task §9). The live runner may pass a
+    # FreshnessPolicy explicitly once a human has approved the thresholds
+    # (task §7: no arbitrary production threshold may be invented here).
+    #
+    # A policy never changes regime mathematics, weights, thresholds or the
+    # divergence cap. It can only (a) record that the inputs are not current and
+    # (b) optionally suppress the decision, leaving a human to act. It never
+    # substitutes an input or invents a fallback regime.
+    freshness_policy: object | None = None
+
+    # The price basis the OHLCV dataset is expressed in, recorded verbatim in
+    # every DecisionRecord so a reader can tell whether two observations are
+    # comparable (task §10).
+    #
+    # The historical cache is `auto_adjust=True` (fully adjusted: splits AND
+    # dividends, applied retrospectively to the whole series). That label is
+    # deliberately NOT defaulted here: the frozen research baseline must not
+    # acquire a provenance claim it never had, and the live dataset's basis is
+    # a human decision (see reports/live_data_lineage_and_corporate_actions).
+    # `None` means "not declared", which the record reports as `unrecorded`.
+    ohlcv_price_basis: str | None = None
+
     # 便利屬性
     @property
     def capital_usd(self) -> float:
@@ -96,3 +146,28 @@ class ProductionConfig:
                 self.cache_dir = d
             else:
                 self.cache_dir = str(Path(self.base_dir) / "data" / "cache" / "equities")
+        # normalise the wiring flag in place; never trust an invalid value
+        resolved = resolve_exit_engine_mode(self)
+        if resolved != self.exit_engine_mode:
+            self.config_warnings.append(
+                f"exit_engine_mode {self.exit_engine_mode!r} is not one of "
+                f"{sorted(EXIT_ENGINE_MODES)} — fell back to "
+                f"{EXIT_ENGINE_LEGACY!r} (safe default)")
+        self.exit_engine_mode = resolved
+
+
+def resolve_exit_engine_mode(cfg) -> str:
+    """Return a valid exit-engine mode, failing SAFE to `legacy`.
+
+    Phase-3 §1.2: a missing attribute, an invalid value, or anything unexpected
+    must resolve to `legacy` — the mode that leaves production behaviour
+    untouched. This function never raises.
+    """
+    try:
+        mode = getattr(cfg, "exit_engine_mode", None)
+    except Exception:                                     # pragma: no cover
+        return EXIT_ENGINE_LEGACY
+    if not isinstance(mode, str):
+        return EXIT_ENGINE_LEGACY
+    mode = mode.strip().lower()
+    return mode if mode in EXIT_ENGINE_MODES else EXIT_ENGINE_LEGACY

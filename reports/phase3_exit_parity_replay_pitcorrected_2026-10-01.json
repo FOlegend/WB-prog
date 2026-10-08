@@ -1,0 +1,3571 @@
+{
+  "trades_replayed": 168,
+  "trades_skipped": 0,
+  "bars_compared": 1271,
+  "divergences": 0,
+  "reason_counts_legacy": {
+    "TAKE_PROFIT": 67,
+    "STOP_LOSS": 84,
+    "TIME_STOP": 9,
+    "TRAILING_STOP": 8
+  },
+  "reason_counts_new": {
+    "TAKE_PROFIT": 67,
+    "STOP_LOSS": 84,
+    "TIME_STOP": 9,
+    "TRAILING_STOP": 8
+  },
+  "unexplained": [],
+  "adapter_bars_compared": 1271,
+  "adapter_divergences": 0,
+  "adapter_reason_counts_new": {
+    "TAKE_PROFIT": 67,
+    "STOP_LOSS": 84,
+    "TIME_STOP": 9,
+    "TRAILING_STOP": 8
+  },
+  "adapter_unexplained": [],
+  "adapter_errors": 0,
+  "adapter_error_detail": [],
+  "adapter_vs_direct_mismatches": 0,
+  "adapter_vs_direct": [],
+  "trades_with_legacy_first_exit_matching_record": 168,
+  "reconciliation": [
+    {
+      "ticker": "COHR",
+      "recorded_exit_date": "2024-02-06",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 52.4179,
+      "replayed_first_exit": {
+        "session": "2024-02-06",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 52.4179,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 52.4179,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "recorded_exit_date": "2024-02-07",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 79.8431,
+      "replayed_first_exit": {
+        "session": "2024-02-07",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 79.8431,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 79.8431,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "PANW",
+      "recorded_exit_date": "2024-02-07",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 179.8973,
+      "replayed_first_exit": {
+        "session": "2024-02-07",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 179.8973,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 179.8973,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "ECHO",
+      "recorded_exit_date": "2024-02-13",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 12.2668,
+      "replayed_first_exit": {
+        "session": "2024-02-13",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 12.2668,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 12.2668,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "COHR",
+      "recorded_exit_date": "2024-02-13",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 58.4754,
+      "replayed_first_exit": {
+        "session": "2024-02-13",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 58.4754,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 58.4754,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "VTRS",
+      "recorded_exit_date": "2024-02-15",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 11.2308,
+      "replayed_first_exit": {
+        "session": "2024-02-15",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 11.2308,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 11.2308,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "COHR",
+      "recorded_exit_date": "2024-02-20",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 57.6411,
+      "replayed_first_exit": {
+        "session": "2024-02-20",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 57.6411,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 57.6411,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "recorded_exit_date": "2024-02-20",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 80.0285,
+      "replayed_first_exit": {
+        "session": "2024-02-20",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 80.0285,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 80.0285,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "RMD",
+      "recorded_exit_date": "2024-02-28",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 173.8997,
+      "replayed_first_exit": {
+        "session": "2024-02-28",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 173.8997,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 173.8997,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "GM",
+      "recorded_exit_date": "2024-03-01",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 40.6537,
+      "replayed_first_exit": {
+        "session": "2024-03-01",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 40.6537,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 40.6537,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "SYF",
+      "recorded_exit_date": "2024-03-04",
+      "recorded_exit_reason": "TIME_STOP",
+      "recorded_exit_price": 38.81521987915039,
+      "replayed_first_exit": {
+        "session": "2024-03-04",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 38.81521987915039,
+          "fill_model": "CLOSE"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 38.81521987915039,
+          "fill_model": "CLOSE"
+        }
+      }
+    },
+    {
+      "ticker": "FITB",
+      "recorded_exit_date": "2024-03-04",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 32.7612,
+      "replayed_first_exit": {
+        "session": "2024-03-04",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 32.7612,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 32.7612,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "PLTR",
+      "recorded_exit_date": "2024-03-05",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 23.4349,
+      "replayed_first_exit": {
+        "session": "2024-03-05",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 23.4349,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 23.4349,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "FLEX",
+      "recorded_exit_date": "2024-03-11",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 29.469999313354492,
+      "replayed_first_exit": {
+        "session": "2024-03-11",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 29.469999313354492,
+          "fill_model": "GAP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 29.469999313354492,
+          "fill_model": "GAP"
+        }
+      }
+    },
+    {
+      "ticker": "HOOD",
+      "recorded_exit_date": "2024-03-14",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 18.2589,
+      "replayed_first_exit": {
+        "session": "2024-03-14",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 18.2589,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 18.2589,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "COHR",
+      "recorded_exit_date": "2024-03-14",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 60.0407,
+      "replayed_first_exit": {
+        "session": "2024-03-14",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 60.0407,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 60.0407,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "APP",
+      "recorded_exit_date": "2024-03-18",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 67.2545,
+      "replayed_first_exit": {
+        "session": "2024-03-18",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 67.2545,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 67.2545,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "TPR",
+      "recorded_exit_date": "2024-03-21",
+      "recorded_exit_reason": "TIME_STOP",
+      "recorded_exit_price": 46.036922454833984,
+      "replayed_first_exit": {
+        "session": "2024-03-21",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 46.036922454833984,
+          "fill_model": "CLOSE"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 46.036922454833984,
+          "fill_model": "CLOSE"
+        }
+      }
+    },
+    {
+      "ticker": "VST",
+      "recorded_exit_date": "2024-03-21",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 67.8048,
+      "replayed_first_exit": {
+        "session": "2024-03-21",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 67.8048,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 67.8048,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "HOOD",
+      "recorded_exit_date": "2024-03-26",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 19.5846,
+      "replayed_first_exit": {
+        "session": "2024-03-26",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 19.5846,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 19.5846,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "IBKR",
+      "recorded_exit_date": "2024-04-02",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 27.8752,
+      "replayed_first_exit": {
+        "session": "2024-04-02",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 27.8752,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 27.8752,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "VST",
+      "recorded_exit_date": "2024-04-04",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 74.7637,
+      "replayed_first_exit": {
+        "session": "2024-04-04",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 74.7637,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 74.7637,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2024-04-08",
+      "recorded_exit_reason": "TIME_STOP",
+      "recorded_exit_price": 16.534000396728516,
+      "replayed_first_exit": {
+        "session": "2024-04-08",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 16.534000396728516,
+          "fill_model": "CLOSE"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 16.534000396728516,
+          "fill_model": "CLOSE"
+        }
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "recorded_exit_date": "2024-04-09",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 83.077,
+      "replayed_first_exit": {
+        "session": "2024-04-09",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 83.077,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 83.077,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "VST",
+      "recorded_exit_date": "2024-04-09",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 68.8809,
+      "replayed_first_exit": {
+        "session": "2024-04-09",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 68.8809,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 68.8809,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "HOOD",
+      "recorded_exit_date": "2024-04-10",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 17.68000030517578,
+      "replayed_first_exit": {
+        "session": "2024-04-10",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 17.68000030517578,
+          "fill_model": "GAP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 17.68000030517578,
+          "fill_model": "GAP"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2024-04-15",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 14.6085,
+      "replayed_first_exit": {
+        "session": "2024-04-15",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 14.6085,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 14.6085,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "HOOD",
+      "recorded_exit_date": "2024-04-15",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 17.506,
+      "replayed_first_exit": {
+        "session": "2024-04-15",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 17.506,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 17.506,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "PLTR",
+      "recorded_exit_date": "2024-04-16",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 21.59000015258789,
+      "replayed_first_exit": {
+        "session": "2024-04-16",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 21.59000015258789,
+          "fill_model": "GAP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 21.59000015258789,
+          "fill_model": "GAP"
+        }
+      }
+    },
+    {
+      "ticker": "WSM",
+      "recorded_exit_date": "2024-04-16",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 136.1194,
+      "replayed_first_exit": {
+        "session": "2024-04-16",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 136.1194,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 136.1194,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "recorded_exit_date": "2024-04-17",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 84.562,
+      "replayed_first_exit": {
+        "session": "2024-04-17",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 84.562,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 84.562,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "DVA",
+      "recorded_exit_date": "2024-05-01",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 140.0,
+      "replayed_first_exit": {
+        "session": "2024-05-01",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 140.0,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 140.0,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "VLO",
+      "recorded_exit_date": "2024-05-01",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 149.1762,
+      "replayed_first_exit": {
+        "session": "2024-05-01",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 149.1762,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 149.1762,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "XYZ",
+      "recorded_exit_date": "2024-05-01",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 67.1489,
+      "replayed_first_exit": {
+        "session": "2024-05-01",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 67.1489,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 67.1489,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "NRG",
+      "recorded_exit_date": "2024-05-06",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 75.5722,
+      "replayed_first_exit": {
+        "session": "2024-05-06",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 75.5722,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 75.5722,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "HOOD",
+      "recorded_exit_date": "2024-05-10",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 16.3094,
+      "replayed_first_exit": {
+        "session": "2024-05-10",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 16.3094,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 16.3094,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "HAS",
+      "recorded_exit_date": "2024-05-17",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 54.629,
+      "replayed_first_exit": {
+        "session": "2024-05-17",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 54.629,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 54.629,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "FCX",
+      "recorded_exit_date": "2024-05-20",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 53.6764,
+      "replayed_first_exit": {
+        "session": "2024-05-20",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 53.6764,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 53.6764,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "GE",
+      "recorded_exit_date": "2024-05-24",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 166.8403,
+      "replayed_first_exit": {
+        "session": "2024-05-24",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 166.8403,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 166.8403,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "DAL",
+      "recorded_exit_date": "2024-05-29",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 47.66504940673416,
+      "replayed_first_exit": {
+        "session": "2024-05-29",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 47.66504940673416,
+          "fill_model": "GAP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 47.66504940673416,
+          "fill_model": "GAP"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2024-05-29",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 20.5891,
+      "replayed_first_exit": {
+        "session": "2024-05-29",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 20.5891,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 20.5891,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "FCX",
+      "recorded_exit_date": "2024-06-04",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 48.6782,
+      "replayed_first_exit": {
+        "session": "2024-06-04",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 48.6782,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 48.6782,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "GE",
+      "recorded_exit_date": "2024-06-04",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 156.5733,
+      "replayed_first_exit": {
+        "session": "2024-06-04",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 156.5733,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 156.5733,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "WDC",
+      "recorded_exit_date": "2024-06-06",
+      "recorded_exit_reason": "TIME_STOP",
+      "recorded_exit_price": 56.619083404541016,
+      "replayed_first_exit": {
+        "session": "2024-06-06",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 56.619083404541016,
+          "fill_model": "CLOSE"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 56.619083404541016,
+          "fill_model": "CLOSE"
+        }
+      }
+    },
+    {
+      "ticker": "AES",
+      "recorded_exit_date": "2024-06-11",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 17.5274,
+      "replayed_first_exit": {
+        "session": "2024-06-11",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 17.5274,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 17.5274,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "TER",
+      "recorded_exit_date": "2024-06-12",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 149.9973,
+      "replayed_first_exit": {
+        "session": "2024-06-12",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 149.9973,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 149.9973,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "TKO",
+      "recorded_exit_date": "2024-06-17",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 101.8337,
+      "replayed_first_exit": {
+        "session": "2024-06-17",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 101.8337,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 101.8337,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "AES",
+      "recorded_exit_date": "2024-06-17",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 16.4578,
+      "replayed_first_exit": {
+        "session": "2024-06-17",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 16.4578,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 16.4578,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "NRG",
+      "recorded_exit_date": "2024-06-20",
+      "recorded_exit_reason": "TIME_STOP",
+      "recorded_exit_price": 78.0832748413086,
+      "replayed_first_exit": {
+        "session": "2024-06-20",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 78.0832748413086,
+          "fill_model": "CLOSE"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 78.0832748413086,
+          "fill_model": "CLOSE"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2024-06-24",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 23.4736,
+      "replayed_first_exit": {
+        "session": "2024-06-24",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 23.4736,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 23.4736,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "HPQ",
+      "recorded_exit_date": "2024-06-26",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 31.935,
+      "replayed_first_exit": {
+        "session": "2024-06-26",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 31.935,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 31.935,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "TKO",
+      "recorded_exit_date": "2024-07-03",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 108.2406,
+      "replayed_first_exit": {
+        "session": "2024-07-03",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 108.2406,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 108.2406,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "NEM",
+      "recorded_exit_date": "2024-07-05",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 43.1658,
+      "replayed_first_exit": {
+        "session": "2024-07-05",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 43.1658,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 43.1658,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "TER",
+      "recorded_exit_date": "2024-07-10",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 155.2566,
+      "replayed_first_exit": {
+        "session": "2024-07-10",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 155.2566,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 155.2566,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "ANET",
+      "recorded_exit_date": "2024-07-10",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 89.3798,
+      "replayed_first_exit": {
+        "session": "2024-07-10",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 89.3798,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 89.3798,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "COHR",
+      "recorded_exit_date": "2024-07-12",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 79.2268,
+      "replayed_first_exit": {
+        "session": "2024-07-12",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 79.2268,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 79.2268,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "NRG",
+      "recorded_exit_date": "2024-07-15",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 72.8808,
+      "replayed_first_exit": {
+        "session": "2024-07-15",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 72.8808,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 72.8808,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "HOOD",
+      "recorded_exit_date": "2024-07-16",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 24.3696,
+      "replayed_first_exit": {
+        "session": "2024-07-16",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 24.3696,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 24.3696,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2024-07-17",
+      "recorded_exit_reason": "TRAILING_STOP",
+      "recorded_exit_price": 26.703371797289165,
+      "replayed_first_exit": {
+        "session": "2024-07-17",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 26.703371797289165,
+          "fill_model": "TRAILING"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 26.703371797289165,
+          "fill_model": "TRAILING"
+        }
+      }
+    },
+    {
+      "ticker": "ANET",
+      "recorded_exit_date": "2024-07-17",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 85.889,
+      "replayed_first_exit": {
+        "session": "2024-07-17",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 85.889,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 85.889,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "COHR",
+      "recorded_exit_date": "2024-07-17",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 76.2029,
+      "replayed_first_exit": {
+        "session": "2024-07-17",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 76.2029,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 76.2029,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "COHR",
+      "recorded_exit_date": "2024-07-24",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 70.5257,
+      "replayed_first_exit": {
+        "session": "2024-07-24",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 70.5257,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 70.5257,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "CCL",
+      "recorded_exit_date": "2024-07-25",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 17.5661,
+      "replayed_first_exit": {
+        "session": "2024-07-25",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 17.5661,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 17.5661,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "HOOD",
+      "recorded_exit_date": "2024-07-25",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 21.15999984741211,
+      "replayed_first_exit": {
+        "session": "2024-07-25",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 21.15999984741211,
+          "fill_model": "GAP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 21.15999984741211,
+          "fill_model": "GAP"
+        }
+      }
+    },
+    {
+      "ticker": "CHRW",
+      "recorded_exit_date": "2024-08-01",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 89.5451,
+      "replayed_first_exit": {
+        "session": "2024-08-01",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 89.5451,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 89.5451,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2024-08-01",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 30.1573,
+      "replayed_first_exit": {
+        "session": "2024-08-01",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 30.1573,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 30.1573,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "PLTR",
+      "recorded_exit_date": "2024-08-28",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 29.8665,
+      "replayed_first_exit": {
+        "session": "2024-08-28",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 29.8665,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 29.8665,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "BBY",
+      "recorded_exit_date": "2024-08-29",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 83.5837,
+      "replayed_first_exit": {
+        "session": "2024-08-29",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 83.5837,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 83.5837,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "MMM",
+      "recorded_exit_date": "2024-08-30",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 130.385,
+      "replayed_first_exit": {
+        "session": "2024-08-30",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 130.385,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 130.385,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "TPL",
+      "recorded_exit_date": "2024-09-03",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 276.7137,
+      "replayed_first_exit": {
+        "session": "2024-09-03",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 276.7137,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 276.7137,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "CBRE",
+      "recorded_exit_date": "2024-09-06",
+      "recorded_exit_reason": "TRAILING_STOP",
+      "recorded_exit_price": 113.07642718723842,
+      "replayed_first_exit": {
+        "session": "2024-09-06",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 113.07642718723842,
+          "fill_model": "TRAILING"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 113.07642718723842,
+          "fill_model": "TRAILING"
+        }
+      }
+    },
+    {
+      "ticker": "IRM",
+      "recorded_exit_date": "2024-09-06",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 101.2095,
+      "replayed_first_exit": {
+        "session": "2024-09-06",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 101.2095,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 101.2095,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2024-09-06",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 27.7069,
+      "replayed_first_exit": {
+        "session": "2024-09-06",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 27.7069,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 27.7069,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "KEY",
+      "recorded_exit_date": "2024-09-06",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 14.8528,
+      "replayed_first_exit": {
+        "session": "2024-09-06",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 14.8528,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 14.8528,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "PLTR",
+      "recorded_exit_date": "2024-09-09",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 32.9629,
+      "replayed_first_exit": {
+        "session": "2024-09-09",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 32.9629,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 32.9629,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "CIEN",
+      "recorded_exit_date": "2024-09-26",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 63.0536,
+      "replayed_first_exit": {
+        "session": "2024-09-26",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 63.0536,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 63.0536,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "BMY",
+      "recorded_exit_date": "2024-10-01",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 47.566,
+      "replayed_first_exit": {
+        "session": "2024-10-01",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 47.566,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 47.566,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "COO",
+      "recorded_exit_date": "2024-10-02",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 106.9171,
+      "replayed_first_exit": {
+        "session": "2024-10-02",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 106.9171,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 106.9171,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2024-10-08",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 37.4636,
+      "replayed_first_exit": {
+        "session": "2024-10-08",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 37.4636,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 37.4636,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "APP",
+      "recorded_exit_date": "2024-10-08",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 143.0314,
+      "replayed_first_exit": {
+        "session": "2024-10-08",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 143.0314,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 143.0314,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "DASH",
+      "recorded_exit_date": "2024-10-15",
+      "recorded_exit_reason": "TRAILING_STOP",
+      "recorded_exit_price": 144.87779208592005,
+      "replayed_first_exit": {
+        "session": "2024-10-15",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 144.87779208592005,
+          "fill_model": "TRAILING"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 144.87779208592005,
+          "fill_model": "TRAILING"
+        }
+      }
+    },
+    {
+      "ticker": "MAS",
+      "recorded_exit_date": "2024-10-21",
+      "recorded_exit_reason": "TIME_STOP",
+      "recorded_exit_price": 81.60511779785156,
+      "replayed_first_exit": {
+        "session": "2024-10-21",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 81.60511779785156,
+          "fill_model": "CLOSE"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 81.60511779785156,
+          "fill_model": "CLOSE"
+        }
+      }
+    },
+    {
+      "ticker": "SBUX",
+      "recorded_exit_date": "2024-10-21",
+      "recorded_exit_reason": "TIME_STOP",
+      "recorded_exit_price": 92.239013671875,
+      "replayed_first_exit": {
+        "session": "2024-10-21",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 92.239013671875,
+          "fill_model": "CLOSE"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 92.239013671875,
+          "fill_model": "CLOSE"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2024-10-28",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 41.1048,
+      "replayed_first_exit": {
+        "session": "2024-10-28",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 41.1048,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 41.1048,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "PYPL",
+      "recorded_exit_date": "2024-10-29",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 76.3609,
+      "replayed_first_exit": {
+        "session": "2024-10-29",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 76.3609,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 76.3609,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "FTNT",
+      "recorded_exit_date": "2024-10-29",
+      "recorded_exit_reason": "TRAILING_STOP",
+      "recorded_exit_price": 79.7699966430664,
+      "replayed_first_exit": {
+        "session": "2024-10-29",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 79.7699966430664,
+          "fill_model": "GAP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 79.7699966430664,
+          "fill_model": "GAP"
+        }
+      }
+    },
+    {
+      "ticker": "DASH",
+      "recorded_exit_date": "2024-10-31",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 159.9716,
+      "replayed_first_exit": {
+        "session": "2024-10-31",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 159.9716,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 159.9716,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "PLTR",
+      "recorded_exit_date": "2024-11-05",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 46.8354,
+      "replayed_first_exit": {
+        "session": "2024-11-05",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 46.8354,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 46.8354,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "CCL",
+      "recorded_exit_date": "2024-11-06",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 23.3572,
+      "replayed_first_exit": {
+        "session": "2024-11-06",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 23.3572,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 23.3572,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "LVS",
+      "recorded_exit_date": "2024-11-06",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 47.8894,
+      "replayed_first_exit": {
+        "session": "2024-11-06",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 47.8894,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 47.8894,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "NCLH",
+      "recorded_exit_date": "2024-11-06",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 27.3107,
+      "replayed_first_exit": {
+        "session": "2024-11-06",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 27.3107,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 27.3107,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "UAL",
+      "recorded_exit_date": "2024-11-06",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 87.5236,
+      "replayed_first_exit": {
+        "session": "2024-11-06",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 87.5236,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 87.5236,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "UAL",
+      "recorded_exit_date": "2024-12-05",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 102.3711,
+      "replayed_first_exit": {
+        "session": "2024-12-05",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 102.3711,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 102.3711,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "CCL",
+      "recorded_exit_date": "2024-12-09",
+      "recorded_exit_reason": "TRAILING_STOP",
+      "recorded_exit_price": 25.34651682105094,
+      "replayed_first_exit": {
+        "session": "2024-12-09",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 25.34651682105094,
+          "fill_model": "TRAILING"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 25.34651682105094,
+          "fill_model": "TRAILING"
+        }
+      }
+    },
+    {
+      "ticker": "NCLH",
+      "recorded_exit_date": "2024-12-09",
+      "recorded_exit_reason": "TRAILING_STOP",
+      "recorded_exit_price": 26.84464250292097,
+      "replayed_first_exit": {
+        "session": "2024-12-09",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 26.84464250292097,
+          "fill_model": "TRAILING"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 26.84464250292097,
+          "fill_model": "TRAILING"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2024-12-10",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 47.2243,
+      "replayed_first_exit": {
+        "session": "2024-12-10",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 47.2243,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 47.2243,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "UAL",
+      "recorded_exit_date": "2024-12-13",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 95.2482,
+      "replayed_first_exit": {
+        "session": "2024-12-13",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 95.2482,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 95.2482,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "HOOD",
+      "recorded_exit_date": "2024-12-16",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 43.4121,
+      "replayed_first_exit": {
+        "session": "2024-12-16",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 43.4121,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 43.4121,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "DAL",
+      "recorded_exit_date": "2024-12-18",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 58.8929,
+      "replayed_first_exit": {
+        "session": "2024-12-18",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 58.8929,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 58.8929,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2024-12-18",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 48.0738,
+      "replayed_first_exit": {
+        "session": "2024-12-18",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 48.0738,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 48.0738,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "UAL",
+      "recorded_exit_date": "2024-12-18",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 90.3321,
+      "replayed_first_exit": {
+        "session": "2024-12-18",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 90.3321,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 90.3321,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "SHOP",
+      "recorded_exit_date": "2024-12-19",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 109.4764,
+      "replayed_first_exit": {
+        "session": "2024-12-19",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 109.4764,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 109.4764,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "TPR",
+      "recorded_exit_date": "2024-12-26",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 64.5112,
+      "replayed_first_exit": {
+        "session": "2024-12-26",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 64.5112,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 64.5112,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "PLTR",
+      "recorded_exit_date": "2025-01-07",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 71.4678,
+      "replayed_first_exit": {
+        "session": "2025-01-07",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 71.4678,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 71.4678,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "WBD",
+      "recorded_exit_date": "2025-01-08",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 10.0893,
+      "replayed_first_exit": {
+        "session": "2025-01-08",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 10.0893,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 10.0893,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "HOOD",
+      "recorded_exit_date": "2025-01-17",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 48.4713,
+      "replayed_first_exit": {
+        "session": "2025-01-17",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 48.4713,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 48.4713,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "TPR",
+      "recorded_exit_date": "2025-01-17",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 69.9581,
+      "replayed_first_exit": {
+        "session": "2025-01-17",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 69.9581,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 69.9581,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "WSM",
+      "recorded_exit_date": "2025-01-21",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 204.9789,
+      "replayed_first_exit": {
+        "session": "2025-01-21",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 204.9789,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 204.9789,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "UAL",
+      "recorded_exit_date": "2025-01-22",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 115.1946,
+      "replayed_first_exit": {
+        "session": "2025-01-22",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 115.1946,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 115.1946,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "PLTR",
+      "recorded_exit_date": "2025-01-23",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 78.9384,
+      "replayed_first_exit": {
+        "session": "2025-01-23",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 78.9384,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 78.9384,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "EXE",
+      "recorded_exit_date": "2025-01-27",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 98.9206,
+      "replayed_first_exit": {
+        "session": "2025-01-27",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 98.9206,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 98.9206,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "HOOD",
+      "recorded_exit_date": "2025-01-27",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 47.2522,
+      "replayed_first_exit": {
+        "session": "2025-01-27",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 47.2522,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 47.2522,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "SHOP",
+      "recorded_exit_date": "2025-01-28",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 117.2443,
+      "replayed_first_exit": {
+        "session": "2025-01-28",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 117.2443,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 117.2443,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "TPR",
+      "recorded_exit_date": "2025-01-31",
+      "recorded_exit_reason": "TRAILING_STOP",
+      "recorded_exit_price": 71.46628495741274,
+      "replayed_first_exit": {
+        "session": "2025-01-31",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 71.46628495741274,
+          "fill_model": "TRAILING"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 71.46628495741274,
+          "fill_model": "TRAILING"
+        }
+      }
+    },
+    {
+      "ticker": "WSM",
+      "recorded_exit_date": "2025-02-03",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 196.4537,
+      "replayed_first_exit": {
+        "session": "2025-02-03",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 196.4537,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 196.4537,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "PLTR",
+      "recorded_exit_date": "2025-02-04",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 90.017,
+      "replayed_first_exit": {
+        "session": "2025-02-04",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 90.017,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 90.017,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "TPR",
+      "recorded_exit_date": "2025-02-06",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 76.3989,
+      "replayed_first_exit": {
+        "session": "2025-02-06",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 76.3989,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 76.3989,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "A",
+      "recorded_exit_date": "2025-02-10",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 140.1743,
+      "replayed_first_exit": {
+        "session": "2025-02-10",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 140.1743,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 140.1743,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "WBD",
+      "recorded_exit_date": "2025-02-11",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 9.7986,
+      "replayed_first_exit": {
+        "session": "2025-02-11",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 9.7986,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 9.7986,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "HOOD",
+      "recorded_exit_date": "2025-02-13",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 58.4438,
+      "replayed_first_exit": {
+        "session": "2025-02-13",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 58.4438,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 58.4438,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "C",
+      "recorded_exit_date": "2025-02-14",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 81.6623,
+      "replayed_first_exit": {
+        "session": "2025-02-14",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 81.6623,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 81.6623,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "PLTR",
+      "recorded_exit_date": "2025-02-19",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 113.5448,
+      "replayed_first_exit": {
+        "session": "2025-02-19",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 113.5448,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 113.5448,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "WSM",
+      "recorded_exit_date": "2025-02-21",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 201.4367,
+      "replayed_first_exit": {
+        "session": "2025-02-21",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 201.4367,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 201.4367,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "JBL",
+      "recorded_exit_date": "2025-02-24",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 161.3082,
+      "replayed_first_exit": {
+        "session": "2025-02-24",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 161.3082,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 161.3082,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "A",
+      "recorded_exit_date": "2025-02-25",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 131.9592,
+      "replayed_first_exit": {
+        "session": "2025-02-25",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 131.9592,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 131.9592,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "IBKR",
+      "recorded_exit_date": "2025-02-25",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 51.9698,
+      "replayed_first_exit": {
+        "session": "2025-02-25",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 51.9698,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 51.9698,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "KLAC",
+      "recorded_exit_date": "2025-02-27",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 70.5708,
+      "replayed_first_exit": {
+        "session": "2025-02-27",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 70.5708,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 70.5708,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "TPR",
+      "recorded_exit_date": "2025-03-06",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 77.1538,
+      "replayed_first_exit": {
+        "session": "2025-03-06",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 77.1538,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 77.1538,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "GE",
+      "recorded_exit_date": "2025-03-31",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 196.245356477963,
+      "replayed_first_exit": {
+        "session": "2025-03-31",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 196.245356477963,
+          "fill_model": "GAP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 196.245356477963,
+          "fill_model": "GAP"
+        }
+      }
+    },
+    {
+      "ticker": "TPR",
+      "recorded_exit_date": "2025-03-31",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 67.3933,
+      "replayed_first_exit": {
+        "session": "2025-03-31",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 67.3933,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 67.3933,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "CVS",
+      "recorded_exit_date": "2025-04-04",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 61.1394,
+      "replayed_first_exit": {
+        "session": "2025-04-04",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 61.1394,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 61.1394,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "UBER",
+      "recorded_exit_date": "2025-04-04",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 66.69499969482422,
+      "replayed_first_exit": {
+        "session": "2025-04-04",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 66.69499969482422,
+          "fill_model": "GAP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 66.69499969482422,
+          "fill_model": "GAP"
+        }
+      }
+    },
+    {
+      "ticker": "GILD",
+      "recorded_exit_date": "2025-04-07",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 101.37069630952612,
+      "replayed_first_exit": {
+        "session": "2025-04-07",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 101.37069630952612,
+          "fill_model": "GAP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 101.37069630952612,
+          "fill_model": "GAP"
+        }
+      }
+    },
+    {
+      "ticker": "GILD",
+      "recorded_exit_date": "2025-04-25",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 95.7685,
+      "replayed_first_exit": {
+        "session": "2025-04-25",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 95.7685,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 95.7685,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "CVS",
+      "recorded_exit_date": "2025-05-01",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 69.3707,
+      "replayed_first_exit": {
+        "session": "2025-05-01",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 69.3707,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 69.3707,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "DG",
+      "recorded_exit_date": "2025-05-01",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 87.4689,
+      "replayed_first_exit": {
+        "session": "2025-05-01",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 87.4689,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 87.4689,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "AWK",
+      "recorded_exit_date": "2025-05-12",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 136.7093,
+      "replayed_first_exit": {
+        "session": "2025-05-12",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 136.7093,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 136.7093,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "AMT",
+      "recorded_exit_date": "2025-05-12",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 206.4542,
+      "replayed_first_exit": {
+        "session": "2025-05-12",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 206.4542,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 206.4542,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "DG",
+      "recorded_exit_date": "2025-05-13",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 84.8609,
+      "replayed_first_exit": {
+        "session": "2025-05-13",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 84.8609,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 84.8609,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "WRB",
+      "recorded_exit_date": "2025-05-19",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 70.9144,
+      "replayed_first_exit": {
+        "session": "2025-05-19",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 70.9144,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 70.9144,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "PM",
+      "recorded_exit_date": "2025-05-23",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 170.2331,
+      "replayed_first_exit": {
+        "session": "2025-05-23",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 170.2331,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 170.2331,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "T",
+      "recorded_exit_date": "2025-05-29",
+      "recorded_exit_reason": "TIME_STOP",
+      "recorded_exit_price": 25.888355255126953,
+      "replayed_first_exit": {
+        "session": "2025-05-29",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 25.888355255126953,
+          "fill_model": "CLOSE"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 25.888355255126953,
+          "fill_model": "CLOSE"
+        }
+      }
+    },
+    {
+      "ticker": "DG",
+      "recorded_exit_date": "2025-05-29",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 94.2217,
+      "replayed_first_exit": {
+        "session": "2025-05-29",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 94.2217,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 94.2217,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "WRB",
+      "recorded_exit_date": "2025-06-03",
+      "recorded_exit_reason": "TRAILING_STOP",
+      "recorded_exit_price": 70.82376856985618,
+      "replayed_first_exit": {
+        "session": "2025-06-03",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 70.82376856985618,
+          "fill_model": "TRAILING"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TRAILING_STOP",
+          "exit_price": 70.82376856985618,
+          "fill_model": "TRAILING"
+        }
+      }
+    },
+    {
+      "ticker": "HOOD",
+      "recorded_exit_date": "2025-06-05",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 74.1412,
+      "replayed_first_exit": {
+        "session": "2025-06-05",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 74.1412,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 74.1412,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "CNP",
+      "recorded_exit_date": "2025-06-10",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 35.4688,
+      "replayed_first_exit": {
+        "session": "2025-06-10",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 35.4688,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 35.4688,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "NRG",
+      "recorded_exit_date": "2025-06-10",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 148.4346,
+      "replayed_first_exit": {
+        "session": "2025-06-10",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 148.4346,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 148.4346,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "TTD",
+      "recorded_exit_date": "2025-06-12",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 70.2976,
+      "replayed_first_exit": {
+        "session": "2025-06-12",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 70.2976,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 70.2976,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2025-06-12",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 65.3264,
+      "replayed_first_exit": {
+        "session": "2025-06-12",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 65.3264,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 65.3264,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "FIS",
+      "recorded_exit_date": "2025-06-16",
+      "recorded_exit_reason": "TIME_STOP",
+      "recorded_exit_price": 78.4026870727539,
+      "replayed_first_exit": {
+        "session": "2025-06-16",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 78.4026870727539,
+          "fill_model": "CLOSE"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TIME_STOP",
+          "exit_price": 78.4026870727539,
+          "fill_model": "CLOSE"
+        }
+      }
+    },
+    {
+      "ticker": "MOS",
+      "recorded_exit_date": "2025-06-16",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 35.4831,
+      "replayed_first_exit": {
+        "session": "2025-06-16",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 35.4831,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 35.4831,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "NFLX",
+      "recorded_exit_date": "2025-06-24",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 127.5032,
+      "replayed_first_exit": {
+        "session": "2025-06-24",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 127.5032,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 127.5032,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "HWM",
+      "recorded_exit_date": "2025-06-25",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 177.878,
+      "replayed_first_exit": {
+        "session": "2025-06-25",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 177.878,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 177.878,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "CIEN",
+      "recorded_exit_date": "2025-06-26",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 82.38,
+      "replayed_first_exit": {
+        "session": "2025-06-26",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 82.38,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 82.38,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "NRG",
+      "recorded_exit_date": "2025-06-27",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 161.4174,
+      "replayed_first_exit": {
+        "session": "2025-06-27",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 161.4174,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 161.4174,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "STX",
+      "recorded_exit_date": "2025-07-02",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 150.3861,
+      "replayed_first_exit": {
+        "session": "2025-07-02",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 150.3861,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 150.3861,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2025-07-07",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 70.5179,
+      "replayed_first_exit": {
+        "session": "2025-07-07",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 70.5179,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 70.5179,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "DLTR",
+      "recorded_exit_date": "2025-07-08",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 105.6182,
+      "replayed_first_exit": {
+        "session": "2025-07-08",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 105.6182,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 105.6182,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "MCHP",
+      "recorded_exit_date": "2025-07-08",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 72.7666,
+      "replayed_first_exit": {
+        "session": "2025-07-08",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 72.7666,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 72.7666,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "MU",
+      "recorded_exit_date": "2025-07-16",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 114.8162,
+      "replayed_first_exit": {
+        "session": "2025-07-16",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 114.8162,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 114.8162,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "LITE",
+      "recorded_exit_date": "2025-07-16",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 98.7739,
+      "replayed_first_exit": {
+        "session": "2025-07-16",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 98.7739,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 98.7739,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "MCHP",
+      "recorded_exit_date": "2025-07-16",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 70.3072,
+      "replayed_first_exit": {
+        "session": "2025-07-16",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 70.3072,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 70.3072,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "MOS",
+      "recorded_exit_date": "2025-07-17",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 33.6663,
+      "replayed_first_exit": {
+        "session": "2025-07-17",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 33.6663,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 33.6663,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "FLEX",
+      "recorded_exit_date": "2025-07-22",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 51.475,
+      "replayed_first_exit": {
+        "session": "2025-07-22",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 51.475,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 51.475,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "MCHP",
+      "recorded_exit_date": "2025-07-23",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 68.83288841840424,
+      "replayed_first_exit": {
+        "session": "2025-07-23",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 68.83288841840424,
+          "fill_model": "GAP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 68.83288841840424,
+          "fill_model": "GAP"
+        }
+      }
+    },
+    {
+      "ticker": "CVNA",
+      "recorded_exit_date": "2025-07-24",
+      "recorded_exit_reason": "STOP_LOSS",
+      "recorded_exit_price": 65.8707,
+      "replayed_first_exit": {
+        "session": "2025-07-24",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 65.8707,
+          "fill_model": "STOP"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "STOP_LOSS",
+          "exit_price": 65.8707,
+          "fill_model": "STOP"
+        }
+      }
+    },
+    {
+      "ticker": "STX",
+      "recorded_exit_date": "2025-07-29",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 153.8058,
+      "replayed_first_exit": {
+        "session": "2025-07-29",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 153.8058,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 153.8058,
+          "fill_model": "TARGET"
+        }
+      }
+    },
+    {
+      "ticker": "WDC",
+      "recorded_exit_date": "2025-07-31",
+      "recorded_exit_reason": "TAKE_PROFIT",
+      "recorded_exit_price": 71.9913,
+      "replayed_first_exit": {
+        "session": "2025-07-31",
+        "legacy": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 71.9913,
+          "fill_model": "TARGET"
+        },
+        "new": {
+          "should_exit": true,
+          "exit_reason_code": "TAKE_PROFIT",
+          "exit_price": 71.9913,
+          "fill_model": "TARGET"
+        }
+      }
+    }
+  ],
+  "skipped": [],
+  "trade_log": "production_bt_pitcorrected_2024-01-01_2025-07-31.json",
+  "config": {
+    "stop_atr_mult": 1.5,
+    "trailing_atr_mult": 1.5,
+    "trailing_trigger_r": 1.0,
+    "max_holding_days": 30
+  }
+}

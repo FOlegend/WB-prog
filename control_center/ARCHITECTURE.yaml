@@ -1,0 +1,1362 @@
+# ARCHITECTURE.yaml — machine-readable map (GENERATED)
+meta:
+  tool_version: 1.0.0
+  generated_at: "2026-10-07T06:44:29"
+  generator: control_center/generate_docs.py
+  note: "GENERATED FILE — do not hand-edit; run refresh_registry.py"
+git:
+  branch: main
+  head_commit: da9f5dcfad69ff1adac61488a627e1fecf7700c6
+  head_subject: "Unified decision pipeline: run_daily + DataSource + DecisionRecord + production-equivalent backtest (2026-09-04)"
+  head_date: "2026-09-04T06:12:27+08:00"
+  remote: "https://github.com/FOlegend/WB-prog.git"
+  is_dirty: 1
+repo_copies:
+  - path: "C:\\Users\\zqp\\OneDrive - The Chinese University of Hong Kong\\WB-prog"
+    label: primary
+    head_commit: da9f5dcfad69ff1adac61488a627e1fecf7700c6
+    branch: main
+    py_count: 165
+    is_primary: 1
+    scanned_at: "2026-10-07T06:44:28"
+  - path: "C:\\Users\\zqp\\OneDrive - The Chinese University of Hong Kong\\WB prog"
+    label: secondary
+    head_commit: da9f5dcfad69ff1adac61488a627e1fecf7700c6
+    branch: main
+    py_count: 93
+    is_primary: 0
+    scanned_at: "2026-10-07T06:44:28"
+production:
+  entrypoint: production/main.py
+  decision_function: "production/pipeline.py::run_daily"
+  exit_engine_mode: legacy
+  decision_authority:
+    - path: production/agents/regime.py
+      subsystem: Market Regime
+      production_used: 1
+      authority: PRIMARY
+    - path: production/agents/setup.py
+      subsystem: Setup / Signal
+      production_used: 1
+      authority: PRIMARY
+    - path: production/backtest.py
+      subsystem: Backtest
+      production_used: 1
+      authority: PRIMARY
+    - path: production/config.py
+      subsystem: Config
+      production_used: 1
+      authority: PRIMARY
+    - path: production/datasource.py
+      subsystem: Data
+      production_used: 1
+      authority: PRIMARY
+    - path: production/ledger.py
+      subsystem: State
+      production_used: 1
+      authority: PRIMARY
+    - path: production/main.py
+      subsystem: Entrypoint
+      production_used: 1
+      authority: PRIMARY
+    - path: production/pipeline.py
+      subsystem: Infrastructure
+      production_used: 1
+      authority: PRIMARY
+    - path: production/portfolio/portfolio.py
+      subsystem: Portfolio
+      production_used: 1
+      authority: PRIMARY
+    - path: production/reporting/briefing.py
+      subsystem: Reporting
+      production_used: 1
+      authority: PRIMARY
+    - path: production/risk/risk.py
+      subsystem: Risk / Sizing
+      production_used: 1
+      authority: PRIMARY
+    - path: production/screener/screener.py
+      subsystem: Screener / Universe
+      production_used: 1
+      authority: PRIMARY
+    - path: src/agents/regime_agent.py
+      subsystem: Market Regime
+      production_used: 1
+      authority: PRIMARY
+    - path: src/agents/risk_manager.py
+      subsystem: Risk / Sizing
+      production_used: 1
+      authority: PRIMARY
+    - path: src/agents/setup_agent.py
+      subsystem: Setup / Signal
+      production_used: 1
+      authority: PRIMARY
+    - path: src/agents/technicals_agent.py
+      subsystem: Indicators / Technicals
+      production_used: 1
+      authority: PRIMARY
+    - path: src/portfolio/portfolio_manager.py
+      subsystem: Portfolio
+      production_used: 1
+      authority: PRIMARY
+    - path: src/screener/screener.py
+      subsystem: Screener / Universe
+      production_used: 1
+      authority: PRIMARY
+    - path: src/state/state.py
+      subsystem: State
+      production_used: 1
+      authority: PRIMARY
+    - path: production/contracts/__init__.py
+      subsystem: Contracts
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/contracts/base.py
+      subsystem: Contracts
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/contracts/entry.py
+      subsystem: Contracts
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/contracts/exit.py
+      subsystem: Contracts
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/contracts/order.py
+      subsystem: Contracts
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/contracts/position.py
+      subsystem: Contracts
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/contracts/reason_codes.py
+      subsystem: Contracts
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/contracts/risk.py
+      subsystem: Contracts
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/contracts/stop.py
+      subsystem: Contracts
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/exits/__init__.py
+      subsystem: Exit Engine
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/exits/adapter.py
+      subsystem: Exit Engine
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/exits/context.py
+      subsystem: Exit Engine
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/exits/engine.py
+      subsystem: Exit Engine
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/exits/rules.py
+      subsystem: Exit Engine
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/exits/shadow.py
+      subsystem: Exit Engine
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/stops/__init__.py
+      subsystem: Stop Engine
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/stops/engine.py
+      subsystem: Stop Engine
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/stops/errors.py
+      subsystem: Stop Engine
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/stops/initial.py
+      subsystem: Stop Engine
+      production_used: 1
+      authority: SHADOW_ONLY
+    - path: production/stops/trailing.py
+      subsystem: Stop Engine
+      production_used: 1
+      authority: SHADOW_ONLY
+  freeze_contracts:
+    - regime_dual_engine/REGIME_V1_FREEZE.md (Regime v1)
+    - "src/agents/SETUP_V1_FREEZE.md (Setup v1 = Pullback Only)"
+    - "production/STOP_EXIT_V1_FREEZE.md (Stop + Exit v1, Phase-3 wiring)"
+  pipeline:
+    - step: 1
+      stage: 1. DATA
+      module: production/datasource.py
+      function: CachedSource / YFinanceSource
+      next: 2. REGIME
+      status: OK
+    - step: 2
+      stage: 2. REGIME
+      module: production/agents/regime.py
+      function: compute_market_regime
+      next: 3. SCREENER
+      status: OK
+    - step: 3
+      stage: 3. SCREENER
+      module: production/screener/screener.py
+      function: screen_from_source
+      next: 4. SETUP
+      status: OK
+    - step: 4
+      stage: 4. SETUP
+      module: production/agents/setup.py
+      function: evaluate_setup
+      next: 5. RISK
+      status: OK
+    - step: 5
+      stage: 5. RISK
+      module: production/risk/risk.py
+      function: size_swing_position
+      next: 6. ENTRY/EXIT
+      status: OK
+    - step: 6
+      stage: 6. EXIT
+      module: production/portfolio/portfolio.py
+      function: exit_check
+      next: 7. ENTRY
+      status: OK
+    - step: 7
+      stage: 7. ENTRY
+      module: production/portfolio/portfolio.py
+      function: build_order_buy
+      next: 8. PORTFOLIO
+      status: OK
+    - step: 8
+      stage: 8. PORTFOLIO
+      module: production/portfolio/portfolio.py
+      function: "constraints/mark-to-market"
+      next: 9. LEDGER
+      status: OK
+    - step: 9
+      stage: 9. STATE/LEDGER
+      module: production/ledger.py
+      function: write DecisionRecord
+      next: 10. REPORTING
+      status: OK
+    - step: 10
+      stage: 10. REPORTING
+      module: production/reporting/briefing.py
+      function: render briefing
+      next: —
+      status: OK
+research:
+  entrypoint: dynamic_universe_backtest.py
+  production_equivalent: production/backtest.py
+  pipeline:
+    - step: 1
+      stage: 1. CACHE
+      module: historical_cache.py
+      function: get_all_data
+      next: 2. PIT SCREEN
+      status: OK
+    - step: 2
+      stage: 2. PIT SCREEN
+      module: screen_as_of.py
+      function: screen_all_buckets
+      next: 3. RESEARCH ENGINE
+      status: OK
+    - step: 3
+      stage: 3. RESEARCH ENGINE
+      module: dynamic_universe_backtest.py
+      function: DynamicBacktestEngine.run
+      next: 4. SETUP
+      status: OK
+    - step: 4
+      stage: 4. SETUP
+      module: src/agents/setup_agent.py
+      function: setup_signal
+      next: 5. METRICS
+      status: OK
+    - step: 5
+      stage: 5. METRICS
+      module: src/backtest/engine.py
+      function: compute_metrics
+      next: 6. REPORT
+      status: OK
+    - step: 6
+      stage: 6. REPORT
+      module: src/backtest/report.py
+      function: generate_html
+      next: —
+      status: OK
+    - step: 7
+      stage: "ALT. PROD-EQUIV"
+      module: production/backtest.py
+      function: ProductionBacktest.run
+      next: —
+      status: OK
+subsystems:
+  Setup / Signal:
+    canonical:
+      - production/agents/setup.py
+      - src/agents/setup_agent.py
+    legacy: "[]"
+    research:
+      - ablation_test.py
+      - breakout_ablation.py
+      - breakout_comparison.py
+      - setup_comparison.py
+  Infrastructure:
+    canonical: "[]"
+    legacy: "[]"
+    research: "[]"
+  Backtest:
+    canonical:
+      - production/backtest.py
+      - production/tests/freeze_conformance_audit.py
+      - production/tests/phase4_diagnostics.py
+      - production/tests/phase4_verify.py
+      - production/tests/phase5_step0b_lever_cohorts.py
+      - production/tests/phase5_step0_marginal_cohort.py
+      - src/backtest/engine.py
+    legacy:
+      - backtest.py
+      - unified_backtest.py
+    research: "[]"
+  Config:
+    canonical:
+      - production/config.py
+    legacy:
+      - config.py
+    research: "[]"
+  Data:
+    canonical:
+      - historical_cache.py
+      - production/datasource.py
+      - src/data/data_fetcher.py
+    legacy: "[]"
+    research: "[]"
+  Market Regime:
+    canonical:
+      - production/agents/regime.py
+      - regime_dual_engine/breadth_engine.py
+      - regime_dual_engine/config.py
+      - regime_dual_engine/engine.py
+      - regime_dual_engine/hmm_engine.py
+      - regime_dual_engine/regime_dual.py
+    legacy:
+      - src/agents/regime_agent.py
+    research:
+      - hmm_backtest_compare.py
+      - hmm_diagnostic.py
+      - hmm_vw_compare.py
+      - hostile_regime_test.py
+      - v32_experiments.py
+      - v32_robustness.py
+  Entrypoint:
+    canonical:
+      - production/main.py
+    legacy:
+      - main.py
+    research: "[]"
+  Screener / Universe:
+    canonical:
+      - screen_as_of.py
+      - production/screener/screener.py
+      - src/screener/screener.py
+    legacy: "[]"
+    research:
+      - screener_backtest.py
+  Control Center:
+    canonical: "[]"
+    legacy: "[]"
+    research: "[]"
+  State:
+    canonical:
+      - production/ledger.py
+    legacy:
+      - src/state/state.py
+    research: "[]"
+  Contracts:
+    canonical:
+      - production/contracts/base.py
+      - production/contracts/entry.py
+      - production/contracts/exit.py
+      - production/contracts/order.py
+      - production/contracts/position.py
+      - production/contracts/reason_codes.py
+      - production/contracts/risk.py
+      - production/contracts/stop.py
+      - production/contracts/__init__.py
+    legacy: "[]"
+    research: "[]"
+  Exit Engine:
+    canonical:
+      - production/exits/adapter.py
+      - production/exits/context.py
+      - production/exits/engine.py
+      - production/exits/rules.py
+      - production/exits/shadow.py
+      - production/exits/__init__.py
+    legacy: "[]"
+    research: "[]"
+  Portfolio:
+    canonical:
+      - production/portfolio/portfolio.py
+    legacy:
+      - src/portfolio/portfolio_manager.py
+    research: "[]"
+  Reporting:
+    canonical:
+      - production/reporting/briefing.py
+      - production/reporting/shadow_monitor.py
+    legacy:
+      - src/utils/display.py
+    research: "[]"
+  Risk / Sizing:
+    canonical:
+      - production/risk/risk.py
+    legacy:
+      - src/agents/risk_manager.py
+    research: "[]"
+  Stop Engine:
+    canonical:
+      - production/stops/engine.py
+      - production/stops/errors.py
+      - production/stops/initial.py
+      - production/stops/trailing.py
+      - production/stops/__init__.py
+    legacy: "[]"
+    research: "[]"
+  Return Research:
+    canonical:
+      - research/harness.py
+      - research/pit_breadth_audit.py
+      - research/rerun_corrected_research.py
+      - research/run_baseline.py
+      - research/run_lever_grid.py
+      - research/run_tp_grid.py
+      - research/step0_harness_audit.py
+    legacy: "[]"
+    research:
+      - research/harness.py
+      - research/rerun_corrected_research.py
+      - research/run_baseline.py
+      - research/run_lever_grid.py
+      - research/run_stop_trailing_experiments.py
+      - research/run_tp_grid.py
+  Indicators / Technicals:
+    canonical:
+      - src/agents/technicals_agent.py
+      - src/indicators/technicals.py
+    legacy: "[]"
+    research: "[]"
+  Utility:
+    canonical: "[]"
+    legacy: "[]"
+    research: "[]"
+modules:
+  total: 165
+  by_type:
+    experiment: 11
+    UNKNOWN: 17
+    backtest: 6
+    config: 3
+    research: 6
+    production: 13
+    utility: 25
+    core: 49
+    test: 16
+    audit: 19
+  by_status:
+    EXPERIMENTAL: 9
+    UNKNOWN: 26
+    LEGACY: 18
+    RESEARCH: 4
+    ACTIVE: 100
+    VALIDATED: 8
+  by_layer:
+    INFRA: 15
+    CONFIG: 3
+    UNIVERSE_SCREENER: 6
+    DATA: 6
+    MARKET_REGIME: 25
+    SETUP_SIGNAL: 8
+    CONTROL_CENTER: 7
+    STATE: 2
+    PACKAGE: 20
+    CONTRACTS: 8
+    EXIT_ENGINE: 5
+    PORTFOLIO: 2
+    REPORTING: 4
+    RISK_SIZING: 2
+    STOP: 4
+    TESTS: 20
+    RESEARCH: 25
+    INDICATORS: 2
+    UTIL: 1
+  by_decision_authority:
+    NONE: 126
+    PRIMARY: 19
+    SHADOW_ONLY: 20
+  needs_review:
+    - audit_return_calculation.py
+    - control_center/control_center.py
+    - control_center/tests/test_control_center.py
+    - regime_dual_engine/__init__.py
+    - regime_dual_engine/backtest_harness.py
+    - regime_dual_engine/breadth_refresh.py
+    - regime_dual_engine/download_missing_ohlcv.py
+    - regime_dual_engine/setup_v1_regime_policy_test.py
+    - regime_dual_engine/setup_v1_root_cause.py
+    - regime_dual_engine/setup_v1_selection_sim.py
+    - regime_dual_engine/setup_v1_validation.py
+    - regime_dual_engine/tests/test_regime_dual.py
+    - research/__init__.py
+    - research/bootstrap_uncertainty.py
+    - research/breadth_lineage_impact.py
+    - research/breadth_staleness_impact.py
+    - research/bs_temporal_consistency.py
+    - research/constituent_official_crosscheck.py
+    - research/constituent_source_audit.py
+    - research/constituent_staleness_impact.py
+    - research/live_breadth_build.py
+    - research/live_breadth_crosscheck.py
+    - research/live_freshness_matrix.py
+    - research/ohlcv_lineage_audit.py
+    - research/p6_extension_impact.py
+    - research/r2_entry_cohorts.py
+    - research/r3_capacity_magnitude.py
+    - research/run_stop_trailing_experiments.py
+    - research/s1_decomposition.py
+    - research/verify_r7_equivalence.py
+    - src/__init__.py
+    - src/agents/__init__.py
+    - src/backtest/__init__.py
+    - src/data/__init__.py
+    - src/indicators/__init__.py
+    - src/portfolio/__init__.py
+    - src/screener/__init__.py
+    - src/state/__init__.py
+    - src/utils/__init__.py
+    - src/utils/fees.py
+  unreferenced:
+    - production/tests/freeze_conformance_audit.py
+    - production/tests/phase4_diagnostics.py
+    - production/tests/phase4_verify.py
+    - production/tests/phase5_step0_marginal_cohort.py
+    - production/tests/phase5_step0b_lever_cohorts.py
+    - regime_dual_engine/breadth_refresh.py
+    - regime_dual_engine/validation_divergence_review.py
+    - research/bootstrap_uncertainty.py
+    - research/breadth_lineage_impact.py
+    - research/breadth_staleness_impact.py
+    - research/bs_temporal_consistency.py
+    - research/constituent_official_crosscheck.py
+    - research/constituent_source_audit.py
+    - research/constituent_staleness_impact.py
+    - research/harness.py
+    - research/live_breadth_build.py
+    - research/live_breadth_crosscheck.py
+    - research/live_freshness_matrix.py
+    - research/ohlcv_lineage_audit.py
+    - research/p6_extension_impact.py
+    - research/pit_breadth_audit.py
+    - research/r2_entry_cohorts.py
+    - research/r3_capacity_magnitude.py
+    - research/rerun_corrected_research.py
+    - research/run_baseline.py
+    - research/run_lever_grid.py
+    - research/run_stop_trailing_experiments.py
+    - research/run_tp_grid.py
+    - research/s1_decomposition.py
+    - research/step0_harness_audit.py
+    - research/verify_r7_equivalence.py
+    - unified_backtest.py
+migrations:
+  - subsystem: Market Regime
+    old: src/agents/regime_agent.py
+    new: regime_dual_engine/
+    status: VALIDATED — WIRED
+    blocker: human review
+  - subsystem: Live Entrypoint
+    old: main.py
+    new: production/main.py + production/pipeline.run_daily
+    status: VALIDATED — NOT YET CUT OVER
+    blocker: human review
+  - subsystem: Backtest
+    old: dynamic_universe_backtest.py
+    new: production/backtest.py
+    status: AVAILABLE — LEGACY RETAINED
+    blocker: —
+  - subsystem: Setup / Signal
+    old: "config.py: setup_enabled_types=['breakout']"
+    new: "src/agents/setup_agent.py (Pullback Only, Setup v1)"
+    status: VALIDATED — FROZEN
+    blocker: —
+  - subsystem: Stop Engine
+    old: "derived inline: src/agents/risk_manager.py (initial stop) + src/portfolio/portfolio_manager.py::_exit_check (trailing)"
+    new: production/stops/ + production/contracts/ (Phase 1; reached from production through production/exits/adapter.py)
+    status: SHADOW WIRED — NOT DECIDING (parity verified)
+    blocker: "mode != 'new': the legacy oracle still owns every stop decision"
+  - subsystem: Exit Engine
+    old: "src/portfolio/portfolio_manager.py::_exit_check (decision + fill model inline)"
+    new: production/exits/ + production/contracts/exit.py (Phase 2; wired in shadow by Phase 3 behind cfg.exit_engine_mode)
+    status: "SHADOW WIRED — LEGACY STILL AUTHORITATIVE (parity verified, 0 divergences)"
+    blocker: human review; live shadow coverage PENDING (0 sessions observed)
+  - subsystem: Stop + Exit wiring (Phase 3)
+    old: "src/portfolio/portfolio_manager.py::_exit_check — the single decision source for stop/target/trailing/time/signal exits"
+    new: "production/exits/adapter.py + production/exits/shadow.py behind production/config.py::exit_engine_mode (legacy | shadow | new; default legacy), selectable at the live entrypoint via production/main.py --exit-engine-mode"
+    status: IMPLEMENTED — HISTORICALLY VALIDATED — LIVE VALIDATION PENDING
+    blocker: "live shadow validation PENDING (0 sessions observed); mode='new' NOT ENABLED; production cut-over NOT APPROVED"
+  - subsystem: "Regime v1 breadth — point-in-time contract (data integrity)"
+    old: "regime_dual_engine/pit_breadth_data.py::get_breadth — returned the WHOLE cached CSV whenever the cache existed (the `end` argument was honoured only on rebuild), and regime_dual_engine/breadth_data.py::get_breadth_series had the same defect; compute_regime_decision then read `pct_above_50dma.iloc[-1]`, i.e. the 2025-07-31 tail, for every historical as-of date"
+    new: "regime_dual_engine/breadth_data.py::slice_to_end — ONE point-in-time guard applied on both the cache and rebuild paths of both loaders, so any `end=as_of` request is guaranteed `date <= as_of`"
+    status: "FIXED — FULLY RE-BASELINED (data-integrity repair; no strategy change)"
+    blocker: —
+decisions:
+  - issue: "Two repo copies exist with the same commit: 'WB prog' vs 'WB-prog'"
+    priority: HIGH
+    status: RESOLVED
+  - issue: Legacy live entrypoint (main.py) still present alongside production/main.py
+    priority: HIGH
+    status: OPEN
+  - issue: Untracked legacy artefacts from an earlier session (unified_backtest.py + 2 reports)
+    priority: MEDIUM
+    status: OPEN
+  - issue: "Unused/dead-code candidates are not proven safe to delete"
+    priority: MEDIUM
+    status: OPEN
+  - issue: Legacy src/ modules are still imported by the production path (deletion unsafe)
+    priority: HIGH
+    status: OPEN
+  - issue: Stop Engine is implemented but NOT wired (Phase 1 isolation)
+    priority: HIGH
+    status: RESOLVED
+  - issue: "Structure-based stop definition is undefined (deferred in Phase 1)"
+    priority: MEDIUM
+    status: OPEN
+  - issue: current_stop_price is computed but never persisted
+    priority: MEDIUM
+    status: OPEN
+  - issue: Exit Engine is implemented but NOT wired (Phase 2 isolation)
+    priority: HIGH
+    status: RESOLVED
+  - issue: Legacy position has TWO stop levels; mapping into StopPlan must be confirmed
+    priority: MEDIUM
+    status: OPEN
+  - issue: "Live 20-session shadow gate is not yet closed (backtest coverage only)"
+    priority: HIGH
+    status: OPEN
+  - issue: "exit_engine_mode='new' is implemented but must not be enabled without approval"
+    priority: HIGH
+    status: OPEN
+  - issue: production_used vs production_decision_authority were conflated
+    priority: HIGH
+    status: RESOLVED
+  - issue: "`production_used` for test files under production/ relies on a path heuristic"
+    priority: LOW
+    status: OPEN
+  - issue: "BLOCKER: no executable path can run production in shadow mode, so the §10 live gate cannot start accumulating"
+    priority: HIGH
+    status: RESOLVED
+  - issue: "Phase 4 D1-D6 diagnostics complete — the next implementation target must be chosen from evidence, not intuition"
+    priority: HIGH
+    status: OPEN
+  - issue: "Phase-4 verification REFUTED one diagnostic claim (entry-gap monotonicity)"
+    priority: HIGH
+    status: RESOLVED
+  - issue: "Diagnostic record-quality gaps limit future analysis"
+    priority: LOW
+    status: OPEN
+  - issue: "CONTRACT MISMATCH: the frozen Setup v1 extension filter cannot fire in production"
+    priority: HIGH
+    status: OPEN
+  - issue: Two freeze clauses are accurate only under one reading (documentation precision)
+    priority: LOW
+    status: OPEN
+  - issue: "Step 0 executed: the risk-budget cap is PROTECTIVE, so the primary research target moves from deployment to exit efficiency"
+    priority: HIGH
+    status: RESOLVED
+  - issue: "Research §11 gate: is the Stop/Exit research harness trustworthy before parameter experiments?"
+    priority: HIGH
+    status: RESOLVED
+  - issue: "R1 executed: the frozen 2.5 ATR take-profit appears TOO TIGHT — a research finding, NOT a production change"
+    priority: HIGH
+    status: RESOLVED
+  - issue: "LOOK-AHEAD: Regime v1 Engine B (breadth) is NOT point-in-time in historical replay — it always evaluates the cache tail"
+    priority: HIGH
+    status: RESOLVED
+  - issue: "Live breadth staleness: the freshness POLICY is undefined (exposure now added, threshold not yet decided)"
+    priority: MEDIUM
+    status: OPEN
+  - issue: "Corrected research re-baseline complete — the next implementation target must be chosen on PIT-clean evidence"
+    priority: HIGH
+    status: OPEN
+duplicates:
+  group_count: 19
+  members: 45
+  groups:
+    - "same_filename::backtest.py"
+    - "same_filename::config.py"
+    - "same_filename::engine.py"
+    - "same_filename::main.py"
+    - "same_filename::risk.py"
+    - "same_filename::screener.py"
+    - "same_function::build_daily_signals"
+    - "same_function::detailed_metrics"
+    - "same_function::load_data_from_cache"
+    - "same_function::load_snapshots"
+    - "same_function::members_as_of"
+    - "same_function::render_briefing"
+    - "same_function::run_ablation"
+    - "same_function::run_backtest"
+    - "same_function::run_daily"
+    - "same_function::run_screener"
+    - "same_function::run_stage"
+    - "same_function::run_variant"
+    - "same_function::segmented_breakdown"
+copy_divergence:
+  count: 319
+  items:
+    - path: production/backtest.py
+      status: content_differs
+    - path: production/config.py
+      status: content_differs
+    - path: production/main.py
+      status: content_differs
+    - path: production/pipeline.py
+      status: content_differs
+    - path: regime_dual_engine/breadth_data.py
+      status: content_differs
+    - path: regime_dual_engine/pit_breadth_data.py
+      status: content_differs
+    - path: "reports/production_bt_2024-01-01_2025-07-31.json"
+      status: content_differs
+    - path: "HANDOFF_2026-08-30.md"
+      status: line_ending_only
+    - path: "HANDOFF_2026-09-04.md"
+      status: line_ending_only
+    - path: README.md
+      status: line_ending_only
+    - path: ablation_test.py
+      status: line_ending_only
+    - path: audit_return_calculation.py
+      status: line_ending_only
+    - path: backtest.py
+      status: line_ending_only
+    - path: breakout_ablation.py
+      status: line_ending_only
+    - path: breakout_comparison.py
+      status: line_ending_only
+    - path: config.py
+      status: line_ending_only
+    - path: data/screener_top20.csv
+      status: line_ending_only
+    - path: dynamic_universe_backtest.py
+      status: line_ending_only
+    - path: historical_cache.py
+      status: line_ending_only
+    - path: hmm_backtest_compare.py
+      status: line_ending_only
+    - path: hmm_diagnostic.py
+      status: line_ending_only
+    - path: hmm_vw_compare.py
+      status: line_ending_only
+    - path: hostile_regime_test.py
+      status: line_ending_only
+    - path: main.py
+      status: line_ending_only
+    - path: production/agents/regime.py
+      status: line_ending_only
+    - path: production/agents/setup.py
+      status: line_ending_only
+    - path: production/datasource.py
+      status: line_ending_only
+    - path: production/ledger.py
+      status: line_ending_only
+    - path: production/portfolio/portfolio.py
+      status: line_ending_only
+    - path: production/reporting/briefing.py
+      status: line_ending_only
+    - path: production/risk/risk.py
+      status: line_ending_only
+    - path: production/screener/screener.py
+      status: line_ending_only
+    - path: production/tests/test_backtest.py
+      status: line_ending_only
+    - path: production/tests/test_datasource.py
+      status: line_ending_only
+    - path: production/tests/test_pipeline.py
+      status: line_ending_only
+    - path: production/tests/test_production.py
+      status: line_ending_only
+    - path: regime_dual_engine/README.md
+      status: line_ending_only
+    - path: regime_dual_engine/REGIME_V1_FREEZE.md
+      status: line_ending_only
+    - path: regime_dual_engine/REGIME_V2_BACKLOG.md
+      status: line_ending_only
+    - path: regime_dual_engine/__init__.py
+      status: line_ending_only
+    - path: regime_dual_engine/ablation_pit.py
+      status: line_ending_only
+    - path: regime_dual_engine/audit_distdays_thresholds.py
+      status: line_ending_only
+    - path: regime_dual_engine/audit_distribution_days.py
+      status: line_ending_only
+    - path: regime_dual_engine/audit_live_backtest.py
+      status: line_ending_only
+    - path: regime_dual_engine/backtest_harness.py
+      status: line_ending_only
+    - path: regime_dual_engine/breadth_engine.py
+      status: line_ending_only
+    - path: regime_dual_engine/build_review_report.py
+      status: line_ending_only
+    - path: regime_dual_engine/config.py
+      status: line_ending_only
+    - path: regime_dual_engine/daily_signals.py
+      status: line_ending_only
+    - path: regime_dual_engine/data/breadth_2016_2025.csv
+      status: line_ending_only
+    - path: regime_dual_engine/data/breadth_current_2016_2025.csv
+      status: line_ending_only
+    - path: regime_dual_engine/data/breadth_pit_2016_2025.csv
+      status: line_ending_only
+    - path: regime_dual_engine/distribution_days.py
+      status: line_ending_only
+    - path: regime_dual_engine/download_missing_ohlcv.py
+      status: line_ending_only
+    - path: regime_dual_engine/engine.py
+      status: line_ending_only
+    - path: regime_dual_engine/hmm_engine.py
+      status: line_ending_only
+    - path: regime_dual_engine/pit_constituents.py
+      status: line_ending_only
+    - path: regime_dual_engine/regime_dual.py
+      status: line_ending_only
+    - path: regime_dual_engine/robustness_pit.py
+      status: line_ending_only
+    - path: regime_dual_engine/setup_v1_regime_policy_test.py
+      status: line_ending_only
+    - path: regime_dual_engine/setup_v1_root_cause.py
+      status: line_ending_only
+    - path: regime_dual_engine/setup_v1_selection_sim.py
+      status: line_ending_only
+    - path: regime_dual_engine/setup_v1_validation.py
+      status: line_ending_only
+    - path: regime_dual_engine/tests/test_regime_dual.py
+      status: line_ending_only
+    - path: regime_dual_engine/validation_conditioning.py
+      status: line_ending_only
+    - path: regime_dual_engine/validation_divergence.py
+      status: line_ending_only
+    - path: regime_dual_engine/validation_divergence_review.py
+      status: line_ending_only
+    - path: regime_dual_engine/validation_orthogonality.py
+      status: line_ending_only
+    - path: regime_dual_engine/validation_perturbation.py
+      status: line_ending_only
+    - path: regime_dual_engine/validation_state_alignment.py
+      status: line_ending_only
+    - path: reports/audit_trade_log.json
+      status: line_ending_only
+    - path: reports/backtest_result.json
+      status: line_ending_only
+    - path: reports/backtest_top20_trades.json
+      status: line_ending_only
+    - path: reports/breakout_ablation.json
+      status: line_ending_only
+    - path: reports/breakout_comparison.json
+      status: line_ending_only
+    - path: "reports/briefing_2024-05-28.md"
+      status: line_ending_only
+    - path: "reports/briefing_2026-07-26.md"
+      status: line_ending_only
+    - path: "reports/briefing_2026-08-02.md"
+      status: line_ending_only
+    - path: "reports/briefing_2026-08-03.md"
+      status: line_ending_only
+    - path: reports/dual_engine_ablation.json
+      status: line_ending_only
+    - path: reports/dual_engine_ablation_pit.json
+      status: line_ending_only
+    - path: reports/dual_engine_breadth_compare.json
+      status: line_ending_only
+    - path: reports/dual_engine_conditioning.json
+      status: line_ending_only
+    - path: reports/dual_engine_constituents.json
+      status: line_ending_only
+    - path: reports/dual_engine_distdays_audit.json
+      status: line_ending_only
+    - path: reports/dual_engine_distdays_thresholds.json
+      status: line_ending_only
+    - path: reports/dual_engine_distdays_thresholds_pit.json
+      status: line_ending_only
+    - path: reports/dual_engine_divergence.json
+      status: line_ending_only
+    - path: reports/dual_engine_divergence_review.json
+      status: line_ending_only
+    - path: reports/dual_engine_divergence_review_pit.json
+      status: line_ending_only
+    - path: reports/dual_engine_orthogonality.json
+      status: line_ending_only
+    - path: reports/dual_engine_orthogonality_pit.json
+      status: line_ending_only
+    - path: reports/dual_engine_perturbation.json
+      status: line_ending_only
+    - path: reports/dual_engine_regime_conditioning.json
+      status: line_ending_only
+    - path: reports/dual_engine_review_decision.json
+      status: line_ending_only
+    - path: reports/dual_engine_robustness_pit.json
+      status: line_ending_only
+    - path: reports/dual_engine_state_alignment.json
+      status: line_ending_only
+    - path: reports/dynamic_backtest_results.json
+      status: line_ending_only
+    - path: "reports/dynamic_buckets_2018-01-01_2025-07-31_top20.json"
+      status: line_ending_only
+    - path: "reports/dynamic_buckets_2018-01-01_2025-07-31_top30.json"
+      status: line_ending_only
+    - path: "reports/dynamic_buckets_2024-01-01_2025-07-31_top20.json"
+      status: line_ending_only
+    - path: reports/graduation_screener_diagnostics.json
+      status: line_ending_only
+    - path: "reports/orders_2024-05-28.json"
+      status: line_ending_only
+    - path: "reports/orders_2026-07-26.json"
+      status: line_ending_only
+    - path: "reports/orders_2026-08-02.json"
+      status: line_ending_only
+    - path: "reports/orders_2026-08-03.json"
+      status: line_ending_only
+    - path: "reports/production_pipeline_unified_2026-09-04.md"
+      status: line_ending_only
+    - path: reports/production_v2_report.md
+      status: line_ending_only
+    - path: "reports/repo_archaeology_2026-08-30.md"
+      status: line_ending_only
+    - path: "reports/selection_audit_2026-08-30.md"
+      status: line_ending_only
+    - path: reports/setup_comparison.json
+      status: line_ending_only
+    - path: "reports/setup_research_inventory_2026-08-30.md"
+      status: line_ending_only
+    - path: reports/setup_v1_live_bt_audit.json
+      status: line_ending_only
+    - path: reports/setup_v1_regime_policy.json
+      status: line_ending_only
+    - path: reports/setup_v1_regime_policy_report.md
+      status: line_ending_only
+    - path: reports/setup_v1_root_cause_report.md
+      status: line_ending_only
+    - path: reports/setup_v1_rootcause.json
+      status: line_ending_only
+    - path: reports/setup_v1_rootcause_logs.json
+      status: line_ending_only
+    - path: reports/setup_v1_validation.json
+      status: line_ending_only
+    - path: reports/setup_v1_validation_report.md
+      status: line_ending_only
+    - path: reports/universe_comparison.json
+      status: line_ending_only
+    - path: reports/v32_results.json
+      status: line_ending_only
+    - path: reports/v32_robustness.json
+      status: line_ending_only
+    - path: requirements.txt
+      status: line_ending_only
+    - path: screen_as_of.py
+      status: line_ending_only
+    - path: screener_backtest.py
+      status: line_ending_only
+    - path: setup_comparison.py
+      status: line_ending_only
+    - path: src/agents/SETUP_V1_FREEZE.md
+      status: line_ending_only
+    - path: src/agents/SETUP_V2_BACKLOG.md
+      status: line_ending_only
+    - path: src/agents/regime_agent.py
+      status: line_ending_only
+    - path: src/agents/risk_manager.py
+      status: line_ending_only
+    - path: src/agents/setup_agent.py
+      status: line_ending_only
+    - path: src/agents/technicals_agent.py
+      status: line_ending_only
+    - path: src/backtest/engine.py
+      status: line_ending_only
+    - path: src/backtest/report.py
+      status: line_ending_only
+    - path: src/data/data_fetcher.py
+      status: line_ending_only
+    - path: src/indicators/technicals.py
+      status: line_ending_only
+    - path: src/portfolio/portfolio_manager.py
+      status: line_ending_only
+    - path: src/screener/screener.py
+      status: line_ending_only
+    - path: src/state/state.py
+      status: line_ending_only
+    - path: src/utils/display.py
+      status: line_ending_only
+    - path: src/utils/fees.py
+      status: line_ending_only
+    - path: v32_experiments.py
+      status: line_ending_only
+    - path: v32_robustness.py
+      status: line_ending_only
+    - path: "HANDOFF_2026-10-01.md"
+      status: only_in_primary
+    - path: control_center/AGENT_WORKFLOW.md
+      status: only_in_primary
+    - path: control_center/ARCHITECTURE.md
+      status: only_in_primary
+    - path: control_center/ARCHITECTURE.yaml
+      status: only_in_primary
+    - path: control_center/ARCHITECTURE_AUDIT_REPORT.md
+      status: only_in_primary
+    - path: control_center/README.md
+      status: only_in_primary
+    - path: control_center/classify.py
+      status: only_in_primary
+    - path: control_center/control_center.py
+      status: only_in_primary
+    - path: control_center/generate_docs.py
+      status: only_in_primary
+    - path: control_center/refresh_registry.py
+      status: only_in_primary
+    - path: control_center/registry_db.py
+      status: only_in_primary
+    - path: "control_center/requirements-control-center.txt"
+      status: only_in_primary
+    - path: control_center/scanner.py
+      status: only_in_primary
+    - path: control_center/tests/test_control_center.py
+      status: only_in_primary
+    - path: data/live/breadth/breadth_live.csv
+      status: only_in_primary
+    - path: data/live/breadth/breadth_live_provenance.json
+      status: only_in_primary
+    - path: production/STOP_EXIT_V1_FREEZE.md
+      status: only_in_primary
+    - path: production/contracts/__init__.py
+      status: only_in_primary
+    - path: production/contracts/base.py
+      status: only_in_primary
+    - path: production/contracts/entry.py
+      status: only_in_primary
+    - path: production/contracts/exit.py
+      status: only_in_primary
+    - path: production/contracts/order.py
+      status: only_in_primary
+    - path: production/contracts/position.py
+      status: only_in_primary
+    - path: production/contracts/reason_codes.py
+      status: only_in_primary
+    - path: production/contracts/risk.py
+      status: only_in_primary
+    - path: production/contracts/stop.py
+      status: only_in_primary
+    - path: production/data_validity.py
+      status: only_in_primary
+    - path: production/exits/DESIGN_NOTE.md
+      status: only_in_primary
+    - path: production/exits/PHASE2_REVIEW_SHEET.md
+      status: only_in_primary
+    - path: production/exits/PHASE3_REVIEW_SHEET.md
+      status: only_in_primary
+    - path: production/exits/__init__.py
+      status: only_in_primary
+    - path: production/exits/adapter.py
+      status: only_in_primary
+    - path: production/exits/context.py
+      status: only_in_primary
+    - path: production/exits/engine.py
+      status: only_in_primary
+    - path: production/exits/rules.py
+      status: only_in_primary
+    - path: production/exits/shadow.py
+      status: only_in_primary
+    - path: production/observability.py
+      status: only_in_primary
+    - path: production/reporting/shadow_monitor.py
+      status: only_in_primary
+    - path: production/stops/DESIGN_NOTE.md
+      status: only_in_primary
+    - path: production/stops/PHASE1_REVIEW_SHEET.md
+      status: only_in_primary
+    - path: production/stops/STOP_ENGINE_BACKLOG.md
+      status: only_in_primary
+    - path: production/stops/__init__.py
+      status: only_in_primary
+    - path: production/stops/engine.py
+      status: only_in_primary
+    - path: production/stops/errors.py
+      status: only_in_primary
+    - path: production/stops/initial.py
+      status: only_in_primary
+    - path: production/stops/trailing.py
+      status: only_in_primary
+    - path: production/tests/exit_fixtures.py
+      status: only_in_primary
+    - path: production/tests/freeze_conformance_audit.py
+      status: only_in_primary
+    - path: production/tests/phase4_diagnostics.py
+      status: only_in_primary
+    - path: production/tests/phase4_verify.py
+      status: only_in_primary
+    - path: production/tests/phase5_step0_marginal_cohort.py
+      status: only_in_primary
+    - path: production/tests/phase5_step0b_lever_cohorts.py
+      status: only_in_primary
+    - path: production/tests/replay_exit_parity.py
+      status: only_in_primary
+    - path: production/tests/shadow_coverage.py
+      status: only_in_primary
+    - path: production/tests/test_breadth_freshness.py
+      status: only_in_primary
+    - path: production/tests/test_contracts.py
+      status: only_in_primary
+    - path: production/tests/test_exit_engine.py
+      status: only_in_primary
+    - path: production/tests/test_pit_breadth.py
+      status: only_in_primary
+    - path: production/tests/test_r7_observability.py
+      status: only_in_primary
+    - path: production/tests/test_stops.py
+      status: only_in_primary
+    - path: production/tests/test_wiring_safety.py
+      status: only_in_primary
+    - path: regime_dual_engine/breadth_refresh.py
+      status: only_in_primary
+    - path: regime_dual_engine/data/breadth_current_2016_2025_refreshed.csv
+      status: only_in_primary
+    - path: regime_dual_engine/data/breadth_pit_2016_2025_refreshed.csv
+      status: only_in_primary
+    - path: reports/SUPERSEDED_PIT_ARTIFACTS.md
+      status: only_in_primary
+    - path: "reports/bootstrap_uncertainty_2026-10-02.md"
+      status: only_in_primary
+    - path: "reports/bootstrap_uncertainty_pitcorrected_2026-10-02.json"
+      status: only_in_primary
+    - path: "reports/breadth_lineage_impact_2026-10-04.json"
+      status: only_in_primary
+    - path: "reports/breadth_staleness_impact_2026-10-02.json"
+      status: only_in_primary
+    - path: "reports/breadth_staleness_impact_2026-10-02.md"
+      status: only_in_primary
+    - path: "reports/briefing_2025-07-24.md"
+      status: only_in_primary
+    - path: "reports/bs2_breadth_refresh_2026-10-04.json"
+      status: only_in_primary
+    - path: "reports/bs5_freshness_policy_proposal_2026-10-04.md"
+      status: only_in_primary
+    - path: "reports/bs_breadth_refresh_and_freshness_2026-10-04.md"
+      status: only_in_primary
+    - path: "reports/bs_temporal_consistency_2026-10-04.json"
+      status: only_in_primary
+    - path: "reports/capacity_observability_proposal_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/constituent_official_crosscheck_2026-10-05.md"
+      status: only_in_primary
+    - path: "reports/constituent_official_crosscheck_raw_2026-10-05.json"
+      status: only_in_primary
+    - path: "reports/constituent_source_audit_2026-10-05.md"
+      status: only_in_primary
+    - path: "reports/constituent_source_audit_raw_2026-10-05.json"
+      status: only_in_primary
+    - path: "reports/constituent_staleness_impact_2026-10-04.json"
+      status: only_in_primary
+    - path: "reports/decision_2025-07-24.json"
+      status: only_in_primary
+    - path: "reports/experiment_matrix_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/experiment_matrix_pitcorrected_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/experiment_matrix_pitcorrected_2026-10-02.md"
+      status: only_in_primary
+    - path: "reports/freeze_conformance_audit_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/freeze_conformance_audit_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/lever_experiments_pitcorrected_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/live_breadth_crosscheck_2026-10-05.json"
+      status: only_in_primary
+    - path: "reports/live_constituent_source_validation_2026-10-05.md"
+      status: only_in_primary
+    - path: "reports/live_data_freshness_complete_2026-10-04.md"
+      status: only_in_primary
+    - path: "reports/live_data_lineage_and_corporate_actions_2026-10-04.md"
+      status: only_in_primary
+    - path: "reports/live_freshness_matrix_2026-10-04.json"
+      status: only_in_primary
+    - path: "reports/ohlcv_corporate_action_audit_2026-10-04.md"
+      status: only_in_primary
+    - path: "reports/ohlcv_lineage_audit_2026-10-04.json"
+      status: only_in_primary
+    - path: "reports/orders_2025-07-24.json"
+      status: only_in_primary
+    - path: "reports/p6_extension_impact_2026-10-02.md"
+      status: only_in_primary
+    - path: "reports/p6_extension_impact_pitcorrected_2026-10-02.json"
+      status: only_in_primary
+    - path: "reports/phase0_1_stop_engine_2026-09-28.md"
+      status: only_in_primary
+    - path: "reports/phase2_exit_engine_2026-09-29.md"
+      status: only_in_primary
+    - path: "reports/phase2_exit_engine_plan_2026-09-28.md"
+      status: only_in_primary
+    - path: "reports/phase2_exit_parity_replay_2026-09-29.json"
+      status: only_in_primary
+    - path: "reports/phase3_exit_parity_replay_2026-09-30.json"
+      status: only_in_primary
+    - path: "reports/phase3_exit_parity_replay_pitcorrected_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/phase3_shadow_coverage_2026-09-30.json"
+      status: only_in_primary
+    - path: "reports/phase3_wiring_acceptance_2026-09-30.md"
+      status: only_in_primary
+    - path: "reports/phase3_wiring_plan_2026-09-29.md"
+      status: only_in_primary
+    - path: "reports/phase4_diag_data_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/phase4_diag_data_pitcorrected_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/phase4_diagnostics_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/phase4_research_prioritisation_plan_2026-09-30.md"
+      status: only_in_primary
+    - path: "reports/phase4_review_sheet_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/phase4_verify_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/phase4_verify_pitcorrected_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/phase5_plan_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/phase5_record_quality_proposal_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/phase5_step0_marginal_cohort_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/phase5_step0_marginal_cohort_pitcorrected_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/phase5_step0_report_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/phase5_step0b_lever_cohorts_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/phase5_step0b_lever_cohorts_pitcorrected_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/pit_breadth_audit_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/pit_breadth_leak_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/pit_correction_and_rebaseline_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/production_bt_pitcorrected_2024-01-01_2025-07-31.json"
+      status: only_in_primary
+    - path: "reports/r2_entry_cohorts_pitcorrected_2026-10-02.json"
+      status: only_in_primary
+    - path: "reports/r2_r3_cohorts_capacity_2026-10-02.md"
+      status: only_in_primary
+    - path: "reports/r3_capacity_magnitude_pitcorrected_2026-10-02.json"
+      status: only_in_primary
+    - path: "reports/r7_equivalence_2026-10-02.json"
+      status: only_in_primary
+    - path: "reports/r7_observability_2026-10-02.md"
+      status: only_in_primary
+    - path: "reports/research_baseline_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/research_baseline_pitcorrected_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/research_lever_max_open_positions_pitcorrected_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/research_lever_risk_per_trade_pitcorrected_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/research_replay_parity_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/research_tp_grid_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/research_tp_grid_ext_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/research_tp_grid_pitcorrected_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/return_bottleneck_report_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/return_improvement_research_2026-10-01.md"
+      status: only_in_primary
+    - path: "reports/s1_decomposition_2026-10-02.md"
+      status: only_in_primary
+    - path: "reports/s1_decomposition_pitcorrected_2026-10-02.json"
+      status: only_in_primary
+    - path: "reports/s1_stop_width_decision_proposal_2026-10-02.md"
+      status: only_in_primary
+    - path: "reports/step0_harness_audit_2026-10-01.json"
+      status: only_in_primary
+    - path: "reports/stop_trailing_experiments_pitcorrected_2026-10-02.md"
+      status: only_in_primary
+    - path: "reports/stop_trailing_s1_pitcorrected_2026-10-02.json"
+      status: only_in_primary
+    - path: "reports/stop_trailing_s2_pitcorrected_2026-10-02.json"
+      status: only_in_primary
+    - path: "reports/stop_trailing_s3_pitcorrected_2026-10-02.json"
+      status: only_in_primary
+    - path: reports/unified_backtest_CurrentWeights_setup.json
+      status: only_in_primary
+    - path: research/__init__.py
+      status: only_in_primary
+    - path: research/bootstrap_uncertainty.py
+      status: only_in_primary
+    - path: research/breadth_lineage_impact.py
+      status: only_in_primary
+    - path: research/breadth_staleness_impact.py
+      status: only_in_primary
+    - path: research/bs_temporal_consistency.py
+      status: only_in_primary
+    - path: research/constituent_official_crosscheck.py
+      status: only_in_primary
+    - path: research/constituent_source_audit.py
+      status: only_in_primary
+    - path: research/constituent_staleness_impact.py
+      status: only_in_primary
+    - path: research/harness.py
+      status: only_in_primary
+    - path: research/live_breadth_build.py
+      status: only_in_primary
+    - path: research/live_breadth_crosscheck.py
+      status: only_in_primary
+    - path: research/live_freshness_matrix.py
+      status: only_in_primary
+    - path: research/ohlcv_lineage_audit.py
+      status: only_in_primary
+    - path: research/p6_extension_impact.py
+      status: only_in_primary
+    - path: research/pit_breadth_audit.py
+      status: only_in_primary
+    - path: research/r2_entry_cohorts.py
+      status: only_in_primary
+    - path: research/r3_capacity_magnitude.py
+      status: only_in_primary
+    - path: research/rerun_corrected_research.py
+      status: only_in_primary
+    - path: research/run_baseline.py
+      status: only_in_primary
+    - path: research/run_lever_grid.py
+      status: only_in_primary
+    - path: research/run_stop_trailing_experiments.py
+      status: only_in_primary
+    - path: research/run_tp_grid.py
+      status: only_in_primary
+    - path: research/s1_decomposition.py
+      status: only_in_primary
+    - path: research/step0_harness_audit.py
+      status: only_in_primary
+    - path: research/verify_r7_equivalence.py
+      status: only_in_primary
+    - path: unified_backtest.py
+      status: only_in_primary

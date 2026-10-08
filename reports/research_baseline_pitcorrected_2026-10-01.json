@@ -1,0 +1,220 @@
+{
+  "generated": "2026-10-01",
+  "deliverable": "D2 — corrected baseline (PIT breadth)",
+  "command": "python research/run_baseline.py",
+  "harness": "production/backtest.py::ProductionBacktest (unchanged), mode=legacy, run through research/harness.py",
+  "pit_status": "point-in-time breadth contract ACTIVE (regime_dual_engine/breadth_data.slice_to_end)",
+  "window": {
+    "start_arg": "2024-01-01",
+    "end_arg": "2025-07-31",
+    "actual_start": "2024-01-02",
+    "actual_end": "2025-07-31",
+    "n_sessions": 396
+  },
+  "git": {
+    "head": "da9f5dcfad69ff1adac61488a627e1fecf7700c6",
+    "head_short": "da9f5dc",
+    "subject": "Unified decision pipeline: run_daily + DataSource + DecisionRecord + production-equivalent backtest (2026-09-04)",
+    "is_dirty": true
+  },
+  "data": {
+    "cache_dir": "/Users/curryzeng/Library/CloudStorage/OneDrive-TheChineseUniversityofHongKong/data/cache/equities",
+    "n_ticker_files": 1136,
+    "spy": {
+      "sha256_16": "c7bab00e299105d7",
+      "rows": 2663,
+      "first": "2016-01-04",
+      "last": "2026-08-06"
+    }
+  },
+  "config_snapshot": {
+    "starting_capital": 10000.0,
+    "fx_to_usd": 0.1282,
+    "risk_per_trade": 0.01,
+    "base_dir": "/Users/curryzeng/Library/CloudStorage/OneDrive-TheChineseUniversityofHongKong/WB-prog",
+    "state_file": "/Users/curryzeng/Library/CloudStorage/OneDrive-TheChineseUniversityofHongKong/WB-prog/production/data/state.json",
+    "reports_dir": "/Users/curryzeng/Library/CloudStorage/OneDrive-TheChineseUniversityofHongKong/WB-prog/reports",
+    "cache_dir": "/Users/curryzeng/Library/CloudStorage/OneDrive-TheChineseUniversityofHongKong/data/cache/equities",
+    "regime_market_index": "SPY",
+    "screener_min_market_cap": 10000000000.0,
+    "screener_min_dollar_vol": 50000000.0,
+    "screener_dvol_window": 20,
+    "screener_min_price": 10.0,
+    "screener_min_atr_pct": 2.0,
+    "screener_atr_period": 14,
+    "screener_min_rs_ratio": 1.0,
+    "screener_rs_top_pct": 0.2,
+    "screener_use_rs_top_pct": false,
+    "screener_min_adx": 20.0,
+    "screener_adx_period": 14,
+    "screener_top_n": 30,
+    "entry_mode": "setup",
+    "setup_score_threshold": 0.5,
+    "setup_quality_score_high": 0.8,
+    "setup_quality_score_mid": 0.6,
+    "setup_quality_mult_high": 1.0,
+    "setup_quality_mult_mid": 0.75,
+    "setup_quality_mult_low": 0.5,
+    "setup_pullback_ma_tol": 0.01,
+    "max_entry_gap_pct": 0.02,
+    "max_extension_from_pivot_pct": 0.03,
+    "setup_min_rs_rank": 10,
+    "stop_atr_mult": 1.5,
+    "take_profit_atr_mult": 2.5,
+    "trailing_atr_mult": 1.5,
+    "trailing_trigger_r": 1.0,
+    "max_holding_days": 30,
+    "max_open_positions": 5,
+    "max_position_pct": 0.25,
+    "slippage_pct": 0.0005,
+    "atr_period": 14,
+    "exit_engine_mode": "legacy"
+  },
+  "summary": {
+    "start": "2024-01-02",
+    "end": "2025-07-31",
+    "n_days": 396,
+    "start_equity": 1282.0,
+    "end_equity": 1353.41,
+    "return_pct": 5.57,
+    "cagr_pct": 3.51,
+    "sharpe": 0.513,
+    "max_dd_pct": -10.39,
+    "n_trades": 168,
+    "win_rate_pct": 47.6,
+    "profit_factor": 1.13,
+    "avg_net_pnl": 0.4,
+    "exposure_days_pct": 76.5,
+    "n_skipped_entries": 8,
+    "n_failed_screens": 0,
+    "regime_label_counts": {
+      "SIDEWAYS": 174,
+      "BEAR": 136,
+      "BULL": 86
+    },
+    "cash_end": 993.02,
+    "open_positions_end": 3
+  },
+  "dashboard": {
+    "return_pct": 5.57,
+    "cagr_pct": 3.51,
+    "max_dd_pct": -10.39,
+    "sharpe": 0.513,
+    "sortino": 0.557,
+    "downside_deviation_daily": 0.003431,
+    "calmar": 0.338,
+    "n_trades": 168,
+    "win_rate_pct": 47.6,
+    "profit_factor": 1.13,
+    "expectancy_r": 0.1878,
+    "avg_r": 0.1878,
+    "median_r": -0.562,
+    "sum_r": 31.545,
+    "avg_winner_r": 1.4573,
+    "avg_loser_r": -0.9942,
+    "largest_win_r": 1.667,
+    "largest_loss_r": -1.689,
+    "avg_holding_cal_days": 9.7798,
+    "median_holding_cal_days": 7.0,
+    "mfe_r_mean": 1.271,
+    "mae_r_mean": -0.8812,
+    "mfe_capture_mean": -2.1618,
+    "mfe_capture_total": 0.1477,
+    "avg_exposure_pct": 23.39,
+    "median_exposure_pct": 25.72,
+    "max_exposure_pct": 87.84,
+    "cash_drag_pct": 76.61,
+    "flat_days_pct": 23.48,
+    "avg_positions": 2.823,
+    "sessions_at_max_open_positions": 96,
+    "sessions_at_max_open_positions_pct": 24.24,
+    "exit_reason_distribution": {
+      "STOP_LOSS": {
+        "n": 84,
+        "share_pct": 50.0,
+        "sum_r": -86.165,
+        "avg_r": -1.0258,
+        "sum_net_pnl": -507.57
+      },
+      "TAKE_PROFIT": {
+        "n": 67,
+        "share_pct": 39.88,
+        "sum_r": 111.689,
+        "avg_r": 1.667,
+        "sum_net_pnl": 549.96
+      },
+      "TIME_STOP": {
+        "n": 9,
+        "share_pct": 5.36,
+        "sum_r": 5.036,
+        "avg_r": 0.5596,
+        "sum_net_pnl": 21.27
+      },
+      "TRAILING_STOP": {
+        "n": 8,
+        "share_pct": 4.76,
+        "sum_r": 0.985,
+        "avg_r": 0.1231,
+        "sum_net_pnl": 3.47
+      }
+    },
+    "by_entry_regime": {
+      "BULL": {
+        "n": 48,
+        "sum_r": 1.601,
+        "avg_r": 0.0334,
+        "win_rate_pct": 41.67,
+        "sum_net_pnl": -41.57
+      },
+      "SIDEWAYS": {
+        "n": 120,
+        "sum_r": 29.944,
+        "avg_r": 0.2495,
+        "win_rate_pct": 50.0,
+        "sum_net_pnl": 108.69
+      }
+    }
+  },
+  "reference_checks": {
+    "n_days": {
+      "reference": 396,
+      "actual": 396,
+      "ok": true
+    },
+    "n_trades": {
+      "reference": 168,
+      "actual": 168,
+      "ok": true
+    },
+    "return_pct": {
+      "reference": 5.57,
+      "actual": 5.57,
+      "ok": true
+    },
+    "sharpe": {
+      "reference": 0.513,
+      "actual": 0.513,
+      "ok": true
+    },
+    "max_dd_pct": {
+      "reference": -10.39,
+      "actual": -10.39,
+      "ok": true
+    },
+    "profit_factor": {
+      "reference": 1.13,
+      "actual": 1.13,
+      "ok": true
+    },
+    "win_rate_pct": {
+      "reference": 47.6,
+      "actual": 47.6,
+      "ok": true
+    }
+  },
+  "all_reference_checks_ok": true,
+  "outputs": {
+    "baseline_json": "reports/research_baseline_pitcorrected_2026-10-01.json",
+    "raw_backtest": "reports/production_bt_pitcorrected_2024-01-01_2025-07-31.json"
+  }
+}

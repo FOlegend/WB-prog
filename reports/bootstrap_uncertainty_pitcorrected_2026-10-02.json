@@ -1,0 +1,331 @@
+{
+  "generated": "2026-10-02",
+  "deliverable": "block-bootstrap uncertainty on S1–S3 headline metrics",
+  "method": {
+    "block_days": 10,
+    "n_boot": 5000,
+    "seed": 20261002,
+    "paired_across_variants": true,
+    "sharpe": "mean/std x sqrt(252) on daily equity returns (production convention)"
+  },
+  "stages": {
+    "S1": {
+      "point_estimate": {
+        "1.5": {
+          "sharpe": 0.5135214079605516,
+          "max_dd_pct": -10.386847059976368,
+          "return_pct": 5.5702028081122235,
+          "avg_r": 0.1878
+        },
+        "1.2": {
+          "sharpe": 0.41986345224736044,
+          "max_dd_pct": -14.784180020456873,
+          "return_pct": 5.383775351013975,
+          "avg_r": 0.138
+        },
+        "1.8": {
+          "sharpe": 1.1083081405346558,
+          "max_dd_pct": -8.725766407238133,
+          "return_pct": 11.087363494539826,
+          "avg_r": 0.2445
+        },
+        "2.0": {
+          "sharpe": 0.7226032583551866,
+          "max_dd_pct": -7.64416256363174,
+          "return_pct": 6.530421216848836,
+          "avg_r": 0.1549
+        }
+      },
+      "n_days": 395,
+      "block_days": 10,
+      "n_boot": 5000,
+      "paired": true,
+      "variants": {
+        "1.2": {
+          "sharpe": {
+            "delta_point": -0.0937,
+            "ci95_low": -1.0058,
+            "ci95_high": 0.8308,
+            "excludes_zero": false,
+            "prob_variant_better": 0.4074
+          },
+          "max_dd_pct": {
+            "delta_point": -4.3973,
+            "ci95_low": -8.0054,
+            "ci95_high": 2.8593,
+            "excludes_zero": false,
+            "prob_variant_better": 0.206
+          },
+          "return_pct": {
+            "delta_point": -0.1864,
+            "ci95_low": -12.0751,
+            "ci95_high": 12.8806,
+            "excludes_zero": false,
+            "prob_variant_better": 0.478
+          },
+          "avg_r": {
+            "delta_point": -0.0498,
+            "ci95_low": -0.3288,
+            "ci95_high": 0.2384,
+            "excludes_zero": false,
+            "prob_variant_better": 0.359
+          }
+        },
+        "1.8": {
+          "sharpe": {
+            "delta_point": 0.5948,
+            "ci95_low": -0.0889,
+            "ci95_high": 1.5029,
+            "excludes_zero": false,
+            "prob_variant_better": 0.952
+          },
+          "max_dd_pct": {
+            "delta_point": 1.6611,
+            "ci95_low": 0.1055,
+            "ci95_high": 8.6538,
+            "excludes_zero": true,
+            "prob_variant_better": 0.9792
+          },
+          "return_pct": {
+            "delta_point": 5.5172,
+            "ci95_low": -3.2585,
+            "ci95_high": 15.7873,
+            "excludes_zero": false,
+            "prob_variant_better": 0.8908
+          },
+          "avg_r": {
+            "delta_point": 0.0567,
+            "ci95_low": -0.2103,
+            "ci95_high": 0.3312,
+            "excludes_zero": false,
+            "prob_variant_better": 0.6634
+          }
+        },
+        "2.0": {
+          "sharpe": {
+            "delta_point": 0.2091,
+            "ci95_low": -0.6567,
+            "ci95_high": 1.2438,
+            "excludes_zero": false,
+            "prob_variant_better": 0.7174
+          },
+          "max_dd_pct": {
+            "delta_point": 2.7427,
+            "ci95_low": -0.8521,
+            "ci95_high": 8.6571,
+            "excludes_zero": false,
+            "prob_variant_better": 0.93
+          },
+          "return_pct": {
+            "delta_point": 0.9602,
+            "ci95_low": -10.358,
+            "ci95_high": 12.3638,
+            "excludes_zero": false,
+            "prob_variant_better": 0.6218
+          },
+          "avg_r": {
+            "delta_point": -0.0329,
+            "ci95_low": -0.3046,
+            "ci95_high": 0.2355,
+            "excludes_zero": false,
+            "prob_variant_better": 0.4074
+          }
+        }
+      },
+      "interpretation_rule": "A delta whose 95% CI excludes zero is larger than this sample's noise floor. A CI spanning zero means the sample cannot distinguish the variant from the control — which is NOT the same as the variant being harmful, and with 128-201 trades it mostly reflects limited power.",
+      "caveats": [
+        "The bootstrap resamples the realised path; it cannot correct for the selection channel documented in S1-D, where a variant's trade SET differs from the control's. These intervals cover sampling variation in the equity path, not the mechanism behind the difference.",
+        "Block length 10 is a judgement call matched to the ~10-day average holding period. Shorter blocks understate variance; longer blocks understate the effective sample size.",
+        "168 trades over 19 months is a small sample for any of these comparisons. A wide CI is a statement about power, not about merit."
+      ]
+    },
+    "S2": {
+      "point_estimate": {
+        "1.5": {
+          "sharpe": 0.5135214079605516,
+          "max_dd_pct": -10.386847059976368,
+          "return_pct": 5.5702028081122235,
+          "avg_r": 0.1878
+        },
+        "2.0": {
+          "sharpe": 0.30611973911193574,
+          "max_dd_pct": -10.719438130291225,
+          "return_pct": 3.123244929797142,
+          "avg_r": 0.1304
+        },
+        "2.5": {
+          "sharpe": 0.35462263795319415,
+          "max_dd_pct": -10.400247256992712,
+          "return_pct": 3.6622464898595775,
+          "avg_r": 0.1326
+        }
+      },
+      "n_days": 395,
+      "block_days": 10,
+      "n_boot": 5000,
+      "paired": true,
+      "variants": {
+        "2.0": {
+          "sharpe": {
+            "delta_point": -0.2074,
+            "ci95_low": -0.5021,
+            "ci95_high": 0.0345,
+            "excludes_zero": false,
+            "prob_variant_better": 0.047
+          },
+          "max_dd_pct": {
+            "delta_point": -0.3326,
+            "ci95_low": -2.7081,
+            "ci95_high": 0.4868,
+            "excludes_zero": false,
+            "prob_variant_better": 0.1472
+          },
+          "return_pct": {
+            "delta_point": -2.447,
+            "ci95_low": -6.1938,
+            "ci95_high": 0.3796,
+            "excludes_zero": false,
+            "prob_variant_better": 0.0462
+          },
+          "avg_r": {
+            "delta_point": -0.0574,
+            "ci95_low": -0.3453,
+            "ci95_high": 0.2185,
+            "excludes_zero": false,
+            "prob_variant_better": 0.3392
+          }
+        },
+        "2.5": {
+          "sharpe": {
+            "delta_point": -0.1589,
+            "ci95_low": -0.4592,
+            "ci95_high": 0.08,
+            "excludes_zero": false,
+            "prob_variant_better": 0.0988
+          },
+          "max_dd_pct": {
+            "delta_point": -0.0134,
+            "ci95_low": -2.401,
+            "ci95_high": 0.6587,
+            "excludes_zero": false,
+            "prob_variant_better": 0.2252
+          },
+          "return_pct": {
+            "delta_point": -1.908,
+            "ci95_low": -5.6904,
+            "ci95_high": 0.956,
+            "excludes_zero": false,
+            "prob_variant_better": 0.0984
+          },
+          "avg_r": {
+            "delta_point": -0.0552,
+            "ci95_low": -0.3383,
+            "ci95_high": 0.2327,
+            "excludes_zero": false,
+            "prob_variant_better": 0.3536
+          }
+        }
+      },
+      "interpretation_rule": "A delta whose 95% CI excludes zero is larger than this sample's noise floor. A CI spanning zero means the sample cannot distinguish the variant from the control — which is NOT the same as the variant being harmful, and with 128-201 trades it mostly reflects limited power.",
+      "caveats": [
+        "The bootstrap resamples the realised path; it cannot correct for the selection channel documented in S1-D, where a variant's trade SET differs from the control's. These intervals cover sampling variation in the equity path, not the mechanism behind the difference.",
+        "Block length 10 is a judgement call matched to the ~10-day average holding period. Shorter blocks understate variance; longer blocks understate the effective sample size.",
+        "168 trades over 19 months is a small sample for any of these comparisons. A wide CI is a statement about power, not about merit."
+      ]
+    },
+    "S3": {
+      "point_estimate": {
+        "1.0": {
+          "sharpe": 0.5135214079605516,
+          "max_dd_pct": -10.386847059976368,
+          "return_pct": 5.5702028081122235,
+          "avg_r": 0.1878
+        },
+        "0.5": {
+          "sharpe": 0.3152935319355132,
+          "max_dd_pct": -9.513946814075535,
+          "return_pct": 3.129485179407321,
+          "avg_r": 0.1158
+        },
+        "1.5": {
+          "sharpe": 0.48050936253115073,
+          "max_dd_pct": -10.30957984597599,
+          "return_pct": 5.177847113884537,
+          "avg_r": 0.1675
+        }
+      },
+      "n_days": 395,
+      "block_days": 10,
+      "n_boot": 5000,
+      "paired": true,
+      "variants": {
+        "0.5": {
+          "sharpe": {
+            "delta_point": -0.1982,
+            "ci95_low": -0.6017,
+            "ci95_high": 0.3146,
+            "excludes_zero": false,
+            "prob_variant_better": 0.2932
+          },
+          "max_dd_pct": {
+            "delta_point": 0.8729,
+            "ci95_low": -2.7741,
+            "ci95_high": 2.681,
+            "excludes_zero": false,
+            "prob_variant_better": 0.5438
+          },
+          "return_pct": {
+            "delta_point": -2.4407,
+            "ci95_low": -7.4335,
+            "ci95_high": 3.5156,
+            "excludes_zero": false,
+            "prob_variant_better": 0.2764
+          },
+          "avg_r": {
+            "delta_point": -0.072,
+            "ci95_low": -0.3407,
+            "ci95_high": 0.1848,
+            "excludes_zero": false,
+            "prob_variant_better": 0.2974
+          }
+        },
+        "1.5": {
+          "sharpe": {
+            "delta_point": -0.033,
+            "ci95_low": -0.2583,
+            "ci95_high": 0.2046,
+            "excludes_zero": false,
+            "prob_variant_better": 0.4604
+          },
+          "max_dd_pct": {
+            "delta_point": 0.0773,
+            "ci95_low": -1.2887,
+            "ci95_high": 1.201,
+            "excludes_zero": false,
+            "prob_variant_better": 0.5612
+          },
+          "return_pct": {
+            "delta_point": -0.3924,
+            "ci95_low": -3.248,
+            "ci95_high": 2.5445,
+            "excludes_zero": false,
+            "prob_variant_better": 0.4552
+          },
+          "avg_r": {
+            "delta_point": -0.0203,
+            "ci95_low": -0.3064,
+            "ci95_high": 0.2571,
+            "excludes_zero": false,
+            "prob_variant_better": 0.4324
+          }
+        }
+      },
+      "interpretation_rule": "A delta whose 95% CI excludes zero is larger than this sample's noise floor. A CI spanning zero means the sample cannot distinguish the variant from the control — which is NOT the same as the variant being harmful, and with 128-201 trades it mostly reflects limited power.",
+      "caveats": [
+        "The bootstrap resamples the realised path; it cannot correct for the selection channel documented in S1-D, where a variant's trade SET differs from the control's. These intervals cover sampling variation in the equity path, not the mechanism behind the difference.",
+        "Block length 10 is a judgement call matched to the ~10-day average holding period. Shorter blocks understate variance; longer blocks understate the effective sample size.",
+        "168 trades over 19 months is a small sample for any of these comparisons. A wide CI is a statement about power, not about merit."
+      ]
+    }
+  }
+}

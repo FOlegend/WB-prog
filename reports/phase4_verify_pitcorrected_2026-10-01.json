@@ -1,0 +1,249 @@
+{
+  "generated": "2026-10-01",
+  "purpose": "independent verification of the Phase-4 diagnostic claims",
+  "V1_risk_engine_agreement": {
+    "sizing_attempts_replayed": 610,
+    "allow_matches_record": 609,
+    "allow_mismatches": 1,
+    "agreement_pct": 99.84,
+    "rejects_confirmed_by_real_engine": 426,
+    "reject_reasons_from_real_engine": {
+      "risk_budget_insufficient_for_one_share": 426
+    },
+    "mismatch_examples": [
+      {
+        "session": "2025-05-30",
+        "ticker": "HOOD",
+        "recorded_allow": true,
+        "replayed_allow": false,
+        "recorded_shares": 1,
+        "replayed_shares": 0,
+        "reasoning": "風險預算 $4.86 不足以買 1 股（stop_dist=4.87）"
+      }
+    ],
+    "verdict": "re-derivation CONFIRMED by the real risk engine"
+  },
+  "V2_decomposition": {
+    "full_window": {
+      "sessions": 396,
+      "system_return_pct": 5.57,
+      "spy_return_pct": 36.26,
+      "avg_exposure_pct": 23.45,
+      "sessions_invested": 303,
+      "method_static_matched_pct": 8.5,
+      "method_daily_matched_pct": 5.75,
+      "method_invested_days_only_pct": 22.49,
+      "selection_gap_static_pp": -2.93,
+      "selection_gap_daily_pp": -0.18,
+      "raw_gap_pp": -30.69
+    },
+    "first_half": {
+      "sessions": 198,
+      "system_return_pct": 4.27,
+      "spy_return_pct": 24.79,
+      "avg_exposure_pct": 20.16,
+      "sessions_invested": 148,
+      "method_static_matched_pct": 5.0,
+      "method_daily_matched_pct": 3.84,
+      "method_invested_days_only_pct": 13.1,
+      "selection_gap_static_pp": -0.73,
+      "selection_gap_daily_pp": 0.43,
+      "raw_gap_pp": -20.53
+    },
+    "second_half": {
+      "sessions": 198,
+      "system_return_pct": 1.6,
+      "spy_return_pct": 10.04,
+      "avg_exposure_pct": 26.73,
+      "sessions_invested": 154,
+      "method_static_matched_pct": 2.68,
+      "method_daily_matched_pct": 2.03,
+      "method_invested_days_only_pct": 9.16,
+      "selection_gap_static_pp": -1.09,
+      "selection_gap_daily_pp": -0.44,
+      "raw_gap_pp": -8.44
+    },
+    "calendar_2024": {
+      "sessions": 252,
+      "system_return_pct": 6.5,
+      "spy_return_pct": 25.59,
+      "avg_exposure_pct": 19.53,
+      "sessions_invested": 186,
+      "method_static_matched_pct": 5.0,
+      "method_daily_matched_pct": 4.2,
+      "method_invested_days_only_pct": 13.44,
+      "selection_gap_static_pp": 1.51,
+      "selection_gap_daily_pp": 2.3,
+      "raw_gap_pp": -19.09
+    },
+    "calendar_2025": {
+      "sessions": 144,
+      "system_return_pct": -0.88,
+      "spy_return_pct": 8.76,
+      "avg_exposure_pct": 30.5,
+      "sessions_invested": 117,
+      "method_static_matched_pct": 2.67,
+      "method_daily_matched_pct": 1.48,
+      "method_invested_days_only_pct": 7.98,
+      "selection_gap_static_pp": -3.55,
+      "selection_gap_daily_pp": -2.36,
+      "raw_gap_pp": -9.64
+    },
+    "robustness": {
+      "selection_gap_by_window_pp": {
+        "full_window": -0.18,
+        "first_half": 0.43,
+        "second_half": -0.44,
+        "calendar_2024": 2.3,
+        "calendar_2025": -2.36
+      },
+      "note": "if every window shows selection ~= 0 and a large raw gap, the Phase-4 conclusion is not a period artefact"
+    }
+  },
+  "V3_sizing_counterfactual": {
+    "variants": {
+      "as_recorded": {
+        "valid_setups": 610,
+        "sizeable": 184,
+        "sizeable_pct": 30.16,
+        "delta_vs_recorded": 0
+      },
+      "eff_doubled_to_0.5": {
+        "valid_setups": 610,
+        "sizeable": 248,
+        "sizeable_pct": 40.66,
+        "delta_vs_recorded": 64
+      },
+      "regime_mult_1.0_quality_kept": {
+        "valid_setups": 610,
+        "sizeable": 358,
+        "sizeable_pct": 58.69,
+        "delta_vs_recorded": 174
+      },
+      "full_1.0": {
+        "valid_setups": 610,
+        "sizeable": 421,
+        "sizeable_pct": 69.02,
+        "delta_vs_recorded": 237
+      }
+    },
+    "method": "pure arithmetic on the captured records using the production sizing formula; NO backtest was re-run and NO parameter was changed — this only bounds which lever could matter",
+    "reading": "if raising the effective multiplier barely increases the sizeable count, the binding constraint is the ACCOUNT SIZE / stop distance, not the multiplier"
+  },
+  "V4_entry_gap_stability": {
+    "full_window": {
+      "<0%": {
+        "n": 82,
+        "avg_r": 0.2119,
+        "win_rate_pct": 48.78
+      },
+      "0-0.5%": {
+        "n": 46,
+        "avg_r": 0.2373,
+        "win_rate_pct": 50.0
+      },
+      "0.5-1%": {
+        "n": 24,
+        "avg_r": -0.0069,
+        "win_rate_pct": 41.67
+      },
+      "1-2%": {
+        "n": 16,
+        "avg_r": 0.2138,
+        "win_rate_pct": 50.0
+      }
+    },
+    "by_period": {
+      "first_half": {
+        "<0%": {
+          "n": 49,
+          "avg_r": 0.1973,
+          "win_rate_pct": 46.94
+        },
+        "0-0.5%": {
+          "n": 21,
+          "avg_r": 0.2405,
+          "win_rate_pct": 47.62
+        },
+        "0.5-1%": {
+          "n": 10,
+          "avg_r": 0.3454,
+          "win_rate_pct": 60.0
+        },
+        "1-2%": {
+          "n": 4,
+          "avg_r": -0.0482,
+          "win_rate_pct": 50.0
+        }
+      },
+      "second_half": {
+        "<0%": {
+          "n": 33,
+          "avg_r": 0.2335,
+          "win_rate_pct": 51.52
+        },
+        "0-0.5%": {
+          "n": 25,
+          "avg_r": 0.2347,
+          "win_rate_pct": 52.0
+        },
+        "0.5-1%": {
+          "n": 14,
+          "avg_r": -0.2586,
+          "win_rate_pct": 28.57
+        },
+        "1-2%": {
+          "n": 12,
+          "avg_r": 0.3011,
+          "win_rate_pct": 50.0
+        }
+      }
+    },
+    "by_year": {
+      "2024": {
+        "<0%": {
+          "n": 58,
+          "avg_r": 0.3028,
+          "win_rate_pct": 50.0
+        },
+        "0-0.5%": {
+          "n": 29,
+          "avg_r": 0.0676,
+          "win_rate_pct": 44.83
+        },
+        "0.5-1%": {
+          "n": 11,
+          "avg_r": 0.4655,
+          "win_rate_pct": 63.64
+        },
+        "1-2%": {
+          "n": 5,
+          "avg_r": -0.2386,
+          "win_rate_pct": 40.0
+        }
+      },
+      "2025": {
+        "<0%": {
+          "n": 24,
+          "avg_r": -0.008,
+          "win_rate_pct": 45.83
+        },
+        "0-0.5%": {
+          "n": 17,
+          "avg_r": 0.5269,
+          "win_rate_pct": 58.82
+        },
+        "0.5-1%": {
+          "n": 13,
+          "avg_r": -0.4067,
+          "win_rate_pct": 23.08
+        },
+        "1-2%": {
+          "n": 11,
+          "avg_r": 0.4194,
+          "win_rate_pct": 54.55
+        }
+      }
+    }
+  }
+}

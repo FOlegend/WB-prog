@@ -1,0 +1,94 @@
+{
+  "generated": "2026-10-04",
+  "deliverable": "BS-§12 temporal-consistency diagnostic + §16 shadow rule",
+  "no_production_change": true,
+  "policy_used": {
+    "max_age_days": 7,
+    "temporal_skew_days": 3,
+    "policy_id": "bs5-proposed-2026-10-04",
+    "approved_by": "PENDING_HUMAN_APPROVAL",
+    "on_failure": "RECORD_ONLY",
+    "rationale": "7 d clears a normal weekend/holiday cluster and one missed manual refresh; 3 d allows the two caches to refresh independently while still catching a real split"
+  },
+  "policy_status": "PROPOSED — thresholds NOT active in ProductionConfig",
+  "rows": [
+    {
+      "as_of": "2026-10-04",
+      "spy_tail_date": "2026-08-06",
+      "breadth_tail_date": "2025-07-31",
+      "spy_age_days": 59,
+      "breadth_age_days": 430,
+      "spy_matches_as_of": false,
+      "breadth_matches_as_of": false,
+      "temporal_consistent": false,
+      "freshness_valid": false,
+      "state": "STALE",
+      "reasons": [
+        "BREADTH_STALE",
+        "SPY_STALE"
+      ],
+      "decision_trustworthy": false,
+      "shadow_session_qualifies": false
+    },
+    {
+      "as_of": "2026-08-06",
+      "spy_tail_date": "2026-08-06",
+      "breadth_tail_date": "2025-07-31",
+      "spy_age_days": 0,
+      "breadth_age_days": 371,
+      "spy_matches_as_of": true,
+      "breadth_matches_as_of": false,
+      "temporal_consistent": false,
+      "freshness_valid": false,
+      "state": "STALE",
+      "reasons": [
+        "BREADTH_STALE"
+      ],
+      "decision_trustworthy": false,
+      "shadow_session_qualifies": false
+    },
+    {
+      "as_of": "2025-07-31",
+      "spy_tail_date": "2025-07-31",
+      "breadth_tail_date": "2025-07-31",
+      "spy_age_days": 0,
+      "breadth_age_days": 0,
+      "spy_matches_as_of": true,
+      "breadth_matches_as_of": true,
+      "temporal_consistent": true,
+      "freshness_valid": true,
+      "state": "VALID",
+      "reasons": [
+        "OK"
+      ],
+      "decision_trustworthy": true,
+      "shadow_session_qualifies": true
+    },
+    {
+      "as_of": "2024-06-14",
+      "spy_tail_date": "2024-06-14",
+      "breadth_tail_date": "2024-06-14",
+      "spy_age_days": 0,
+      "breadth_age_days": 0,
+      "spy_matches_as_of": true,
+      "breadth_matches_as_of": true,
+      "temporal_consistent": true,
+      "freshness_valid": true,
+      "state": "VALID",
+      "reasons": [
+        "OK"
+      ],
+      "decision_trustworthy": true,
+      "shadow_session_qualifies": true
+    }
+  ],
+  "shadow_gate": {
+    "rule": "a live shadow session counts toward the 20-session gate only if regime input validity == VALID",
+    "predicate": "production.data_validity.state == 'VALID'",
+    "non_qualifying_label": "NON_QUALIFYING_DATA_INVALID",
+    "required_sessions": 20,
+    "observed_qualifying_sessions": 0,
+    "current_status": "PENDING — 0 sessions observed to date",
+    "note": "the pre-existing 0-session pending state is UNAFFECTED: with the proposed policy, every session recorded so far would have been non-qualifying anyway, so this task does not reset or advance the gate"
+  }
+}

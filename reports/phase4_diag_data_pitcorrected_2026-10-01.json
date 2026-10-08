@@ -1,0 +1,411 @@
+{
+  "generated": "2026-10-01",
+  "window": [
+    "2024-01-02",
+    "2025-07-31"
+  ],
+  "harness": "production/backtest.py::ProductionBacktest (unchanged) + in-process DecisionRecord capture; no production file modified",
+  "mode": "legacy (production default)",
+  "system_summary": {
+    "start": "2024-01-02",
+    "end": "2025-07-31",
+    "n_days": 396,
+    "start_equity": 1282.0,
+    "end_equity": 1353.41,
+    "return_pct": 5.57,
+    "cagr_pct": 3.51,
+    "sharpe": 0.513,
+    "max_dd_pct": -10.39,
+    "n_trades": 168,
+    "win_rate_pct": 47.6,
+    "profit_factor": 1.13,
+    "avg_net_pnl": 0.4,
+    "exposure_days_pct": 76.5,
+    "n_skipped_entries": 8,
+    "n_failed_screens": 0,
+    "regime_label_counts": {
+      "SIDEWAYS": 174,
+      "BEAR": 136,
+      "BULL": 86
+    },
+    "cash_end": 993.02,
+    "open_positions_end": 3
+  },
+  "D1_exit_attribution": {
+    "n_trades": 168,
+    "realised_r": {
+      "n": 168,
+      "mean": 0.1878,
+      "median": -0.562,
+      "min": -1.689,
+      "max": 1.667,
+      "std": 1.2791
+    },
+    "expectancy_r": 0.1878,
+    "total_r": 31.545,
+    "by_reason": {
+      "STOP_LOSS": {
+        "n": 84,
+        "share_pct": 50.0,
+        "wins": 0,
+        "win_rate_pct": 0.0,
+        "sum_r": -86.165,
+        "avg_r": -1.0258,
+        "sum_net_pnl": -507.57,
+        "avg_mfe_r": 0.4827,
+        "avg_mae_r": -1.3594,
+        "avg_give_back_r": 1.5084,
+        "pct_mfe_ge_1r": 13.1,
+        "pct_mfe_ge_2r": 0.0
+      },
+      "TAKE_PROFIT": {
+        "n": 67,
+        "share_pct": 39.88,
+        "wins": 67,
+        "win_rate_pct": 100.0,
+        "sum_r": 111.689,
+        "avg_r": 1.667,
+        "sum_net_pnl": 549.96,
+        "avg_mfe_r": 2.2491,
+        "avg_mae_r": -0.3617,
+        "avg_give_back_r": 0.5821,
+        "pct_mfe_ge_1r": 100.0,
+        "pct_mfe_ge_2r": 38.81
+      },
+      "TIME_STOP": {
+        "n": 9,
+        "share_pct": 5.36,
+        "wins": 7,
+        "win_rate_pct": 77.78,
+        "sum_r": 5.036,
+        "avg_r": 0.5596,
+        "sum_net_pnl": 21.27,
+        "avg_mfe_r": 1.2672,
+        "avg_mae_r": -0.5793,
+        "avg_give_back_r": 0.7076,
+        "pct_mfe_ge_1r": 77.78,
+        "pct_mfe_ge_2r": 0.0
+      },
+      "TRAILING_STOP": {
+        "n": 8,
+        "share_pct": 4.76,
+        "wins": 7,
+        "win_rate_pct": 87.5,
+        "sum_r": 0.985,
+        "avg_r": 0.1231,
+        "sum_net_pnl": 3.47,
+        "avg_mfe_r": 1.3608,
+        "avg_mae_r": -0.5507,
+        "avg_give_back_r": 1.2377,
+        "pct_mfe_ge_1r": 100.0,
+        "pct_mfe_ge_2r": 0.0
+      }
+    },
+    "winners_given_back": {
+      "n": 13,
+      "share_pct": 7.74,
+      "tickers": [
+        "CVNA",
+        "DAL",
+        "FTNT",
+        "GILD",
+        "HOOD",
+        "IBKR",
+        "KLAC",
+        "MOS",
+        "NRG",
+        "PLTR",
+        "PYPL",
+        "WSM",
+        "XYZ"
+      ],
+      "note": "reached >= +1R unrealised, then closed at <= 0R"
+    },
+    "stops_with_high_mfe": {
+      "n": 11,
+      "note": "STOP_LOSS trades that were >= +1R in favour first (entry timing / stop distance, not selection)"
+    }
+  },
+  "D2_funnel": {
+    "sessions": 396,
+    "funnel": {
+      "candidate_ticker_evaluations": 969,
+      "setup_valid": 610,
+      "risk_allowed": 185,
+      "risk_rejected": 425,
+      "buy_proposals": 185,
+      "filled_trades": 168,
+      "rejected_at_next_open": 8
+    },
+    "conversion_pct": {
+      "candidate->valid_setup": 62.95,
+      "valid_setup->risk_allowed": 30.33,
+      "risk_allowed->proposal": 100.0,
+      "proposal->filled": 90.81,
+      "candidate->filled": 17.34
+    },
+    "setup_skip_reasons": {},
+    "risk_rejection_causes": {
+      "risk_budget_insufficient_for_one_share": 425
+    },
+    "risk_rejection_causes_pct": {
+      "risk_budget_insufficient_for_one_share": 100.0
+    },
+    "mean_risk_budget_per_rejected_setup_usd": 5.24,
+    "risk_cause_method": "AUTHORITATIVE: the production risk engine (production/risk/risk.py::size_swing_position) is re-called on the reconstructed inputs and its own rejection string is classified. Reconstruction validated in phase4_verify.py V1 (99.7% agreement). No parameter changed and nothing re-simulated",
+    "entry_session_status": {
+      "EMPTY": 288,
+      "OK": 108
+    },
+    "entry_blocked_reasons": {
+      "max_open_positions": 131,
+      "regime_defensive": 136
+    },
+    "sessions_with_valid_setup_but_entry_blocked": 0,
+    "next_open_skip_reasons": {
+      "GAP_TOO_HIGH": 8
+    },
+    "note": "counts only — no P&L is simulated for unfilled signals. When entries are blocked by regime/budget the pipeline never evaluates setups, so foregone signals are NOT observable from the records."
+  },
+  "D3_quality": {
+    "by_setup_score": {
+      "_rows_with_value": 168,
+      "_rows_without_value": 0,
+      "<0.60": {
+        "n": 8,
+        "share_pct": 4.76,
+        "avg_r": 0.8626,
+        "sum_r": 6.901,
+        "win_rate_pct": 75.0,
+        "sum_net_pnl": 18.65
+      },
+      "0.60-0.70": {
+        "n": 96,
+        "share_pct": 57.14,
+        "avg_r": 0.1784,
+        "sum_r": 17.129,
+        "win_rate_pct": 47.92,
+        "sum_net_pnl": 69.06
+      },
+      "0.70-0.80": {
+        "n": 19,
+        "share_pct": 11.31,
+        "avg_r": 0.3055,
+        "sum_r": 5.805,
+        "win_rate_pct": 52.63,
+        "sum_net_pnl": 13.39
+      },
+      "0.80-0.90": {
+        "n": 43,
+        "share_pct": 25.6,
+        "avg_r": 0.0243,
+        "sum_r": 1.043,
+        "win_rate_pct": 41.86,
+        "sum_net_pnl": -36.67
+      },
+      ">=0.90": {
+        "n": 2,
+        "share_pct": 1.19,
+        "avg_r": 0.3335,
+        "sum_r": 0.667,
+        "win_rate_pct": 50.0,
+        "sum_net_pnl": 2.7
+      }
+    },
+    "by_entry_gap": {
+      "_rows_with_value": 168,
+      "_rows_without_value": 0,
+      "<0%": {
+        "n": 82,
+        "share_pct": 48.81,
+        "avg_r": 0.2119,
+        "sum_r": 17.374,
+        "win_rate_pct": 48.78,
+        "sum_net_pnl": 26.51
+      },
+      "0-0.5%": {
+        "n": 46,
+        "share_pct": 27.38,
+        "avg_r": 0.2373,
+        "sum_r": 10.917,
+        "win_rate_pct": 50.0,
+        "sum_net_pnl": 40.35
+      },
+      "0.5-1%": {
+        "n": 24,
+        "share_pct": 14.29,
+        "avg_r": -0.0069,
+        "sum_r": -0.166,
+        "win_rate_pct": 41.67,
+        "sum_net_pnl": -18.57
+      },
+      "1-2%": {
+        "n": 16,
+        "share_pct": 9.52,
+        "avg_r": 0.2138,
+        "sum_r": 3.42,
+        "win_rate_pct": 50.0,
+        "sum_net_pnl": 18.83
+      }
+    },
+    "by_extension": {
+      "_rows_with_value": 0,
+      "_rows_without_value": 168,
+      "<0%": {
+        "n": 0
+      },
+      "0-1%": {
+        "n": 0
+      },
+      "1-2%": {
+        "n": 0
+      },
+      "2-3%": {
+        "n": 0
+      }
+    },
+    "by_regime_at_entry": {
+      "BULL": {
+        "n": 48,
+        "share_pct": 28.57,
+        "avg_r": 0.0334,
+        "sum_r": 1.601,
+        "win_rate_pct": 41.67,
+        "sum_net_pnl": -41.57
+      },
+      "SIDEWAYS": {
+        "n": 120,
+        "share_pct": 71.43,
+        "avg_r": 0.2495,
+        "sum_r": 29.944,
+        "win_rate_pct": 50.83,
+        "sum_net_pnl": 108.69
+      }
+    },
+    "by_size_multiplier": {
+      "_rows_with_value": 168,
+      "_rows_without_value": 0,
+      "0.5": {
+        "n": 127,
+        "share_pct": 75.6,
+        "avg_r": 0.2267,
+        "sum_r": 28.785,
+        "win_rate_pct": 49.61,
+        "sum_net_pnl": 102.2
+      },
+      "1.0": {
+        "n": 41,
+        "share_pct": 24.4,
+        "avg_r": 0.0673,
+        "sum_r": 2.76,
+        "win_rate_pct": 43.9,
+        "sum_net_pnl": -35.08
+      }
+    }
+  },
+  "D4_risk": {
+    "risk_per_trade_target_pct": 1.0,
+    "realised_risk_pct_of_equity": {
+      "n": 168,
+      "mean": 0.3992,
+      "median": 0.3571,
+      "min": 0.132,
+      "max": 0.9965,
+      "std": 0.1604
+    },
+    "trades_at_or_below_target": 168,
+    "trades_above_target": 0,
+    "position_value_pct_of_equity": {
+      "n": 168,
+      "mean": 8.4261,
+      "median": 7.5351,
+      "min": 1.5817,
+      "max": 23.0763,
+      "std": 3.9777
+    },
+    "max_position_pct_limit": 25.0,
+    "trades_at_position_cap": 0,
+    "r_distribution": {
+      "mean": 0.1878,
+      "median": -0.562,
+      "share_positive_pct": 48.21,
+      "share_ge_1r_pct": 41.07,
+      "share_le_minus1r_pct": 50.0,
+      "sum_r": 31.545
+    },
+    "max_consecutive_losing_trades": 13,
+    "worst_r_sequence_drawdown": -16.436
+  },
+  "D5_exposure": {
+    "sessions": 396,
+    "regime_label_counts": {
+      "BULL": 86,
+      "SIDEWAYS": 174,
+      "BEAR": 136
+    },
+    "position_size_mult_counts": {
+      "1.0": 61,
+      "0.5": 199,
+      "0.0": 136
+    },
+    "sessions_with_mult_zero": 136,
+    "sessions_with_mult_zero_pct": 34.34,
+    "max_size_mult_observed": 1.0,
+    "veto_flag_counts": {
+      "BEARISH_BREADTH_DIVERGENCE": 70,
+      "BREADTH_THRUST": 27
+    },
+    "positions_held_distribution": {
+      "0": 93,
+      "1": 18,
+      "2": 32,
+      "3": 72,
+      "4": 85,
+      "5": 96
+    },
+    "sessions_flat": 93,
+    "sessions_flat_pct": 23.48,
+    "sessions_at_max_open_positions": 96,
+    "sessions_at_max_open_positions_pct": 24.24,
+    "avg_positions_held": 2.823,
+    "avg_exposure_pct": 23.39,
+    "max_exposure_pct": 87.84,
+    "cash_drag_pct": 76.61,
+    "structural_note": "size multiplier is capped: base BULL 1.0 / SIDEWAYS 0.5 / BEAR 0.0, then the Bearish Breadth Divergence cap applies min(x, 0.50) whenever the HMM label is BULL and breadth is declining"
+  },
+  "D6_benchmark": {
+    "window": [
+      "2024-01-02",
+      "2025-07-31"
+    ],
+    "sessions": 396,
+    "system": {
+      "return_pct": 5.57,
+      "cagr_pct": 3.51,
+      "sharpe": 0.513,
+      "max_dd_pct": -10.39,
+      "profit_factor": 1.13,
+      "win_rate_pct": 47.6
+    },
+    "spy_buy_and_hold": {
+      "return_pct": 36.26,
+      "first_close": 458.8092346191406,
+      "last_close": 625.1531372070312
+    },
+    "exposure": {
+      "avg_exposure_pct": 23.39,
+      "sessions_invested": 303,
+      "sessions_invested_pct": 76.52
+    },
+    "exposure_matched_benchmarks": {
+      "spy_x_avg_exposure_pct": 8.48,
+      "spy_daily_exposure_weighted_pct": 5.75,
+      "spy_on_invested_days_only_pct": 22.49
+    },
+    "gap": {
+      "system_minus_spy_pp": -30.69,
+      "system_minus_daily_matched_pp": -0.18,
+      "note": "the daily-matched figure isolates decision quality from exposure: it applies the system's OWN daily exposure weight to SPY. A value near 0 means the gap is exposure, not skill."
+    }
+  }
+}

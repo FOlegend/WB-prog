@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-10-05T22:58:44",
+  "as_of": "2026-08-06",
+  "breadth_date": "2026-08-06",
+  "breadth_rows": 2411,
+  "breadth_first_date": "2017-01-03",
+  "constituent_source": "github.com/chinobing/historical_sp500_constituents",
+  "constituent_file": "sp_500_historical_components.csv",
+  "constituent_sha256": "457035ecec33c69f61c6249d6a114626f85a80c4c5f8cab9aa3e5c5e5f5d5cdb",
+  "constituent_snapshot_date": "2026-10-04",
+  "constituent_snapshot_count": 503,
+  "constituent_trusted_from": "2017-01-01",
+  "constituent_trusted_from_reason": "the candidate's pre-2017 snapshots carry 442-478 members where the index had ~498; those rows are EXCLUDED, not repaired",
+  "panel_days_without_snapshot_excluded": 252,
+  "current_universe_without_cache_file": [
+    "BE",
+    "P",
+    "RDDT",
+    "VMRK"
+  ],
+  "historical_only_tickers_without_cache_count": 107,
+  "ticker_normalisation": "regime_dual_engine.pit_constituents.norm (Wikipedia BRK.B -> cache BRK-B)",
+  "membership_hash": "1926e378a6629b820d8018c94b5395b1e4801b21b49ef5d9b5492616e432b388",
+  "ohlcv_source": "local data/cache/equities (UNCHANGED; not rewritten)",
+  "ohlcv_tail_date": "2026-08-06",
+  "price_basis": "auto_adjust=True (fully adjusted: splits + dividends)",
+  "breadth_formula": "regime_dual_engine.pit_breadth_data.build_breadth — UNMODIFIED",
+  "universe_source": "candidate constituent snapshots (this build)",
+  "frozen_research_artifacts_touched": [],
+  "not_validated": [
+    "the candidate's date semantics (announcement vs effective date) differ from the frozen source by 0-2 days on 80% of events; the audit could not determine which is correct from data alone",
+    "the candidate's 2017+ history has not been validated against any independent source for the events after 2026-06-30"
+  ]
+}

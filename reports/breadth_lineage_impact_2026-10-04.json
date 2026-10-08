@@ -1,0 +1,109 @@
+{
+  "generated": "2026-10-04",
+  "as_of": "2026-08-06",
+  "method": "reuses pit_breadth_data.build_breadth + PitMembership.membership_matrix unchanged; ONLY the price source differs between the two arms",
+  "baseline": {
+    "rows": 2663,
+    "start": "2016-01-04",
+    "end": "2026-08-06",
+    "last_pct": 64.4,
+    "last_ad": 57908.0,
+    "last_n": 500
+  },
+  "baseline_reproduction_check": {
+    "overlap_days": 2408,
+    "max_abs_diff_pp": 0.0,
+    "identical": true
+  },
+  "coverage": {
+    "cache_tickers": 614,
+    "live_tickers": 603,
+    "tickers_lost_in_live": 11,
+    "tickers_with_pre_2026_06_tail_in_cache": 92,
+    "examples_lost": [
+      "AAL@2024-09-23",
+      "AAP@2023-08-25",
+      "AET@2018-11-29",
+      "AIV@2020-12-21",
+      "ALK@2023-12-18",
+      "AMG@2019-12-23",
+      "AMTM@2024-12-23",
+      "AN@2017-08-08",
+      "ANDV@2018-10-01",
+      "AYI@2018-06-18"
+    ],
+    "note": "these are delisted / acquired members. Live yfinance returns 'no price data found' for them, so a live re-download loses their history entirely. This is a COVERAGE effect and is NOT evidence about the price basis."
+  },
+  "A_B_sma_and_pct": {
+    "overlap_days": 2662,
+    "days_exactly_equal": 50,
+    "pct_days_identical": 1.8783,
+    "max_abs_diff_pp": 1.88600000000001,
+    "mean_abs_diff_pp": 0.24869196093163037,
+    "p99_abs_diff_pp": 1.3721199999999971,
+    "days_diff_gt_0_5pp": 328,
+    "days_diff_gt_1_0pp": 66,
+    "worst_day": "2017-10-11",
+    "worst_day_diff_pp": 1.88600000000001
+  },
+  "C_ad_line": {
+    "max_abs_diff": 578.0,
+    "mean_abs_diff": 407.64800901577763,
+    "final_baseline": 58004.0,
+    "final_counterfactual": 57433.0,
+    "final_diff": -571.0,
+    "final_diff_pct_of_baseline": -0.9844148679401421
+  },
+  "D_regime": {
+    "overlap_days": 2603,
+    "max_abs_diff_pp": 5.555555555555557,
+    "mean_abs_diff_pp": 0.4689927109398799,
+    "final_baseline_pctile": 91.26984126984127,
+    "final_counterfactual_pctile": 91.26984126984127,
+    "final_diff_pp": 0.0,
+    "days_BULL_side_flips": 27,
+    "days_BEAR_side_flips": 14,
+    "composite_half_weight_note": "breadth contributes 50% of composite_score; a percentile move of x pp moves the composite by 0.5x pp"
+  },
+  "E_price_basis_isolation": {
+    "method": "each MEASURED factor applied to the SAME panel, so the universe, the dates and the coverage are identical and the only difference is the price scale",
+    "results": {
+      "AMCR_worst": {
+        "factor": 0.956084,
+        "pct_max_abs_diff_pp": 0.0,
+        "pct_days_changed": 0,
+        "ad_max_abs_diff": 0.0,
+        "ad_days_changed": 0
+      },
+      "median": {
+        "factor": 0.995432,
+        "pct_max_abs_diff_pp": 0.0,
+        "pct_days_changed": 0,
+        "ad_max_abs_diff": 0.0,
+        "ad_days_changed": 0
+      },
+      "mildest": {
+        "factor": 0.999829,
+        "pct_max_abs_diff_pp": 0.0,
+        "pct_days_changed": 0,
+        "ad_max_abs_diff": 0.0,
+        "ad_days_changed": 0
+      },
+      "MNST_split": {
+        "factor": 0.5,
+        "pct_max_abs_diff_pp": 0.0,
+        "pct_days_changed": 0,
+        "ad_max_abs_diff": 0.0,
+        "ad_days_changed": 0
+      },
+      "APH_split": {
+        "factor": 0.499226,
+        "pct_max_abs_diff_pp": 0.0,
+        "pct_days_changed": 0,
+        "ad_max_abs_diff": 0.0,
+        "ad_days_changed": 0
+      }
+    },
+    "conclusion": "a constant rescale changes neither close > 50DMA nor sign(close.diff()), so neither pct_above_50dma nor ad_line can move; every observed difference in arm C is attributable to coverage, not to price basis"
+  }
+}

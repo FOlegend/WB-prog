@@ -1,0 +1,284 @@
+{
+  "generated": "2026-10-02",
+  "deliverable": "S1-D — decomposition of the stop_atr_mult=1.8 effect into position size / R unit / trailing arm / trade selection",
+  "method": {
+    "no_production_change": true,
+    "A": "control trades re-expressed in each variant's R unit (pure arithmetic; isolates the R-denominator channel)",
+    "B": "realised dollar risk and position value per variant (isolates the sizing channel)",
+    "C": "trailing arming price in ATR units (isolates the trigger channel)",
+    "D": "shared vs unique trade split (isolates selection)",
+    "E": "control exit reasons on the shared trades (isolates execution)"
+  },
+  "headline_by_variant": {
+    "1.2": {
+      "return_pct": 5.38,
+      "sharpe": 0.419,
+      "max_dd_pct": -14.78,
+      "calmar": 0.229,
+      "profit_factor": 1.1,
+      "n_trades": 201,
+      "avg_exposure_pct": 26.6,
+      "avg_r": 0.138,
+      "sum_r": 27.736,
+      "sum_net_pnl": 69.03,
+      "unit_free": "return_pct / sharpe / max_dd_pct / sum_net_pnl do not depend on the R denominator; avg_r and sum_r DO"
+    },
+    "1.5": {
+      "return_pct": 5.57,
+      "sharpe": 0.513,
+      "max_dd_pct": -10.39,
+      "calmar": 0.338,
+      "profit_factor": 1.13,
+      "n_trades": 168,
+      "avg_exposure_pct": 23.39,
+      "avg_r": 0.1878,
+      "sum_r": 31.545,
+      "sum_net_pnl": 67.12,
+      "unit_free": "return_pct / sharpe / max_dd_pct / sum_net_pnl do not depend on the R denominator; avg_r and sum_r DO"
+    },
+    "1.8": {
+      "return_pct": 11.09,
+      "sharpe": 1.107,
+      "max_dd_pct": -8.73,
+      "calmar": 0.793,
+      "profit_factor": 1.37,
+      "n_trades": 145,
+      "avg_exposure_pct": 20.37,
+      "avg_r": 0.2445,
+      "sum_r": 35.451,
+      "sum_net_pnl": 143.7,
+      "unit_free": "return_pct / sharpe / max_dd_pct / sum_net_pnl do not depend on the R denominator; avg_r and sum_r DO"
+    },
+    "2.0": {
+      "return_pct": 6.53,
+      "sharpe": 0.722,
+      "max_dd_pct": -7.64,
+      "calmar": 0.538,
+      "profit_factor": 1.26,
+      "n_trades": 128,
+      "avg_exposure_pct": 20.08,
+      "avg_r": 0.1549,
+      "sum_r": 19.821,
+      "sum_net_pnl": 85.19,
+      "unit_free": "return_pct / sharpe / max_dd_pct / sum_net_pnl do not depend on the R denominator; avg_r and sum_r DO"
+    }
+  },
+  "A_r_unit_normalisation": {
+    "1.2": {
+      "control_r_as_recorded": 0.1878,
+      "control_r_in_this_variants_unit": 0.2347,
+      "delta_from_unit_alone": 0.0469,
+      "take_profit_R_in_this_unit": 2.0833,
+      "note": "same 168 trades, same exit prices; only the R denominator is re-expressed. Any change here is arithmetic, not skill."
+    },
+    "1.5": {
+      "control_r_as_recorded": 0.1878,
+      "control_r_in_this_variants_unit": 0.1878,
+      "delta_from_unit_alone": 0.0,
+      "take_profit_R_in_this_unit": 1.6667,
+      "note": "same 168 trades, same exit prices; only the R denominator is re-expressed. Any change here is arithmetic, not skill."
+    },
+    "1.8": {
+      "control_r_as_recorded": 0.1878,
+      "control_r_in_this_variants_unit": 0.1565,
+      "delta_from_unit_alone": -0.0313,
+      "take_profit_R_in_this_unit": 1.3889,
+      "note": "same 168 trades, same exit prices; only the R denominator is re-expressed. Any change here is arithmetic, not skill."
+    },
+    "2.0": {
+      "control_r_as_recorded": 0.1878,
+      "control_r_in_this_variants_unit": 0.1408,
+      "delta_from_unit_alone": -0.047,
+      "take_profit_R_in_this_unit": 1.25,
+      "note": "same 168 trades, same exit prices; only the R denominator is re-expressed. Any change here is arithmetic, not skill."
+    }
+  },
+  "B_risk_and_exposure": {
+    "1.2": {
+      "mean_dollar_risk_per_trade": 5.3873,
+      "mean_position_value": 137.7459,
+      "mean_shares": 2.3035,
+      "avg_exposure_pct": 26.6,
+      "note": "dollar risk is ~constant because shares = floor(risk_budget / stop_distance); only position VALUE falls as the stop widens"
+    },
+    "1.5": {
+      "mean_dollar_risk_per_trade": 5.3411,
+      "mean_position_value": 112.5945,
+      "mean_shares": 2.1488,
+      "avg_exposure_pct": 23.39,
+      "note": "dollar risk is ~constant because shares = floor(risk_budget / stop_distance); only position VALUE falls as the stop widens"
+    },
+    "1.8": {
+      "mean_dollar_risk_per_trade": 5.5079,
+      "mean_position_value": 100.5154,
+      "mean_shares": 1.8552,
+      "avg_exposure_pct": 20.37,
+      "note": "dollar risk is ~constant because shares = floor(risk_budget / stop_distance); only position VALUE falls as the stop widens"
+    },
+    "2.0": {
+      "mean_dollar_risk_per_trade": 5.5708,
+      "mean_position_value": 93.0042,
+      "mean_shares": 1.8125,
+      "avg_exposure_pct": 20.08,
+      "note": "dollar risk is ~constant because shares = floor(risk_budget / stop_distance); only position VALUE falls as the stop widens"
+    }
+  },
+  "C_trailing_arm": {
+    "1.2": {
+      "trailing_trigger_r": 1.0,
+      "r_dist_atr_multiple": 1.2,
+      "arm_price_formula": "entry + 1.0 * atr * 1.2",
+      "note": "the arming threshold in ATR units IS stop_atr_mult when trailing_trigger_r = 1.0, so a wider initial stop also delays the trailing arm"
+    },
+    "1.5": {
+      "trailing_trigger_r": 1.0,
+      "r_dist_atr_multiple": 1.5,
+      "arm_price_formula": "entry + 1.0 * atr * 1.5",
+      "note": "the arming threshold in ATR units IS stop_atr_mult when trailing_trigger_r = 1.0, so a wider initial stop also delays the trailing arm"
+    },
+    "1.8": {
+      "trailing_trigger_r": 1.0,
+      "r_dist_atr_multiple": 1.8,
+      "arm_price_formula": "entry + 1.0 * atr * 1.8",
+      "note": "the arming threshold in ATR units IS stop_atr_mult when trailing_trigger_r = 1.0, so a wider initial stop also delays the trailing arm"
+    },
+    "2.0": {
+      "trailing_trigger_r": 1.0,
+      "r_dist_atr_multiple": 2.0,
+      "arm_price_formula": "entry + 1.0 * atr * 2.0",
+      "note": "the arming threshold in ATR units IS stop_atr_mult when trailing_trigger_r = 1.0, so a wider initial stop also delays the trailing arm"
+    }
+  },
+  "D_selection_vs_execution": {
+    "1.2": {
+      "jaccard_vs_control": 0.3418,
+      "n_shared": 94,
+      "n_unique": 107,
+      "n_control_dropped": 74,
+      "shared_variant_avg_r": 0.2439,
+      "shared_control_avg_r": 0.2211,
+      "shared_delta": 0.0228,
+      "unique_variant_avg_r": 0.045,
+      "shared_sum_r": 22.922,
+      "unique_sum_r": 4.814,
+      "shared_net_pnl": 49.62,
+      "unique_net_pnl": 19.41
+    },
+    "1.8": {
+      "jaccard_vs_control": 0.385,
+      "n_shared": 87,
+      "n_unique": 58,
+      "n_control_dropped": 81,
+      "shared_variant_avg_r": 0.2547,
+      "shared_control_avg_r": 0.264,
+      "shared_delta": -0.0093,
+      "unique_variant_avg_r": 0.2292,
+      "shared_sum_r": 22.157,
+      "unique_sum_r": 13.294,
+      "shared_net_pnl": 75.4,
+      "unique_net_pnl": 68.3
+    },
+    "2.0": {
+      "jaccard_vs_control": 0.2982,
+      "n_shared": 68,
+      "n_unique": 60,
+      "n_control_dropped": 100,
+      "shared_variant_avg_r": 0.3343,
+      "shared_control_avg_r": 0.3154,
+      "shared_delta": 0.0189,
+      "unique_variant_avg_r": -0.0485,
+      "shared_sum_r": 22.733,
+      "unique_sum_r": -2.912,
+      "shared_net_pnl": 83.07,
+      "unique_net_pnl": 2.12
+    }
+  },
+  "E_exit_migration_shared": {
+    "1.2": {
+      "control_exit_reasons_on_shared_trades": {
+        "STOP_LOSS": {
+          "n": 45,
+          "sum_r": -46.229,
+          "avg_r": -1.0273
+        },
+        "TAKE_PROFIT": {
+          "n": 37,
+          "sum_r": 61.679,
+          "avg_r": 1.667
+        },
+        "TIME_STOP": {
+          "n": 7,
+          "sum_r": 4.427,
+          "avg_r": 0.6324
+        },
+        "TRAILING_STOP": {
+          "n": 5,
+          "sum_r": 0.903,
+          "avg_r": 0.1806
+        }
+      },
+      "note": "what the control did with the trades this variant ALSO took — isolates the execution channel from selection"
+    },
+    "1.8": {
+      "control_exit_reasons_on_shared_trades": {
+        "STOP_LOSS": {
+          "n": 39,
+          "sum_r": -40.761,
+          "avg_r": -1.0452
+        },
+        "TAKE_PROFIT": {
+          "n": 35,
+          "sum_r": 58.345,
+          "avg_r": 1.667
+        },
+        "TIME_STOP": {
+          "n": 8,
+          "sum_r": 4.826,
+          "avg_r": 0.6032
+        },
+        "TRAILING_STOP": {
+          "n": 5,
+          "sum_r": 0.562,
+          "avg_r": 0.1124
+        }
+      },
+      "note": "what the control did with the trades this variant ALSO took — isolates the execution channel from selection"
+    },
+    "2.0": {
+      "control_exit_reasons_on_shared_trades": {
+        "STOP_LOSS": {
+          "n": 29,
+          "sum_r": -30.166,
+          "avg_r": -1.0402
+        },
+        "TAKE_PROFIT": {
+          "n": 28,
+          "sum_r": 46.676,
+          "avg_r": 1.667
+        },
+        "TIME_STOP": {
+          "n": 6,
+          "sum_r": 4.364,
+          "avg_r": 0.7273
+        },
+        "TRAILING_STOP": {
+          "n": 5,
+          "sum_r": 0.571,
+          "avg_r": 0.1142
+        }
+      },
+      "note": "what the control did with the trades this variant ALSO took — isolates the execution channel from selection"
+    }
+  },
+  "caveats": [
+    "Channels are not independent: position size feeds back into cash, which changes which candidates are affordable, which changes selection. The split attributes the OBSERVED difference; it does not prove the mechanism is causal.",
+    "Shared/unique is defined on (ticker, entry_date). A variant may re-enter the same ticker on a different date; that counts as unique.",
+    "No production parameter was changed and no frozen contract touched."
+  ],
+  "git": {
+    "head": "da9f5dcfad69ff1adac61488a627e1fecf7700c6",
+    "head_short": "da9f5dc",
+    "subject": "Unified decision pipeline: run_daily + DataSource + DecisionRecord + production-equivalent backtest (2026-09-04)",
+    "is_dirty": true
+  }
+}

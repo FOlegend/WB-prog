@@ -1,0 +1,1592 @@
+{
+  "generated": "2026-10-05",
+  "local_frozen_source": {
+    "name": "fja05680/sp500 (local data/constituents)",
+    "snapshots": 2718,
+    "first": "1996-01-02",
+    "last": "2026-06-30",
+    "role": "AUTHORITATIVE for the frozen research baseline; not to be rewritten"
+  },
+  "plausible_band": [
+    480,
+    525
+  ],
+  "candidates": {
+    "chinobing": {
+      "status": "FETCHED",
+      "repo": "https://github.com/chinobing/historical_sp500_constituents",
+      "snapshots": 3903,
+      "events": 702,
+      "snapshot_range": [
+        "1996-01-02",
+        "2026-10-04"
+      ],
+      "event_range": [
+        "1996-01-22",
+        "2026-09-21"
+      ],
+      "A_date_semantics": {
+        "n_event_dates": 702,
+        "n_snapshot_dates": 3885,
+        "dates_in_both": 702,
+        "event_only": 0,
+        "snapshot_only": 3183,
+        "event_only_examples": [],
+        "interpretation": "an event stream and a snapshot stream that share dates describe the SAME effective-date convention; where they diverge the two files were written by different runs and the date semantics are not verifiable from the data alone"
+      },
+      "B_history_plausibility": {
+        "min_n": 442,
+        "max_n": 505,
+        "median_n": 468.0,
+        "first_date": "1996-01-02",
+        "last_date": "2026-10-04",
+        "plausible_band": [
+          480,
+          525
+        ],
+        "n_implausible_snapshots": 2309,
+        "implausible_range": [
+          "1996-01-02",
+          "2016-07-01"
+        ],
+        "worst_undershoot": 38,
+        "by_year": {
+          "1996": {
+            "median_n": 468.0,
+            "min_n": 468,
+            "max_n": 469
+          },
+          "1997": {
+            "median_n": 468.0,
+            "min_n": 467,
+            "max_n": 468
+          },
+          "1998": {
+            "median_n": 470.0,
+            "min_n": 468,
+            "max_n": 471
+          },
+          "1999": {
+            "median_n": 468.0,
+            "min_n": 466,
+            "max_n": 468
+          },
+          "2000": {
+            "median_n": 464.0,
+            "min_n": 460,
+            "max_n": 466
+          },
+          "2001": {
+            "median_n": 463.0,
+            "min_n": 462,
+            "max_n": 463
+          },
+          "2002": {
+            "median_n": 460.0,
+            "min_n": 457,
+            "max_n": 463
+          },
+          "2003": {
+            "median_n": 458.0,
+            "min_n": 457,
+            "max_n": 458
+          },
+          "2004": {
+            "median_n": 459.0,
+            "min_n": 457,
+            "max_n": 459
+          },
+          "2005": {
+            "median_n": 457.0,
+            "min_n": 455,
+            "max_n": 457
+          },
+          "2006": {
+            "median_n": 455.0,
+            "min_n": 451,
+            "max_n": 457
+          },
+          "2007": {
+            "median_n": 447.0,
+            "min_n": 446,
+            "max_n": 450
+          },
+          "2008": {
+            "median_n": 445.0,
+            "min_n": 443,
+            "max_n": 446
+          },
+          "2009": {
+            "median_n": 444.0,
+            "min_n": 442,
+            "max_n": 445
+          },
+          "2010": {
+            "median_n": 446.0,
+            "min_n": 444,
+            "max_n": 447
+          },
+          "2011": {
+            "median_n": 449.0,
+            "min_n": 446,
+            "max_n": 452
+          },
+          "2012": {
+            "median_n": 455.0,
+            "min_n": 452,
+            "max_n": 458
+          },
+          "2013": {
+            "median_n": 459.5,
+            "min_n": 458,
+            "max_n": 461
+          },
+          "2014": {
+            "median_n": 464.0,
+            "min_n": 461,
+            "max_n": 465
+          },
+          "2015": {
+            "median_n": 467.0,
+            "min_n": 463,
+            "max_n": 471
+          },
+          "2016": {
+            "median_n": 478.0,
+            "min_n": 471,
+            "max_n": 484
+          },
+          "2017": {
+            "median_n": 489.0,
+            "min_n": 484,
+            "max_n": 492
+          },
+          "2018": {
+            "median_n": 496.0,
+            "min_n": 491,
+            "max_n": 497
+          },
+          "2019": {
+            "median_n": 497.0,
+            "min_n": 496,
+            "max_n": 499
+          },
+          "2020": {
+            "median_n": 501.0,
+            "min_n": 499,
+            "max_n": 501
+          },
+          "2021": {
+            "median_n": 501.0,
+            "min_n": 501,
+            "max_n": 501
+          },
+          "2022": {
+            "median_n": 499.0,
+            "min_n": 498,
+            "max_n": 501
+          },
+          "2023": {
+            "median_n": 503.0,
+            "min_n": 498,
+            "max_n": 503
+          },
+          "2024": {
+            "median_n": 503.0,
+            "min_n": 502,
+            "max_n": 505
+          },
+          "2025": {
+            "median_n": 503.0,
+            "min_n": 501,
+            "max_n": 504
+          },
+          "2026": {
+            "median_n": 503.0,
+            "min_n": 502,
+            "max_n": 503
+          }
+        }
+      },
+      "C_internal_consistency": {
+        "events_checked": 702,
+        "mismatches": 3,
+        "mismatch_rate": 0.004273504273504274,
+        "examples": [
+          {
+            "date": "2025-07-23",
+            "event_added": [
+              "XYZ"
+            ],
+            "event_removed": [],
+            "snapshot_implied_added": [],
+            "snapshot_implied_removed": [
+              "XYZ"
+            ]
+          },
+          {
+            "date": "2026-04-09",
+            "event_added": [
+              "CASY"
+            ],
+            "event_removed": [
+              "HOLX"
+            ],
+            "snapshot_implied_added": [
+              "CASY"
+            ],
+            "snapshot_implied_removed": []
+          },
+          {
+            "date": "2026-08-06",
+            "event_added": [
+              "FERG"
+            ],
+            "event_removed": [
+              "EA"
+            ],
+            "snapshot_implied_added": [],
+            "snapshot_implied_removed": [
+              "FERG"
+            ]
+          }
+        ]
+      },
+      "D_anomalies": {
+        "n_add_remove_add": 40,
+        "flips": [
+          {
+            "ticker": "ILMN",
+            "added": "2015-11-19",
+            "removed": "2024-06-23",
+            "re_added": "2026-09-21",
+            "span_days": 3959
+          },
+          {
+            "ticker": "CIEN",
+            "added": "2001-08-30",
+            "removed": "2009-12-21",
+            "re_added": "2026-02-08",
+            "span_days": 8928
+          },
+          {
+            "ticker": "SNDK",
+            "added": "2006-04-20",
+            "removed": "2016-05-12",
+            "re_added": "2025-12-02",
+            "span_days": 7166
+          },
+          {
+            "ticker": "FISV",
+            "added": "2001-04-02",
+            "removed": "2023-06-08",
+            "re_added": "2025-11-13",
+            "span_days": 8991
+          },
+          {
+            "ticker": "HOOD",
+            "added": "2025-09-06",
+            "removed": "2025-09-09",
+            "re_added": "2025-09-23",
+            "span_days": 17
+          },
+          {
+            "ticker": "EME",
+            "added": "2025-09-06",
+            "removed": "2025-09-09",
+            "re_added": "2025-09-23",
+            "span_days": 17
+          },
+          {
+            "ticker": "APP",
+            "added": "2025-09-06",
+            "removed": "2025-09-09",
+            "re_added": "2025-09-23",
+            "span_days": 17
+          },
+          {
+            "ticker": "MKTX",
+            "added": "2019-07-01",
+            "removed": "2025-09-06",
+            "re_added": "2025-09-09",
+            "span_days": 2262
+          },
+          {
+            "ticker": "ENPH",
+            "added": "2021-01-07",
+            "removed": "2025-09-06",
+            "re_added": "2025-09-09",
+            "span_days": 1706
+          },
+          {
+            "ticker": "CZR",
+            "added": "2021-03-22",
+            "removed": "2025-09-06",
+            "re_added": "2025-09-09",
+            "span_days": 1632
+          },
+          {
+            "ticker": "COIN",
+            "added": "2025-05-13",
+            "removed": "2025-05-14",
+            "re_added": "2025-05-17",
+            "span_days": 4
+          },
+          {
+            "ticker": "BF.B",
+            "added": "2023-05-09",
+            "removed": "2023-05-14",
+            "re_added": "2024-08-04",
+            "span_days": 453
+          },
+          {
+            "ticker": "RVTY",
+            "added": "2023-05-18",
+            "removed": "2023-12-31",
+            "re_added": "2024-01-01",
+            "span_days": 228
+          },
+          {
+            "ticker": "JBL",
+            "added": "2001-01-30",
+            "removed": "2014-11-05",
+            "re_added": "2023-12-17",
+            "span_days": 8356
+          },
+          {
+            "ticker": "BRK.B",
+            "added": "2023-05-09",
+            "removed": "2023-09-24",
+            "re_added": "2023-09-26",
+            "span_days": 140
+          }
+        ],
+        "n_rapid_re_add_under_120d": 5,
+        "rapid_examples": [
+          {
+            "ticker": "PANW",
+            "first": "2023-06-03",
+            "again": "2023-06-20",
+            "gap_days": 17
+          },
+          {
+            "ticker": "COIN",
+            "first": "2025-05-13",
+            "again": "2025-05-17",
+            "gap_days": 4
+          },
+          {
+            "ticker": "HOOD",
+            "first": "2025-09-06",
+            "again": "2025-09-23",
+            "gap_days": 17
+          },
+          {
+            "ticker": "EME",
+            "first": "2025-09-06",
+            "again": "2025-09-23",
+            "gap_days": 17
+          },
+          {
+            "ticker": "APP",
+            "first": "2025-09-06",
+            "again": "2025-09-23",
+            "gap_days": 17
+          }
+        ],
+        "universe_size_during_flips": [
+          445,
+          455,
+          463,
+          470,
+          477,
+          497,
+          498,
+          501,
+          503,
+          504
+        ],
+        "interpretation": "an index that swaps the same names in and out twice inside a month, while the universe size never changes, is not a market event -- it is a scraping artefact written into permanent history"
+      },
+      "E_pit": {
+        "rows": [
+          {
+            "as_of": "2024-01-31",
+            "n": 503,
+            "probes": {
+              "P": false,
+              "BE": false,
+              "ILMN": true,
+              "BLDR": true,
+              "TTD": false,
+              "TAP": true,
+              "FERG": false,
+              "EA": true
+            }
+          },
+          {
+            "as_of": "2025-07-31",
+            "n": 503,
+            "probes": {
+              "P": false,
+              "BE": false,
+              "ILMN": false,
+              "BLDR": true,
+              "TTD": true,
+              "TAP": true,
+              "FERG": false,
+              "EA": true
+            }
+          },
+          {
+            "as_of": "2026-06-30",
+            "n": 503,
+            "probes": {
+              "P": false,
+              "BE": false,
+              "ILMN": false,
+              "BLDR": true,
+              "TTD": true,
+              "TAP": true,
+              "FERG": false,
+              "EA": true
+            }
+          },
+          {
+            "as_of": "2026-08-06",
+            "n": 502,
+            "probes": {
+              "P": false,
+              "BE": false,
+              "ILMN": false,
+              "BLDR": true,
+              "TTD": true,
+              "TAP": true,
+              "FERG": false,
+              "EA": false
+            }
+          },
+          {
+            "as_of": "2026-08-18",
+            "n": 503,
+            "probes": {
+              "P": false,
+              "BE": false,
+              "ILMN": false,
+              "BLDR": true,
+              "TTD": true,
+              "TAP": true,
+              "FERG": true,
+              "EA": false
+            }
+          },
+          {
+            "as_of": "2026-09-21",
+            "n": 503,
+            "probes": {
+              "P": true,
+              "BE": true,
+              "ILMN": true,
+              "BLDR": false,
+              "TTD": false,
+              "TAP": false,
+              "FERG": true,
+              "EA": false
+            }
+          }
+        ],
+        "latest_snapshot": "2026-10-04",
+        "newest_members": [],
+        "lookahead_leak": [],
+        "lookahead_clean": true
+      },
+      "F_overlap_vs_frozen": {
+        "overlap_days": 2719,
+        "jaccard_median": 0.924,
+        "jaccard_min": 0.8837675350701403,
+        "identical_days": 12,
+        "first_disagreement": "1996-01-02",
+        "by_year": {
+          "1996": {
+            "n": 106,
+            "jaccard_median": 0.9569672131147541,
+            "jaccard_min": 0.9550102249488752,
+            "days_with_diff": 106
+          },
+          "1997": {
+            "n": 122,
+            "jaccard_median": 0.9550102249488752,
+            "jaccard_min": 0.9549180327868853,
+            "days_with_diff": 122
+          },
+          "1998": {
+            "n": 131,
+            "jaccard_median": 0.9551020408163265,
+            "jaccard_min": 0.9512195121951219,
+            "days_with_diff": 131
+          },
+          "1999": {
+            "n": 133,
+            "jaccard_median": 0.9491869918699187,
+            "jaccard_min": 0.9432048681541582,
+            "days_with_diff": 133
+          },
+          "2000": {
+            "n": 120,
+            "jaccard_median": 0.9391480730223124,
+            "jaccard_min": 0.9329268292682927,
+            "days_with_diff": 120
+          },
+          "2001": {
+            "n": 107,
+            "jaccard_median": 0.9314516129032258,
+            "jaccard_min": 0.9294354838709677,
+            "days_with_diff": 107
+          },
+          "2002": {
+            "n": 105,
+            "jaccard_median": 0.9254032258064516,
+            "jaccard_min": 0.9230769230769231,
+            "days_with_diff": 105
+          },
+          "2003": {
+            "n": 90,
+            "jaccard_median": 0.9232323232323232,
+            "jaccard_min": 0.9230769230769231,
+            "days_with_diff": 90
+          },
+          "2004": {
+            "n": 101,
+            "jaccard_median": 0.9233870967741935,
+            "jaccard_min": 0.9193548387096774,
+            "days_with_diff": 101
+          },
+          "2005": {
+            "n": 99,
+            "jaccard_median": 0.9175050301810865,
+            "jaccard_min": 0.9153225806451613,
+            "days_with_diff": 99
+          },
+          "2006": {
+            "n": 114,
+            "jaccard_median": 0.9116465863453815,
+            "jaccard_min": 0.9036144578313253,
+            "days_with_diff": 114
+          },
+          "2007": {
+            "n": 131,
+            "jaccard_median": 0.8955823293172691,
+            "jaccard_min": 0.893574297188755,
+            "days_with_diff": 131
+          },
+          "2008": {
+            "n": 126,
+            "jaccard_median": 0.8897795591182365,
+            "jaccard_min": 0.8857715430861723,
+            "days_with_diff": 126
+          },
+          "2009": {
+            "n": 112,
+            "jaccard_median": 0.886,
+            "jaccard_min": 0.8837675350701403,
+            "days_with_diff": 112
+          },
+          "2010": {
+            "n": 100,
+            "jaccard_median": 0.888,
+            "jaccard_min": 0.884,
+            "days_with_diff": 100
+          },
+          "2011": {
+            "n": 106,
+            "jaccard_median": 0.8957915831663327,
+            "jaccard_min": 0.8897795591182365,
+            "days_with_diff": 106
+          },
+          "2012": {
+            "n": 105,
+            "jaccard_median": 0.9096385542168675,
+            "jaccard_min": 0.9036144578313253,
+            "days_with_diff": 105
+          },
+          "2013": {
+            "n": 106,
+            "jaccard_median": 0.9168336673346693,
+            "jaccard_min": 0.9138276553106213,
+            "days_with_diff": 106
+          },
+          "2014": {
+            "n": 100,
+            "jaccard_median": 0.9221556886227545,
+            "jaccard_min": 0.9198396793587175,
+            "days_with_diff": 100
+          },
+          "2015": {
+            "n": 117,
+            "jaccard_median": 0.9262948207171314,
+            "jaccard_min": 0.922,
+            "days_with_diff": 117
+          },
+          "2016": {
+            "n": 130,
+            "jaccard_median": 0.9407114624505929,
+            "jaccard_min": 0.9268774703557312,
+            "days_with_diff": 130
+          },
+          "2017": {
+            "n": 113,
+            "jaccard_median": 0.9586614173228346,
+            "jaccard_min": 0.9488188976377953,
+            "days_with_diff": 113
+          },
+          "2018": {
+            "n": 115,
+            "jaccard_median": 0.9724409448818898,
+            "jaccard_min": 0.9644970414201184,
+            "days_with_diff": 115
+          },
+          "2019": {
+            "n": 27,
+            "jaccard_median": 0.9763313609467456,
+            "jaccard_min": 0.9743589743589743,
+            "days_with_diff": 27
+          },
+          "2020": {
+            "n": 13,
+            "jaccard_median": 0.9842209072978304,
+            "jaccard_min": 0.980276134122288,
+            "days_with_diff": 13
+          },
+          "2021": {
+            "n": 14,
+            "jaccard_median": 0.9842209072978304,
+            "jaccard_min": 0.9842209072978304,
+            "days_with_diff": 14
+          },
+          "2022": {
+            "n": 18,
+            "jaccard_median": 0.98219582827848,
+            "jaccard_min": 0.9821782178217822,
+            "days_with_diff": 18
+          },
+          "2023": {
+            "n": 13,
+            "jaccard_median": 0.9920792079207921,
+            "jaccard_min": 0.9821782178217822,
+            "days_with_diff": 13
+          },
+          "2024": {
+            "n": 14,
+            "jaccard_median": 0.996031746031746,
+            "jaccard_min": 0.9900990099009901,
+            "days_with_diff": 11
+          },
+          "2025": {
+            "n": 18,
+            "jaccard_median": 0.9970218372305848,
+            "jaccard_min": 0.9842209072978304,
+            "days_with_diff": 14
+          },
+          "2026": {
+            "n": 13,
+            "jaccard_median": 0.998015873015873,
+            "jaccard_min": 0.9842209072978304,
+            "days_with_diff": 8
+          }
+        },
+        "worst_days": [
+          {
+            "date": "2024-09-23",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 1.0,
+            "n_only_cur": 0,
+            "n_only_cand": 0,
+            "sample_only_cur": []
+          },
+          {
+            "date": "2024-10-01",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 1.0,
+            "n_only_cur": 0,
+            "n_only_cand": 0,
+            "sample_only_cur": []
+          },
+          {
+            "date": "2024-11-26",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 1.0,
+            "n_only_cur": 0,
+            "n_only_cand": 0,
+            "sample_only_cur": []
+          },
+          {
+            "date": "2025-05-19",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 1.0,
+            "n_only_cur": 0,
+            "n_only_cand": 0,
+            "sample_only_cur": []
+          },
+          {
+            "date": "2025-07-18",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 1.0,
+            "n_only_cur": 0,
+            "n_only_cand": 0,
+            "sample_only_cur": []
+          },
+          {
+            "date": "2025-07-23",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 1.0,
+            "n_only_cur": 0,
+            "n_only_cand": 0,
+            "sample_only_cur": []
+          },
+          {
+            "date": "2025-10-31",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 1.0,
+            "n_only_cur": 0,
+            "n_only_cand": 0,
+            "sample_only_cur": []
+          },
+          {
+            "date": "2026-02-09",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 1.0,
+            "n_only_cur": 0,
+            "n_only_cand": 0,
+            "sample_only_cur": []
+          }
+        ]
+      },
+      "G_current_universe": {
+        "as_of": "2026-10-04",
+        "n": 503,
+        "duplicates": 0,
+        "vs_local_current": {
+          "local_n": 503,
+          "intersection": 497,
+          "only_candidate": [
+            "BE",
+            "FERG",
+            "ILMN",
+            "P",
+            "RDDT",
+            "VMRK"
+          ],
+          "only_local": [
+            "AVB",
+            "BLDR",
+            "EA",
+            "EQR",
+            "TAP",
+            "TTD"
+          ]
+        }
+      },
+      "membership_hash": "1926e378a6629b82"
+    },
+    "leandroloi": {
+      "status": "FETCHED",
+      "repo": "https://github.com/leandroloi/historical_sp500_constituents",
+      "snapshots": 3424,
+      "events": 666,
+      "snapshot_range": [
+        "1996-01-02",
+        "2025-06-18"
+      ],
+      "event_range": [
+        "1996-01-22",
+        "2025-05-17"
+      ],
+      "A_date_semantics": {
+        "n_event_dates": 666,
+        "n_snapshot_dates": 3418,
+        "dates_in_both": 666,
+        "event_only": 0,
+        "snapshot_only": 2752,
+        "event_only_examples": [],
+        "interpretation": "an event stream and a snapshot stream that share dates describe the SAME effective-date convention; where they diverge the two files were written by different runs and the date semantics are not verifiable from the data alone"
+      },
+      "B_history_plausibility": {
+        "min_n": 442,
+        "max_n": 505,
+        "median_n": 467.0,
+        "first_date": "1996-01-02",
+        "last_date": "2025-06-18",
+        "plausible_band": [
+          480,
+          525
+        ],
+        "n_implausible_snapshots": 2309,
+        "implausible_range": [
+          "1996-01-02",
+          "2016-07-01"
+        ],
+        "worst_undershoot": 38,
+        "by_year": {
+          "1996": {
+            "median_n": 468.0,
+            "min_n": 468,
+            "max_n": 469
+          },
+          "1997": {
+            "median_n": 468.0,
+            "min_n": 467,
+            "max_n": 468
+          },
+          "1998": {
+            "median_n": 470.0,
+            "min_n": 468,
+            "max_n": 471
+          },
+          "1999": {
+            "median_n": 468.0,
+            "min_n": 466,
+            "max_n": 468
+          },
+          "2000": {
+            "median_n": 464.0,
+            "min_n": 460,
+            "max_n": 466
+          },
+          "2001": {
+            "median_n": 463.0,
+            "min_n": 462,
+            "max_n": 463
+          },
+          "2002": {
+            "median_n": 460.0,
+            "min_n": 457,
+            "max_n": 463
+          },
+          "2003": {
+            "median_n": 458.0,
+            "min_n": 457,
+            "max_n": 458
+          },
+          "2004": {
+            "median_n": 459.0,
+            "min_n": 457,
+            "max_n": 459
+          },
+          "2005": {
+            "median_n": 457.0,
+            "min_n": 455,
+            "max_n": 457
+          },
+          "2006": {
+            "median_n": 455.0,
+            "min_n": 451,
+            "max_n": 457
+          },
+          "2007": {
+            "median_n": 447.0,
+            "min_n": 446,
+            "max_n": 450
+          },
+          "2008": {
+            "median_n": 445.0,
+            "min_n": 443,
+            "max_n": 446
+          },
+          "2009": {
+            "median_n": 444.0,
+            "min_n": 442,
+            "max_n": 445
+          },
+          "2010": {
+            "median_n": 446.0,
+            "min_n": 444,
+            "max_n": 447
+          },
+          "2011": {
+            "median_n": 449.0,
+            "min_n": 446,
+            "max_n": 452
+          },
+          "2012": {
+            "median_n": 455.0,
+            "min_n": 452,
+            "max_n": 458
+          },
+          "2013": {
+            "median_n": 459.5,
+            "min_n": 458,
+            "max_n": 461
+          },
+          "2014": {
+            "median_n": 464.0,
+            "min_n": 461,
+            "max_n": 465
+          },
+          "2015": {
+            "median_n": 467.0,
+            "min_n": 463,
+            "max_n": 471
+          },
+          "2016": {
+            "median_n": 478.0,
+            "min_n": 471,
+            "max_n": 484
+          },
+          "2017": {
+            "median_n": 489.0,
+            "min_n": 484,
+            "max_n": 492
+          },
+          "2018": {
+            "median_n": 496.0,
+            "min_n": 491,
+            "max_n": 497
+          },
+          "2019": {
+            "median_n": 497.0,
+            "min_n": 496,
+            "max_n": 499
+          },
+          "2020": {
+            "median_n": 501.0,
+            "min_n": 499,
+            "max_n": 501
+          },
+          "2021": {
+            "median_n": 501.0,
+            "min_n": 501,
+            "max_n": 501
+          },
+          "2022": {
+            "median_n": 499.0,
+            "min_n": 498,
+            "max_n": 501
+          },
+          "2023": {
+            "median_n": 503.0,
+            "min_n": 498,
+            "max_n": 503
+          },
+          "2024": {
+            "median_n": 503.0,
+            "min_n": 502,
+            "max_n": 505
+          },
+          "2025": {
+            "median_n": 503.0,
+            "min_n": 503,
+            "max_n": 504
+          }
+        }
+      },
+      "C_internal_consistency": {
+        "events_checked": 666,
+        "mismatches": 1,
+        "mismatch_rate": 0.0015015015015015015,
+        "examples": [
+          {
+            "date": "2024-11-23",
+            "event_added": [],
+            "event_removed": [
+              "MRO"
+            ],
+            "snapshot_implied_added": [
+              "MRO"
+            ],
+            "snapshot_implied_removed": []
+          }
+        ]
+      },
+      "D_anomalies": {
+        "n_add_remove_add": 30,
+        "flips": [
+          {
+            "ticker": "COIN",
+            "added": "2025-05-13",
+            "removed": "2025-05-14",
+            "re_added": "2025-05-17",
+            "span_days": 4
+          },
+          {
+            "ticker": "BF.B",
+            "added": "2023-05-09",
+            "removed": "2023-05-14",
+            "re_added": "2024-08-04",
+            "span_days": 453
+          },
+          {
+            "ticker": "RVTY",
+            "added": "2023-05-18",
+            "removed": "2023-12-31",
+            "re_added": "2024-01-01",
+            "span_days": 228
+          },
+          {
+            "ticker": "JBL",
+            "added": "2001-01-30",
+            "removed": "2014-11-05",
+            "re_added": "2023-12-17",
+            "span_days": 8356
+          },
+          {
+            "ticker": "BRK.B",
+            "added": "2023-05-09",
+            "removed": "2023-09-24",
+            "re_added": "2023-09-26",
+            "span_days": 140
+          },
+          {
+            "ticker": "BRK-B",
+            "added": "2010-02-16",
+            "removed": "2023-05-09",
+            "re_added": "2023-09-24",
+            "span_days": 4968
+          },
+          {
+            "ticker": "ABC",
+            "added": "2001-08-30",
+            "removed": "2023-08-31",
+            "re_added": "2023-09-01",
+            "span_days": 8037
+          },
+          {
+            "ticker": "PANW",
+            "added": "2023-06-03",
+            "removed": "2023-06-04",
+            "re_added": "2023-06-20",
+            "span_days": 17
+          },
+          {
+            "ticker": "DISH",
+            "added": "2017-03-13",
+            "removed": "2023-06-03",
+            "re_added": "2023-06-04",
+            "span_days": 2274
+          },
+          {
+            "ticker": "FSLR",
+            "added": "2009-10-16",
+            "removed": "2017-03-20",
+            "re_added": "2022-12-19",
+            "span_days": 4812
+          },
+          {
+            "ticker": "EQT",
+            "added": "2008-12-19",
+            "removed": "2018-11-13",
+            "re_added": "2022-10-03",
+            "span_days": 5036
+          },
+          {
+            "ticker": "KDP",
+            "added": "2008-10-07",
+            "removed": "2018-07-02",
+            "re_added": "2022-06-21",
+            "span_days": 5005
+          },
+          {
+            "ticker": "PTC",
+            "added": "1997-04-03",
+            "removed": "2007-01-03",
+            "re_added": "2021-04-20",
+            "span_days": 8783
+          },
+          {
+            "ticker": "TER",
+            "added": "1999-11-15",
+            "removed": "2013-12-23",
+            "re_added": "2020-09-21",
+            "span_days": 7616
+          },
+          {
+            "ticker": "TT",
+            "added": "2002-05-13",
+            "removed": "2008-06-06",
+            "re_added": "2020-03-03",
+            "span_days": 6504
+          }
+        ],
+        "n_rapid_re_add_under_120d": 2,
+        "rapid_examples": [
+          {
+            "ticker": "PANW",
+            "first": "2023-06-03",
+            "again": "2023-06-20",
+            "gap_days": 17
+          },
+          {
+            "ticker": "COIN",
+            "first": "2025-05-13",
+            "again": "2025-05-17",
+            "gap_days": 4
+          }
+        ],
+        "universe_size_during_flips": [
+          444,
+          445,
+          462,
+          463,
+          464,
+          485,
+          487,
+          496,
+          497,
+          498,
+          502,
+          503,
+          504
+        ],
+        "interpretation": "an index that swaps the same names in and out twice inside a month, while the universe size never changes, is not a market event -- it is a scraping artefact written into permanent history"
+      },
+      "E_pit": {
+        "rows": [
+          {
+            "as_of": "2024-01-31",
+            "n": 503,
+            "probes": {
+              "P": false,
+              "BE": false,
+              "ILMN": true,
+              "BLDR": true,
+              "TTD": false,
+              "TAP": true,
+              "FERG": false,
+              "EA": true
+            }
+          },
+          {
+            "as_of": "2025-07-31",
+            "n": 503,
+            "probes": {
+              "P": false,
+              "BE": false,
+              "ILMN": false,
+              "BLDR": true,
+              "TTD": false,
+              "TAP": true,
+              "FERG": false,
+              "EA": true
+            }
+          },
+          {
+            "as_of": "2026-06-30",
+            "n": 503,
+            "probes": {
+              "P": false,
+              "BE": false,
+              "ILMN": false,
+              "BLDR": true,
+              "TTD": false,
+              "TAP": true,
+              "FERG": false,
+              "EA": true
+            }
+          },
+          {
+            "as_of": "2026-08-06",
+            "n": 503,
+            "probes": {
+              "P": false,
+              "BE": false,
+              "ILMN": false,
+              "BLDR": true,
+              "TTD": false,
+              "TAP": true,
+              "FERG": false,
+              "EA": true
+            }
+          },
+          {
+            "as_of": "2026-08-18",
+            "n": 503,
+            "probes": {
+              "P": false,
+              "BE": false,
+              "ILMN": false,
+              "BLDR": true,
+              "TTD": false,
+              "TAP": true,
+              "FERG": false,
+              "EA": true
+            }
+          },
+          {
+            "as_of": "2026-09-21",
+            "n": 503,
+            "probes": {
+              "P": false,
+              "BE": false,
+              "ILMN": false,
+              "BLDR": true,
+              "TTD": false,
+              "TAP": true,
+              "FERG": false,
+              "EA": true
+            }
+          }
+        ],
+        "latest_snapshot": "2025-06-18",
+        "newest_members": [],
+        "lookahead_leak": [],
+        "lookahead_clean": true
+      },
+      "F_overlap_vs_frozen": {
+        "overlap_days": 2690,
+        "jaccard_median": 0.924,
+        "jaccard_min": 0.8837675350701403,
+        "identical_days": 4,
+        "first_disagreement": "1996-01-02",
+        "by_year": {
+          "1996": {
+            "n": 106,
+            "jaccard_median": 0.9569672131147541,
+            "jaccard_min": 0.9550102249488752,
+            "days_with_diff": 106
+          },
+          "1997": {
+            "n": 122,
+            "jaccard_median": 0.9550102249488752,
+            "jaccard_min": 0.9549180327868853,
+            "days_with_diff": 122
+          },
+          "1998": {
+            "n": 131,
+            "jaccard_median": 0.9551020408163265,
+            "jaccard_min": 0.9512195121951219,
+            "days_with_diff": 131
+          },
+          "1999": {
+            "n": 133,
+            "jaccard_median": 0.9491869918699187,
+            "jaccard_min": 0.9432048681541582,
+            "days_with_diff": 133
+          },
+          "2000": {
+            "n": 120,
+            "jaccard_median": 0.9391480730223124,
+            "jaccard_min": 0.9329268292682927,
+            "days_with_diff": 120
+          },
+          "2001": {
+            "n": 107,
+            "jaccard_median": 0.9314516129032258,
+            "jaccard_min": 0.9294354838709677,
+            "days_with_diff": 107
+          },
+          "2002": {
+            "n": 105,
+            "jaccard_median": 0.9254032258064516,
+            "jaccard_min": 0.9230769230769231,
+            "days_with_diff": 105
+          },
+          "2003": {
+            "n": 90,
+            "jaccard_median": 0.9232323232323232,
+            "jaccard_min": 0.9230769230769231,
+            "days_with_diff": 90
+          },
+          "2004": {
+            "n": 101,
+            "jaccard_median": 0.9233870967741935,
+            "jaccard_min": 0.9193548387096774,
+            "days_with_diff": 101
+          },
+          "2005": {
+            "n": 99,
+            "jaccard_median": 0.9175050301810865,
+            "jaccard_min": 0.9153225806451613,
+            "days_with_diff": 99
+          },
+          "2006": {
+            "n": 114,
+            "jaccard_median": 0.9116465863453815,
+            "jaccard_min": 0.9036144578313253,
+            "days_with_diff": 114
+          },
+          "2007": {
+            "n": 131,
+            "jaccard_median": 0.8955823293172691,
+            "jaccard_min": 0.893574297188755,
+            "days_with_diff": 131
+          },
+          "2008": {
+            "n": 126,
+            "jaccard_median": 0.8897795591182365,
+            "jaccard_min": 0.8857715430861723,
+            "days_with_diff": 126
+          },
+          "2009": {
+            "n": 112,
+            "jaccard_median": 0.886,
+            "jaccard_min": 0.8837675350701403,
+            "days_with_diff": 112
+          },
+          "2010": {
+            "n": 100,
+            "jaccard_median": 0.888,
+            "jaccard_min": 0.884,
+            "days_with_diff": 100
+          },
+          "2011": {
+            "n": 106,
+            "jaccard_median": 0.8957915831663327,
+            "jaccard_min": 0.8897795591182365,
+            "days_with_diff": 106
+          },
+          "2012": {
+            "n": 105,
+            "jaccard_median": 0.9096385542168675,
+            "jaccard_min": 0.9036144578313253,
+            "days_with_diff": 105
+          },
+          "2013": {
+            "n": 106,
+            "jaccard_median": 0.9168336673346693,
+            "jaccard_min": 0.9138276553106213,
+            "days_with_diff": 106
+          },
+          "2014": {
+            "n": 100,
+            "jaccard_median": 0.9221556886227545,
+            "jaccard_min": 0.9198396793587175,
+            "days_with_diff": 100
+          },
+          "2015": {
+            "n": 117,
+            "jaccard_median": 0.9262948207171314,
+            "jaccard_min": 0.922,
+            "days_with_diff": 117
+          },
+          "2016": {
+            "n": 130,
+            "jaccard_median": 0.9407114624505929,
+            "jaccard_min": 0.9268774703557312,
+            "days_with_diff": 130
+          },
+          "2017": {
+            "n": 113,
+            "jaccard_median": 0.9586614173228346,
+            "jaccard_min": 0.9488188976377953,
+            "days_with_diff": 113
+          },
+          "2018": {
+            "n": 115,
+            "jaccard_median": 0.9724409448818898,
+            "jaccard_min": 0.9644970414201184,
+            "days_with_diff": 115
+          },
+          "2019": {
+            "n": 27,
+            "jaccard_median": 0.9763313609467456,
+            "jaccard_min": 0.9743589743589743,
+            "days_with_diff": 27
+          },
+          "2020": {
+            "n": 13,
+            "jaccard_median": 0.9842209072978304,
+            "jaccard_min": 0.980276134122288,
+            "days_with_diff": 13
+          },
+          "2021": {
+            "n": 14,
+            "jaccard_median": 0.9842209072978304,
+            "jaccard_min": 0.9842209072978304,
+            "days_with_diff": 14
+          },
+          "2022": {
+            "n": 18,
+            "jaccard_median": 0.98219582827848,
+            "jaccard_min": 0.9821782178217822,
+            "days_with_diff": 18
+          },
+          "2023": {
+            "n": 13,
+            "jaccard_median": 0.9920792079207921,
+            "jaccard_min": 0.9821782178217822,
+            "days_with_diff": 13
+          },
+          "2024": {
+            "n": 14,
+            "jaccard_median": 0.996031746031746,
+            "jaccard_min": 0.9900990099009901,
+            "days_with_diff": 11
+          },
+          "2025": {
+            "n": 2,
+            "jaccard_median": 0.9921104536489151,
+            "jaccard_min": 0.9842209072978304,
+            "days_with_diff": 1
+          }
+        },
+        "worst_days": [
+          {
+            "date": "2023-06-20",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 0.996,
+            "n_only_cur": 1,
+            "n_only_cand": 1,
+            "sample_only_cur": [
+              "BF.B"
+            ]
+          },
+          {
+            "date": "2023-09-18",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 0.996,
+            "n_only_cur": 1,
+            "n_only_cand": 1,
+            "sample_only_cur": [
+              "BF.B"
+            ]
+          },
+          {
+            "date": "2023-10-18",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 0.996,
+            "n_only_cur": 1,
+            "n_only_cand": 1,
+            "sample_only_cur": [
+              "BF.B"
+            ]
+          },
+          {
+            "date": "2023-12-18",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 0.996,
+            "n_only_cur": 1,
+            "n_only_cand": 1,
+            "sample_only_cur": [
+              "BF.B"
+            ]
+          },
+          {
+            "date": "2024-03-04",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 0.996,
+            "n_only_cur": 1,
+            "n_only_cand": 1,
+            "sample_only_cur": [
+              "BF.B"
+            ]
+          },
+          {
+            "date": "2024-03-18",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 0.996,
+            "n_only_cur": 1,
+            "n_only_cand": 1,
+            "sample_only_cur": [
+              "BF.B"
+            ]
+          },
+          {
+            "date": "2024-05-08",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 0.996,
+            "n_only_cur": 1,
+            "n_only_cand": 1,
+            "sample_only_cur": [
+              "BF.B"
+            ]
+          },
+          {
+            "date": "2024-06-24",
+            "cur_n": 503,
+            "cand_n": 503,
+            "jaccard": 0.996,
+            "n_only_cur": 1,
+            "n_only_cand": 1,
+            "sample_only_cur": [
+              "BF.B"
+            ]
+          }
+        ]
+      },
+      "G_current_universe": {
+        "as_of": "2025-06-18",
+        "n": 503,
+        "duplicates": 0,
+        "vs_local_current": {
+          "local_n": 503,
+          "intersection": 475,
+          "only_candidate": [
+            "ANSS",
+            "BK",
+            "CAG",
+            "CPB",
+            "CTRA",
+            "CZR",
+            "DAY",
+            "EMN",
+            "ENPH",
+            "EPAM",
+            "FI",
+            "HES",
+            "HOLX",
+            "IPG",
+            "JNPR",
+            "K",
+            "KMX",
+            "LKQ",
+            "LW",
+            "MHK",
+            "MKTX",
+            "MMC",
+            "MOH",
+            "MTCH",
+            "PARA",
+            "PAYC",
+            "POOL",
+            "WBA"
+          ],
+          "only_local": [
+            "APP",
+            "ARES",
+            "BNY",
+            "CASY",
+            "CIEN",
+            "COHR",
+            "CRH",
+            "CVNA",
+            "DDOG",
+            "ECHO",
+            "EME",
+            "FDXF",
+            "FISV",
+            "FIX",
+            "FLEX",
+            "HONA",
+            "HOOD",
+            "IBKR",
+            "LITE",
+            "MRSH",
+            "MRVL",
+            "PSKY",
+            "Q",
+            "SNDK",
+            "TTD",
+            "VEEV",
+            "VRT",
+            "XYZ"
+          ]
+        }
+      },
+      "membership_hash": "37573dc06cf2f8a5"
+    }
+  }
+}

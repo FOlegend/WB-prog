@@ -1,0 +1,214 @@
+{
+  "generated": "2026-10-01",
+  "purpose": "lever-specific cohort verification + leverage decision table",
+  "source": "phase5_step0_marginal_cohort_pitcorrected_2026-10-01.json",
+  "lever_cohorts": {
+    "baseline (as recorded)": {
+      "sizeable": 0,
+      "of": 391,
+      "newly_admitted": 0
+    },
+    "(b) risk_per_trade 1.0% -> 1.5%": {
+      "sizeable": 101,
+      "of": 391,
+      "newly_admitted": 101,
+      "newly_admitted_expectancy": {
+        "n": 101,
+        "avg_r": 0.3489,
+        "median_r": 0.2244,
+        "sum_r": 35.242,
+        "win_rate_pct": 58.42
+      },
+      "newly_admitted_mean_shares": 1,
+      "newly_admitted_mean_risk_usd": 6.52,
+      "newly_admitted_by_regime": {
+        "BULL": {
+          "n": 14,
+          "avg_r": 0.4924,
+          "median_r": 0.9462,
+          "sum_r": 6.893,
+          "win_rate_pct": 64.29
+        },
+        "SIDEWAYS": {
+          "n": 87,
+          "avg_r": 0.3258,
+          "median_r": 0.1178,
+          "sum_r": 28.349,
+          "win_rate_pct": 57.47
+        }
+      }
+    },
+    "(b2) risk_per_trade 1.0% -> 2.0%": {
+      "sizeable": 173,
+      "of": 391,
+      "newly_admitted": 173,
+      "newly_admitted_expectancy": {
+        "n": 173,
+        "avg_r": 0.1329,
+        "median_r": 0.0014,
+        "sum_r": 22.998,
+        "win_rate_pct": 50.87
+      },
+      "newly_admitted_mean_shares": 1,
+      "newly_admitted_mean_risk_usd": 7.63,
+      "newly_admitted_by_regime": {
+        "BULL": {
+          "n": 30,
+          "avg_r": 0.3877,
+          "median_r": 0.2559,
+          "sum_r": 11.631,
+          "win_rate_pct": 60.0
+        },
+        "SIDEWAYS": {
+          "n": 143,
+          "avg_r": 0.0795,
+          "median_r": -1.0,
+          "sum_r": 11.367,
+          "win_rate_pct": 48.95
+        }
+      }
+    },
+    "(c) divergence cap removed (size_mult -> 1.0)": {
+      "sizeable": 163,
+      "of": 391,
+      "newly_admitted": 163,
+      "newly_admitted_expectancy": {
+        "n": 163,
+        "avg_r": 0.1457,
+        "median_r": 0.023,
+        "sum_r": 23.743,
+        "win_rate_pct": 51.53
+      },
+      "newly_admitted_mean_shares": 1,
+      "newly_admitted_mean_risk_usd": 7.21,
+      "newly_admitted_by_regime": {
+        "BULL": {
+          "n": 20,
+          "avg_r": 0.6188,
+          "median_r": 1.6667,
+          "sum_r": 12.376,
+          "win_rate_pct": 70.0
+        },
+        "SIDEWAYS": {
+          "n": 143,
+          "avg_r": 0.0795,
+          "median_r": -1.0,
+          "sum_r": 11.367,
+          "win_rate_pct": 48.95
+        }
+      }
+    },
+    "(c2) SIDEWAYS base 0.5 -> 0.75": {
+      "sizeable": 87,
+      "of": 391,
+      "newly_admitted": 87,
+      "newly_admitted_expectancy": {
+        "n": 87,
+        "avg_r": 0.3258,
+        "median_r": 0.1178,
+        "sum_r": 28.349,
+        "win_rate_pct": 57.47
+      },
+      "newly_admitted_mean_shares": 1,
+      "newly_admitted_mean_risk_usd": 6.17,
+      "newly_admitted_by_regime": {
+        "SIDEWAYS": {
+          "n": 87,
+          "avg_r": 0.3258,
+          "median_r": 0.1178,
+          "sum_r": 28.349,
+          "win_rate_pct": 57.47
+        }
+      }
+    },
+    "(e) capital base doubled": {
+      "sizeable": 177,
+      "of": 391,
+      "newly_admitted": 177,
+      "newly_admitted_expectancy": {
+        "n": 177,
+        "avg_r": 0.1604,
+        "median_r": 0.0931,
+        "sum_r": 28.393,
+        "win_rate_pct": 51.98
+      },
+      "newly_admitted_mean_shares": 1,
+      "newly_admitted_mean_risk_usd": 7.8,
+      "newly_admitted_by_regime": {
+        "BULL": {
+          "n": 33,
+          "avg_r": 0.4654,
+          "median_r": 0.3944,
+          "sum_r": 15.359,
+          "win_rate_pct": 63.64
+        },
+        "SIDEWAYS": {
+          "n": 144,
+          "avg_r": 0.0905,
+          "median_r": -0.5422,
+          "sum_r": 13.034,
+          "win_rate_pct": 49.31
+        }
+      }
+    }
+  },
+  "leverage_decision": {
+    "system_realised": {
+      "return_pct": 5.57,
+      "max_dd_pct": -10.39,
+      "sharpe": 0.513,
+      "avg_exposure_pct": 23.39
+    },
+    "spy_same_window": {
+      "sessions": 396,
+      "total_return_pct": 36.26,
+      "max_drawdown_pct": -18.76,
+      "sharpe_daily_annualised": 1.218,
+      "first_close": 458.8092346191406,
+      "last_close": 625.1531372070312
+    },
+    "scale_to_match_spy_return": {
+      "required_k": 6.51,
+      "implied_max_dd_pct": -67.64,
+      "note": "Sharpe is scale-invariant, so matching SPY's return by scaling positions means accepting the implied drawdown; compare it with SPY's own drawdown above"
+    },
+    "scaling_table_approx": [
+      {
+        "scale_k": 1,
+        "implied_return_pct": 5.57,
+        "implied_max_dd_pct": -10.39,
+        "sharpe": 0.513,
+        "implied_avg_exposure_pct": 23.39
+      },
+      {
+        "scale_k": 2,
+        "implied_return_pct": 11.14,
+        "implied_max_dd_pct": -20.78,
+        "sharpe": 0.513,
+        "implied_avg_exposure_pct": 46.78
+      },
+      {
+        "scale_k": 3,
+        "implied_return_pct": 16.71,
+        "implied_max_dd_pct": -31.17,
+        "sharpe": 0.513,
+        "implied_avg_exposure_pct": 70.17
+      },
+      {
+        "scale_k": 4,
+        "implied_return_pct": 22.28,
+        "implied_max_dd_pct": -41.56,
+        "sharpe": 0.513,
+        "implied_avg_exposure_pct": 93.56
+      },
+      {
+        "scale_k": 5,
+        "implied_return_pct": 27.85,
+        "implied_max_dd_pct": -51.95,
+        "sharpe": 0.513,
+        "implied_avg_exposure_pct": 116.95
+      }
+    ],
+    "caveat": "linear scaling is an approximation: compounding, cash drag and the integer-share floor all change with size. The table is a decision aid for a PREFERENCE, not a performance estimate"
+  }
+}

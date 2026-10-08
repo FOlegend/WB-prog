@@ -1,0 +1,131 @@
+{
+  "generated": "2026-10-04",
+  "reports": [
+    {
+      "kind": "pit",
+      "requested_end": "2026-08-06",
+      "new_rows": 2663,
+      "new_range": [
+        "2016-01-04",
+        "2026-08-06"
+      ],
+      "new_tail": "2026-08-06",
+      "original_path": "/Users/curryzeng/Library/CloudStorage/OneDrive-TheChineseUniversityofHongKong/WB-prog/regime_dual_engine/data/breadth_pit_2016_2025.csv",
+      "promoted": false,
+      "original_rows": 2408,
+      "original_range": [
+        "2016-01-04",
+        "2025-07-31"
+      ],
+      "original_tail": "2025-07-31",
+      "original_sha256": "06772d3c0860a00be4ad024e08e04fc1c0d6908e10c3b5ed44fd82c09bd801e0",
+      "appended_rows": 255,
+      "historical_invariance": {
+        "n_common": 2408,
+        "columns": [
+          "pct_above_50dma",
+          "ad_line",
+          "n_stocks"
+        ],
+        "identical": true,
+        "n_differing_rows": 0,
+        "differences": {},
+        "old_range": [
+          "2016-01-04",
+          "2025-07-31"
+        ]
+      },
+      "written_path": "/Users/curryzeng/Library/CloudStorage/OneDrive-TheChineseUniversityofHongKong/WB-prog/regime_dual_engine/data/breadth_pit_2016_2025_refreshed.csv",
+      "written_sha256": "4969d5dcd91a98f785689220fb9ab3d10f47a9b2d83cc5fb383dbc5fb6fe2d96"
+    },
+    {
+      "kind": "current",
+      "requested_end": "2026-08-06",
+      "new_rows": 2663,
+      "new_range": [
+        "2016-01-04",
+        "2026-08-06"
+      ],
+      "new_tail": "2026-08-06",
+      "original_path": "/Users/curryzeng/Library/CloudStorage/OneDrive-TheChineseUniversityofHongKong/WB-prog/regime_dual_engine/data/breadth_current_2016_2025.csv",
+      "promoted": false,
+      "original_rows": 2408,
+      "original_range": [
+        "2016-01-04",
+        "2025-07-31"
+      ],
+      "original_tail": "2025-07-31",
+      "original_sha256": "633c8e5fd966091a1d5e0e388967a6090e4e540d63101aea558fb39da4b50218",
+      "appended_rows": 255,
+      "historical_invariance": {
+        "n_common": 2408,
+        "columns": [
+          "pct_above_50dma",
+          "ad_line",
+          "n_stocks"
+        ],
+        "identical": true,
+        "n_differing_rows": 0,
+        "differences": {},
+        "old_range": [
+          "2016-01-04",
+          "2025-07-31"
+        ]
+      },
+      "written_path": "/Users/curryzeng/Library/CloudStorage/OneDrive-TheChineseUniversityofHongKong/WB-prog/regime_dual_engine/data/breadth_current_2016_2025_refreshed.csv",
+      "written_sha256": "3a540c45a14252d85f74d1fa1251ac4d96b7a7b8afcc985b7431307dace1eba7"
+    },
+    {
+      "kind": "plain",
+      "requested_end": "2026-08-06",
+      "new_rows": 2663,
+      "new_range": [
+        "2016-01-04",
+        "2026-08-06"
+      ],
+      "new_tail": "2026-08-06",
+      "original_path": "/Users/curryzeng/Library/CloudStorage/OneDrive-TheChineseUniversityofHongKong/WB-prog/regime_dual_engine/data/breadth_2016_2025.csv",
+      "promoted": false,
+      "original_rows": 2408,
+      "original_range": [
+        "2016-01-04",
+        "2025-07-31"
+      ],
+      "original_tail": "2025-07-31",
+      "original_sha256": "23755815783b72d5a65859804547b978f16f9f0bebc2bf72b2b95867c431aa60",
+      "appended_rows": 255,
+      "historical_invariance": {
+        "n_common": 2408,
+        "columns": [
+          "pct_above_50dma",
+          "ad_line",
+          "n_stocks"
+        ],
+        "identical": false,
+        "n_differing_rows": 7174,
+        "differences": {
+          "pct_above_50dma": {
+            "n_differing": 2359,
+            "max_abs_diff": 2.5180000000000007,
+            "first_differing_date": "2016-03-15"
+          },
+          "ad_line": {
+            "n_differing": 2407,
+            "max_abs_diff": 2749.0,
+            "first_differing_date": "2016-01-05"
+          },
+          "n_stocks": {
+            "n_differing": 2408,
+            "max_abs_diff": 68.0,
+            "first_differing_date": "2016-01-04"
+          }
+        },
+        "old_range": [
+          "2016-01-04",
+          "2025-07-31"
+        ]
+      },
+      "ABORTED": "historical rows would change — refusing to write. Investigate the source data before proceeding (task §11)."
+    }
+  ]
+}

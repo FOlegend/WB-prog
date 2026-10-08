@@ -1,0 +1,503 @@
+{
+  "generated": "2026-10-05",
+  "candidate_source": "github.com/chinobing/historical_sp500_constituents",
+  "constituent_sha256": "457035ecec33c69f61c6249d6a114626f85a80c4c5f8cab9aa3e5c5e5f5d5cdb",
+  "official_events": [
+    {
+      "event": "A",
+      "announcement_date": "2026-05-27",
+      "announcement_source": "S&P DJI press release 20260527-1483532 'FedEx Freight Holding Company Set to Join S&P 500; EPAM Systems and Dave to Join S&P SmallCap 600'",
+      "url": "https://www.spglobal.com/spdji/en/documents/indexnews/announcements/20260527-1483532/1483532_fdx-amwd-56.pdf",
+      "note": "the English table gives FDXF addition 2026-06-01 and EPAM deletion 2026-06-02, while the body text and the Portuguese release say both are effective 2026-06-02 / 06-01 — S&P's own documents are not fully self-consistent here",
+      "actions": [
+        {
+          "ticker": "FDXF",
+          "action": "addition",
+          "official_effective_date": "2026-06-01",
+          "candidate_event_date": "2026-06-04",
+          "gap_days_candidate_minus_effective": 3,
+          "probes": {
+            "day_before_effective": {
+              "date": "2026-05-31",
+              "present": false,
+              "universe_size": 503
+            },
+            "effective_date": {
+              "date": "2026-06-01",
+              "present": false,
+              "universe_size": 503
+            },
+            "candidate_event_date": {
+              "date": "2026-06-04",
+              "present": true,
+              "universe_size": 503
+            }
+          }
+        },
+        {
+          "ticker": "EPAM",
+          "action": "deletion",
+          "official_effective_date": "2026-06-02",
+          "candidate_event_date": "2026-06-04",
+          "gap_days_candidate_minus_effective": 2,
+          "probes": {
+            "day_before_effective": {
+              "date": "2026-06-01",
+              "present": true,
+              "universe_size": 503
+            },
+            "effective_date": {
+              "date": "2026-06-02",
+              "present": true,
+              "universe_size": 503
+            },
+            "candidate_event_date": {
+              "date": "2026-06-04",
+              "present": false,
+              "universe_size": 503
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "FERG",
+      "announcement_date": "2026-07-31",
+      "announcement_source": "S&P DJI press release 20260731 'Ferguson Enterprises Set to Join S&P 500 and ADI Global Distribution to Join S&P SmallCap 600'",
+      "url": "https://press.spglobal.com/2026-07-31-Ferguson-Enterprises-Set-to-Join-S-P-500-and-ADI-Global-Distribution-to-Join-S-P-SmallCap-600",
+      "note": null,
+      "actions": [
+        {
+          "ticker": "FERG",
+          "action": "addition",
+          "official_effective_date": "2026-08-05",
+          "candidate_event_date": "2026-08-06",
+          "gap_days_candidate_minus_effective": 1,
+          "probes": {
+            "day_before_effective": {
+              "date": "2026-08-04",
+              "present": false,
+              "universe_size": 503
+            },
+            "effective_date": {
+              "date": "2026-08-05",
+              "present": false,
+              "universe_size": 503
+            },
+            "candidate_event_date": {
+              "date": "2026-08-06",
+              "present": false,
+              "universe_size": 502
+            }
+          }
+        },
+        {
+          "ticker": "EA",
+          "action": "deletion",
+          "official_effective_date": "2026-08-05",
+          "candidate_event_date": "2026-08-06",
+          "gap_days_candidate_minus_effective": 1,
+          "probes": {
+            "day_before_effective": {
+              "date": "2026-08-04",
+              "present": true,
+              "universe_size": 503
+            },
+            "effective_date": {
+              "date": "2026-08-05",
+              "present": true,
+              "universe_size": 503
+            },
+            "candidate_event_date": {
+              "date": "2026-08-06",
+              "present": false,
+              "universe_size": 502
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "B",
+      "announcement_date": "2026-08-13",
+      "announcement_source": "S&P DJI press release 20260813-1484396 'Reddit Set to Join S&P 500 and Sun Communities to Join S&P MidCap 400'",
+      "url": "https://www.spglobal.com/spdji/en/documents/indexnews/announcements/20260813-1484396/1484396_avb54wbs.pdf",
+      "note": "EQR acquires AVB; the combined company is renamed VMRK and KEEPS its S&P 500 seat. So the economic universe change is one addition (RDDT) and one deletion (AVB); EQR->VMRK is a ticker change, not a membership change",
+      "actions": [
+        {
+          "ticker": "RDDT",
+          "action": "addition",
+          "official_effective_date": "2026-08-18",
+          "candidate_event_date": "2026-08-18",
+          "gap_days_candidate_minus_effective": 0,
+          "probes": {
+            "day_before_effective": {
+              "date": "2026-08-17",
+              "present": false,
+              "universe_size": 503
+            },
+            "effective_date": {
+              "date": "2026-08-18",
+              "present": true,
+              "universe_size": 503
+            },
+            "candidate_event_date": {
+              "date": "2026-08-18",
+              "present": true,
+              "universe_size": 503
+            }
+          }
+        },
+        {
+          "ticker": "AVB",
+          "action": "deletion",
+          "official_effective_date": "2026-08-18",
+          "candidate_event_date": "2026-08-18",
+          "gap_days_candidate_minus_effective": 0,
+          "probes": {
+            "day_before_effective": {
+              "date": "2026-08-17",
+              "present": true,
+              "universe_size": 503
+            },
+            "effective_date": {
+              "date": "2026-08-18",
+              "present": false,
+              "universe_size": 503
+            },
+            "candidate_event_date": {
+              "date": "2026-08-18",
+              "present": false,
+              "universe_size": 503
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "C",
+      "announcement_date": "2026-09-04",
+      "announcement_source": "S&P DJI quarterly rebalance announcement, 2026-09-04, effective prior to the open on Monday 2026-09-21",
+      "url": "https://seekingalpha.com/news/4640512",
+      "note": null,
+      "actions": [
+        {
+          "ticker": "BE",
+          "action": "addition",
+          "official_effective_date": "2026-09-21",
+          "candidate_event_date": "2026-09-21",
+          "gap_days_candidate_minus_effective": 0,
+          "probes": {
+            "day_before_effective": {
+              "date": "2026-09-20",
+              "present": false,
+              "universe_size": 503
+            },
+            "effective_date": {
+              "date": "2026-09-21",
+              "present": true,
+              "universe_size": 503
+            },
+            "candidate_event_date": {
+              "date": "2026-09-21",
+              "present": true,
+              "universe_size": 503
+            }
+          }
+        },
+        {
+          "ticker": "P",
+          "action": "addition",
+          "official_effective_date": "2026-09-21",
+          "candidate_event_date": "2026-09-21",
+          "gap_days_candidate_minus_effective": 0,
+          "probes": {
+            "day_before_effective": {
+              "date": "2026-09-20",
+              "present": false,
+              "universe_size": 503
+            },
+            "effective_date": {
+              "date": "2026-09-21",
+              "present": true,
+              "universe_size": 503
+            },
+            "candidate_event_date": {
+              "date": "2026-09-21",
+              "present": true,
+              "universe_size": 503
+            }
+          }
+        },
+        {
+          "ticker": "ILMN",
+          "action": "addition",
+          "official_effective_date": "2026-09-21",
+          "candidate_event_date": "2026-09-21",
+          "gap_days_candidate_minus_effective": 0,
+          "probes": {
+            "day_before_effective": {
+              "date": "2026-09-20",
+              "present": false,
+              "universe_size": 503
+            },
+            "effective_date": {
+              "date": "2026-09-21",
+              "present": true,
+              "universe_size": 503
+            },
+            "candidate_event_date": {
+              "date": "2026-09-21",
+              "present": true,
+              "universe_size": 503
+            }
+          }
+        },
+        {
+          "ticker": "TAP",
+          "action": "deletion",
+          "official_effective_date": "2026-09-21",
+          "candidate_event_date": "2026-09-21",
+          "gap_days_candidate_minus_effective": 0,
+          "probes": {
+            "day_before_effective": {
+              "date": "2026-09-20",
+              "present": true,
+              "universe_size": 503
+            },
+            "effective_date": {
+              "date": "2026-09-21",
+              "present": false,
+              "universe_size": 503
+            },
+            "candidate_event_date": {
+              "date": "2026-09-21",
+              "present": false,
+              "universe_size": 503
+            }
+          }
+        },
+        {
+          "ticker": "TTD",
+          "action": "deletion",
+          "official_effective_date": "2026-09-21",
+          "candidate_event_date": "2026-09-21",
+          "gap_days_candidate_minus_effective": 0,
+          "probes": {
+            "day_before_effective": {
+              "date": "2026-09-20",
+              "present": true,
+              "universe_size": 503
+            },
+            "effective_date": {
+              "date": "2026-09-21",
+              "present": false,
+              "universe_size": 503
+            },
+            "candidate_event_date": {
+              "date": "2026-09-21",
+              "present": false,
+              "universe_size": 503
+            }
+          }
+        },
+        {
+          "ticker": "BLDR",
+          "action": "deletion",
+          "official_effective_date": "2026-09-21",
+          "candidate_event_date": "2026-09-21",
+          "gap_days_candidate_minus_effective": 0,
+          "probes": {
+            "day_before_effective": {
+              "date": "2026-09-20",
+              "present": true,
+              "universe_size": 503
+            },
+            "effective_date": {
+              "date": "2026-09-21",
+              "present": false,
+              "universe_size": 503
+            },
+            "candidate_event_date": {
+              "date": "2026-09-21",
+              "present": false,
+              "universe_size": 503
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "MRSH",
+      "announcement_date": "2025-10-14",
+      "announcement_source": "Marsh McLennan company press release: ticker changes from MMC to MRSH effective 2026-01-14. NOT an S&P index action.",
+      "url": "https://www.marsh.com/jp/en/about/media/marshmclennan-and-its-businesses-will-brand-as-marsh.html",
+      "note": "the company was a member before and after; only the symbol changed. Any 'MRSH in / MMC out' event is therefore a SYMBOL change, not a universe change, and must not be counted as evidence about index date semantics",
+      "actions": [
+        {
+          "ticker": "MRSH",
+          "action": "ticker_change_from_MMC",
+          "official_effective_date": "2026-01-14",
+          "candidate_event_date": "2026-01-15",
+          "gap_days_candidate_minus_effective": 1,
+          "probes": {
+            "day_before_effective": {
+              "date": "2026-01-13",
+              "present": false,
+              "universe_size": 503
+            },
+            "effective_date": {
+              "date": "2026-01-14",
+              "present": false,
+              "universe_size": 503
+            },
+            "candidate_event_date": {
+              "date": "2026-01-15",
+              "present": true,
+              "universe_size": 503
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "verdict": {
+    "gaps_vs_effective": [
+      3,
+      2,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min_gap": 0,
+    "max_gap": 3,
+    "never_before_effective": true,
+    "is_effective_date": false,
+    "additions_with_lookahead": 0
+  },
+  "pit_tests": [
+    {
+      "event": "A",
+      "ticker": "FDXF",
+      "kind": "addition",
+      "absent_day_before": true,
+      "present_on_effective_date": false,
+      "candidate_lag_days": 3
+    },
+    {
+      "event": "A",
+      "ticker": "EPAM",
+      "kind": "deletion",
+      "still_present_day_before": true,
+      "absent_on_effective_date": false,
+      "candidate_lag_days": 2
+    },
+    {
+      "event": "FERG",
+      "ticker": "FERG",
+      "kind": "addition",
+      "absent_day_before": true,
+      "present_on_effective_date": false,
+      "candidate_lag_days": 1
+    },
+    {
+      "event": "FERG",
+      "ticker": "EA",
+      "kind": "deletion",
+      "still_present_day_before": true,
+      "absent_on_effective_date": false,
+      "candidate_lag_days": 1
+    },
+    {
+      "event": "B",
+      "ticker": "RDDT",
+      "kind": "addition",
+      "absent_day_before": true,
+      "present_on_effective_date": true,
+      "candidate_lag_days": 0
+    },
+    {
+      "event": "B",
+      "ticker": "AVB",
+      "kind": "deletion",
+      "still_present_day_before": true,
+      "absent_on_effective_date": true,
+      "candidate_lag_days": 0
+    },
+    {
+      "event": "C",
+      "ticker": "BE",
+      "kind": "addition",
+      "absent_day_before": true,
+      "present_on_effective_date": true,
+      "candidate_lag_days": 0
+    },
+    {
+      "event": "C",
+      "ticker": "P",
+      "kind": "addition",
+      "absent_day_before": true,
+      "present_on_effective_date": true,
+      "candidate_lag_days": 0
+    },
+    {
+      "event": "C",
+      "ticker": "ILMN",
+      "kind": "addition",
+      "absent_day_before": true,
+      "present_on_effective_date": true,
+      "candidate_lag_days": 0
+    },
+    {
+      "event": "C",
+      "ticker": "TAP",
+      "kind": "deletion",
+      "still_present_day_before": true,
+      "absent_on_effective_date": true,
+      "candidate_lag_days": 0
+    },
+    {
+      "event": "C",
+      "ticker": "TTD",
+      "kind": "deletion",
+      "still_present_day_before": true,
+      "absent_on_effective_date": true,
+      "candidate_lag_days": 0
+    },
+    {
+      "event": "C",
+      "ticker": "BLDR",
+      "kind": "deletion",
+      "still_present_day_before": true,
+      "absent_on_effective_date": true,
+      "candidate_lag_days": 0
+    }
+  ],
+  "event_snapshot_consistency": {
+    "events_checked": 701,
+    "mismatches": 1,
+    "mismatch_rate": 0.0014265335235378032,
+    "examples": [
+      {
+        "date": "2026-08-06",
+        "event_add": [
+          "FERG"
+        ],
+        "event_rem": [
+          "EA"
+        ],
+        "snap_add": [],
+        "snap_rem": [
+          "EA"
+        ]
+      }
+    ]
+  }
+}

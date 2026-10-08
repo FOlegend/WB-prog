@@ -1,0 +1,1306 @@
+{
+  "generated": "2026-10-01",
+  "finding": "Regime v1 Engine B (breadth) is not point-in-time in historical replay: load_breadth() ignores `end` when the cache exists, so compute_regime_decision() always reads the cache tail (2025-07-31)",
+  "part1_leak": {
+    "probe_rows": [
+      {
+        "as_of": "2018-06-29",
+        "breadth_rows_shipped": 2408,
+        "breadth_rows_pit": 628,
+        "shipped": {
+          "label": "BEAR",
+          "composite": 28.458,
+          "mult": 0.0,
+          "vetoes": [],
+          "breadth_percentile": 41.746,
+          "breadth_now_pct": 57.23,
+          "breadth_10d_ago_pct": 67.48,
+          "hmm_bull_prob": 0.1517
+        },
+        "pit_corrected": {
+          "label": "BEAR",
+          "composite": 21.454,
+          "mult": 0.0,
+          "vetoes": [],
+          "breadth_percentile": 27.738,
+          "breadth_now_pct": 52.87,
+          "breadth_10d_ago_pct": 68.97,
+          "hmm_bull_prob": 0.1517
+        }
+      },
+      {
+        "as_of": "2020-03-31",
+        "breadth_rows_shipped": 2408,
+        "breadth_rows_pit": 1068,
+        "shipped": {
+          "label": "BEAR",
+          "composite": 20.873,
+          "mult": 0.0,
+          "vetoes": [],
+          "breadth_percentile": 41.746,
+          "breadth_now_pct": 57.23,
+          "breadth_10d_ago_pct": 67.48,
+          "hmm_bull_prob": 0.0
+        },
+        "pit_corrected": {
+          "label": "BEAR",
+          "composite": 5.893,
+          "mult": 0.0,
+          "vetoes": [],
+          "breadth_percentile": 11.786,
+          "breadth_now_pct": 3.88,
+          "breadth_10d_ago_pct": 4.34,
+          "hmm_bull_prob": 0.0
+        }
+      },
+      {
+        "as_of": "2022-06-30",
+        "breadth_rows_shipped": 2408,
+        "breadth_rows_pit": 1635,
+        "shipped": {
+          "label": "BEAR",
+          "composite": 20.873,
+          "mult": 0.0,
+          "vetoes": [],
+          "breadth_percentile": 41.746,
+          "breadth_now_pct": 57.23,
+          "breadth_10d_ago_pct": 67.48,
+          "hmm_bull_prob": 0.0
+        },
+        "pit_corrected": {
+          "label": "BULL",
+          "composite": 8.531,
+          "mult": 1.0,
+          "vetoes": [
+            "BREADTH_THRUST"
+          ],
+          "breadth_percentile": 17.063,
+          "breadth_now_pct": 15.7,
+          "breadth_10d_ago_pct": 5.38,
+          "hmm_bull_prob": 0.0
+        }
+      },
+      {
+        "as_of": "2024-01-31",
+        "breadth_rows_shipped": 2408,
+        "breadth_rows_pit": 2033,
+        "shipped": {
+          "label": "SIDEWAYS",
+          "composite": 42.068,
+          "mult": 0.5,
+          "vetoes": [],
+          "breadth_percentile": 41.746,
+          "breadth_now_pct": 57.23,
+          "breadth_10d_ago_pct": 67.48,
+          "hmm_bull_prob": 0.4239
+        },
+        "pit_corrected": {
+          "label": "SIDEWAYS",
+          "composite": 49.191,
+          "mult": 0.5,
+          "vetoes": [],
+          "breadth_percentile": 55.992,
+          "breadth_now_pct": 64.38,
+          "breadth_10d_ago_pct": 71.46,
+          "hmm_bull_prob": 0.4239
+        }
+      },
+      {
+        "as_of": "2024-06-28",
+        "breadth_rows_shipped": 2408,
+        "breadth_rows_pit": 2136,
+        "shipped": {
+          "label": "SIDEWAYS",
+          "composite": 42.343,
+          "mult": 0.5,
+          "vetoes": [],
+          "breadth_percentile": 41.746,
+          "breadth_now_pct": 57.23,
+          "breadth_10d_ago_pct": 67.48,
+          "hmm_bull_prob": 0.4294
+        },
+        "pit_corrected": {
+          "label": "SIDEWAYS",
+          "composite": 38.653,
+          "mult": 0.5,
+          "vetoes": [],
+          "breadth_percentile": 34.365,
+          "breadth_now_pct": 48.97,
+          "breadth_10d_ago_pct": 48.65,
+          "hmm_bull_prob": 0.4294
+        }
+      },
+      {
+        "as_of": "2025-01-31",
+        "breadth_rows_shipped": 2408,
+        "breadth_rows_pit": 2284,
+        "shipped": {
+          "label": "BEAR",
+          "composite": 31.238,
+          "mult": 0.0,
+          "vetoes": [],
+          "breadth_percentile": 41.746,
+          "breadth_now_pct": 57.23,
+          "breadth_10d_ago_pct": 67.48,
+          "hmm_bull_prob": 0.2073
+        },
+        "pit_corrected": {
+          "label": "BEAR",
+          "composite": 26.099,
+          "mult": 0.0,
+          "vetoes": [],
+          "breadth_percentile": 31.468,
+          "breadth_now_pct": 51.74,
+          "breadth_10d_ago_pct": 37.58,
+          "hmm_bull_prob": 0.2073
+        }
+      },
+      {
+        "as_of": "2025-07-31",
+        "breadth_rows_shipped": 2408,
+        "breadth_rows_pit": 2408,
+        "shipped": {
+          "label": "BULL",
+          "composite": 70.858,
+          "mult": 0.5,
+          "vetoes": [
+            "BEARISH_BREADTH_DIVERGENCE"
+          ],
+          "breadth_percentile": 41.746,
+          "breadth_now_pct": 57.23,
+          "breadth_10d_ago_pct": 67.48,
+          "hmm_bull_prob": 0.9997
+        },
+        "pit_corrected": {
+          "label": "BULL",
+          "composite": 70.858,
+          "mult": 0.5,
+          "vetoes": [
+            "BEARISH_BREADTH_DIVERGENCE"
+          ],
+          "breadth_percentile": 41.746,
+          "breadth_now_pct": 57.23,
+          "breadth_10d_ago_pct": 67.48,
+          "hmm_bull_prob": 0.9997
+        }
+      }
+    ],
+    "shipped_breadth_is_constant_across_as_of": true,
+    "interpretation": "if the shipped breadth diagnostics are identical for every as-of date, Engine B is not point-in-time: it always evaluates the last row of the cache"
+  },
+  "part2_end_to_end": {
+    "comparison": {
+      "2.5": {
+        "pit_corrected": {
+          "return_pct": 5.57,
+          "cagr_pct": 3.51,
+          "max_dd_pct": -10.39,
+          "sharpe": 0.513,
+          "sortino": 0.557,
+          "downside_deviation_daily": 0.003431,
+          "calmar": 0.338,
+          "n_trades": 168,
+          "win_rate_pct": 47.6,
+          "profit_factor": 1.13,
+          "expectancy_r": 0.1878,
+          "avg_r": 0.1878,
+          "median_r": -0.562,
+          "sum_r": 31.545,
+          "avg_winner_r": 1.4573,
+          "avg_loser_r": -0.9942,
+          "largest_win_r": 1.667,
+          "largest_loss_r": -1.689,
+          "avg_holding_cal_days": 9.7798,
+          "median_holding_cal_days": 7.0,
+          "mfe_r_mean": 1.271,
+          "mae_r_mean": -0.8812,
+          "mfe_capture_mean": -2.1618,
+          "mfe_capture_total": 0.1477,
+          "avg_exposure_pct": 23.39,
+          "median_exposure_pct": 25.72,
+          "max_exposure_pct": 87.84,
+          "cash_drag_pct": 76.61,
+          "flat_days_pct": 23.48,
+          "avg_positions": 2.823,
+          "sessions_at_max_open_positions": 96,
+          "sessions_at_max_open_positions_pct": 24.24,
+          "exit_reason_distribution": {
+            "STOP_LOSS": {
+              "n": 84,
+              "share_pct": 50.0,
+              "sum_r": -86.165,
+              "avg_r": -1.0258,
+              "sum_net_pnl": -507.57
+            },
+            "TAKE_PROFIT": {
+              "n": 67,
+              "share_pct": 39.88,
+              "sum_r": 111.689,
+              "avg_r": 1.667,
+              "sum_net_pnl": 549.96
+            },
+            "TIME_STOP": {
+              "n": 9,
+              "share_pct": 5.36,
+              "sum_r": 5.036,
+              "avg_r": 0.5596,
+              "sum_net_pnl": 21.27
+            },
+            "TRAILING_STOP": {
+              "n": 8,
+              "share_pct": 4.76,
+              "sum_r": 0.985,
+              "avg_r": 0.1231,
+              "sum_net_pnl": 3.47
+            }
+          },
+          "by_entry_regime": {
+            "BULL": {
+              "n": 48,
+              "sum_r": 1.601,
+              "avg_r": 0.0334,
+              "win_rate_pct": 41.67,
+              "sum_net_pnl": -41.57
+            },
+            "SIDEWAYS": {
+              "n": 120,
+              "sum_r": 29.944,
+              "avg_r": 0.2495,
+              "win_rate_pct": 50.0,
+              "sum_net_pnl": 108.69
+            }
+          }
+        },
+        "shipped_leaky": {
+          "return_pct": 7.99,
+          "cagr_pct": 5.01,
+          "max_dd_pct": -5.98,
+          "sharpe": 0.935,
+          "sortino": 1.141,
+          "downside_deviation_daily": 0.002365,
+          "calmar": 0.838,
+          "n_trades": 151,
+          "win_rate_pct": 50.3,
+          "profit_factor": 1.29,
+          "expectancy_r": 0.1822,
+          "avg_r": 0.1822,
+          "median_r": 0.021,
+          "sum_r": 27.514,
+          "avg_winner_r": 1.3975,
+          "avg_loser_r": -1.0493,
+          "largest_win_r": 1.667,
+          "largest_loss_r": -1.573,
+          "avg_holding_cal_days": 8.9404,
+          "median_holding_cal_days": 7,
+          "mfe_r_mean": 1.2197,
+          "mae_r_mean": -0.8421,
+          "mfe_capture_mean": -3.2955,
+          "mfe_capture_total": 0.1494,
+          "avg_exposure_pct": 17.16,
+          "median_exposure_pct": 19.47,
+          "max_exposure_pct": 57.1,
+          "cash_drag_pct": 82.84,
+          "flat_days_pct": 31.06,
+          "avg_positions": 2.366,
+          "sessions_at_max_open_positions": 68,
+          "sessions_at_max_open_positions_pct": 17.17,
+          "exit_reason_distribution": {
+            "STOP_LOSS": {
+              "n": 75,
+              "share_pct": 49.67,
+              "sum_r": -78.694,
+              "avg_r": -1.0493,
+              "sum_net_pnl": -361.48
+            },
+            "TAKE_PROFIT": {
+              "n": 60,
+              "share_pct": 39.74,
+              "sum_r": 100.02,
+              "avg_r": 1.667,
+              "sum_net_pnl": 438.28
+            },
+            "TRAILING_STOP": {
+              "n": 10,
+              "share_pct": 6.62,
+              "sum_r": 2.463,
+              "avg_r": 0.2463,
+              "sum_net_pnl": 9.36
+            },
+            "TIME_STOP": {
+              "n": 6,
+              "share_pct": 3.97,
+              "sum_r": 3.725,
+              "avg_r": 0.6208,
+              "sum_net_pnl": 17.67
+            }
+          },
+          "by_entry_regime": {
+            "BULL": {
+              "n": 24,
+              "sum_r": -7.706,
+              "avg_r": -0.3211,
+              "win_rate_pct": 33.33,
+              "sum_net_pnl": -47.99
+            },
+            "SIDEWAYS": {
+              "n": 127,
+              "sum_r": 35.22,
+              "avg_r": 0.2773,
+              "win_rate_pct": 53.54,
+              "sum_net_pnl": 151.81
+            }
+          }
+        },
+        "delta_return_pp": -2.42,
+        "delta_sharpe": -0.422,
+        "delta_maxdd_pp": -4.41,
+        "delta_trades": 17,
+        "delta_avg_r": 0.0056
+      },
+      "3.0": {
+        "pit_corrected": {
+          "return_pct": -1.43,
+          "cagr_pct": -0.91,
+          "max_dd_pct": -11.29,
+          "sharpe": -0.084,
+          "sortino": -0.096,
+          "downside_deviation_daily": 0.003585,
+          "calmar": -0.081,
+          "n_trades": 156,
+          "win_rate_pct": 44.2,
+          "profit_factor": 0.97,
+          "expectancy_r": 0.0572,
+          "avg_r": 0.0572,
+          "median_r": -1.0,
+          "sum_r": 8.923,
+          "avg_winner_r": 1.3988,
+          "avg_loser_r": -1.0348,
+          "largest_win_r": 2.0,
+          "largest_loss_r": -1.689,
+          "avg_holding_cal_days": 10.8269,
+          "median_holding_cal_days": 8.0,
+          "mfe_r_mean": 1.3615,
+          "mae_r_mean": -0.9408,
+          "mfe_capture_mean": -2.0901,
+          "mfe_capture_total": 0.042,
+          "avg_exposure_pct": 23.36,
+          "median_exposure_pct": 25.43,
+          "max_exposure_pct": 91.09,
+          "cash_drag_pct": 76.64,
+          "flat_days_pct": 23.74,
+          "avg_positions": 2.907,
+          "sessions_at_max_open_positions": 111,
+          "sessions_at_max_open_positions_pct": 28.03,
+          "exit_reason_distribution": {
+            "STOP_LOSS": {
+              "n": 82,
+              "share_pct": 52.56,
+              "sum_r": -87.288,
+              "avg_r": -1.0645,
+              "sum_net_pnl": -483.79
+            },
+            "TAKE_PROFIT": {
+              "n": 43,
+              "share_pct": 27.56,
+              "sum_r": 86.0,
+              "avg_r": 2.0,
+              "sum_net_pnl": 419.46
+            },
+            "TRAILING_STOP": {
+              "n": 21,
+              "share_pct": 13.46,
+              "sum_r": 5.862,
+              "avg_r": 0.2791,
+              "sum_net_pnl": 26.44
+            },
+            "TIME_STOP": {
+              "n": 10,
+              "share_pct": 6.41,
+              "sum_r": 4.349,
+              "avg_r": 0.4349,
+              "sum_net_pnl": 21.75
+            }
+          },
+          "by_entry_regime": {
+            "BULL": {
+              "n": 42,
+              "sum_r": -4.943,
+              "avg_r": -0.1177,
+              "win_rate_pct": 40.48,
+              "sum_net_pnl": -70.76
+            },
+            "SIDEWAYS": {
+              "n": 114,
+              "sum_r": 13.866,
+              "avg_r": 0.1216,
+              "win_rate_pct": 45.61,
+              "sum_net_pnl": 54.63
+            }
+          }
+        },
+        "shipped_leaky": {
+          "return_pct": 10.22,
+          "cagr_pct": 6.39,
+          "max_dd_pct": -5.52,
+          "sharpe": 1.181,
+          "sortino": 1.525,
+          "downside_deviation_daily": 0.002276,
+          "calmar": 1.158,
+          "n_trades": 133,
+          "win_rate_pct": 51.1,
+          "profit_factor": 1.44,
+          "expectancy_r": 0.2439,
+          "avg_r": 0.2439,
+          "median_r": 0.054,
+          "sum_r": 32.434,
+          "avg_winner_r": 1.4574,
+          "avg_loser_r": -1.0256,
+          "largest_win_r": 2.0,
+          "largest_loss_r": -1.573,
+          "avg_holding_cal_days": 10.7218,
+          "median_holding_cal_days": 8,
+          "mfe_r_mean": 1.4099,
+          "mae_r_mean": -0.8521,
+          "mfe_capture_mean": -2.6581,
+          "mfe_capture_total": 0.173,
+          "avg_exposure_pct": 17.3,
+          "median_exposure_pct": 18.22,
+          "max_exposure_pct": 57.5,
+          "cash_drag_pct": 82.7,
+          "flat_days_pct": 30.81,
+          "avg_positions": 2.475,
+          "sessions_at_max_open_positions": 81,
+          "sessions_at_max_open_positions_pct": 20.45,
+          "exit_reason_distribution": {
+            "STOP_LOSS": {
+              "n": 62,
+              "share_pct": 46.62,
+              "sum_r": -65.086,
+              "avg_r": -1.0498,
+              "sum_net_pnl": -290.85
+            },
+            "TAKE_PROFIT": {
+              "n": 45,
+              "share_pct": 33.83,
+              "sum_r": 90.0,
+              "avg_r": 2.0,
+              "sum_net_pnl": 387.49
+            },
+            "TRAILING_STOP": {
+              "n": 18,
+              "share_pct": 13.53,
+              "sum_r": 5.491,
+              "avg_r": 0.3051,
+              "sum_net_pnl": 23.44
+            },
+            "TIME_STOP": {
+              "n": 8,
+              "share_pct": 6.02,
+              "sum_r": 2.029,
+              "avg_r": 0.2536,
+              "sum_net_pnl": 10.76
+            }
+          },
+          "by_entry_regime": {
+            "BULL": {
+              "n": 19,
+              "sum_r": -4.876,
+              "avg_r": -0.2566,
+              "win_rate_pct": 31.58,
+              "sum_net_pnl": -35.86
+            },
+            "SIDEWAYS": {
+              "n": 114,
+              "sum_r": 37.31,
+              "avg_r": 0.3273,
+              "win_rate_pct": 54.39,
+              "sum_net_pnl": 166.69
+            }
+          }
+        },
+        "delta_return_pp": -11.65,
+        "delta_sharpe": -1.265,
+        "delta_maxdd_pp": -5.77,
+        "delta_trades": 23,
+        "delta_avg_r": -0.1867
+      },
+      "3.5": {
+        "pit_corrected": {
+          "return_pct": -0.41,
+          "cagr_pct": -0.26,
+          "max_dd_pct": -10.78,
+          "sharpe": 0.005,
+          "sortino": 0.006,
+          "downside_deviation_daily": 0.003587,
+          "calmar": -0.024,
+          "n_trades": 151,
+          "win_rate_pct": 43.7,
+          "profit_factor": 0.99,
+          "expectancy_r": 0.0742,
+          "avg_r": 0.0742,
+          "median_r": -1.0,
+          "sum_r": 11.205,
+          "avg_winner_r": 1.4604,
+          "avg_loser_r": -1.0314,
+          "largest_win_r": 2.333,
+          "largest_loss_r": -1.689,
+          "avg_holding_cal_days": 11.1589,
+          "median_holding_cal_days": 9,
+          "mfe_r_mean": 1.3708,
+          "mae_r_mean": -0.9492,
+          "mfe_capture_mean": -2.119,
+          "mfe_capture_total": 0.0541,
+          "avg_exposure_pct": 24.19,
+          "median_exposure_pct": 25.83,
+          "max_exposure_pct": 91.72,
+          "cash_drag_pct": 75.81,
+          "flat_days_pct": 22.47,
+          "avg_positions": 2.932,
+          "sessions_at_max_open_positions": 108,
+          "sessions_at_max_open_positions_pct": 27.27,
+          "exit_reason_distribution": {
+            "STOP_LOSS": {
+              "n": 80,
+              "share_pct": 52.98,
+              "sum_r": -84.935,
+              "avg_r": -1.0617,
+              "sum_net_pnl": -474.05
+            },
+            "TAKE_PROFIT": {
+              "n": 36,
+              "share_pct": 23.84,
+              "sum_r": 83.988,
+              "avg_r": 2.333,
+              "sum_net_pnl": 411.71
+            },
+            "TRAILING_STOP": {
+              "n": 26,
+              "share_pct": 17.22,
+              "sum_r": 8.202,
+              "avg_r": 0.3155,
+              "sum_net_pnl": 36.43
+            },
+            "TIME_STOP": {
+              "n": 9,
+              "share_pct": 5.96,
+              "sum_r": 3.95,
+              "avg_r": 0.4389,
+              "sum_net_pnl": 20.04
+            }
+          },
+          "by_entry_regime": {
+            "BULL": {
+              "n": 38,
+              "sum_r": -7.906,
+              "avg_r": -0.2081,
+              "win_rate_pct": 39.47,
+              "sum_net_pnl": -75.39
+            },
+            "SIDEWAYS": {
+              "n": 113,
+              "sum_r": 19.111,
+              "avg_r": 0.1691,
+              "win_rate_pct": 45.13,
+              "sum_net_pnl": 69.53
+            }
+          }
+        },
+        "shipped_leaky": {
+          "return_pct": 11.17,
+          "cagr_pct": 6.97,
+          "max_dd_pct": -4.13,
+          "sharpe": 1.242,
+          "sortino": 1.647,
+          "downside_deviation_daily": 0.002301,
+          "calmar": 1.688,
+          "n_trades": 131,
+          "win_rate_pct": 51.1,
+          "profit_factor": 1.49,
+          "expectancy_r": 0.2884,
+          "avg_r": 0.2884,
+          "median_r": 0.054,
+          "sum_r": 37.784,
+          "avg_winner_r": 1.5293,
+          "avg_loser_r": -1.0106,
+          "largest_win_r": 2.333,
+          "largest_loss_r": -1.573,
+          "avg_holding_cal_days": 11.0916,
+          "median_holding_cal_days": 8,
+          "mfe_r_mean": 1.4389,
+          "mae_r_mean": -0.8572,
+          "mfe_capture_mean": -3.3891,
+          "mfe_capture_total": 0.2004,
+          "avg_exposure_pct": 17.74,
+          "median_exposure_pct": 19.86,
+          "max_exposure_pct": 56.43,
+          "cash_drag_pct": 82.26,
+          "flat_days_pct": 29.29,
+          "avg_positions": 2.53,
+          "sessions_at_max_open_positions": 81,
+          "sessions_at_max_open_positions_pct": 20.45,
+          "exit_reason_distribution": {
+            "STOP_LOSS": {
+              "n": 60,
+              "share_pct": 45.8,
+              "sum_r": -62.993,
+              "avg_r": -1.0499,
+              "sum_net_pnl": -289.43
+            },
+            "TAKE_PROFIT": {
+              "n": 37,
+              "share_pct": 28.24,
+              "sum_r": 86.321,
+              "avg_r": 2.333,
+              "sum_net_pnl": 372.92
+            },
+            "TRAILING_STOP": {
+              "n": 26,
+              "share_pct": 19.85,
+              "sum_r": 10.961,
+              "avg_r": 0.4216,
+              "sum_net_pnl": 47.65
+            },
+            "TIME_STOP": {
+              "n": 8,
+              "share_pct": 6.11,
+              "sum_r": 3.495,
+              "avg_r": 0.4369,
+              "sum_net_pnl": 14.42
+            }
+          },
+          "by_entry_regime": {
+            "BULL": {
+              "n": 19,
+              "sum_r": -5.64,
+              "avg_r": -0.2968,
+              "win_rate_pct": 26.32,
+              "sum_net_pnl": -43.15
+            },
+            "SIDEWAYS": {
+              "n": 112,
+              "sum_r": 43.424,
+              "avg_r": 0.3877,
+              "win_rate_pct": 55.36,
+              "sum_net_pnl": 188.72
+            }
+          }
+        },
+        "delta_return_pp": -11.58,
+        "delta_sharpe": -1.237,
+        "delta_maxdd_pp": -6.65,
+        "delta_trades": 20,
+        "delta_avg_r": -0.2142
+      },
+      "4.0": {
+        "pit_corrected": {
+          "return_pct": 7.38,
+          "cagr_pct": 4.63,
+          "max_dd_pct": -10.7,
+          "sharpe": 0.612,
+          "sortino": 0.689,
+          "downside_deviation_daily": 0.003661,
+          "calmar": 0.433,
+          "n_trades": 141,
+          "win_rate_pct": 45.4,
+          "profit_factor": 1.2,
+          "expectancy_r": 0.2139,
+          "avg_r": 0.2139,
+          "median_r": -1.0,
+          "sum_r": 30.164,
+          "avg_winner_r": 1.6395,
+          "avg_loser_r": -1.0053,
+          "largest_win_r": 2.667,
+          "largest_loss_r": -1.739,
+          "avg_holding_cal_days": 12.3333,
+          "median_holding_cal_days": 10,
+          "mfe_r_mean": 1.4913,
+          "mae_r_mean": -0.917,
+          "mfe_capture_mean": -1.4393,
+          "mfe_capture_total": 0.1435,
+          "avg_exposure_pct": 24.32,
+          "median_exposure_pct": 26.12,
+          "max_exposure_pct": 86.97,
+          "cash_drag_pct": 75.68,
+          "flat_days_pct": 20.2,
+          "avg_positions": 2.995,
+          "sessions_at_max_open_positions": 127,
+          "sessions_at_max_open_positions_pct": 32.07,
+          "exit_reason_distribution": {
+            "STOP_LOSS": {
+              "n": 71,
+              "share_pct": 50.35,
+              "sum_r": -74.279,
+              "avg_r": -1.0462,
+              "sum_net_pnl": -442.29
+            },
+            "TAKE_PROFIT": {
+              "n": 33,
+              "share_pct": 23.4,
+              "sum_r": 88.011,
+              "avg_r": 2.667,
+              "sum_net_pnl": 451.95
+            },
+            "TRAILING_STOP": {
+              "n": 28,
+              "share_pct": 19.86,
+              "sum_r": 12.795,
+              "avg_r": 0.457,
+              "sum_net_pnl": 61.57
+            },
+            "TIME_STOP": {
+              "n": 9,
+              "share_pct": 6.38,
+              "sum_r": 3.637,
+              "avg_r": 0.4041,
+              "sum_net_pnl": 19.06
+            }
+          },
+          "by_entry_regime": {
+            "BULL": {
+              "n": 37,
+              "sum_r": -1.042,
+              "avg_r": -0.0282,
+              "win_rate_pct": 37.84,
+              "sum_net_pnl": -45.12
+            },
+            "SIDEWAYS": {
+              "n": 104,
+              "sum_r": 31.206,
+              "avg_r": 0.3001,
+              "win_rate_pct": 48.08,
+              "sum_net_pnl": 135.4
+            }
+          }
+        },
+        "shipped_leaky": {
+          "return_pct": 14.13,
+          "cagr_pct": 8.78,
+          "max_dd_pct": -4.5,
+          "sharpe": 1.468,
+          "sortino": 1.843,
+          "downside_deviation_daily": 0.002412,
+          "calmar": 1.951,
+          "n_trades": 123,
+          "win_rate_pct": 51.2,
+          "profit_factor": 1.63,
+          "expectancy_r": 0.3537,
+          "avg_r": 0.3537,
+          "median_r": 0.054,
+          "sum_r": 43.505,
+          "avg_winner_r": 1.619,
+          "avg_loser_r": -1.0188,
+          "largest_win_r": 2.667,
+          "largest_loss_r": -1.587,
+          "avg_holding_cal_days": 12.374,
+          "median_holding_cal_days": 9,
+          "mfe_r_mean": 1.5401,
+          "mae_r_mean": -0.8363,
+          "mfe_capture_mean": -2.2659,
+          "mfe_capture_total": 0.2297,
+          "avg_exposure_pct": 18.48,
+          "median_exposure_pct": 20.76,
+          "max_exposure_pct": 54.52,
+          "cash_drag_pct": 81.52,
+          "flat_days_pct": 27.27,
+          "avg_positions": 2.604,
+          "sessions_at_max_open_positions": 94,
+          "sessions_at_max_open_positions_pct": 23.74,
+          "exit_reason_distribution": {
+            "STOP_LOSS": {
+              "n": 58,
+              "share_pct": 47.15,
+              "sum_r": -60.006,
+              "avg_r": -1.0346,
+              "sum_net_pnl": -288.4
+            },
+            "TAKE_PROFIT": {
+              "n": 32,
+              "share_pct": 26.02,
+              "sum_r": 85.344,
+              "avg_r": 2.667,
+              "sum_net_pnl": 392.16
+            },
+            "TRAILING_STOP": {
+              "n": 26,
+              "share_pct": 21.14,
+              "sum_r": 14.138,
+              "avg_r": 0.5438,
+              "sum_net_pnl": 62.23
+            },
+            "TIME_STOP": {
+              "n": 7,
+              "share_pct": 5.69,
+              "sum_r": 4.029,
+              "avg_r": 0.5756,
+              "sum_net_pnl": 15.86
+            }
+          },
+          "by_entry_regime": {
+            "BULL": {
+              "n": 18,
+              "sum_r": 4.987,
+              "avg_r": 0.2771,
+              "win_rate_pct": 38.89,
+              "sum_net_pnl": 10.46
+            },
+            "SIDEWAYS": {
+              "n": 105,
+              "sum_r": 38.518,
+              "avg_r": 0.3668,
+              "win_rate_pct": 53.33,
+              "sum_net_pnl": 171.39
+            }
+          }
+        },
+        "delta_return_pp": -6.75,
+        "delta_sharpe": -0.856,
+        "delta_maxdd_pp": -6.2,
+        "delta_trades": 18,
+        "delta_avg_r": -0.1398
+      }
+    },
+    "raw": {
+      "grid": [
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ],
+      "variants": {
+        "2.5": {
+          "take_profit_atr_mult": 2.5,
+          "dashboard": {
+            "return_pct": 5.57,
+            "cagr_pct": 3.51,
+            "max_dd_pct": -10.39,
+            "sharpe": 0.513,
+            "sortino": 0.557,
+            "downside_deviation_daily": 0.003431,
+            "calmar": 0.338,
+            "n_trades": 168,
+            "win_rate_pct": 47.6,
+            "profit_factor": 1.13,
+            "expectancy_r": 0.1878,
+            "avg_r": 0.1878,
+            "median_r": -0.562,
+            "sum_r": 31.545,
+            "avg_winner_r": 1.4573,
+            "avg_loser_r": -0.9942,
+            "largest_win_r": 1.667,
+            "largest_loss_r": -1.689,
+            "avg_holding_cal_days": 9.7798,
+            "median_holding_cal_days": 7.0,
+            "mfe_r_mean": 1.271,
+            "mae_r_mean": -0.8812,
+            "mfe_capture_mean": -2.1618,
+            "mfe_capture_total": 0.1477,
+            "avg_exposure_pct": 23.39,
+            "median_exposure_pct": 25.72,
+            "max_exposure_pct": 87.84,
+            "cash_drag_pct": 76.61,
+            "flat_days_pct": 23.48,
+            "avg_positions": 2.823,
+            "sessions_at_max_open_positions": 96,
+            "sessions_at_max_open_positions_pct": 24.24,
+            "exit_reason_distribution": {
+              "STOP_LOSS": {
+                "n": 84,
+                "share_pct": 50.0,
+                "sum_r": -86.165,
+                "avg_r": -1.0258,
+                "sum_net_pnl": -507.57
+              },
+              "TAKE_PROFIT": {
+                "n": 67,
+                "share_pct": 39.88,
+                "sum_r": 111.689,
+                "avg_r": 1.667,
+                "sum_net_pnl": 549.96
+              },
+              "TIME_STOP": {
+                "n": 9,
+                "share_pct": 5.36,
+                "sum_r": 5.036,
+                "avg_r": 0.5596,
+                "sum_net_pnl": 21.27
+              },
+              "TRAILING_STOP": {
+                "n": 8,
+                "share_pct": 4.76,
+                "sum_r": 0.985,
+                "avg_r": 0.1231,
+                "sum_net_pnl": 3.47
+              }
+            },
+            "by_entry_regime": {
+              "BULL": {
+                "n": 48,
+                "sum_r": 1.601,
+                "avg_r": 0.0334,
+                "win_rate_pct": 41.67,
+                "sum_net_pnl": -41.57
+              },
+              "SIDEWAYS": {
+                "n": 120,
+                "sum_r": 29.944,
+                "avg_r": 0.2495,
+                "win_rate_pct": 50.0,
+                "sum_net_pnl": 108.69
+              }
+            }
+          },
+          "summary": {
+            "start": "2024-01-02",
+            "end": "2025-07-31",
+            "n_days": 396,
+            "start_equity": 1282.0,
+            "end_equity": 1353.41,
+            "return_pct": 5.57,
+            "cagr_pct": 3.51,
+            "sharpe": 0.513,
+            "max_dd_pct": -10.39,
+            "n_trades": 168,
+            "win_rate_pct": 47.6,
+            "profit_factor": 1.13,
+            "avg_net_pnl": 0.4,
+            "exposure_days_pct": 76.5,
+            "n_skipped_entries": 8,
+            "n_failed_screens": 0,
+            "regime_label_counts": {
+              "SIDEWAYS": 174,
+              "BEAR": 136,
+              "BULL": 86
+            },
+            "cash_end": 993.02,
+            "open_positions_end": 3
+          }
+        },
+        "3.0": {
+          "take_profit_atr_mult": 3.0,
+          "dashboard": {
+            "return_pct": -1.43,
+            "cagr_pct": -0.91,
+            "max_dd_pct": -11.29,
+            "sharpe": -0.084,
+            "sortino": -0.096,
+            "downside_deviation_daily": 0.003585,
+            "calmar": -0.081,
+            "n_trades": 156,
+            "win_rate_pct": 44.2,
+            "profit_factor": 0.97,
+            "expectancy_r": 0.0572,
+            "avg_r": 0.0572,
+            "median_r": -1.0,
+            "sum_r": 8.923,
+            "avg_winner_r": 1.3988,
+            "avg_loser_r": -1.0348,
+            "largest_win_r": 2.0,
+            "largest_loss_r": -1.689,
+            "avg_holding_cal_days": 10.8269,
+            "median_holding_cal_days": 8.0,
+            "mfe_r_mean": 1.3615,
+            "mae_r_mean": -0.9408,
+            "mfe_capture_mean": -2.0901,
+            "mfe_capture_total": 0.042,
+            "avg_exposure_pct": 23.36,
+            "median_exposure_pct": 25.43,
+            "max_exposure_pct": 91.09,
+            "cash_drag_pct": 76.64,
+            "flat_days_pct": 23.74,
+            "avg_positions": 2.907,
+            "sessions_at_max_open_positions": 111,
+            "sessions_at_max_open_positions_pct": 28.03,
+            "exit_reason_distribution": {
+              "STOP_LOSS": {
+                "n": 82,
+                "share_pct": 52.56,
+                "sum_r": -87.288,
+                "avg_r": -1.0645,
+                "sum_net_pnl": -483.79
+              },
+              "TAKE_PROFIT": {
+                "n": 43,
+                "share_pct": 27.56,
+                "sum_r": 86.0,
+                "avg_r": 2.0,
+                "sum_net_pnl": 419.46
+              },
+              "TRAILING_STOP": {
+                "n": 21,
+                "share_pct": 13.46,
+                "sum_r": 5.862,
+                "avg_r": 0.2791,
+                "sum_net_pnl": 26.44
+              },
+              "TIME_STOP": {
+                "n": 10,
+                "share_pct": 6.41,
+                "sum_r": 4.349,
+                "avg_r": 0.4349,
+                "sum_net_pnl": 21.75
+              }
+            },
+            "by_entry_regime": {
+              "BULL": {
+                "n": 42,
+                "sum_r": -4.943,
+                "avg_r": -0.1177,
+                "win_rate_pct": 40.48,
+                "sum_net_pnl": -70.76
+              },
+              "SIDEWAYS": {
+                "n": 114,
+                "sum_r": 13.866,
+                "avg_r": 0.1216,
+                "win_rate_pct": 45.61,
+                "sum_net_pnl": 54.63
+              }
+            }
+          },
+          "summary": {
+            "start": "2024-01-02",
+            "end": "2025-07-31",
+            "n_days": 396,
+            "start_equity": 1282.0,
+            "end_equity": 1263.64,
+            "return_pct": -1.43,
+            "cagr_pct": -0.91,
+            "sharpe": -0.084,
+            "max_dd_pct": -11.29,
+            "n_trades": 156,
+            "win_rate_pct": 44.2,
+            "profit_factor": 0.97,
+            "avg_net_pnl": -0.1,
+            "exposure_days_pct": 76.3,
+            "n_skipped_entries": 5,
+            "n_failed_screens": 0,
+            "regime_label_counts": {
+              "SIDEWAYS": 174,
+              "BEAR": 136,
+              "BULL": 86
+            },
+            "cash_end": 1072.23,
+            "open_positions_end": 2
+          }
+        },
+        "3.5": {
+          "take_profit_atr_mult": 3.5,
+          "dashboard": {
+            "return_pct": -0.41,
+            "cagr_pct": -0.26,
+            "max_dd_pct": -10.78,
+            "sharpe": 0.005,
+            "sortino": 0.006,
+            "downside_deviation_daily": 0.003587,
+            "calmar": -0.024,
+            "n_trades": 151,
+            "win_rate_pct": 43.7,
+            "profit_factor": 0.99,
+            "expectancy_r": 0.0742,
+            "avg_r": 0.0742,
+            "median_r": -1.0,
+            "sum_r": 11.205,
+            "avg_winner_r": 1.4604,
+            "avg_loser_r": -1.0314,
+            "largest_win_r": 2.333,
+            "largest_loss_r": -1.689,
+            "avg_holding_cal_days": 11.1589,
+            "median_holding_cal_days": 9,
+            "mfe_r_mean": 1.3708,
+            "mae_r_mean": -0.9492,
+            "mfe_capture_mean": -2.119,
+            "mfe_capture_total": 0.0541,
+            "avg_exposure_pct": 24.19,
+            "median_exposure_pct": 25.83,
+            "max_exposure_pct": 91.72,
+            "cash_drag_pct": 75.81,
+            "flat_days_pct": 22.47,
+            "avg_positions": 2.932,
+            "sessions_at_max_open_positions": 108,
+            "sessions_at_max_open_positions_pct": 27.27,
+            "exit_reason_distribution": {
+              "STOP_LOSS": {
+                "n": 80,
+                "share_pct": 52.98,
+                "sum_r": -84.935,
+                "avg_r": -1.0617,
+                "sum_net_pnl": -474.05
+              },
+              "TAKE_PROFIT": {
+                "n": 36,
+                "share_pct": 23.84,
+                "sum_r": 83.988,
+                "avg_r": 2.333,
+                "sum_net_pnl": 411.71
+              },
+              "TRAILING_STOP": {
+                "n": 26,
+                "share_pct": 17.22,
+                "sum_r": 8.202,
+                "avg_r": 0.3155,
+                "sum_net_pnl": 36.43
+              },
+              "TIME_STOP": {
+                "n": 9,
+                "share_pct": 5.96,
+                "sum_r": 3.95,
+                "avg_r": 0.4389,
+                "sum_net_pnl": 20.04
+              }
+            },
+            "by_entry_regime": {
+              "BULL": {
+                "n": 38,
+                "sum_r": -7.906,
+                "avg_r": -0.2081,
+                "win_rate_pct": 39.47,
+                "sum_net_pnl": -75.39
+              },
+              "SIDEWAYS": {
+                "n": 113,
+                "sum_r": 19.111,
+                "avg_r": 0.1691,
+                "win_rate_pct": 45.13,
+                "sum_net_pnl": 69.53
+              }
+            }
+          },
+          "summary": {
+            "start": "2024-01-02",
+            "end": "2025-07-31",
+            "n_days": 396,
+            "start_equity": 1282.0,
+            "end_equity": 1276.74,
+            "return_pct": -0.41,
+            "cagr_pct": -0.26,
+            "sharpe": 0.005,
+            "max_dd_pct": -10.78,
+            "n_trades": 151,
+            "win_rate_pct": 43.7,
+            "profit_factor": 0.99,
+            "avg_net_pnl": -0.04,
+            "exposure_days_pct": 77.5,
+            "n_skipped_entries": 4,
+            "n_failed_screens": 0,
+            "regime_label_counts": {
+              "SIDEWAYS": 174,
+              "BEAR": 136,
+              "BULL": 86
+            },
+            "cash_end": 1085.33,
+            "open_positions_end": 2
+          }
+        },
+        "4.0": {
+          "take_profit_atr_mult": 4.0,
+          "dashboard": {
+            "return_pct": 7.38,
+            "cagr_pct": 4.63,
+            "max_dd_pct": -10.7,
+            "sharpe": 0.612,
+            "sortino": 0.689,
+            "downside_deviation_daily": 0.003661,
+            "calmar": 0.433,
+            "n_trades": 141,
+            "win_rate_pct": 45.4,
+            "profit_factor": 1.2,
+            "expectancy_r": 0.2139,
+            "avg_r": 0.2139,
+            "median_r": -1.0,
+            "sum_r": 30.164,
+            "avg_winner_r": 1.6395,
+            "avg_loser_r": -1.0053,
+            "largest_win_r": 2.667,
+            "largest_loss_r": -1.739,
+            "avg_holding_cal_days": 12.3333,
+            "median_holding_cal_days": 10,
+            "mfe_r_mean": 1.4913,
+            "mae_r_mean": -0.917,
+            "mfe_capture_mean": -1.4393,
+            "mfe_capture_total": 0.1435,
+            "avg_exposure_pct": 24.32,
+            "median_exposure_pct": 26.12,
+            "max_exposure_pct": 86.97,
+            "cash_drag_pct": 75.68,
+            "flat_days_pct": 20.2,
+            "avg_positions": 2.995,
+            "sessions_at_max_open_positions": 127,
+            "sessions_at_max_open_positions_pct": 32.07,
+            "exit_reason_distribution": {
+              "STOP_LOSS": {
+                "n": 71,
+                "share_pct": 50.35,
+                "sum_r": -74.279,
+                "avg_r": -1.0462,
+                "sum_net_pnl": -442.29
+              },
+              "TAKE_PROFIT": {
+                "n": 33,
+                "share_pct": 23.4,
+                "sum_r": 88.011,
+                "avg_r": 2.667,
+                "sum_net_pnl": 451.95
+              },
+              "TRAILING_STOP": {
+                "n": 28,
+                "share_pct": 19.86,
+                "sum_r": 12.795,
+                "avg_r": 0.457,
+                "sum_net_pnl": 61.57
+              },
+              "TIME_STOP": {
+                "n": 9,
+                "share_pct": 6.38,
+                "sum_r": 3.637,
+                "avg_r": 0.4041,
+                "sum_net_pnl": 19.06
+              }
+            },
+            "by_entry_regime": {
+              "BULL": {
+                "n": 37,
+                "sum_r": -1.042,
+                "avg_r": -0.0282,
+                "win_rate_pct": 37.84,
+                "sum_net_pnl": -45.12
+              },
+              "SIDEWAYS": {
+                "n": 104,
+                "sum_r": 31.206,
+                "avg_r": 0.3001,
+                "win_rate_pct": 48.08,
+                "sum_net_pnl": 135.4
+              }
+            }
+          },
+          "summary": {
+            "start": "2024-01-02",
+            "end": "2025-07-31",
+            "n_days": 396,
+            "start_equity": 1282.0,
+            "end_equity": 1376.57,
+            "return_pct": 7.38,
+            "cagr_pct": 4.63,
+            "sharpe": 0.612,
+            "max_dd_pct": -10.7,
+            "n_trades": 141,
+            "win_rate_pct": 45.4,
+            "profit_factor": 1.2,
+            "avg_net_pnl": 0.64,
+            "exposure_days_pct": 79.8,
+            "n_skipped_entries": 6,
+            "n_failed_screens": 0,
+            "regime_label_counts": {
+              "SIDEWAYS": 174,
+              "BEAR": 136,
+              "BULL": 86
+            },
+            "cash_end": 1016.18,
+            "open_positions_end": 3
+          }
+        }
+      }
+    },
+    "method": "production.pipeline.load_breadth patched in-process only; no file modified"
+  }
+}

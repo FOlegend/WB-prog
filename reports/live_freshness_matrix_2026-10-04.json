@@ -1,0 +1,159 @@
+{
+  "generated": "2026-10-04",
+  "deliverable": "§8 temporal consistency matrix + §9 live-readiness gate",
+  "no_production_change": true,
+  "policy": {
+    "max_age_days": 7,
+    "temporal_skew_days": 3,
+    "max_constituent_age_days": 14,
+    "policy_id": "live-freshness-2026-10-04",
+    "approved_by": "TASK_INSTRUCTED (§1)",
+    "on_failure": "BLOCK_DECISION",
+    "rationale": "7 d clears a weekend/holiday cluster; 3 d skew allows the caches to refresh independently; constituent bound proposed at 14 d because the reference dataset is updated on membership-change dates, not daily"
+  },
+  "constituent_snapshot_source": "fja05680/sp500 (sp500_changes.csv)",
+  "rows": [
+    {
+      "as_of": "2026-10-04",
+      "mode": "LIVE",
+      "spy_tail": "2026-08-06",
+      "constituent_tail": "2026-06-30",
+      "breadth_tail": "2025-07-31",
+      "spy_age": 59,
+      "constituent_age": 96,
+      "breadth_age": 430,
+      "spy_valid": false,
+      "constituents_valid": false,
+      "breadth_valid": false,
+      "skew_valid": false,
+      "overall_state": "STALE_CONSTITUENTS",
+      "reasons": [
+        "BREADTH_STALE",
+        "SPY_STALE",
+        "CONSTITUENTS_STALE"
+      ],
+      "trustworthy": false,
+      "shadow_qualifies": false
+    },
+    {
+      "as_of": "2026-10-02",
+      "mode": "LIVE",
+      "spy_tail": "2026-08-06",
+      "constituent_tail": "2026-06-30",
+      "breadth_tail": "2025-07-31",
+      "spy_age": 57,
+      "constituent_age": 94,
+      "breadth_age": 428,
+      "spy_valid": false,
+      "constituents_valid": false,
+      "breadth_valid": false,
+      "skew_valid": false,
+      "overall_state": "STALE_CONSTITUENTS",
+      "reasons": [
+        "BREADTH_STALE",
+        "SPY_STALE",
+        "CONSTITUENTS_STALE"
+      ],
+      "trustworthy": false,
+      "shadow_qualifies": false
+    },
+    {
+      "as_of": "2026-08-06",
+      "mode": "LIVE",
+      "spy_tail": "2026-08-06",
+      "constituent_tail": "2026-06-30",
+      "breadth_tail": "2025-07-31",
+      "spy_age": 0,
+      "constituent_age": 37,
+      "breadth_age": 371,
+      "spy_valid": true,
+      "constituents_valid": false,
+      "breadth_valid": false,
+      "skew_valid": false,
+      "overall_state": "STALE_CONSTITUENTS",
+      "reasons": [
+        "BREADTH_STALE",
+        "CONSTITUENTS_STALE"
+      ],
+      "trustworthy": false,
+      "shadow_qualifies": false
+    },
+    {
+      "as_of": "2026-07-01",
+      "mode": "LIVE",
+      "spy_tail": "2026-07-01",
+      "constituent_tail": "2026-06-30",
+      "breadth_tail": "2025-07-31",
+      "spy_age": 0,
+      "constituent_age": 1,
+      "breadth_age": 335,
+      "spy_valid": true,
+      "constituents_valid": true,
+      "breadth_valid": false,
+      "skew_valid": false,
+      "overall_state": "STALE",
+      "reasons": [
+        "BREADTH_STALE"
+      ],
+      "trustworthy": false,
+      "shadow_qualifies": false
+    },
+    {
+      "as_of": "2025-07-31",
+      "mode": "REPLAY",
+      "spy_tail": "2025-07-31",
+      "constituent_tail": "(n/a — replay: contemporaneous by construction)",
+      "breadth_tail": "2025-07-31",
+      "spy_age": 0,
+      "constituent_age": null,
+      "breadth_age": 0,
+      "spy_valid": true,
+      "constituents_valid": true,
+      "breadth_valid": true,
+      "skew_valid": true,
+      "overall_state": "VALID",
+      "reasons": [
+        "OK"
+      ],
+      "trustworthy": true,
+      "shadow_qualifies": true
+    },
+    {
+      "as_of": "2024-06-14",
+      "mode": "REPLAY",
+      "spy_tail": "2024-06-14",
+      "constituent_tail": "(n/a — replay: contemporaneous by construction)",
+      "breadth_tail": "2024-06-14",
+      "spy_age": 0,
+      "constituent_age": null,
+      "breadth_age": 0,
+      "spy_valid": true,
+      "constituents_valid": true,
+      "breadth_valid": true,
+      "skew_valid": true,
+      "overall_state": "VALID",
+      "reasons": [
+        "OK"
+      ],
+      "trustworthy": true,
+      "shadow_qualifies": true
+    }
+  ],
+  "readiness": {
+    "LIVE_DATA_READY": false,
+    "blockers": [
+      "OHLCV/SPY stale by 59 days (tail 2026-08-06); refresh blocked by an auto_adjust basis change that would rewrite history",
+      "breadth stale by 430 days (tail 2025-07-31)",
+      "PIT constituent snapshot stale by 96 days (snapshot 2026-06-30); breadth after that date is computed from a carried-forward membership list"
+    ],
+    "policy_enabled_in_production": false,
+    "reason_not_enabled": "BLOCK_DECISION is NOT enabled: at least one required input is stale, so enabling it would simply refuse every live run without any route to recovery. The policy is implemented and tested; it is switched on only when the chain is current."
+  },
+  "shadow_gate": {
+    "status": "PENDING",
+    "required_sessions": 20,
+    "qualifying_sessions": 0,
+    "rule": "counts only sessions with overall_state == VALID",
+    "note": "unchanged — no session to date would have qualified, so this task neither advances nor resets the gate"
+  }
+}

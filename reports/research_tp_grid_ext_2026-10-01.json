@@ -1,0 +1,446 @@
+{
+  "generated": "2026-10-01",
+  "deliverable": "D4b — R1 response-shape diagnostic (beyond the pre-registered grid edge)",
+  "hypothesis": "frozen take-profit (2.5 ATR) truncates winners; a wider target raises captured upside without harming risk-adjusted performance",
+  "changing_variable": "take_profit_atr_mult",
+  "unchanged": "everything else (universe, data, costs, execution, all other parameters); bucket screen reused from the PIT cache",
+  "baseline_tp": 2.5,
+  "grid": [
+    4.5,
+    5.0
+  ],
+  "git": {
+    "head": "da9f5dcfad69ff1adac61488a627e1fecf7700c6",
+    "head_short": "da9f5dc",
+    "subject": "Unified decision pipeline: run_daily + DataSource + DecisionRecord + production-equivalent backtest (2026-09-04)",
+    "is_dirty": true
+  },
+  "variants": {
+    "4.5": {
+      "take_profit_atr_mult": 4.5,
+      "dashboard": {
+        "return_pct": 14.39,
+        "cagr_pct": 8.93,
+        "max_dd_pct": -5.78,
+        "sharpe": 1.424,
+        "sortino": 1.855,
+        "downside_deviation_daily": 0.002506,
+        "calmar": 1.545,
+        "n_trades": 128,
+        "win_rate_pct": 50.0,
+        "profit_factor": 1.59,
+        "expectancy_r": 0.351,
+        "avg_r": 0.351,
+        "median_r": -0.025,
+        "sum_r": 44.925,
+        "avg_winner_r": 1.7121,
+        "avg_loser_r": -1.0102,
+        "largest_win_r": 3.0,
+        "largest_loss_r": -1.826,
+        "avg_holding_cal_days": 12.0703,
+        "median_holding_cal_days": 9.0,
+        "mfe_r_mean": 1.5642,
+        "mae_r_mean": -0.8518,
+        "mfe_capture_mean": -3.0107,
+        "mfe_capture_total": 0.2244,
+        "avg_exposure_pct": 18.63,
+        "median_exposure_pct": 20.22,
+        "max_exposure_pct": 54.25,
+        "cash_drag_pct": 81.37,
+        "flat_days_pct": 24.24,
+        "avg_positions": 2.631,
+        "sessions_at_max_open_positions": 88,
+        "sessions_at_max_open_positions_pct": 22.22,
+        "exit_reason_distribution": {
+          "STOP_LOSS": {
+            "n": 61,
+            "share_pct": 47.66,
+            "sum_r": -63.07,
+            "avg_r": -1.0339,
+            "sum_net_pnl": -305.11
+          },
+          "TRAILING_STOP": {
+            "n": 31,
+            "share_pct": 24.22,
+            "sum_r": 19.167,
+            "avg_r": 0.6183,
+            "sum_net_pnl": 84.02
+          },
+          "TAKE_PROFIT": {
+            "n": 26,
+            "share_pct": 20.31,
+            "sum_r": 78.0,
+            "avg_r": 3.0,
+            "sum_net_pnl": 354.38
+          },
+          "TIME_STOP": {
+            "n": 10,
+            "share_pct": 7.81,
+            "sum_r": 10.828,
+            "avg_r": 1.0828,
+            "sum_net_pnl": 51.15
+          }
+        },
+        "by_entry_regime": {
+          "BULL": {
+            "n": 16,
+            "sum_r": -0.855,
+            "avg_r": -0.0534,
+            "win_rate_pct": 25.0,
+            "sum_net_pnl": -12.48
+          },
+          "SIDEWAYS": {
+            "n": 112,
+            "sum_r": 45.78,
+            "avg_r": 0.4088,
+            "win_rate_pct": 53.57,
+            "sum_net_pnl": 196.93
+          }
+        }
+      },
+      "subperiods": {
+        "2024_full": {
+          "window": [
+            "2024-01-02",
+            "2024-12-31"
+          ],
+          "n_days": 252,
+          "return_pct": 7.75,
+          "sharpe": 1.121,
+          "max_dd_pct": -5.78,
+          "n_trades": 93,
+          "avg_r": 0.2735,
+          "win_rate_pct": 47.3
+        },
+        "2025_to_Jul": {
+          "window": [
+            "2025-01-02",
+            "2025-07-31"
+          ],
+          "n_days": 144,
+          "return_pct": 6.12,
+          "sharpe": 2.285,
+          "max_dd_pct": -3.42,
+          "n_trades": 35,
+          "avg_r": 0.5567,
+          "win_rate_pct": 57.1
+        },
+        "2024_H2": {
+          "window": [
+            "2024-07-01",
+            "2024-12-31"
+          ],
+          "n_days": 128,
+          "return_pct": 4.4,
+          "sharpe": 1.198,
+          "max_dd_pct": -3.68,
+          "n_trades": 42,
+          "avg_r": 0.2756,
+          "win_rate_pct": 47.6
+        },
+        "2025_H1": {
+          "window": [
+            "2025-01-02",
+            "2025-06-30"
+          ],
+          "n_days": 122,
+          "return_pct": 6.51,
+          "sharpe": 2.936,
+          "max_dd_pct": -3.42,
+          "n_trades": 24,
+          "avg_r": 0.7657,
+          "win_rate_pct": 62.5
+        }
+      },
+      "vs_baseline": {
+        "return_pct": {
+          "baseline": 7.99,
+          "variant": 14.39,
+          "delta": 6.4
+        },
+        "cagr_pct": {
+          "baseline": 5.01,
+          "variant": 8.93,
+          "delta": 3.92
+        },
+        "max_dd_pct": {
+          "baseline": -5.98,
+          "variant": -5.78,
+          "delta": 0.2
+        },
+        "sharpe": {
+          "baseline": 0.935,
+          "variant": 1.424,
+          "delta": 0.489
+        },
+        "sortino": {
+          "baseline": 1.141,
+          "variant": 1.855,
+          "delta": 0.714
+        },
+        "calmar": {
+          "baseline": 0.838,
+          "variant": 1.545,
+          "delta": 0.707
+        },
+        "avg_r": {
+          "baseline": 0.1822,
+          "variant": 0.351,
+          "delta": 0.1688
+        },
+        "expectancy_r": {
+          "baseline": 0.1822,
+          "variant": 0.351,
+          "delta": 0.1688
+        },
+        "profit_factor": {
+          "baseline": 1.29,
+          "variant": 1.59,
+          "delta": 0.3
+        },
+        "n_trades": {
+          "baseline": 151,
+          "variant": 128,
+          "delta": -23
+        },
+        "avg_exposure_pct": {
+          "baseline": 17.16,
+          "variant": 18.63,
+          "delta": 1.47
+        },
+        "win_rate_pct": {
+          "baseline": 50.3,
+          "variant": 50.0,
+          "delta": -0.3
+        },
+        "mfe_capture_total": {
+          "baseline": 0.1494,
+          "variant": 0.2244,
+          "delta": 0.075
+        }
+      }
+    },
+    "5.0": {
+      "take_profit_atr_mult": 5.0,
+      "dashboard": {
+        "return_pct": 13.68,
+        "cagr_pct": 8.5,
+        "max_dd_pct": -4.75,
+        "sharpe": 1.356,
+        "sortino": 1.888,
+        "downside_deviation_daily": 0.002427,
+        "calmar": 1.789,
+        "n_trades": 128,
+        "win_rate_pct": 47.7,
+        "profit_factor": 1.52,
+        "expectancy_r": 0.3218,
+        "avg_r": 0.3218,
+        "median_r": -0.913,
+        "sum_r": 41.193,
+        "avg_winner_r": 1.7845,
+        "avg_loser_r": -1.0099,
+        "largest_win_r": 3.334,
+        "largest_loss_r": -1.549,
+        "avg_holding_cal_days": 11.8672,
+        "median_holding_cal_days": 9.0,
+        "mfe_r_mean": 1.5501,
+        "mae_r_mean": -0.8717,
+        "mfe_capture_mean": -4.3455,
+        "mfe_capture_total": 0.2076,
+        "avg_exposure_pct": 18.24,
+        "median_exposure_pct": 19.54,
+        "max_exposure_pct": 59.95,
+        "cash_drag_pct": 81.76,
+        "flat_days_pct": 23.23,
+        "avg_positions": 2.624,
+        "sessions_at_max_open_positions": 84,
+        "sessions_at_max_open_positions_pct": 21.21,
+        "exit_reason_distribution": {
+          "STOP_LOSS": {
+            "n": 64,
+            "share_pct": 50.0,
+            "sum_r": -66.079,
+            "avg_r": -1.0325,
+            "sum_net_pnl": -319.88
+          },
+          "TRAILING_STOP": {
+            "n": 31,
+            "share_pct": 24.22,
+            "sum_r": 20.214,
+            "avg_r": 0.6521,
+            "sum_net_pnl": 84.19
+          },
+          "TAKE_PROFIT": {
+            "n": 22,
+            "share_pct": 17.19,
+            "sum_r": 73.327,
+            "avg_r": 3.333,
+            "sum_net_pnl": 339.98
+          },
+          "TIME_STOP": {
+            "n": 11,
+            "share_pct": 8.59,
+            "sum_r": 13.731,
+            "avg_r": 1.2483,
+            "sum_net_pnl": 64.63
+          }
+        },
+        "by_entry_regime": {
+          "BULL": {
+            "n": 19,
+            "sum_r": 2.631,
+            "avg_r": 0.1385,
+            "win_rate_pct": 31.58,
+            "sum_net_pnl": 1.87
+          },
+          "SIDEWAYS": {
+            "n": 109,
+            "sum_r": 38.562,
+            "avg_r": 0.3538,
+            "win_rate_pct": 50.46,
+            "sum_net_pnl": 167.05
+          }
+        }
+      },
+      "subperiods": {
+        "2024_full": {
+          "window": [
+            "2024-01-02",
+            "2024-12-31"
+          ],
+          "n_days": 252,
+          "return_pct": 8.08,
+          "sharpe": 1.187,
+          "max_dd_pct": -4.75,
+          "n_trades": 91,
+          "avg_r": 0.2773,
+          "win_rate_pct": 46.2
+        },
+        "2025_to_Jul": {
+          "window": [
+            "2025-01-02",
+            "2025-07-31"
+          ],
+          "n_days": 144,
+          "return_pct": 5.14,
+          "sharpe": 1.787,
+          "max_dd_pct": -3.64,
+          "n_trades": 37,
+          "avg_r": 0.4314,
+          "win_rate_pct": 51.4
+        },
+        "2024_H2": {
+          "window": [
+            "2024-07-01",
+            "2024-12-31"
+          ],
+          "n_days": 128,
+          "return_pct": 4.96,
+          "sharpe": 1.346,
+          "max_dd_pct": -3.4,
+          "n_trades": 43,
+          "avg_r": 0.3037,
+          "win_rate_pct": 48.8
+        },
+        "2025_H1": {
+          "window": [
+            "2025-01-02",
+            "2025-06-30"
+          ],
+          "n_days": 122,
+          "return_pct": 6.91,
+          "sharpe": 2.922,
+          "max_dd_pct": -3.64,
+          "n_trades": 24,
+          "avg_r": 0.8628,
+          "win_rate_pct": 62.5
+        }
+      },
+      "vs_baseline": {
+        "return_pct": {
+          "baseline": 7.99,
+          "variant": 13.68,
+          "delta": 5.69
+        },
+        "cagr_pct": {
+          "baseline": 5.01,
+          "variant": 8.5,
+          "delta": 3.49
+        },
+        "max_dd_pct": {
+          "baseline": -5.98,
+          "variant": -4.75,
+          "delta": 1.23
+        },
+        "sharpe": {
+          "baseline": 0.935,
+          "variant": 1.356,
+          "delta": 0.421
+        },
+        "sortino": {
+          "baseline": 1.141,
+          "variant": 1.888,
+          "delta": 0.747
+        },
+        "calmar": {
+          "baseline": 0.838,
+          "variant": 1.789,
+          "delta": 0.951
+        },
+        "avg_r": {
+          "baseline": 0.1822,
+          "variant": 0.3218,
+          "delta": 0.1396
+        },
+        "expectancy_r": {
+          "baseline": 0.1822,
+          "variant": 0.3218,
+          "delta": 0.1396
+        },
+        "profit_factor": {
+          "baseline": 1.29,
+          "variant": 1.52,
+          "delta": 0.23
+        },
+        "n_trades": {
+          "baseline": 151,
+          "variant": 128,
+          "delta": -23
+        },
+        "avg_exposure_pct": {
+          "baseline": 17.16,
+          "variant": 18.24,
+          "delta": 1.08
+        },
+        "win_rate_pct": {
+          "baseline": 50.3,
+          "variant": 47.7,
+          "delta": -2.6
+        },
+        "mfe_capture_total": {
+          "baseline": 0.1494,
+          "variant": 0.2076,
+          "delta": 0.0582
+        }
+      }
+    }
+  },
+  "robustness": {
+    "grid": [
+      4.5,
+      5.0
+    ],
+    "return_pct_by_tp": {
+      "4.5": 14.39,
+      "5.0": 13.68
+    },
+    "sharpe_by_tp": {
+      "4.5": 1.424,
+      "5.0": 1.356
+    },
+    "note": "a smooth, single-peaked response that is not dominated by one subperiod is weak evidence of a real effect; a sharp isolated spike is likelier to be noise/overfitting"
+  },
+  "_status": "SUPERSEDED — POINT-IN-TIME DATA INTEGRITY FAILURE",
+  "_superseded_by": "(withdrawn: the TP extension was a leak artefact; not re-run)",
+  "_superseded_reason": "Regime v1's breadth engine was not point-in-time in historical replay (always read the 2025-07-31 cache tail); every figure below is leak-contaminated. See reports/pit_breadth_leak_2026-10-01.md"
+}

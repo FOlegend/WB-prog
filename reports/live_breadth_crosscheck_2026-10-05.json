@@ -1,0 +1,42 @@
+{
+  "generated": "2026-10-05",
+  "as_of": "2026-08-06",
+  "frozen_source": "regime_dual_engine/data/breadth_pit_2016_2025.csv",
+  "live_source": "data/live/breadth/breadth_live.csv",
+  "overlap_days": 2156,
+  "stale_window": {
+    "from": null,
+    "to": null,
+    "days": 0
+  },
+  "agreed_window": {
+    "days": 2156,
+    "mean_abs_diff_pp": 0.18358348794063076,
+    "max_abs_diff_pp": 0.7899999999999991,
+    "pct_days_within_1e_9": 15.584415584415584
+  },
+  "series_tails": {
+    "frozen_tail": "2025-07-31",
+    "live_tail": "2026-08-06",
+    "last_common": "2025-07-31",
+    "note": "the frozen research breadth stops at 2026-07-31 because the refresh was never promoted; that is the intended state, not a data gap"
+  },
+  "latest_observation": {
+    "date": "2025-07-31",
+    "frozen_pct": 57.23,
+    "live_pct": 57.23,
+    "frozen_n": 491,
+    "live_n": 491,
+    "frozen_ad": 53988.0,
+    "live_ad": 47916.0
+  },
+  "live_only_extension": {
+    "from": "2025-08-01",
+    "to": "2026-08-06",
+    "days": 255,
+    "pct_first": 50.102,
+    "pct_last": 64.4,
+    "pct_min": 19.355,
+    "pct_max": 73.185
+  }
+}

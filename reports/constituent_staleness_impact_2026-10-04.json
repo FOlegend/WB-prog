@@ -1,0 +1,97 @@
+{
+  "generated": "2026-10-04",
+  "as_of": "2026-08-06",
+  "last_snapshot": "2026-06-30",
+  "panel_shape": [
+    2663,
+    614
+  ],
+  "T1_marginal": {
+    "n_members": 502,
+    "pct_at_as_of": 64.5418326693227,
+    "drop_k_nearest_boundary": {
+      "5": {
+        "pct": 64.7887,
+        "delta_pp": 0.2469
+      },
+      "10": {
+        "pct": 64.8374,
+        "delta_pp": 0.2956
+      },
+      "20": {
+        "pct": 65.1452,
+        "delta_pp": 0.6034
+      },
+      "30": {
+        "pct": 65.678,
+        "delta_pp": 1.1361
+      },
+      "50": {
+        "pct": 66.8142,
+        "delta_pp": 2.2723
+      }
+    }
+  },
+  "T2_historical_analogue": {
+    "37": {
+      "n_snapshots": 244,
+      "median_max_abs_diff_pp": 0.0,
+      "p90_max_abs_diff_pp": 0.0,
+      "max_observed_pp": 0.0,
+      "median_mean_abs_diff_pp": 0.0,
+      "p90_mean_abs_diff_pp": 0.0,
+      "median_abs_final_diff_pp": 0.0,
+      "p90_abs_final_diff_pp": 0.0,
+      "max_abs_final_diff_pp": 0.0,
+      "median_members_changed": 84.0,
+      "p90_members_changed": 88.0,
+      "worst_snapshot": "2018-01-02"
+    },
+    "60": {
+      "n_snapshots": 240,
+      "median_max_abs_diff_pp": 0.0,
+      "p90_max_abs_diff_pp": 0.0,
+      "max_observed_pp": 0.0,
+      "median_mean_abs_diff_pp": 0.0,
+      "p90_mean_abs_diff_pp": 0.0,
+      "median_abs_final_diff_pp": 0.0,
+      "p90_abs_final_diff_pp": 0.0,
+      "max_abs_final_diff_pp": 0.0,
+      "median_members_changed": 85.0,
+      "p90_members_changed": 91.1,
+      "worst_snapshot": "2018-01-02"
+    },
+    "90": {
+      "n_snapshots": 237,
+      "median_max_abs_diff_pp": 0.36799999999999855,
+      "p90_max_abs_diff_pp": 0.5999999999999972,
+      "max_observed_pp": 0.9879999999999995,
+      "median_mean_abs_diff_pp": 0.036180327868852356,
+      "p90_mean_abs_diff_pp": 0.08374838709677436,
+      "median_abs_final_diff_pp": 0.19200000000000728,
+      "p90_abs_final_diff_pp": 0.4784000000000006,
+      "max_abs_final_diff_pp": 0.9209999999999923,
+      "median_members_changed": 87.0,
+      "p90_members_changed": 94.0,
+      "worst_snapshot": "2021-02-12"
+    }
+  },
+  "T2_monotonicity_check": {
+    "median_mean_by_horizon": {
+      "37": 0.0,
+      "60": 0.0,
+      "90": 0.036180327868852356
+    },
+    "increases_with_horizon": false
+  },
+  "T3_current_segment": {
+    "from": "2026-07-01",
+    "to": "2026-08-06",
+    "trading_days": 26,
+    "snapshot_used": "2026-06-30",
+    "carry_forward_days": 37,
+    "frozen_members": 502,
+    "members_with_data": 501,
+    "note": "this segment cannot be re-breadth-ed in isolation (50DMA warm-up needs 50 bars, the segment has 26); its pct_above_50dma was produced by breadth_refresh using the full panel, so it IS computable in production -- what is unknown is the TRUE universe for these dates"
+  }
+}

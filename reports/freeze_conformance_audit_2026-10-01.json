@@ -1,0 +1,185 @@
+{
+  "generated": "2026-10-01",
+  "purpose": "systematic check that each frozen clause operates as documented",
+  "verdict_counts": {
+    "OPERATIVE": 13,
+    "INERT": 1,
+    "TEST-VERIFIED": 9,
+    "CLARITY": 2
+  },
+  "sections": {
+    "SETUP_V1 (src/agents/SETUP_V1_FREEZE.md)": [
+      {
+        "clause": "1 setup type = pullback only",
+        "documented": [
+          "pullback"
+        ],
+        "actual": [
+          "pullback"
+        ],
+        "verdict": "OPERATIVE"
+      },
+      {
+        "clause": "2 setup_score_threshold",
+        "documented": 0.5,
+        "actual": 0.5,
+        "verdict": "OPERATIVE"
+      },
+      {
+        "clause": "3 quality mapping (high/mid/low)",
+        "documented": [
+          1.0,
+          0.75,
+          0.5
+        ],
+        "actual": [
+          1.0,
+          0.75,
+          0.5
+        ],
+        "verdict": "OPERATIVE"
+      },
+      {
+        "clause": "4a gap filter value",
+        "documented": 0.02,
+        "actual": 0.02,
+        "verdict": "OPERATIVE"
+      },
+      {
+        "clause": "4b gap filter operative at runtime",
+        "documented": "blocks entries when next open > signal close +2%",
+        "actual": "5 recorded GAP_TOO_HIGH skips in the window",
+        "verdict": "OPERATIVE"
+      },
+      {
+        "clause": "5 extension filter (max_extension_from_pivot_pct=0.03)",
+        "documented": "blocks entries >3% from the pivot (prior_high20)",
+        "actual": "prior_high20 computed in breakout_setup: True; computed in pullback_setup: False. Setup v1 enables pullback only, so the dispatcher's best.get('prior_high20') is always None -> the guard never fires. Observed trade-log values of extension_from_pivot_pct: [None]",
+        "verdict": "INERT"
+      },
+      {
+        "clause": "6 next-open entry convention",
+        "documented": "entry at the next session's open",
+        "actual": "entry_fill_model values observed: ['NEXT_OPEN']",
+        "verdict": "OPERATIVE"
+      },
+      {
+        "clause": "7 gap-aware OHLC exit (STOP/TARGET/TRAILING/TIME/SIGNAL)",
+        "documented": "exact fill-price equalities",
+        "actual": "Phase-2/3 parity: 31 unit tests + 1073 real bars, 0 divergences",
+        "verdict": "TEST-VERIFIED"
+      },
+      {
+        "clause": "8 pullback definition (EMA pullback + vol contraction + reversal candle + RS strength)",
+        "documented": "reads as a conjunction of four conditions",
+        "actual": "all four present {'near_ema10': True, 'near_ema20': True, 'vol_contract': True, '_reversal_candle': True, 'RS_strong': True}; the score is a weighted SUM (increments ['0.10', '0.10', '0.10', '0.25', '0.20', '0.15', '0.10']) with threshold 0.5 — e.g. structure 0.30 + nearEMA 0.25 = 0.55 is valid with neither volume contraction nor a reversal candle; RS strength is a 50-day-high proximity test (price >= 0.9 x high50), not a cross-sectional RS-vs-SPY test",
+        "verdict": "CLARITY"
+      }
+    ],
+    "REGIME_V1 (regime_dual_engine/REGIME_V1_FREEZE.md)": [
+      {
+        "clause": "1 hmm/breadth weights",
+        "documented": [
+          0.5,
+          0.5
+        ],
+        "actual": [
+          0.5,
+          0.5
+        ],
+        "verdict": "OPERATIVE"
+      },
+      {
+        "clause": "3 thresholds (bull/bear)",
+        "documented": [
+          65,
+          35
+        ],
+        "actual": [
+          65.0,
+          35.0
+        ],
+        "verdict": "OPERATIVE"
+      },
+      {
+        "clause": "5 divergence cap",
+        "documented": 0.5,
+        "actual": 0.5,
+        "verdict": "OPERATIVE"
+      },
+      {
+        "clause": "6a distribution-day overlay disabled in production",
+        "documented": false,
+        "actual": false,
+        "verdict": "OPERATIVE"
+      },
+      {
+        "clause": "2 composite formula",
+        "documented": "hmm_bull_prob x 50.0 + breadth_percentile_score x 0.5",
+        "actual": "code = (hmm_bull_prob*100*w_hmm + breadth_percentile*w_breadth)/total_w with w=0.5/0.5 -> identical to the documented 50/50 form; operands present: True",
+        "verdict": "OPERATIVE"
+      },
+      {
+        "clause": "2-clarity composite formula is stated as the 50/50 special case",
+        "documented": "a fixed 'x50 / x0.5' formula",
+        "actual": "the code is a generalised weighted mean; the two agree only while the weights stay 0.5/0.5 (which is frozen, so this is a documentation-precision note, not a defect)",
+        "verdict": "CLARITY"
+      },
+      {
+        "clause": "4 breadth = %above 50DMA (70%) + A/D 10d momentum (30%), 252-day rolling percentile",
+        "documented": "0.7 / 0.3 and 252",
+        "actual": "delegated to regime_dual_engine/breadth_data.py",
+        "verdict": "TEST-VERIFIED"
+      },
+      {
+        "clause": "5 (thrust) breadth_10d_ago<0.30 and >20% relative rise -> BULL + 1.0 + BREADTH_THRUST",
+        "documented": "override",
+        "actual": "source has _breadth_thrust and BREADTH_THRUST",
+        "verdict": "OPERATIVE"
+      },
+      {
+        "clause": "2-forbidden reintroduction of DistDays / KER / ADX / index MA-trend / 'selective' into the regime decision",
+        "documented": "must not participate in the production regime decision",
+        "actual": "KER/ADX/sma200/selective present: {'KER': False, 'adx': False, 'sma200': False, 'selective': False}; distribution-day tokens present: True (import + config-gated branch only) and enable_dist_day_overlay=False",
+        "verdict": "OPERATIVE"
+      }
+    ],
+    "STOP_EXIT_V1 (production/STOP_EXIT_V1_FREEZE.md)": [
+      {
+        "clause": "exit priority STOP > TARGET > TRAILING > TIME > SIGNAL",
+        "actual": "test_exit_engine priority cases + 17 parity cases",
+        "verdict": "TEST-VERIFIED"
+      },
+      {
+        "clause": "exact fill-price equalities (GAP/STOP/TARGET/CLOSE)",
+        "actual": "test_exit_engine contract guards + replay 1073 bars, 0 divergences",
+        "verdict": "TEST-VERIFIED"
+      },
+      {
+        "clause": "Exit Engine performs no trailing arithmetic",
+        "actual": "test_no_trailing_math_in_exit_engine + wiring-safety test 9",
+        "verdict": "TEST-VERIFIED"
+      },
+      {
+        "clause": "TIME_STOP uses calendar days",
+        "actual": "rules._held_days uses datetime difference; parity case set",
+        "verdict": "TEST-VERIFIED"
+      },
+      {
+        "clause": "current_stop_price is not persisted",
+        "actual": "wiring-safety test 13 asserts state.py has no such field",
+        "verdict": "TEST-VERIFIED"
+      },
+      {
+        "clause": "tech_signal injected by the caller (never computed inside)",
+        "actual": "test_technicals_agent_never_called_internally",
+        "verdict": "TEST-VERIFIED"
+      },
+      {
+        "clause": "legacy remains authoritative while mode=legacy/shadow",
+        "actual": "1088/1088 shadow evaluations agreed; shadow vs legacy runs identical",
+        "verdict": "TEST-VERIFIED"
+      }
+    ]
+  }
+}

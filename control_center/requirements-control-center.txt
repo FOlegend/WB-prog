@@ -1,0 +1,10 @@
+# requirements-control-center.txt
+# The Control Center is deliberately dependency-light.
+# It re-uses whatever the trading repo already needs (pandas) and adds Streamlit.
+# SQLite ships with Python's standard library (no extra package).
+
+streamlit>=1.30
+pandas>=2.0
+
+# Optional: only needed if you want the Control Center's own tests to run.
+pytest>=7.0

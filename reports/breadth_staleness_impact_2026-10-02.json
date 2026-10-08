@@ -1,0 +1,147 @@
+{
+  "generated": "2026-10-02",
+  "deliverable": "breadth staleness exposure for live runs — evidence for a staleness POLICY (none exists today)",
+  "no_production_change": true,
+  "cache": {
+    "path": "regime_dual_engine/data/breadth_pit_2016_2025.csv",
+    "tail_date": "2025-07-31",
+    "today": "2026-10-02",
+    "staleness_calendar_days": 428,
+    "staleness_months": 14.1,
+    "rows_available": 2408
+  },
+  "what_a_live_run_would_use": {
+    "as_of": "2026-10-02",
+    "breadth_rows_returned": 2408,
+    "breadth_tail": "2025-07-31",
+    "tail_matches_as_of": false,
+    "pct_above_50dma_last": 57.23,
+    "regime_decision": {
+      "regime_label": "BEAR",
+      "composite_score": 21.113,
+      "position_size_mult": 0.0,
+      "strategy_mode": "defensive",
+      "veto_flags": []
+    },
+    "note": "this is what production would decide TODAY using a breadth series that ends on the tail date"
+  },
+  "sensitivity_to_breadth_staleness": [
+    {
+      "breadth_tail": "2025-07-31",
+      "lag_calendar_days": 0,
+      "pct_above_50dma": 57.23,
+      "regime_label": "BEAR",
+      "composite_score": 21.113,
+      "position_size_mult": 0.0,
+      "veto_flags": []
+    },
+    {
+      "breadth_tail": "2025-07-25",
+      "lag_calendar_days": 6,
+      "pct_above_50dma": 74.338,
+      "regime_label": "BEAR",
+      "composite_score": 34.109,
+      "position_size_mult": 0.0,
+      "veto_flags": []
+    },
+    {
+      "breadth_tail": "2025-07-21",
+      "lag_calendar_days": 10,
+      "pct_above_50dma": 63.878,
+      "regime_label": "BEAR",
+      "composite_score": 25.081,
+      "position_size_mult": 0.0,
+      "veto_flags": []
+    },
+    {
+      "breadth_tail": "2025-07-10",
+      "lag_calendar_days": 21,
+      "pct_above_50dma": 75.051,
+      "regime_label": "BEAR",
+      "composite_score": 34.824,
+      "position_size_mult": 0.0,
+      "veto_flags": []
+    },
+    {
+      "breadth_tail": "2025-06-18",
+      "lag_calendar_days": 43,
+      "pct_above_50dma": 65.574,
+      "regime_label": "BEAR",
+      "composite_score": 28.811,
+      "position_size_mult": 0.0,
+      "veto_flags": []
+    },
+    {
+      "breadth_tail": "2025-05-29",
+      "lag_calendar_days": 63,
+      "pct_above_50dma": 69.262,
+      "regime_label": "BEAR",
+      "composite_score": 33.038,
+      "position_size_mult": 0.0,
+      "veto_flags": []
+    },
+    {
+      "breadth_tail": "2025-03-27",
+      "lag_calendar_days": 126,
+      "pct_above_50dma": 40.246,
+      "regime_label": "BULL",
+      "composite_score": 11.152,
+      "position_size_mult": 1.0,
+      "veto_flags": [
+        "BREADTH_THRUST"
+      ]
+    },
+    {
+      "breadth_tail": "2024-11-21",
+      "lag_calendar_days": 252,
+      "pct_above_50dma": 60.825,
+      "regime_label": "BEAR",
+      "composite_score": 16.053,
+      "position_size_mult": 0.0,
+      "veto_flags": []
+    }
+  ],
+  "verdict": {
+    "regime_labels_across_staleness_range": [
+      "BEAR",
+      "BULL"
+    ],
+    "regime_flips": [
+      {
+        "between_lag": "63->126d",
+        "from": "BEAR",
+        "to": "BULL",
+        "mult_from": 0.0,
+        "mult_to": 1.0
+      },
+      {
+        "between_lag": "126->252d",
+        "from": "BULL",
+        "to": "BEAR",
+        "mult_from": 1.0,
+        "mult_to": 0.0
+      }
+    ],
+    "position_size_mult_min": 0.0,
+    "position_size_mult_max": 1.0,
+    "decision_sensitive": true,
+    "explanation": "the 252-day rolling percentile makes the breadth half of the composite slow-moving, so a short staleness does not move the decision; the exposure is that a LONG staleness (which is what exists today) imports a market state from a different regime entirely, and no rule currently objects"
+  },
+  "decision_boundary": {
+    "current_breadth_percentile": 57.23,
+    "bull_threshold_percentile_needed": 108.887,
+    "bear_threshold_percentile_needed": 48.887,
+    "note": "breadth percentile that would place the composite exactly on the BULL (65) / BEAR (35) threshold, holding the HMM half at its current value",
+    "hmm_half_of_composite": -7.502
+  },
+  "policy_options_not_recommendation": {
+    "note": "listed for the human decision; this script deliberately does not choose",
+    "warn": "log when tail_date < as_of; never blocks. Zero behavioural risk, but relies on someone reading the log.",
+    "flag": "add a warning to DecisionRecord.warnings and the briefing so the staleness is visible in human review. Still not blocking.",
+    "fail_loud": "refuse to produce a regime decision when the breadth tail is older than N sessions; pipeline_status=FAILURE. Highest safety, and it would stop today's live run."
+  },
+  "caveats": [
+    "The sensitivity sweep holds SPY fixed at its latest cached bar and varies only the breadth tail, so it isolates the breadth half. In a real live run SPY would also be current, and the two halves would move together.",
+    "Staleness measured against the breadth cache only. The OHLCV cache and the HMM input have their own coverage and are not audited here."
+  ]
+}

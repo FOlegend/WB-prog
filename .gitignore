@@ -10,3 +10,9 @@ data/cache/
 
 # 誤放的另一專案（診所更表自動化）— 不屬於本 repo
 YOT/
+
+# OneDrive 同步衝突副本（檔名 + 6 位亂數後綴，如 xxx.pyEY1gyo）
+*.py[0-9A-Za-z][0-9A-Za-z][0-9A-Za-z][0-9A-Za-z][0-9A-Za-z][0-9A-Za-z]
+
+# Control Centre DB 二進位備份
+control_center/*.db.backup-*
